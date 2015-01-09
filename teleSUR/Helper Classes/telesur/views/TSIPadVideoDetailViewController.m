@@ -193,7 +193,6 @@ NSInteger const TS_DETAIL_VIEW_HEIGHT = 764;
 
     UILabelMarginSet *section = (UILabelMarginSet *)[self.view viewWithTag:107];
 
-    date.hidden = NO;
     section.frame = CGRectMake(isLandscape ? VD_SIDE_MARGIN : 30, VD_SIDE_MARGIN, section.frame.size.width, section.frame.size.height);
     title.frame = CGRectMake(section.frame.origin.x, title.frame.origin.y, title.frame.size.width, title.frame.size.height);
     date.frame = CGRectMake(section.frame.origin.x, date.frame.origin.y, date.frame.size.width, date.frame.size.height);
@@ -210,7 +209,8 @@ NSInteger const TS_DETAIL_VIEW_HEIGHT = 764;
     UILabel *description = (UILabel *)[self.view viewWithTag:1004];
     UIButton *download = (UIButton *)[self.view viewWithTag:113];
 
-    NSLog(@"%@", date);
+    date.hidden = NO;
+
     UILabelMarginSet *section = (UILabelMarginSet *)[self.view viewWithTag:107];
 
     section.frame = CGRectMake(isLandscape ? VD_SIDE_MARGIN : 30, VD_SIDE_MARGIN, 300, 50);
@@ -226,6 +226,7 @@ NSInteger const TS_DETAIL_VIEW_HEIGHT = 764;
     date.font = [UIFont fontWithName:@"Roboto-Bold" size:16];//696969
     description.font = [UIFont fontWithName:@"Roboto-Regular" size:16];//black
 
+    date.text = [self.view getLongFormatDateFromData:currentItem];
     [download addTarget:self action:@selector(downloadClip:) forControlEvents:UIControlEventTouchUpInside];
 
     NSString *clipType = [[currentItem valueForKey:@"tipo"] valueForKey:@"slug"];
@@ -239,7 +240,6 @@ NSInteger const TS_DETAIL_VIEW_HEIGHT = 764;
             NSArray *keys = [[catalogs objectForKey:TS_PROGRAMA_SLUG] objectForKey:@"keys"];
             NSString *slug = [currentItem valueForKey:@"slug"];
             NSInteger showIndex = [keys indexOfObject:slug];
-            NSLog(@"%@ at %ld", slug, (long)showIndex);
             if ( showIndex < [keys count]) {
                 description.text = [[[[ catalogs objectForKey:TS_PROGRAMA_SLUG] objectForKey:@"originalData"] objectAtIndex:showIndex] objectForKey:@"descripcion"];
             } else {
@@ -284,7 +284,7 @@ NSInteger const TS_DETAIL_VIEW_HEIGHT = 764;
     download.frame = CGRectMake(download.frame.origin.x, date.hidden ? title.frame.origin.y + 7 : date.frame.origin.y - 4, download.frame.size.width, download.frame.size.height);
 
     [self.view adjustSizeFrameForLabel:description constriainedToSize:CGSizeMake(wrapper.frame.size.width - (VD_SIDE_MARGIN * 3), 1000)];
-    [self.view setLabel:description underView:date withSeparation:10];
+    [self.view setLabel:description underView:download withSeparation:18];
 
     wrapper.contentOffset = CGPointMake(0, 0);
     wrapper.contentSize = CGSizeMake(wrapper.frame.size.width, description.frame.origin.y + description.frame.size.height + 15);

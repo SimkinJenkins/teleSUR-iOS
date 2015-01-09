@@ -43,18 +43,28 @@
 
 - (void) setData:(NSDictionary *)data {
 
+    UILabel *date = (UILabel *)[self viewWithTag:102];
+    date.hidden = NO;
+
     [super setData:data];
 
-    UILabel *date = (UILabel *)[self viewWithTag:102];
     UILabel *description = (UILabel *)[self viewWithTag:104];
 
-    date.text = [data obtenerFechaLargaParaEsteClip];
+    date.text = [self getLongFormatDateFromData:data];
 
     NSString *clipType = [[data valueForKey:@"tipo"] valueForKey:@"slug"];
 
     description.text = ![clipType isEqualToString:@"programa"] ? [data obtenerDescripcion] : @"";
 
     [self configDetailCell];
+
+}
+
+- (void) setDataForShowItem:(NSDictionary *)data forTitle:(UILabel *)title andSection:(UILabel *)section {
+
+    [super setDataForShowItem:data forTitle:title andSection:section];
+
+    [self viewWithTag:102].hidden = YES;
 
 }
 

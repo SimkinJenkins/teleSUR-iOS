@@ -169,10 +169,14 @@
 	horizontalView.cellBackgroundColor			= [UIColor clearColor];
 	[self.view addSubview:horizontalView];
 
-    pageControl = [[UIPageControl alloc] initWithFrame: CGRectMake(frameRect.origin.x, frameRect.origin.y + frameRect.size.height - 25, frameRect.size.width, 20)];
-    pageControl.numberOfPages = [[self getHTableData] count];
-    pageControl.enabled = NO;
+    if( !pageControl ) {
+        pageControl = [[UIPageControl alloc] initWithFrame: CGRectMake(frameRect.origin.x, frameRect.origin.y + frameRect.size.height - 25, frameRect.size.width, 20)];
+    }
 
+    pageControl.numberOfPages = [[self getHTableData] count];
+    pageControl.currentPage = 0;
+    pageControl.hidden = NO;
+    pageControl.enabled = NO;
     [self.view addSubview:pageControl];
 
     [self configTopMenuWithCurrentConfiguration];

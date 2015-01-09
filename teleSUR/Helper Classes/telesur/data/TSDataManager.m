@@ -338,6 +338,7 @@
 - (void)feedParser:(MWFeedParser *)parser didFailWithError:(NSError *)error {
     NSLog(@"Finished Parsing With Error: %@", error);
     if (parsedItems.count == 0) {
+        currentRequest.error = error;
         NSLog(@"No se recuperaron items del RSS");
     } else {
         // Failed but some items parsed, so show and inform of error

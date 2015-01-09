@@ -326,6 +326,9 @@
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateStyle:NSDateFormatterLongStyle];
 
+    NSString *localeID = [[[[NSBundle mainBundle] infoDictionary] objectForKey:@"Configuración"] objectForKey:@"localeID"];
+    [formatter setLocale:[[NSLocale alloc] initWithLocaleIdentifier:localeID]];
+
     return [formatter stringFromDate:[self getNSDateParaFromData:data]];
 
 }
@@ -334,6 +337,9 @@
     
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateStyle:NSDateFormatterLongStyle];
+
+    NSString *localeID = [[[[NSBundle mainBundle] infoDictionary] objectForKey:@"Configuración"] objectForKey:@"localeID"];
+    [formatter setLocale:[[NSLocale alloc] initWithLocaleIdentifier:localeID]];
 
     return [formatter stringFromDate:data.date];
     

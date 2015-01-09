@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>E2EF18EE-02B2-43C8-9EF7-794DEF2567FE</string>
+	<key>IDESourceControlProjectName</key>
+	<string>teleSUR</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>F13761E8C2E46ACAB7A5FB336D09A6D709BEC60B</key>
+		<string>https://github.com/teleSUR/teleSUR-iOS.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>teleSUR.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>F13761E8C2E46ACAB7A5FB336D09A6D709BEC60B</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/teleSUR/teleSUR-iOS.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>F13761E8C2E46ACAB7A5FB336D09A6D709BEC60B</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>F13761E8C2E46ACAB7A5FB336D09A6D709BEC60B</string>
+			<key>IDESourceControlWCCName</key>
+			<string>TeleSUR%20iOS%20Universal</string>
+		</dict>
+	</array>
+</dict>
+</plist>

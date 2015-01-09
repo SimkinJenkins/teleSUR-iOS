@@ -1,0 +1,87 @@
+/* 
+  Localizable.strings
+  teleSUR
+
+  Created by Simkin on 07/08/14.
+  Copyright (c) 2014 teleSUR. All rights reserved.
+*/
+//Secciones del Menú principal
+"noticiasSection" = "Noticias";
+"video-noticiaSection" = "Noticias";
+"entrevistaSection" = "Entrevistas";
+"especial-webSection" = "Especiales Web";
+"infografiaSection" = "Infografías";
+"videoSection" = "Video";
+"opinionSection" = "Opinión";
+"blogSection" = "Blogs";
+"programaSection" = "Programas";
+"reportajeSection" = "Reportajes";
+"buscarSection" = "Buscar";
+"acercaSection" = "Acerca de";
+
+"homeSection" = "Inicio";
+
+//Secciones del Submenu para Opinión
+"op-articulosSection" = "Artículos";
+"op-entrevistasSection" = "Entrevistas";
+
+//Secciones del Submenu para Noticias y entrevistas
+"latinoamericaSection" = "Latinoamérica";
+"mundoSection" = "Vuelta al mundo";
+"deportesSection" = "Deportes";
+"culturaSection" = "Cultura";
+"saludSection" = "Salud";
+"ciencia-y-tecnologiaSection" = "Ciencia y Tecnología";
+
+//Secciones del Submenu para Especiales Web
+"sintesis-webSection" = "Sintesis Web";
+
+//Sección Buscar
+"searchPlaceholder" = "Busca en TeleSUR";
+
+//slug de viewController de Acerca de
+"acercaViewID" = "AcercaDeViewController";
+
+//Celdas
+//Ver mas
+"verMasCellText" = "Ver más...";
+
+//Detalle
+"descarga" = "Descarga";
+"compartir" = "Compartir";
+"masArchivos" = "Más Archivos";
+
+"descargarVideo" = "Descargar video";
+"descargarVideoMessage" = "Se va a descargar este video, puede tardar unos minutos dependiendo de la velocidad de conexión, otro mensaje te avisará cuando la descarga haya finalizado.";
+"descargarVideoCancelar" = "Cancelar";
+"descargarVideoContinuar" = "Continuar";
+"descargaVideoCompletado" = "Vídeo descargado";
+"descargaVideoCompletadoMessage" = "Se ha finalizado la descarga, el video se encuentra en el rollo de tu cámara.";
+
+"acceptText" = "Aceptar";
+
+
+//Errores de conexión a internet
+"internetConnectionErrorTitle" = "Error al conectar a TeleSUR";
+"internetConnectionErrorMessage" = "Asegura que tu conexión a internet está activa e intenta nuevamente.";
+
+"WIFIConnectionErrorTitle" = "Error al conectar a TeleSUR";
+"WIFIConnectionErrorMessage" = "Intenta conectar a tu red Wi-Fi preferida o asegura que tu conexión a internet está activa e intenta nuevamente.";
+
+"APIHostConnectionErrorTitle" = "Error de conexión a servidor";
+"APIHostConnectionErrorMessage" = "No pudimos completar tu petición. Por favor intenta en unos minutos.";
+
+
+//Menu Streaming
+"liveVideo" = "Señal en Vivo";
+"liveAudio" = "Audio en Vivo";
+
+
+//iPad///////////////////////////////////////////////////////////////////
+
+//menu izquierdo
+"leftMenuDefault" = "Secciones";
+"leftMenuProgramDefault" = "Programas";
+
+//about
+"aboutViewTag" = "400";

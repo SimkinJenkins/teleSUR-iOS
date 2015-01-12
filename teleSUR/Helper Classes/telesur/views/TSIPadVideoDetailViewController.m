@@ -85,8 +85,10 @@ NSInteger const TS_DETAIL_VIEW_HEIGHT = 764;
 - (void)viewDidLoad {
     
     [super viewDidLoad];
-    
+
     [self.view setBackgroundColor:[UIColor whiteColor]];
+
+    [self setVideoPlayerFrame];
     
     [self sectionSelected:currentSection withTitle:[self getSectionTitleWith:currentSection]];
     
@@ -165,72 +167,50 @@ NSInteger const TS_DETAIL_VIEW_HEIGHT = 764;
 
 - (void) setupVideoView {
 
-    CGRect screenRect = [[UIScreen mainScreen] bounds];
-    BOOL isLandscape = UIInterfaceOrientationIsLandscape([[UIApplication sharedApplication] statusBarOrientation]);
+    wrapper = [[UIScrollView  alloc] init];
 
-    wrapper = [[UIScrollView  alloc] initWithFrame: isLandscape ? CGRectMake(TS_LIST_WIDTH, 445, screenRect.size.width - TS_LIST_WIDTH, 192)
-                                                            : CGRectMake(0, 492, screenRect.size.width - 60, 350)];
-    wrapper.autoresizesSubviews = NO;
     [wrapper addSubview:[self.view viewWithTag:TS_VD_DETAIL_VIEW_TAG]];
     [self.view addSubview:wrapper];
 
-    UILabelMarginSet *sectionLabel = (UILabelMarginSet *)[self.view viewWithTag:107];
-    [sectionLabel setPersistentBackgroundColor:[UIColor colorWithRed:255/255.0 green:2/255.0 blue:2/255.0 alpha:1.0]];
-
-}
-
-- (void) configViewElements {
-
-    CGRect screenRect = [[UIScreen mainScreen] bounds];
-    BOOL isLandscape = UIInterfaceOrientationIsLandscape([[UIApplication sharedApplication] statusBarOrientation]);
-
-    wrapper.frame = isLandscape ? CGRectMake(TS_LIST_WIDTH, 445, screenRect.size.width - TS_LIST_WIDTH, 192)
-    : CGRectMake(0, 492, screenRect.size.width - 60, 300);
-
     UILabel *title = (UILabel *)[self.view viewWithTag:1001];
     UILabel *date = (UILabel *)[self.view viewWithTag:112];
     UILabel *description = (UILabel *)[self.view viewWithTag:1004];
-
     UILabelMarginSet *section = (UILabelMarginSet *)[self.view viewWithTag:107];
-
-    section.frame = CGRectMake(isLandscape ? VD_SIDE_MARGIN : 30, VD_SIDE_MARGIN, section.frame.size.width, section.frame.size.height);
-    title.frame = CGRectMake(section.frame.origin.x, title.frame.origin.y, title.frame.size.width, title.frame.size.height);
-    date.frame = CGRectMake(section.frame.origin.x, date.frame.origin.y, date.frame.size.width, date.frame.size.height);
-    description.frame = CGRectMake(section.frame.origin.x, description.frame.origin.y, description.frame.size.width, description.frame.size.height);
-
-}
-
-- (void) setupCurrentVideoData {
-
-    BOOL isLandscape = UIInterfaceOrientationIsLandscape([[UIApplication sharedApplication] statusBarOrientation]);
-
-    UILabel *title = (UILabel *)[self.view viewWithTag:1001];
-    UILabel *date = (UILabel *)[self.view viewWithTag:112];
-    UILabel *description = (UILabel *)[self.view viewWithTag:1004];
     UIButton *download = (UIButton *)[self.view viewWithTag:113];
 
-    date.hidden = NO;
+    section.frame = CGRectMake(0, VD_SIDE_MARGIN, 100, section.frame.size.height);
+    title.frame = CGRectMake(0, title.frame.origin.y, title.frame.size.width, title.frame.size.height);
+    date.frame = CGRectMake(0, date.frame.origin.y, date.frame.size.width, date.frame.size.height);
+    description.frame = CGRectMake(0, description.frame.origin.y, description.frame.size.width, description.frame.size.height);
 
-    UILabelMarginSet *section = (UILabelMarginSet *)[self.view viewWithTag:107];
+    [section setPersistentBackgroundColor:[UIColor colorWithRed:255/255.0 green:2/255.0 blue:2/255.0 alpha:1.0]];
 
-    section.frame = CGRectMake(isLandscape ? VD_SIDE_MARGIN : 30, VD_SIDE_MARGIN, 300, 50);
-    date.frame = CGRectMake(section.frame.origin.x, date.frame.origin.y, 300, 25);
-    description.frame = CGRectMake(section.frame.origin.x, description.frame.origin.y, wrapper.frame.size.width - (VD_SIDE_MARGIN * 3), 1000);
-
-    [self configViewElements];
-
-    [download setTitle:NSLocalizedString(@"descarga", nil) forState:UIControlStateNormal];
-    //Setear fuentes custom
     section.leftMargin = 10;
     section.font = [UIFont fontWithName:@"Roboto-BoldCondensed" size:11];//2e2e2e
     date.font = [UIFont fontWithName:@"Roboto-Bold" size:16];//696969
     description.font = [UIFont fontWithName:@"Roboto-Regular" size:16];//black
 
-    date.text = [self.view getLongFormatDateFromData:currentItem];
+    [download setTitle:NSLocalizedString(@"descarga", nil) forState:UIControlStateNormal];
     [download addTarget:self action:@selector(downloadClip:) forControlEvents:UIControlEventTouchUpInside];
+
+    thumb = [[UIImageView alloc] initWithFrame:playerFrame];
+
+}
+
+- (void) setupCurrentVideoData {
+
+    UILabel *title = (UILabel *)[self.view viewWithTag:1001];
+    UILabel *date = (UILabel *)[self.view viewWithTag:112];
+    UILabel *description = (UILabel *)[self.view viewWithTag:1004];
+    UILabelMarginSet *section = (UILabelMarginSet *)[self.view viewWithTag:107];
+
+    date.hidden = NO;
+    date.text = [self.view getLongFormatDateFromData:currentItem];
 
     NSString *clipType = [[currentItem valueForKey:@"tipo"] valueForKey:@"slug"];
     BOOL switchTitles = [clipType isEqualToString:@"programa"];
+
+    section.frame = CGRectMake(0, VD_SIDE_MARGIN, 100, section.frame.size.height);
 
     if ( [clipType isEqualToString:@"programa"] ) {
 
@@ -276,23 +256,38 @@ NSInteger const TS_DETAIL_VIEW_HEIGHT = 764;
     [section sizeToFit];
     section.frame = CGRectMake(section.frame.origin.x, section.frame.origin.y, section.frame.size.width + 20, section.frame.size.height + 10);
 
-    [self.view adjustSizeFrameForLabel:title constriainedToSize:CGSizeMake(wrapper.frame.size.width - (VD_SIDE_MARGIN * 3), 1000)];
+    [self.view addSubview:thumb];
+    [thumb sd_setImageWithURL:[self getThumbURLFromAPIItem:currentItem forceLargeImage:NO]
+             placeholderImage:[UIImage imageNamed:@"SinImagen.png"]];
+
+    [self adjustLabelsSize];
+
+}
+
+- (void) adjustLabelsSize {
+
+    UILabel *title = (UILabel *)[self.view viewWithTag:1001];
+    UILabel *date = (UILabel *)[self.view viewWithTag:112];
+    UILabel *description = (UILabel *)[self.view viewWithTag:1004];
+    UIButton *download = (UIButton *)[self.view viewWithTag:113];
+    UILabelMarginSet *section = (UILabelMarginSet *)[self.view viewWithTag:107];
+
+    [self.view adjustSizeFrameForLabel:title constriainedToSize:CGSizeMake(playerFrame.size.width, 300)];
     [self.view setLabel:title underView:section withSeparation:2];
-
+    
     [self.view setLabel:date underView:title withSeparation:10];
-
-    download.frame = CGRectMake(download.frame.origin.x, date.hidden ? title.frame.origin.y + 7 : date.frame.origin.y - 4, download.frame.size.width, download.frame.size.height);
-
-    [self.view adjustSizeFrameForLabel:description constriainedToSize:CGSizeMake(wrapper.frame.size.width - (VD_SIDE_MARGIN * 3), 1000)];
+    
+    download.frame = CGRectMake(playerFrame.size.width - 110, date.hidden ? title.frame.origin.y + 7 : date.frame.origin.y - 4, download.frame.size.width, download.frame.size.height);
+    
+    [self.view adjustSizeFrameForLabel:description constriainedToSize:CGSizeMake(playerFrame.size.width, 300)];
     [self.view setLabel:description underView:download withSeparation:18];
 
-    wrapper.contentOffset = CGPointMake(0, 0);
-    wrapper.contentSize = CGSizeMake(wrapper.frame.size.width, description.frame.origin.y + description.frame.size.height + 15);
+    thumb.frame = playerFrame;
 
-    thumb = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 300, 200)];
-    
-    [thumb sd_setImageWithURL:[self getThumbURLFromAPIItem:currentItem forceLargeImage:NO]
-               placeholderImage:[UIImage imageNamed:@"SinImagen.png"]];
+    wrapper.frame = CGRectMake(playerFrame.origin.x, playerFrame.origin.y + playerFrame.size.height, playerFrame.size.width + VD_SIDE_MARGIN, UIInterfaceOrientationIsLandscape([[UIApplication sharedApplication] statusBarOrientation]) ? 192 : 285);
+
+    wrapper.contentOffset = CGPointMake(0, 0);
+    wrapper.contentSize = CGSizeMake(playerFrame.size.width, description.frame.origin.y + description.frame.size.height + VD_SIDE_MARGIN);
 
 }
 
@@ -300,10 +295,7 @@ NSInteger const TS_DETAIL_VIEW_HEIGHT = 764;
 
     [self removeCurrentPlayer];
 
-    BOOL isLandscape = UIInterfaceOrientationIsLandscape([[UIApplication sharedApplication] statusBarOrientation]);
-
     playerController = [[TSClipPlayerViewController alloc] initConClip:clip];
-    CGRect playerFrame = CGRectMake(isLandscape ? 360 : 30, 25, isLandscape ? 640 : 700, isLandscape ? 420 : 462);
     [playerController playAtView:self.view withFrame:playerFrame withObserver:self playbackFinish:@selector(playbackEnd:)];
 
 }
@@ -324,7 +316,13 @@ NSInteger const TS_DETAIL_VIEW_HEIGHT = 764;
 
 - (void) playbackEnd:(NSNotification *)notification {}
 
+- (void) setVideoPlayerFrame {
 
+    playerFrame = UIInterfaceOrientationIsLandscape( [ [ UIApplication sharedApplication ] statusBarOrientation ] )
+                                        ? CGRectMake( 360, 25, 640, 420 )
+                                        : CGRectMake( 30, 25, 700, 462 );
+
+}
 
 
 
@@ -372,17 +370,17 @@ NSInteger const TS_DETAIL_VIEW_HEIGHT = 764;
         return;
     }
 
+    [self setVideoPlayerFrame];
+
     [relatedRSSTableView removeFromSuperview];
     relatedRSSTableView = nil;
 
     [self setupRelatedVideoTableView];
 
-    [self configViewElements];
-
-    BOOL isLandscape = UIInterfaceOrientationIsLandscape([[UIApplication sharedApplication] statusBarOrientation]);
+    [self adjustLabelsSize];
 
     if( playerController ) {
-        playerController.view.frame = CGRectMake(isLandscape ? 360 : 30, 25, isLandscape ? 640 : 700, isLandscape ? 420 : 462);
+        playerController.view.frame = playerFrame;
     }
 
 }
@@ -477,18 +475,22 @@ NSInteger const TS_DETAIL_VIEW_HEIGHT = 764;
 
     NSLog(@"Antes del error TSIpadVideoDetailViewController");
 
+    self.navigationController.navigationBarHidden = NO;
+    self.navigationController.toolbarHidden = NO;
+
     if ( [tableElements count] == 0 ) {
         return;
     }
 
-    [self setupCurrentVideoData];
+    if ( ! currentItem ) {
+        currentItem = [tableElements objectAtIndex:0];
+    }
 
+    [self setupCurrentVideoData];
     [self setupRelatedVideoTableView];
-    
+
     if ( ! currentItem ) {
 
-        currentItem = [tableElements objectAtIndex:0];
-        [self setupCurrentVideoData];
         [self playVideoFromClip:currentItem];
 
     } else {
@@ -496,9 +498,6 @@ NSInteger const TS_DETAIL_VIEW_HEIGHT = 764;
         [self resumeVideoPlayer];
 
     }
-
-    self.navigationController.navigationBarHidden = NO;
-    self.navigationController.toolbarHidden = NO;
 
 }
 

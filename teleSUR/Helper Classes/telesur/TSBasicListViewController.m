@@ -193,7 +193,7 @@ NSString* const TS_NOTICIAS_SLUG = @"noticias-texto";
 
     for(uint i = 0; i < [data count]; i++) {
         NSDictionary *row = [data objectAtIndex:i];
-        if( row != nil && [row objectForKey:@"slug"] != nil && [row objectForKey:@"nombre"] != nil) {
+        if( row != nil && [ row isKindOfClass: [ NSDictionary class ] ] && [row objectForKey:@"slug"] != nil && [row objectForKey:@"nombre"] != nil) {
             [keys addObject:[row objectForKey:@"slug"]];
             [titles addObject:[row objectForKey:@"nombre"]];
         }

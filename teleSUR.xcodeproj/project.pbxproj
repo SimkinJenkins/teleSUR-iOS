@@ -727,14 +727,6 @@
 		BCA6A30B19CD1C9F0021B243 /* home@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCA6A2E119CD1C9F0021B243 /* home@2x.png */; };
 		BCA6A30C19CD1C9F0021B243 /* home@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCA6A2E119CD1C9F0021B243 /* home@2x.png */; };
 		BCA6A30D19CD1C9F0021B243 /* home@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCA6A2E119CD1C9F0021B243 /* home@2x.png */; };
-		BCA6A30E19CD1C9F0021B243 /* multimedia.png in Resources */ = {isa = PBXBuildFile; fileRef = BCA6A2E219CD1C9F0021B243 /* multimedia.png */; };
-		BCA6A30F19CD1C9F0021B243 /* multimedia.png in Resources */ = {isa = PBXBuildFile; fileRef = BCA6A2E219CD1C9F0021B243 /* multimedia.png */; };
-		BCA6A31019CD1C9F0021B243 /* multimedia.png in Resources */ = {isa = PBXBuildFile; fileRef = BCA6A2E219CD1C9F0021B243 /* multimedia.png */; };
-		BCA6A31119CD1C9F0021B243 /* multimedia.png in Resources */ = {isa = PBXBuildFile; fileRef = BCA6A2E219CD1C9F0021B243 /* multimedia.png */; };
-		BCA6A31219CD1C9F0021B243 /* multimedia@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCA6A2E319CD1C9F0021B243 /* multimedia@2x.png */; };
-		BCA6A31319CD1C9F0021B243 /* multimedia@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCA6A2E319CD1C9F0021B243 /* multimedia@2x.png */; };
-		BCA6A31419CD1C9F0021B243 /* multimedia@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCA6A2E319CD1C9F0021B243 /* multimedia@2x.png */; };
-		BCA6A31519CD1C9F0021B243 /* multimedia@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCA6A2E319CD1C9F0021B243 /* multimedia@2x.png */; };
 		BCA6A31619CD1C9F0021B243 /* noticias.png in Resources */ = {isa = PBXBuildFile; fileRef = BCA6A2E419CD1C9F0021B243 /* noticias.png */; };
 		BCA6A31719CD1C9F0021B243 /* noticias.png in Resources */ = {isa = PBXBuildFile; fileRef = BCA6A2E419CD1C9F0021B243 /* noticias.png */; };
 		BCA6A31819CD1C9F0021B243 /* noticias.png in Resources */ = {isa = PBXBuildFile; fileRef = BCA6A2E419CD1C9F0021B243 /* noticias.png */; };
@@ -901,6 +893,50 @@
 		BCE09DF819FB03C400528944 /* TSDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BCE09DF619FB03C400528944 /* TSDataManager.m */; };
 		BCE09DF919FB03C400528944 /* TSDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BCE09DF619FB03C400528944 /* TSDataManager.m */; };
 		BCE09DFA19FB03C400528944 /* TSDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BCE09DF619FB03C400528944 /* TSDataManager.m */; };
+		BCEDABC71A60B18B0059C357 /* acerca@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCEDABBC1A60B18B0059C357 /* acerca@3x.png */; };
+		BCEDABC81A60B18B0059C357 /* acerca@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCEDABBC1A60B18B0059C357 /* acerca@3x.png */; };
+		BCEDABC91A60B18B0059C357 /* acerca@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCEDABBC1A60B18B0059C357 /* acerca@3x.png */; };
+		BCEDABCA1A60B18B0059C357 /* acerca@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCEDABBC1A60B18B0059C357 /* acerca@3x.png */; };
+		BCEDABCB1A60B18B0059C357 /* blog@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCEDABBD1A60B18B0059C357 /* blog@3x.png */; };
+		BCEDABCC1A60B18B0059C357 /* blog@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCEDABBD1A60B18B0059C357 /* blog@3x.png */; };
+		BCEDABCD1A60B18B0059C357 /* blog@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCEDABBD1A60B18B0059C357 /* blog@3x.png */; };
+		BCEDABCE1A60B18B0059C357 /* blog@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCEDABBD1A60B18B0059C357 /* blog@3x.png */; };
+		BCEDABCF1A60B18B0059C357 /* buscar@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCEDABBE1A60B18B0059C357 /* buscar@3x.png */; };
+		BCEDABD01A60B18B0059C357 /* buscar@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCEDABBE1A60B18B0059C357 /* buscar@3x.png */; };
+		BCEDABD11A60B18B0059C357 /* buscar@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCEDABBE1A60B18B0059C357 /* buscar@3x.png */; };
+		BCEDABD21A60B18B0059C357 /* buscar@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCEDABBE1A60B18B0059C357 /* buscar@3x.png */; };
+		BCEDABD31A60B18B0059C357 /* menu-logo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCEDABBF1A60B18B0059C357 /* menu-logo@3x.png */; };
+		BCEDABD41A60B18B0059C357 /* menu-logo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCEDABBF1A60B18B0059C357 /* menu-logo@3x.png */; };
+		BCEDABD51A60B18B0059C357 /* menu-logo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCEDABBF1A60B18B0059C357 /* menu-logo@3x.png */; };
+		BCEDABD61A60B18B0059C357 /* menu-logo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCEDABBF1A60B18B0059C357 /* menu-logo@3x.png */; };
+		BCEDABD71A60B18B0059C357 /* noticias@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCEDABC01A60B18B0059C357 /* noticias@3x.png */; };
+		BCEDABD81A60B18B0059C357 /* noticias@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCEDABC01A60B18B0059C357 /* noticias@3x.png */; };
+		BCEDABD91A60B18B0059C357 /* noticias@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCEDABC01A60B18B0059C357 /* noticias@3x.png */; };
+		BCEDABDA1A60B18B0059C357 /* noticias@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCEDABC01A60B18B0059C357 /* noticias@3x.png */; };
+		BCEDABDB1A60B18B0059C357 /* opinion@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCEDABC11A60B18B0059C357 /* opinion@3x.png */; };
+		BCEDABDC1A60B18B0059C357 /* opinion@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCEDABC11A60B18B0059C357 /* opinion@3x.png */; };
+		BCEDABDD1A60B18B0059C357 /* opinion@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCEDABC11A60B18B0059C357 /* opinion@3x.png */; };
+		BCEDABDE1A60B18B0059C357 /* opinion@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCEDABC11A60B18B0059C357 /* opinion@3x.png */; };
+		BCEDABDF1A60B18B0059C357 /* programa@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCEDABC21A60B18B0059C357 /* programa@3x.png */; };
+		BCEDABE01A60B18B0059C357 /* programa@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCEDABC21A60B18B0059C357 /* programa@3x.png */; };
+		BCEDABE11A60B18B0059C357 /* programa@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCEDABC21A60B18B0059C357 /* programa@3x.png */; };
+		BCEDABE21A60B18B0059C357 /* programa@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCEDABC21A60B18B0059C357 /* programa@3x.png */; };
+		BCEDABE31A60B18B0059C357 /* reportaje@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCEDABC31A60B18B0059C357 /* reportaje@3x.png */; };
+		BCEDABE41A60B18B0059C357 /* reportaje@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCEDABC31A60B18B0059C357 /* reportaje@3x.png */; };
+		BCEDABE51A60B18B0059C357 /* reportaje@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCEDABC31A60B18B0059C357 /* reportaje@3x.png */; };
+		BCEDABE61A60B18B0059C357 /* reportaje@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCEDABC31A60B18B0059C357 /* reportaje@3x.png */; };
+		BCEDABE71A60B18B0059C357 /* videos-bullet.png in Resources */ = {isa = PBXBuildFile; fileRef = BCEDABC41A60B18B0059C357 /* videos-bullet.png */; };
+		BCEDABE81A60B18B0059C357 /* videos-bullet.png in Resources */ = {isa = PBXBuildFile; fileRef = BCEDABC41A60B18B0059C357 /* videos-bullet.png */; };
+		BCEDABE91A60B18B0059C357 /* videos-bullet.png in Resources */ = {isa = PBXBuildFile; fileRef = BCEDABC41A60B18B0059C357 /* videos-bullet.png */; };
+		BCEDABEA1A60B18B0059C357 /* videos-bullet.png in Resources */ = {isa = PBXBuildFile; fileRef = BCEDABC41A60B18B0059C357 /* videos-bullet.png */; };
+		BCEDABEB1A60B18B0059C357 /* videos-bullet@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCEDABC51A60B18B0059C357 /* videos-bullet@2x.png */; };
+		BCEDABEC1A60B18B0059C357 /* videos-bullet@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCEDABC51A60B18B0059C357 /* videos-bullet@2x.png */; };
+		BCEDABED1A60B18B0059C357 /* videos-bullet@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCEDABC51A60B18B0059C357 /* videos-bullet@2x.png */; };
+		BCEDABEE1A60B18B0059C357 /* videos-bullet@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCEDABC51A60B18B0059C357 /* videos-bullet@2x.png */; };
+		BCEDABEF1A60B18B0059C357 /* videos-bullet@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCEDABC61A60B18B0059C357 /* videos-bullet@3x.png */; };
+		BCEDABF01A60B18B0059C357 /* videos-bullet@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCEDABC61A60B18B0059C357 /* videos-bullet@3x.png */; };
+		BCEDABF11A60B18B0059C357 /* videos-bullet@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCEDABC61A60B18B0059C357 /* videos-bullet@3x.png */; };
+		BCEDABF21A60B18B0059C357 /* videos-bullet@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCEDABC61A60B18B0059C357 /* videos-bullet@3x.png */; };
 		BCEE971F1972CAC300E03F83 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCEE971E1972CAC300E03F83 /* AudioToolbox.framework */; };
 		BCEE97211972CAFB00E03F83 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCEE97201972CAFB00E03F83 /* MediaPlayer.framework */; };
 		BCF294CF19CCC88B007EEE84 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCF294CE19CCC88B007EEE84 /* MainStoryboard_iPhone.storyboard */; };
@@ -1225,8 +1261,6 @@
 		BCA6A2DF19CD1C9F0021B243 /* buscar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "buscar@2x.png"; path = "teleSUR/Images/buscar@2x.png"; sourceTree = SOURCE_ROOT; };
 		BCA6A2E019CD1C9F0021B243 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = home.png; path = teleSUR/Images/home.png; sourceTree = SOURCE_ROOT; };
 		BCA6A2E119CD1C9F0021B243 /* home@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "home@2x.png"; path = "teleSUR/Images/home@2x.png"; sourceTree = SOURCE_ROOT; };
-		BCA6A2E219CD1C9F0021B243 /* multimedia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = multimedia.png; path = teleSUR/Images/multimedia.png; sourceTree = SOURCE_ROOT; };
-		BCA6A2E319CD1C9F0021B243 /* multimedia@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "multimedia@2x.png"; path = "teleSUR/Images/multimedia@2x.png"; sourceTree = SOURCE_ROOT; };
 		BCA6A2E419CD1C9F0021B243 /* noticias.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = noticias.png; path = teleSUR/Images/noticias.png; sourceTree = SOURCE_ROOT; };
 		BCA6A2E519CD1C9F0021B243 /* noticias@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "noticias@2x.png"; path = "teleSUR/Images/noticias@2x.png"; sourceTree = SOURCE_ROOT; };
 		BCA6A2E619CD1C9F0021B243 /* opinion.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = opinion.png; path = teleSUR/Images/opinion.png; sourceTree = SOURCE_ROOT; };
@@ -1314,6 +1348,17 @@
 		BCE09DF619FB03C400528944 /* TSDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TSDataManager.m; path = "teleSUR/Helper Classes/telesur/data/TSDataManager.m"; sourceTree = SOURCE_ROOT; };
 		BCE09DFB19FB2ED300528944 /* TSDataManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TSDataManagerDelegate.h; path = "teleSUR/Helper Classes/telesur/data/TSDataManagerDelegate.h"; sourceTree = SOURCE_ROOT; };
 		BCE9C4C419B4F22E0085A5ED /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		BCEDABBC1A60B18B0059C357 /* acerca@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "acerca@3x.png"; path = "teleSUR/Images/acerca@3x.png"; sourceTree = SOURCE_ROOT; };
+		BCEDABBD1A60B18B0059C357 /* blog@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "blog@3x.png"; path = "teleSUR/Images/blog@3x.png"; sourceTree = SOURCE_ROOT; };
+		BCEDABBE1A60B18B0059C357 /* buscar@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "buscar@3x.png"; path = "teleSUR/Images/buscar@3x.png"; sourceTree = SOURCE_ROOT; };
+		BCEDABBF1A60B18B0059C357 /* menu-logo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "menu-logo@3x.png"; path = "teleSUR/Images/menu-logo@3x.png"; sourceTree = SOURCE_ROOT; };
+		BCEDABC01A60B18B0059C357 /* noticias@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "noticias@3x.png"; path = "teleSUR/Images/noticias@3x.png"; sourceTree = SOURCE_ROOT; };
+		BCEDABC11A60B18B0059C357 /* opinion@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "opinion@3x.png"; path = "teleSUR/Images/opinion@3x.png"; sourceTree = SOURCE_ROOT; };
+		BCEDABC21A60B18B0059C357 /* programa@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "programa@3x.png"; path = "teleSUR/Images/programa@3x.png"; sourceTree = SOURCE_ROOT; };
+		BCEDABC31A60B18B0059C357 /* reportaje@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "reportaje@3x.png"; path = "teleSUR/Images/reportaje@3x.png"; sourceTree = SOURCE_ROOT; };
+		BCEDABC41A60B18B0059C357 /* videos-bullet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "videos-bullet.png"; path = "teleSUR/Images/videos-bullet.png"; sourceTree = SOURCE_ROOT; };
+		BCEDABC51A60B18B0059C357 /* videos-bullet@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "videos-bullet@2x.png"; path = "teleSUR/Images/videos-bullet@2x.png"; sourceTree = SOURCE_ROOT; };
+		BCEDABC61A60B18B0059C357 /* videos-bullet@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "videos-bullet@3x.png"; path = "teleSUR/Images/videos-bullet@3x.png"; sourceTree = SOURCE_ROOT; };
 		BCEE96E71972C97000E03F83 /* NSDictionary_Datos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSDictionary_Datos.h; path = teleSUR/Source/NSDictionary_Datos.h; sourceTree = SOURCE_ROOT; };
 		BCEE96E81972C97000E03F83 /* NSDictionary_Datos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSDictionary_Datos.m; path = teleSUR/Source/NSDictionary_Datos.m; sourceTree = SOURCE_ROOT; };
 		BCEE971E1972CAC300E03F83 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -1768,46 +1813,55 @@
 			children = (
 				BCA6A2DA19CD1C9F0021B243 /* acerca.png */,
 				BCA6A2DB19CD1C9F0021B243 /* acerca@2x.png */,
+				BCEDABBC1A60B18B0059C357 /* acerca@3x.png */,
+				BCA6A2C419CD1BD80021B243 /* audio.png */,
+				BCA6A2C519CD1BD80021B243 /* audio@2x.png */,
 				BC6805FC1A2482680038930C /* back.png */,
 				BC6805FD1A2482680038930C /* back@2x.png */,
 				BC6805FE1A2482680038930C /* back@3x.png */,
 				BCA6A2DC19CD1C9F0021B243 /* blog.png */,
 				BCA6A2DD19CD1C9F0021B243 /* blog@2x.png */,
+				BCEDABBD1A60B18B0059C357 /* blog@3x.png */,
 				BCA6A2DE19CD1C9F0021B243 /* buscar.png */,
 				BCA6A2DF19CD1C9F0021B243 /* buscar@2x.png */,
+				BCEDABBE1A60B18B0059C357 /* buscar@3x.png */,
 				BCA6A2E019CD1C9F0021B243 /* home.png */,
 				BCA6A2E119CD1C9F0021B243 /* home@2x.png */,
 				BC13773B19F05BF3002C47F1 /* home-cell-shadow.png */,
 				BC13773C19F05BF3002C47F1 /* home-cell-shadow@2x.png */,
-				BCA6A2E219CD1C9F0021B243 /* multimedia.png */,
-				BCA6A2E319CD1C9F0021B243 /* multimedia@2x.png */,
+				BC8BA38019CFE0D50018BA0B /* icon-menu-header.png */,
+				BC8BA37B19CFE0C10018BA0B /* logo-menu-header.png */,
+				BCA6A2D019CD1BF50021B243 /* menu-logo.png */,
+				BCA6A2D119CD1BF50021B243 /* menu-logo@2x.png */,
+				BCEDABBF1A60B18B0059C357 /* menu-logo@3x.png */,
 				BCA6A2E419CD1C9F0021B243 /* noticias.png */,
 				BCA6A2E519CD1C9F0021B243 /* noticias@2x.png */,
+				BCEDABC01A60B18B0059C357 /* noticias@3x.png */,
 				BCA6A2E619CD1C9F0021B243 /* opinion.png */,
 				BCA6A2E719CD1C9F0021B243 /* opinion@2x.png */,
+				BCEDABC11A60B18B0059C357 /* opinion@3x.png */,
 				BCA6A2E819CD1C9F0021B243 /* programa.png */,
 				BCA6A2E919CD1C9F0021B243 /* programa@2x.png */,
+				BCEDABC21A60B18B0059C357 /* programa@3x.png */,
 				BC6805ED1A246ED70038930C /* refresh.png */,
 				BC6805EE1A246ED70038930C /* refresh@2x.png */,
 				BC6805EF1A246ED70038930C /* refresh@3x.png */,
 				BCA6A2EA19CD1C9F0021B243 /* reportaje.png */,
 				BCA6A2EB19CD1C9F0021B243 /* reportaje@2x.png */,
+				BCEDABC31A60B18B0059C357 /* reportaje@3x.png */,
+				BCA6A2CA19CD1BE50021B243 /* senal.png */,
+				BCA6A2CB19CD1BE50021B243 /* senal@2x.png */,
 				BC6805FF1A2482680038930C /* share.png */,
 				BC6806001A2482680038930C /* share@2x.png */,
 				BC6806011A2482680038930C /* share@3x.png */,
-				BCA6A2EC19CD1C9F0021B243 /* video.png */,
-				BCA6A2ED19CD1C9F0021B243 /* video@2x.png */,
-				BCA6A2D019CD1BF50021B243 /* menu-logo.png */,
-				BCA6A2D119CD1BF50021B243 /* menu-logo@2x.png */,
-				BCA6A2CA19CD1BE50021B243 /* senal.png */,
-				BCA6A2CB19CD1BE50021B243 /* senal@2x.png */,
-				BCA6A2C419CD1BD80021B243 /* audio.png */,
-				BCA6A2C519CD1BD80021B243 /* audio@2x.png */,
 				BCF294E219CCD395007EEE84 /* SinImagen.png */,
 				BCF294E319CCD395007EEE84 /* SinImagen@2x.png */,
 				BC86E2981A5CF48D00FF319E /* SinImagen@3x.png */,
-				BC8BA38019CFE0D50018BA0B /* icon-menu-header.png */,
-				BC8BA37B19CFE0C10018BA0B /* logo-menu-header.png */,
+				BCA6A2EC19CD1C9F0021B243 /* video.png */,
+				BCA6A2ED19CD1C9F0021B243 /* video@2x.png */,
+				BCEDABC41A60B18B0059C357 /* videos-bullet.png */,
+				BCEDABC51A60B18B0059C357 /* videos-bullet@2x.png */,
+				BCEDABC61A60B18B0059C357 /* videos-bullet@3x.png */,
 			);
 			name = iPhone;
 			sourceTree = "<group>";
@@ -2435,6 +2489,7 @@
 				BCD544FF1A5796CA00276784 /* Default-Portrait@2x.png in Resources */,
 				BC8BA38119CFE0D50018BA0B /* icon-menu-header.png in Resources */,
 				BC8BA3EF19D07E5D0018BA0B /* ipad-home.png in Resources */,
+				BCEDABCB1A60B18B0059C357 /* blog@3x.png in Resources */,
 				BCA6A32219CD1C9F0021B243 /* opinion@2x.png in Resources */,
 				BCA6A33A19CD1C9F0021B243 /* video@2x.png in Resources */,
 				BC8BA41719D07E5D0018BA0B /* ipad-reportaje.png in Resources */,
@@ -2445,6 +2500,7 @@
 				BC5639D119CA57F700C10BCB /* Roboto-MediumItalic.ttf in Resources */,
 				BCA6A31A19CD1C9F0021B243 /* noticias@2x.png in Resources */,
 				BC56387819CA54FA00C10BCB /* TSClipListadoTableViewController.xib in Resources */,
+				BCEDABE31A60B18B0059C357 /* reportaje@3x.png in Resources */,
 				BCBC3C9219F059F100C3379F /* icon50.png in Resources */,
 				BCA6A32619CD1C9F0021B243 /* programa.png in Resources */,
 				BCA6A32E19CD1C9F0021B243 /* reportaje.png in Resources */,
@@ -2466,6 +2522,7 @@
 				BC56389219CA562D00C10BCB /* ClipEstandarTableCellView.xib in Resources */,
 				BC9D36EF19DC774B009D09A8 /* BlogHomeCollectionCell.xib in Resources */,
 				BC8BA41319D07E5D0018BA0B /* ipad-programa@2x.png in Resources */,
+				BCEDABD71A60B18B0059C357 /* noticias@3x.png in Resources */,
 				BC5638C419CA56D800C10BCB /* HomeTopTableViewCell.xib in Resources */,
 				BCF294CF19CCC88B007EEE84 /* MainStoryboard_iPhone.storyboard in Resources */,
 				BCBC3C8E19F059F100C3379F /* icon40.png in Resources */,
@@ -2479,6 +2536,7 @@
 				BCA6A2EE19CD1C9F0021B243 /* acerca.png in Resources */,
 				BCBC3CAC19F05A3100C3379F /* Default.png in Resources */,
 				BC8BA41B19D07E5D0018BA0B /* ipad-reportaje@2x.png in Resources */,
+				BCEDABCF1A60B18B0059C357 /* buscar@3x.png in Resources */,
 				BCA6A30A19CD1C9F0021B243 /* home@2x.png in Resources */,
 				BCBC3C9C19F059F100C3379F /* icon80.png in Resources */,
 				BCA6A2CE19CD1BE50021B243 /* senal@2x.png in Resources */,
@@ -2497,36 +2555,40 @@
 				BCBC3C9819F059F100C3379F /* icon72.png in Resources */,
 				BC5638B119CA56A200C10BCB /* VideoDetailCellView.xib in Resources */,
 				BC8BA3F719D07E5D0018BA0B /* ipad-multimedia.png in Resources */,
+				BCEDABD31A60B18B0059C357 /* menu-logo@3x.png in Resources */,
 				BC5639A919CA57F700C10BCB /* Roboto-Bold.ttf in Resources */,
 				BCCBEF0D19DCAD480001C2BD /* OpinionHomeCollectionViewCell.xib in Resources */,
 				BC8BA45A19D21CB40018BA0B /* icon-video.png in Resources */,
 				BC8BA41F19D07E5D0018BA0B /* ipad-video.png in Resources */,
-				BCA6A30E19CD1C9F0021B243 /* multimedia.png in Resources */,
 				BC5639C519CA57F700C10BCB /* Roboto-Light.ttf in Resources */,
 				BC8BA3FF19D07E5D0018BA0B /* ipad-noticias.png in Resources */,
 				BC56382519CA516300C10BCB /* psst2.wav in Resources */,
 				BCBC3CA619F059F100C3379F /* icon152.png in Resources */,
 				BC6806161A2482680038930C /* share@3x.png in Resources */,
 				BC8BA37C19CFE0C10018BA0B /* logo-menu-header.png in Resources */,
+				BCEDABDF1A60B18B0059C357 /* programa@3x.png in Resources */,
 				BCBC3C9A19F059F100C3379F /* icon76.png in Resources */,
 				BC6806121A2482680038930C /* share@2x.png in Resources */,
+				BCEDABEF1A60B18B0059C357 /* videos-bullet@3x.png in Resources */,
 				BC5639CD19CA57F700C10BCB /* Roboto-Medium.ttf in Resources */,
 				BC6805F81A246ED70038930C /* refresh@3x.png in Resources */,
 				BCA053251A1CFBF900946420 /* Images.xcassets in Resources */,
+				BCEDABEB1A60B18B0059C357 /* videos-bullet@2x.png in Resources */,
 				BC5A008019D3981A0091EFF3 /* RelatedRSSTableViewCell.xib in Resources */,
 				BCBC3CA419F059F100C3379F /* icon144.png in Resources */,
 				BCBC3C9019F059F100C3379F /* icon44.png in Resources */,
 				BC8BA3D719D07E5D0018BA0B /* ipad-acerca.png in Resources */,
 				BCBC3C8819F059F100C3379F /* icon22.png in Resources */,
+				BCEDABC71A60B18B0059C357 /* acerca@3x.png in Resources */,
 				BC5639AD19CA57F700C10BCB /* Roboto-BoldCondensed.ttf in Resources */,
 				BCA6A33619CD1C9F0021B243 /* video.png in Resources */,
 				BC5639B919CA57F700C10BCB /* Roboto-Condensed.ttf in Resources */,
 				BC68060A1A2482680038930C /* back@3x.png in Resources */,
 				BC8BA38619CFF4020018BA0B /* MainStoryboard_iPad.storyboard in Resources */,
 				BC8BA42719D07E5D0018BA0B /* live-bullet.png in Resources */,
-				BCA6A31219CD1C9F0021B243 /* multimedia@2x.png in Resources */,
 				BC8BA3FB19D07E5D0018BA0B /* ipad-multimedia@2x.png in Resources */,
 				BCBC3C9619F059F100C3379F /* icon58.png in Resources */,
+				BCEDABDB1A60B18B0059C357 /* opinion@3x.png in Resources */,
 				BC86E2991A5CF48D00FF319E /* SinImagen@3x.png in Resources */,
 				BC5639B519CA57F700C10BCB /* Roboto-BoldItalic.ttf in Resources */,
 				BC5639D919CA57F700C10BCB /* Roboto-Thin.ttf in Resources */,
@@ -2541,6 +2603,7 @@
 				BC8BA40319D07E5D0018BA0B /* ipad-noticias@2x.png in Resources */,
 				BC8BA3DF19D07E5D0018BA0B /* ipad-blog.png in Resources */,
 				BC9B8CC919C7851D0033D34A /* menu-button.png in Resources */,
+				BCEDABE71A60B18B0059C357 /* videos-bullet.png in Resources */,
 				BC5639C919CA57F700C10BCB /* Roboto-LightItalic.ttf in Resources */,
 				BCA0E73719F07FB200E47033 /* icon180.png in Resources */,
 				BCA6A2FA19CD1C9F0021B243 /* blog@2x.png in Resources */,
@@ -2592,10 +2655,10 @@
 				BC5639A219CA57F700C10BCB /* Roboto-Black.ttf in Resources */,
 				BC56389319CA562D00C10BCB /* ClipEstandarTableCellView.xib in Resources */,
 				BCA0E71C19F07D5200E47033 /* icon-mult57.png in Resources */,
-				BCA6A31319CD1C9F0021B243 /* multimedia@2x.png in Resources */,
 				BCA0E71219F07D5200E47033 /* icon-mult25.png in Resources */,
 				BCA0E72E19F07D5200E47033 /* icon-mult152.png in Resources */,
 				BC6805F91A246ED70038930C /* refresh@3x.png in Resources */,
+				BCEDABD81A60B18B0059C357 /* noticias@3x.png in Resources */,
 				BC5639CA19CA57F700C10BCB /* Roboto-LightItalic.ttf in Resources */,
 				BCA6A33B19CD1C9F0021B243 /* video@2x.png in Resources */,
 				BC8BA3EC19D07E5D0018BA0B /* ipad-buscar@2x.png in Resources */,
@@ -2609,6 +2672,7 @@
 				BC5639B219CA57F700C10BCB /* Roboto-BoldCondensedItalic.ttf in Resources */,
 				BC8BA3F819D07E5D0018BA0B /* ipad-multimedia.png in Resources */,
 				BC5639AE19CA57F700C10BCB /* Roboto-BoldCondensed.ttf in Resources */,
+				BCEDABF01A60B18B0059C357 /* videos-bullet@3x.png in Resources */,
 				BC6805F11A246ED70038930C /* refresh.png in Resources */,
 				BC5637EE19CA501600C10BCB /* menu-button@2x.png in Resources */,
 				BC8BA42819D07E5D0018BA0B /* live-bullet.png in Resources */,
@@ -2631,6 +2695,7 @@
 				BCF294D019CCC88B007EEE84 /* MainStoryboard_iPhone.storyboard in Resources */,
 				BC6806031A2482680038930C /* back.png in Resources */,
 				BC86E29A1A5CF48D00FF319E /* SinImagen@3x.png in Resources */,
+				BCEDABE81A60B18B0059C357 /* videos-bullet.png in Resources */,
 				BC56382619CA516300C10BCB /* psst2.wav in Resources */,
 				BCA053381A1D0E5F00946420 /* Default-Landscape.png in Resources */,
 				BC8BA40419D07E5D0018BA0B /* ipad-noticias@2x.png in Resources */,
@@ -2639,14 +2704,17 @@
 				BC8BA42C19D07E5D0018BA0B /* live-bullet@2x.png in Resources */,
 				BC56382219CA516300C10BCB /* psst1.wav in Resources */,
 				BC8BA42419D07E5D0018BA0B /* ipad-video@2x.png in Resources */,
+				BCEDABC81A60B18B0059C357 /* acerca@3x.png in Resources */,
 				BCA0E71E19F07D5200E47033 /* icon-mult58.png in Resources */,
 				BC8BA3FC19D07E5D0018BA0B /* ipad-multimedia@2x.png in Resources */,
 				BC5639AA19CA57F700C10BCB /* Roboto-Bold.ttf in Resources */,
+				BCEDABD41A60B18B0059C357 /* menu-logo@3x.png in Resources */,
 				BCA6A30319CD1C9F0021B243 /* buscar@2x.png in Resources */,
 				BCD514611A5F049700F50484 /* Default-Portrait.png in Resources */,
 				BC8BA3B319CFF5990018BA0B /* NewsFirstCollectionCell.xib in Resources */,
 				BC5639D619CA57F700C10BCB /* Roboto-Regular.ttf in Resources */,
 				BCA6A2C719CD1BD80021B243 /* audio.png in Resources */,
+				BCEDABDC1A60B18B0059C357 /* opinion@3x.png in Resources */,
 				BC8BA41419D07E5D0018BA0B /* ipad-programa@2x.png in Resources */,
 				BC5637EA19CA501600C10BCB /* menu-button.png in Resources */,
 				BCA0E72019F07D5200E47033 /* icon-mult72.png in Resources */,
@@ -2656,7 +2724,6 @@
 				BCA6A32319CD1C9F0021B243 /* opinion@2x.png in Resources */,
 				BCCBEF0E19DCAD480001C2BD /* OpinionHomeCollectionViewCell.xib in Resources */,
 				BC8BA41019D07E5D0018BA0B /* ipad-programa.png in Resources */,
-				BCA6A30F19CD1C9F0021B243 /* multimedia.png in Resources */,
 				BC8BA3B819CFF5BC0018BA0B /* NewsDefaultCollectionCell.xib in Resources */,
 				BCA0E71A19F07D5200E47033 /* icon-mult50.png in Resources */,
 				BC8BA41819D07E5D0018BA0B /* ipad-reportaje.png in Resources */,
@@ -2671,8 +2738,10 @@
 				BC5639DE19CA57F700C10BCB /* Roboto-ThinItalic.ttf in Resources */,
 				BCA6A31719CD1C9F0021B243 /* noticias.png in Resources */,
 				BC61E88E19EF6CA50093526C /* Default-568h@2x.png in Resources */,
+				BCEDABCC1A60B18B0059C357 /* blog@3x.png in Resources */,
 				BC5639C219CA57F700C10BCB /* Roboto-Italic.ttf in Resources */,
 				BC8BA40019D07E5D0018BA0B /* ipad-noticias.png in Resources */,
+				BCEDABD01A60B18B0059C357 /* buscar@3x.png in Resources */,
 				BC56389719CA562D00C10BCB /* FirstTableCellView.xib in Resources */,
 				BC5639A619CA57F700C10BCB /* Roboto-BlackItalic.ttf in Resources */,
 				BC9D36F019DC774B009D09A8 /* BlogHomeCollectionCell.xib in Resources */,
@@ -2686,9 +2755,12 @@
 				BC5A008119D3981A0091EFF3 /* RelatedRSSTableViewCell.xib in Resources */,
 				BCA6A2F319CD1C9F0021B243 /* acerca@2x.png in Resources */,
 				BC5638CD19CA56D800C10BCB /* HomeVideoTableViewCell.xib in Resources */,
+				BCEDABE41A60B18B0059C357 /* reportaje@3x.png in Resources */,
 				BC87426C19ABEC1400B895B9 /* Localizable.strings in Resources */,
 				BCA6A30B19CD1C9F0021B243 /* home@2x.png in Resources */,
+				BCEDABE01A60B18B0059C357 /* programa@3x.png in Resources */,
 				BC8BA38219CFE0D50018BA0B /* icon-menu-header.png in Resources */,
+				BCEDABEC1A60B18B0059C357 /* videos-bullet@2x.png in Resources */,
 				BC8BA37D19CFE0C10018BA0B /* logo-menu-header.png in Resources */,
 				BCA053261A1CFBFC00946420 /* Images.xcassets in Resources */,
 				BCF294E519CCD395007EEE84 /* SinImagen.png in Resources */,
@@ -2738,7 +2810,6 @@
 				BC8BA41919D07E5D0018BA0B /* ipad-reportaje.png in Resources */,
 				BCA6A2FC19CD1C9F0021B243 /* blog@2x.png in Resources */,
 				BC5638B819CA56BE00C10BCB /* VerMasClipsTableCellView.xib in Resources */,
-				BCA6A31419CD1C9F0021B243 /* multimedia@2x.png in Resources */,
 				BC8BA3B419CFF5990018BA0B /* NewsFirstCollectionCell.xib in Resources */,
 				BCA6A32819CD1C9F0021B243 /* programa.png in Resources */,
 				BC5639B319CA57F700C10BCB /* Roboto-BoldCondensedItalic.ttf in Resources */,
@@ -2757,10 +2828,12 @@
 				BCBC3C9F19F059F100C3379F /* icon100.png in Resources */,
 				BCBC3C8D19F059F100C3379F /* icon29.png in Resources */,
 				BC8BA38819CFF4020018BA0B /* MainStoryboard_iPad.storyboard in Resources */,
+				BCEDABD51A60B18B0059C357 /* menu-logo@3x.png in Resources */,
 				BCA0E73319F07E9700E47033 /* Default-Landscape.png in Resources */,
-				BCA6A31019CD1C9F0021B243 /* multimedia.png in Resources */,
 				BCBC3C9D19F059F100C3379F /* icon80.png in Resources */,
 				BCBC3C9919F059F100C3379F /* icon72.png in Resources */,
+				BCEDABD91A60B18B0059C357 /* noticias@3x.png in Resources */,
+				BCEDABF11A60B18B0059C357 /* videos-bullet@3x.png in Resources */,
 				BCBC3C9119F059F100C3379F /* icon44.png in Resources */,
 				BCA0E73819F07FB200E47033 /* icon180.png in Resources */,
 				BC68060C1A2482680038930C /* back@3x.png in Resources */,
@@ -2791,13 +2864,16 @@
 				BCA6A31C19CD1C9F0021B243 /* noticias@2x.png in Resources */,
 				BCA6A30819CD1C9F0021B243 /* home.png in Resources */,
 				BC5639AB19CA57F700C10BCB /* Roboto-Bold.ttf in Resources */,
+				BCEDABED1A60B18B0059C357 /* videos-bullet@2x.png in Resources */,
 				BCBC3CAB19F05A3100C3379F /* Default-568h@2x.png in Resources */,
 				BC5639DB19CA57F700C10BCB /* Roboto-Thin.ttf in Resources */,
+				BCEDABD11A60B18B0059C357 /* buscar@3x.png in Resources */,
 				BCBC3C9319F059F100C3379F /* icon50.png in Resources */,
 				BC56387A19CA54FA00C10BCB /* TSClipListadoTableViewController.xib in Resources */,
 				BC5639CF19CA57F700C10BCB /* Roboto-Medium.ttf in Resources */,
 				BC5639BB19CA57F700C10BCB /* Roboto-Condensed.ttf in Resources */,
 				BC5639BF19CA57F700C10BCB /* Roboto-CondensedItalic.ttf in Resources */,
+				BCEDABE11A60B18B0059C357 /* programa@3x.png in Resources */,
 				BC5638CE19CA56D800C10BCB /* HomeVideoTableViewCell.xib in Resources */,
 				BC6805FA1A246ED70038930C /* refresh@3x.png in Resources */,
 				BCBC3CA719F059F100C3379F /* icon152.png in Resources */,
@@ -2806,10 +2882,12 @@
 				BC13773F19F05BF3002C47F1 /* home-cell-shadow.png in Resources */,
 				BC8BA3E519D07E5D0018BA0B /* ipad-blog@2x.png in Resources */,
 				BC1F248019E8449A0059D60E /* MainStoryboard_iPhone.storyboard in Resources */,
+				BCEDABE91A60B18B0059C357 /* videos-bullet.png in Resources */,
 				BC8BA42519D07E5D0018BA0B /* ipad-video@2x.png in Resources */,
 				BC8BA41519D07E5D0018BA0B /* ipad-programa@2x.png in Resources */,
 				BCA6A2F419CD1C9F0021B243 /* acerca@2x.png in Resources */,
 				BCA6A30C19CD1C9F0021B243 /* home@2x.png in Resources */,
+				BCEDABDD1A60B18B0059C357 /* opinion@3x.png in Resources */,
 				BCBC3CAD19F05A3100C3379F /* Default.png in Resources */,
 				BC6805F61A246ED70038930C /* refresh@2x.png in Resources */,
 				BCBC3CA319F059F100C3379F /* icon120.png in Resources */,
@@ -2820,15 +2898,18 @@
 				BC419D5C19AC18D800C632C9 /* Localizable.strings in Resources */,
 				BCA6A2D819CD1BF50021B243 /* menu-logo@2x.png in Resources */,
 				BC6806141A2482680038930C /* share@2x.png in Resources */,
+				BCEDABE51A60B18B0059C357 /* reportaje@3x.png in Resources */,
 				BC5637D919CA4F6C00C10BCB /* plaintableheader.png in Resources */,
 				BCBC3C9519F059F100C3379F /* icon57.png in Resources */,
 				BC8BA3E919D07E5D0018BA0B /* ipad-buscar.png in Resources */,
 				BC5639B719CA57F700C10BCB /* Roboto-BoldItalic.ttf in Resources */,
 				BC6806041A2482680038930C /* back.png in Resources */,
 				BC5639C719CA57F700C10BCB /* Roboto-Light.ttf in Resources */,
+				BCEDABCD1A60B18B0059C357 /* blog@3x.png in Resources */,
 				BC5638B319CA56A200C10BCB /* VideoDetailCellView.xib in Resources */,
 				BC8BA37E19CFE0C10018BA0B /* logo-menu-header.png in Resources */,
 				BCF294E619CCD395007EEE84 /* SinImagen.png in Resources */,
+				BCEDABC91A60B18B0059C357 /* acerca@3x.png in Resources */,
 				BC8BA3D919D07E5D0018BA0B /* ipad-acerca.png in Resources */,
 				BCBC3C9719F059F100C3379F /* icon58.png in Resources */,
 			);
@@ -2857,7 +2938,6 @@
 				BC56387B19CA54FA00C10BCB /* TSClipListadoTableViewController.xib in Resources */,
 				BCA6A2FD19CD1C9F0021B243 /* blog@2x.png in Resources */,
 				BC9D36F219DC774B009D09A8 /* BlogHomeCollectionCell.xib in Resources */,
-				BCA6A31519CD1C9F0021B243 /* multimedia@2x.png in Resources */,
 				BC6806051A2482680038930C /* back.png in Resources */,
 				BC5639A419CA57F700C10BCB /* Roboto-Black.ttf in Resources */,
 				BC6806151A2482680038930C /* share@2x.png in Resources */,
@@ -2888,9 +2968,12 @@
 				BC56389519CA562D00C10BCB /* ClipEstandarTableCellView.xib in Resources */,
 				BC8BA3F619D07E5D0018BA0B /* ipad-home@2x.png in Resources */,
 				BCA0E71D19F07D5200E47033 /* icon-mult57.png in Resources */,
+				BCEDABD61A60B18B0059C357 /* menu-logo@3x.png in Resources */,
 				BCF294EB19CCD395007EEE84 /* SinImagen@2x.png in Resources */,
 				BC5639BC19CA57F700C10BCB /* Roboto-Condensed.ttf in Resources */,
 				BCA6A32D19CD1C9F0021B243 /* programa@2x.png in Resources */,
+				BCEDABDA1A60B18B0059C357 /* noticias@3x.png in Resources */,
+				BCEDABF21A60B18B0059C357 /* videos-bullet@3x.png in Resources */,
 				BC6805F31A246ED70038930C /* refresh.png in Resources */,
 				BC8BA40619D07E5D0018BA0B /* ipad-noticias@2x.png in Resources */,
 				BC8BA3FE19D07E5D0018BA0B /* ipad-multimedia@2x.png in Resources */,
@@ -2921,14 +3004,16 @@
 				BC5637DA19CA4F6C00C10BCB /* plaintableheader.png in Resources */,
 				BC8BA40E19D07E5D0018BA0B /* ipad-opinion@2x.png in Resources */,
 				BC5637F019CA501600C10BCB /* menu-button@2x.png in Resources */,
+				BCEDABEE1A60B18B0059C357 /* videos-bullet@2x.png in Resources */,
 				BCA0E71B19F07D5200E47033 /* icon-mult50.png in Resources */,
 				BC8BA42A19D07E5D0018BA0B /* live-bullet.png in Resources */,
+				BCEDABD21A60B18B0059C357 /* buscar@3x.png in Resources */,
 				BC56382819CA516300C10BCB /* psst2.wav in Resources */,
 				BC5639D819CA57F700C10BCB /* Roboto-Regular.ttf in Resources */,
 				BCA0E71919F07D5200E47033 /* icon-mult44.png in Resources */,
-				BCA6A31119CD1C9F0021B243 /* multimedia.png in Resources */,
 				BC9B8CCC19C7851D0033D34A /* menu-button.png in Resources */,
 				BCA0E72B19F07D5200E47033 /* icon-mult120.png in Resources */,
+				BCEDABE21A60B18B0059C357 /* programa@3x.png in Resources */,
 				BC8BA3EE19D07E5D0018BA0B /* ipad-buscar@2x.png in Resources */,
 				BCA053271A1CFBFD00946420 /* Images.xcassets in Resources */,
 				BC56382419CA516300C10BCB /* psst1.wav in Resources */,
@@ -2937,10 +3022,12 @@
 				BC8BA37F19CFE0C10018BA0B /* logo-menu-header.png in Resources */,
 				BC5638C719CA56D800C10BCB /* HomeTopTableViewCell.xib in Resources */,
 				BC5639D419CA57F700C10BCB /* Roboto-MediumItalic.ttf in Resources */,
+				BCEDABEA1A60B18B0059C357 /* videos-bullet.png in Resources */,
 				BCCBEF1019DCAD480001C2BD /* OpinionHomeCollectionViewCell.xib in Resources */,
 				BC5A008319D3981A0091EFF3 /* RelatedRSSTableViewCell.xib in Resources */,
 				BCA6A32119CD1C9F0021B243 /* opinion.png in Resources */,
 				BCE09DCF19F081A600528944 /* icon-mult180.png in Resources */,
+				BCEDABDE1A60B18B0059C357 /* opinion@3x.png in Resources */,
 				BC8BA46119D21CB40018BA0B /* icon-video@2x.png in Resources */,
 				BC5639E019CA57F700C10BCB /* Roboto-ThinItalic.ttf in Resources */,
 				BC8BA42219D07E5D0018BA0B /* ipad-video.png in Resources */,
@@ -2951,15 +3038,18 @@
 				BC6558B91A5F3FF90007F021 /* Default-Landscape@2x.png in Resources */,
 				BC56389919CA562D00C10BCB /* FirstTableCellView.xib in Resources */,
 				BC5639A819CA57F700C10BCB /* Roboto-BlackItalic.ttf in Resources */,
+				BCEDABE61A60B18B0059C357 /* reportaje@3x.png in Resources */,
 				BCA6A33119CD1C9F0021B243 /* reportaje.png in Resources */,
 				BC5639C019CA57F700C10BCB /* Roboto-CondensedItalic.ttf in Resources */,
 				BC5638B419CA56A200C10BCB /* VideoDetailCellView.xib in Resources */,
 				BCA0E71519F07D5200E47033 /* icon-mult29.png in Resources */,
 				BCA6A2F519CD1C9F0021B243 /* acerca@2x.png in Resources */,
 				BCF294E719CCD395007EEE84 /* SinImagen.png in Resources */,
+				BCEDABCE1A60B18B0059C357 /* blog@3x.png in Resources */,
 				BC13774419F05BF3002C47F1 /* home-cell-shadow@2x.png in Resources */,
 				BCA0E71119F07D5200E47033 /* icon-mult22.png in Resources */,
 				BC6558B51A5F3F6A0007F021 /* Default-Portrait@2x.png in Resources */,
+				BCEDABCA1A60B18B0059C357 /* acerca@3x.png in Resources */,
 				BC5638CF19CA56D800C10BCB /* HomeVideoTableViewCell.xib in Resources */,
 				BC8BA42E19D07E5D0018BA0B /* live-bullet@2x.png in Resources */,
 			);

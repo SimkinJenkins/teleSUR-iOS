@@ -34,6 +34,8 @@
         NSURLConnection *connection;
         UIImageView *thumb;
 
+        CGRect playerFrame;
+
 }
 
 @property (nonatomic, strong) TSClipPlayerViewController *playerController;

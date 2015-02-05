@@ -178,8 +178,7 @@
     
 }
 
-- (void) DropDownMenuDidChange:(NSString *)identifier :(NSString *)ReturnValue
-{
+- (void) DropDownMenuDidChange:(NSString *)identifier :(NSString *)ReturnValue {
     NSInteger selectedIndex = [[currentTopMenuConfig objectForKey:@"keys"] indexOfObject:ReturnValue];
     NSArray *titles = [currentTopMenuConfig objectForKey:@"titles"];
     [self setNavigationTitle:[titles objectAtIndex:selectedIndex]];
@@ -359,19 +358,6 @@
 
 
 
-/*
-// Maneja los datos recibidos
-- (void)TSMultimediaData:(TSMultimediaData *)data entidadesRecibidas:(NSArray *)array paraEntidad:(NSString *)entidad {
-
-    [super TSMultimediaData:data entidadesRecibidas:array paraEntidad:entidad];
-
-    if([currentSection isEqualToString:@"buscar"]) {
-
-        [searchBar becomeFirstResponder];
-
-    }
-}
-*/
 
 
 

@@ -68,9 +68,10 @@
     return self;
 }
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
+
     [self.view setBackgroundColor: [UIColor blackColor]];
+
 }
 
 - (void)viewDidUnload

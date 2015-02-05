@@ -42,6 +42,8 @@ typedef enum {
 
 @implementation SlideNavigationController
 
+@synthesize enableAutorotate;
+
 #define SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v)  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
 #define MENU_SLIDE_ANIMATION_DURATION .3
 #define MENU_QUICK_SLIDE_ANIMATION_DURATION .18
@@ -807,14 +809,16 @@ static SlideNavigationController *singletonInstance;
 	_menuRevealAnimator = menuRevealAnimator;
 }
 
-- (BOOL)shouldAutorotate
-{
-    return NO;
+- (BOOL)shouldAutorotate {
+
+    return enableAutorotate;
+
 }
 
-- (NSUInteger)supportedInterfaceOrientations
-{
-    return UIInterfaceOrientationMaskPortrait;
+- (NSUInteger)supportedInterfaceOrientations {
+
+    return enableAutorotate ? UIInterfaceOrientationMaskAllButUpsideDown : UIInterfaceOrientationMaskPortrait;
+
 }
 
 @end

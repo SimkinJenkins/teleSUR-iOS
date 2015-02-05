@@ -88,10 +88,6 @@
 
 }
 
-- (CGRect) getVideoIconRect {
-    
-    return CGRectMake(110, 60, 93, 93);
-    
-}
+- (void) setVideoIcon {}
 
 @end

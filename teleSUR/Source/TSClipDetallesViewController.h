@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "TSClipListadoTableViewController.h"
-
+#import "TSClipPlayerViewController.h"
 
 @interface TSClipDetallesViewController : TSClipListadoTableViewController {
 
@@ -32,6 +32,8 @@
     NSURLConnection *connection;
 
     UIImageView *thumb;
+
+    TSClipPlayerViewController *playerController;
 }
 
 // Inicia la vista con el diccionario enviado

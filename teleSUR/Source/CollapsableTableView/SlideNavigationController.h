@@ -49,6 +49,7 @@ typedef  enum{
 @property (nonatomic, assign) BOOL avoidSwitchingToSameClassViewController;
 @property (nonatomic, assign) BOOL enableSwipeGesture;
 @property (nonatomic, assign) BOOL enableShadow;
+@property (nonatomic, assign) BOOL enableAutorotate;
 @property (nonatomic, strong) UIViewController *rightMenu;
 @property (nonatomic, strong) UIViewController *leftMenu;
 @property (nonatomic, strong) UIBarButtonItem *leftBarButtonItem;

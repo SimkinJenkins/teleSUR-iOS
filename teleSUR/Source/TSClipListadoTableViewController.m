@@ -112,11 +112,13 @@
 
     NSDictionary *item = [ [ self getDataArrayForIndexPath:indexPath forDefaultTable:YES ] objectAtIndex:indexPath.row];
 
-    TSClipPlayerViewController *playerController = [[TSClipPlayerViewController alloc] initConClip:item];
+    TSClipDetallesViewController *detailView = [[TSClipDetallesViewController alloc] initWithData:item];
+    [self.navigationController pushViewController:detailView animated:YES];
 
-    [playerController playEnViewController:self
-                      finalizarConSelector:@selector(playerDidFinish)
-                         registrandoAccion:YES];
+//    TSClipPlayerViewController *playerController = [[TSClipPlayerViewController alloc] initConClip:item];
+
+//    CGRect screenBound = [[UIScreen mainScreen] bounds];
+//    [playerController playAtView:self.view withFrame:CGRectMake(0, 0, screenBound.size.width, screenBound.size.width * 0.66) withObserver:self playbackFinish:@selector(playerDidFinish)];
 
 }
 

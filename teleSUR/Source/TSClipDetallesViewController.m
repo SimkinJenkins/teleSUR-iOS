@@ -20,6 +20,8 @@
 #import "DefaultTableViewCell.h"
 #import "UIImageView+WebCache.h"
 
+#import "SlideNavigationController.h"
+
 @implementation TSClipDetallesViewController
 
 #pragma mark -
@@ -31,7 +33,7 @@
         currentItem = itemData;
         isDownloading = NO;
     }
-    
+
     return self;
 }
 
@@ -57,6 +59,10 @@
 
     [super viewDidLoad];
 
+    UISearchBar *searchBar = (UISearchBar *)[self.view viewWithTag:101];
+    searchBar.placeholder = [NSString stringWithFormat:NSLocalizedString(@"searchPlaceholder", nil)];
+    searchBar.hidden = YES;
+
     [self setTableViewConfiguration];
 
     [self configLeftButton];
@@ -66,17 +72,36 @@
     
     [thumb sd_setImageWithURL:[self getThumbURLFromAPIItem:currentItem forceLargeImage:NO]
              placeholderImage:[UIImage imageNamed:@"SinImagen.png"]];
+
+//    self.navigationController.navigationBarHidden = YES;
+
+    [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(configVideo) userInfo:nil repeats:NO];
+
+    [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(deviceOrientationDidChangeNotification:)
+                                                 name:UIDeviceOrientationDidChangeNotification
+                                               object:nil];
+
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reset) name:UIApplicationWillEnterForegroundNotification object:nil];
+
+    [SlideNavigationController sharedInstance].enableAutorotate = YES;
+
 }
 
-- (void)setTableViewConfiguration {
+- (void)viewWillAppear:(BOOL)animated {
 
-    CGRect tableFrame = self.tableViewController.tableView.frame;
-    CGRect navRect = self.navigationController.navigationBar.frame;
-    tableFrame.origin.y = 0;
-    tableFrame.size.height -= navRect.size.height - 10;
+    [super viewWillAppear:animated];
 
-    self.tableViewController.tableView.frame = tableFrame;
-    self.tableViewController.tableView.autoresizingMask = UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin;
+    [[UIApplication sharedApplication] setStatusBarHidden:YES];
+
+    [self reset];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+
+    [super viewDidAppear:animated];
+
 }
 
 - (void)viewDidUnload {
@@ -91,11 +116,17 @@
 
     [super viewWillDisappear:animated];
 
+    [self removeCurrentPlayer];
+
     if( isDownloading ) {
 
         [self resetDownloadButton];
 
     }
+
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIDeviceOrientationDidChangeNotification object:nil];
+    [SlideNavigationController sharedInstance].enableAutorotate = NO;
+    
 }
 
 
@@ -160,6 +191,44 @@
     return cell;
 
 }
+
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    if ( indexPath.row != 0 ) {
+        
+        [super tableView:tableView willDisplayCell:cell forRowAtIndexPath:indexPath];
+        
+    }
+    
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+
+    if( indexPath.row == 0) {
+        return;
+    }
+
+    selectedIndexPath = indexPath;
+
+    NSArray *elements = [ self getDataArrayForIndexPath:indexPath forDefaultTable:YES ];
+
+    if (selectedIndexPath.row < [elements count] || loadMoreCellDisabled) {
+
+        currentItem = [elements objectAtIndex:indexPath.row];
+        [self initTableVariables];
+        [self removeCurrentPlayer];
+        [self configVideo];
+        [self loadData];
+
+    } else {// Se trata de la celda "Ver Más"
+
+        addAtListEnd = YES;
+        [self loadData];
+
+    }
+
+}
+
 
 
 
@@ -245,6 +314,15 @@
     
 }
 
+- (void) initTableVariables {
+
+    [super initTableVariables];
+
+    [self.tableViewController.tableView scrollRectToVisible:CGRectMake(0, 0, 1, 1) animated:NO];
+    loadMoreCellDisabled = NO;
+
+}
+
 
 
 
@@ -282,9 +360,61 @@
         return;
     }
 
-    [super playerDidFinish];
+//    [super playerDidFinish];
 
 }
+
+- (void) deviceOrientationDidChangeNotification:(NSNotification *)notification {
+    
+    UIDeviceOrientation orientation = [[UIDevice currentDevice] orientation];
+    if (orientation == UIDeviceOrientationFaceUp || orientation == UIDeviceOrientationFaceDown || orientation == UIDeviceOrientationUnknown || orientation == UIDeviceOrientationPortraitUpsideDown) {
+        return;
+    }
+
+    CGRect screenBound = [[UIScreen mainScreen] bounds];
+
+    BOOL isLandscape = UIInterfaceOrientationIsLandscape(orientation);
+
+    self.navigationController.navigationBarHidden = YES;
+
+    self.navigationController.navigationBarHidden = isLandscape;
+
+    [UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
+        playerController.view.frame = isLandscape ? screenBound : CGRectMake(0, 0, screenBound.size.width, screenBound.size.width * 0.7);
+    } completion:nil];
+    
+}
+
+- (void) removeCurrentPlayer {
+    if(playerController) {
+        [playerController.moviePlayer stop];
+        [playerController.view removeFromSuperview];
+        playerController = nil;
+    }
+}
+
+- (void)configVideo {
+    
+    playerController = [[TSClipPlayerViewController alloc] initConClip:currentItem];
+    
+    CGRect screenBound = [[UIScreen mainScreen] bounds];
+    
+    [playerController playAtView:self.view withFrame:CGRectMake(0, 0, screenBound.size.width, screenBound.size.width * 0.7) withObserver:self playbackFinish:@selector(playerDidFinish)];
+    
+}
+
+- (void)setTableViewConfiguration {
+    
+    CGRect screenBound = [[UIScreen mainScreen] bounds];
+    
+    CGRect tableFrame = self.tableViewController.tableView.frame;
+    tableFrame.origin.y = screenBound.size.width * 0.7;
+    tableFrame.size.height -= 145;
+    
+    self.tableViewController.tableView.frame = tableFrame;
+    self.tableViewController.tableView.autoresizingMask = UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin;
+}
+
 
 
 
@@ -442,5 +572,33 @@
 - (void) connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
     //do something when downloading failed
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+- (void) reset {
+
+    if( playerController ) {
+        [playerController.moviePlayer prepareToPlay];
+        [playerController.moviePlayer pause];
+    }
+
+}
+
+/*
+-(BOOL)prefersStatusBarHidden{
+    return YES;
+}
+*/
 
 @end

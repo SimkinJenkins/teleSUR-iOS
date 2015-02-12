@@ -113,7 +113,33 @@
     NSDictionary *item = [ [ self getDataArrayForIndexPath:indexPath forDefaultTable:YES ] objectAtIndex:indexPath.row];
 
     TSClipDetallesViewController *detailView = [[TSClipDetallesViewController alloc] initWithData:item];
+
+//    [[SlideNavigationController sharedInstance] addTopViewController:detailView withCompletion:nil];
+/*
+//    if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"7.0"))
+//        self.interactivePopGestureRecognizer.enabled = NO;
+    
+    self.view.userInteractionEnabled = NO;
+    
+    //    [viewController.view addGestureRecognizer:self.tapRecognizer];
+    
+    [self.view.window insertSubview:detailView.view aboveSubview:self.view];
+
+    [self addChildViewController:detailView];
+*/
+
+
+//    [self addChildViewController:detailView];
+//    [self.view addSubview:detailView.view];
+
+//    [self.view.window insertSubview:detailView.view aboveSubview:self.view];
+
+//    [detailView didMoveToParentViewController:self];
     [self.navigationController pushViewController:detailView animated:YES];
+
+    
+    
+    //addChildViewController:detailView];
 
 //    TSClipPlayerViewController *playerController = [[TSClipPlayerViewController alloc] initConClip:item];
 

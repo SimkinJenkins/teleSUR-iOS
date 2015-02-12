@@ -68,8 +68,7 @@ const float NJKFinalProgressValue = 0.9f;
     }
 }
 
-- (void)reset
-{
+- (void)reset {
     _maxLoadCount = _loadingCount = 0;
     _interactive = NO;
     [self setProgress:0.0];

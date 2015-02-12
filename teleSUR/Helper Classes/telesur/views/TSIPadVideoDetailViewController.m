@@ -49,6 +49,31 @@ NSInteger const TS_DETAIL_VIEW_HEIGHT = 764;
 
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+- (void)viewWillAppear:(BOOL)animated {
+    
+    [super viewWillAppear:animated];
+    [self reset];
+
+}
+
 - (void) viewDidAppear:(BOOL)animated {
     
     [super viewDidAppear:animated];
@@ -93,7 +118,9 @@ NSInteger const TS_DETAIL_VIEW_HEIGHT = 764;
     [self sectionSelected:currentSection withTitle:[self getSectionTitleWith:currentSection]];
     
     [self setupVideoView];
-    
+
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reset) name:UIApplicationWillEnterForegroundNotification object:nil];
+
 }
 
 
@@ -324,6 +351,14 @@ NSInteger const TS_DETAIL_VIEW_HEIGHT = 764;
 
 }
 
+- (void) reset {
+    
+    if( playerController ) {
+        [playerController.moviePlayer prepareToPlay];
+        [playerController.moviePlayer pause];
+    }
+    
+}
 
 
 

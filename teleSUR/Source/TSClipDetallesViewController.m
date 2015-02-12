@@ -73,8 +73,6 @@
     [thumb sd_setImageWithURL:[self getThumbURLFromAPIItem:currentItem forceLargeImage:NO]
              placeholderImage:[UIImage imageNamed:@"SinImagen.png"]];
 
-//    self.navigationController.navigationBarHidden = YES;
-
     [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(configVideo) userInfo:nil repeats:NO];
 
     [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
@@ -93,9 +91,21 @@
 
     [super viewWillAppear:animated];
 
-    [[UIApplication sharedApplication] setStatusBarHidden:YES];
-
     [self reset];
+/*
+    CGRect screenBound = [[UIScreen mainScreen] bounds];
+
+    self.view.frame = CGRectMake(screenBound.size.width - 10, screenBound.size.height - 10, 10, 10);
+    self.view.alpha = 0.0;
+
+    [UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
+
+        float yPos = 64;
+        self.view.frame = CGRectMake(0, yPos, screenBound.size.width, screenBound.size.height - yPos);
+        self.view.alpha = 1.0;
+
+    } completion:nil];
+*/
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -126,8 +136,14 @@
 
     [[NSNotificationCenter defaultCenter] removeObserver:self name:UIDeviceOrientationDidChangeNotification object:nil];
     [SlideNavigationController sharedInstance].enableAutorotate = NO;
-    
+
 }
+
+
+
+
+
+
 
 
 
@@ -273,15 +289,15 @@
     button.frame = CGRectMake(0, 0, 23, 23);
     [button setBackgroundImage:[UIImage imageNamed:@"back.png"] forState:UIControlStateNormal];
     
-    [button addTarget:self.navigationController action:@selector(popViewControllerAnimated:) forControlEvents:UIControlEventTouchUpInside];
+    [button addTarget:self.parentViewController.navigationController action:@selector(popViewControllerAnimated:) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *barButtonItem = [[UIBarButtonItem alloc] initWithCustomView:button];
-    [self.navigationItem setLeftBarButtonItem:barButtonItem];
+    [self.parentViewController.navigationItem setLeftBarButtonItem:barButtonItem];
     
 }
 
 - (void) configRightButton {
     
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"share.png"]
+    self.parentViewController.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"share.png"]
                                                                              style:UIBarButtonItemStylePlain
                                                                             target:self
                                                                             action:@selector(shareButtonClicked)];
@@ -375,9 +391,7 @@
 
     BOOL isLandscape = UIInterfaceOrientationIsLandscape(orientation);
 
-    self.navigationController.navigationBarHidden = YES;
-
-    self.navigationController.navigationBarHidden = isLandscape;
+    self.parentViewController.navigationController.navigationBarHidden = isLandscape;
 
     [UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
         playerController.view.frame = isLandscape ? screenBound : CGRectMake(0, 0, screenBound.size.width, screenBound.size.width * 0.7);
@@ -415,6 +429,14 @@
     self.tableViewController.tableView.autoresizingMask = UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin;
 }
 
+- (void) reset {
+    
+    if( playerController ) {
+        [playerController.moviePlayer prepareToPlay];
+        [playerController.moviePlayer pause];
+    }
+    
+}
 
 
 
@@ -575,30 +597,5 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-- (void) reset {
-
-    if( playerController ) {
-        [playerController.moviePlayer prepareToPlay];
-        [playerController.moviePlayer pause];
-    }
-
-}
-
-/*
--(BOOL)prefersStatusBarHidden{
-    return YES;
-}
-*/
 
 @end

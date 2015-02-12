@@ -365,6 +365,25 @@ static SlideNavigationController *singletonInstance;
 	return nil;
 }
 
+- (void)addTopViewController:(UIViewController *)viewController withCompletion:(void (^)())completion {
+
+    if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"7.0"))
+        self.interactivePopGestureRecognizer.enabled = NO;
+    
+    self.topViewController.view.userInteractionEnabled = NO;
+
+//    [viewController.view addGestureRecognizer:self.tapRecognizer];
+
+    [self.view.window insertSubview:viewController.view aboveSubview:self.topViewController.view];
+
+    [self.topViewController addChildViewController:viewController];
+
+//    [self updateMenuFrameAndTransformAccordingToOrientation];
+
+}
+
+
+
 #pragma mark - Private Methods -
 
 - (void)updateMenuFrameAndTransformAccordingToOrientation
@@ -564,7 +583,6 @@ static SlideNavigationController *singletonInstance;
 	
 	[removingMenuViewController.view removeFromSuperview];
 	[self.view.window insertSubview:menuViewController.view atIndex:0];
-
 
 	[self updateMenuFrameAndTransformAccordingToOrientation];
 	

@@ -21,21 +21,56 @@
 #import "UIImageView+WebCache.h"
 
 #import "SlideNavigationController.h"
+#import "TSProgramListElement.h"
+
+#import "TSProgramListXMLParser.h"
+
+NSInteger const MENU_FAST_VELOCITY_FOR_SWIPE_FOLLOW_DIRECTION = 1200;
+NSInteger const MENU_DEFAULT_SLIDE_OFFSET = 60;
+
+CGFloat const VIEW_Y_POSITION = 0;//65;
+CGFloat const RIGHT_BOTTOM_MINIMIZED_VIEW_MARGIN = 7;
+
+NSInteger const TS_VIEW_STATUS_DEFAULT = 0;
+NSInteger const TS_VIEW_STATUS_MAXIMIZED = 1;
+NSInteger const TS_VIEW_STATUS_MINIMIZED = 2;
+NSInteger const TS_VIEW_STATUS_FULLSCREEN = 3;
+NSInteger const TS_VIEW_STATUS_ON_TRANSITION = 4;
 
 @implementation TSClipDetallesViewController
 
 #pragma mark -
 #pragma mark Init
 
-- (id)initWithData:(NSDictionary *)itemData {
+- (id) initWithData:(NSDictionary *)itemData andSection:(NSString *)section {
 
     if ((self = [super init])) {
         currentItem = itemData;
+        currentSection = section;
         isDownloading = NO;
+        isLiveStream = NO;
     }
 
     return self;
 }
+
+- (id) initWithURL:(NSString *)URL andTitle:(NSString *)title {
+
+    if ((self = [super init])) {
+        liveURL = URL;
+        liveURLTitle = title;
+        isDownloading = NO;
+        isLiveStream = YES;
+    }
+
+    return self;
+
+}
+
+
+
+
+
 
 
 
@@ -54,36 +89,21 @@
 
 - (void)viewDidLoad {
 
-    loadMoreCellDisabled = YES;
-    addAtListEnd = YES;
-
     [super viewDidLoad];
 
-    UISearchBar *searchBar = (UISearchBar *)[self.view viewWithTag:101];
-    searchBar.placeholder = [NSString stringWithFormat:NSLocalizedString(@"searchPlaceholder", nil)];
-    searchBar.hidden = YES;
+    self.view.backgroundColor = [UIColor clearColor];
+
+    [self setSearchBarConfiguration];
 
     [self setTableViewConfiguration];
 
-    [self configLeftButton];
-    [self configRightButton];
+    [self loadShareImageInBackground];
 
-    thumb = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 300, 200)];
-    
-    [thumb sd_setImageWithURL:[self getThumbURLFromAPIItem:currentItem forceLargeImage:NO]
-             placeholderImage:[UIImage imageNamed:@"SinImagen.png"]];
-
-    [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(configVideo) userInfo:nil repeats:NO];
-
-    [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(deviceOrientationDidChangeNotification:)
-                                                 name:UIDeviceOrientationDidChangeNotification
-                                               object:nil];
-
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reset) name:UIApplicationWillEnterForegroundNotification object:nil];
+    [self setViewNotifications];
 
     [SlideNavigationController sharedInstance].enableAutorotate = YES;
+
+    [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(configVideo) userInfo:nil repeats:NO];
 
 }
 
@@ -92,25 +112,7 @@
     [super viewWillAppear:animated];
 
     [self reset];
-/*
-    CGRect screenBound = [[UIScreen mainScreen] bounds];
-
-    self.view.frame = CGRectMake(screenBound.size.width - 10, screenBound.size.height - 10, 10, 10);
-    self.view.alpha = 0.0;
-
-    [UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
-
-        float yPos = 64;
-        self.view.frame = CGRectMake(0, yPos, screenBound.size.width, screenBound.size.height - yPos);
-        self.view.alpha = 1.0;
-
-    } completion:nil];
-*/
-}
-
-- (void)viewDidAppear:(BOOL)animated {
-
-    [super viewDidAppear:animated];
+    [self showView];
 
 }
 
@@ -162,6 +164,12 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
 
+    if ( isLiveStream ) {
+        
+        return 45;
+
+    }
+
     if(indexPath.row == 0) {
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"VideoDetailCellView"];
         if (cell == nil) {
@@ -187,54 +195,66 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 
     UITableViewCell *cell;
-    if(indexPath.row == 0) {
-        cell = [tableView dequeueReusableCellWithIdentifier:@"VideoDetailCellView"];
+
+    if ( isLiveStream ) {
+        
+        cell = [tableView dequeueReusableCellWithIdentifier:@"TSProgramListTableViewCell"];
         if (cell == nil) {
-            cell = (UITableViewCell *)[[[NSBundle mainBundle] loadNibNamed:@"VideoDetailCellView" owner:self options:nil] lastObject];
+            cell = (UITableViewCell *)[[[NSBundle mainBundle] loadNibNamed:@"TSProgramListTableViewCell" owner:self options:nil] lastObject];
+        }
+        TSProgramListElement *data = [tableElements objectAtIndex:indexPath.row];
+        UILabel *title = (UILabel *)[cell viewWithTag:5003];
+        UILabel *time = (UILabel *)[cell viewWithTag:5002];
+
+        title.text = data.name;
+        time.text = data.scheduleString;
+
+    } else {
+
+        if(indexPath.row == 0) {
+            cell = [tableView dequeueReusableCellWithIdentifier:@"VideoDetailCellView"];
+            if (cell == nil) {
+                cell = (UITableViewCell *)[[[NSBundle mainBundle] loadNibNamed:@"VideoDetailCellView" owner:self options:nil] lastObject];
+            }
+
+            [(UIButton *)[cell viewWithTag:103] addTarget:self action:@selector(downloadClip:) forControlEvents:UIControlEventTouchUpInside];
+
+            [((DefaultTableViewCell *)cell) setData:[tableElements objectAtIndex:indexPath.row]];
+
+        } else if(indexPath.row > [tableElements count]) {
+            cell = [tableView dequeueReusableCellWithIdentifier:@"VerMasClipsTableCellView"];
+            ((UILabel *)[cell viewWithTag:1]).text = [NSString stringWithFormat:NSLocalizedString(@"verMasCellText", nil)];
+        } else {
+            cell = [super tableView:tableView cellForRowAtIndexPath:indexPath];
         }
 
-        [(UIButton *)[cell viewWithTag:103] addTarget:self action:@selector(downloadClip:) forControlEvents:UIControlEventTouchUpInside];
-
-        [((DefaultTableViewCell *)cell) setData:[tableElements objectAtIndex:indexPath.row]];
-
-    } else if(indexPath.row > [tableElements count]) {
-        cell = [tableView dequeueReusableCellWithIdentifier:@"VerMasClipsTableCellView"];
-        ((UILabel *)[cell viewWithTag:1]).text = [NSString stringWithFormat:NSLocalizedString(@"verMasCellText", nil)];
-    } else {
-        cell = [super tableView:tableView cellForRowAtIndexPath:indexPath];
     }
-
     return cell;
 
 }
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    if ( indexPath.row != 0 ) {
-        
+
+    if ( indexPath.row != 0 && !isLiveStream) {
+
         [super tableView:tableView willDisplayCell:cell forRowAtIndexPath:indexPath];
-        
+
     }
-    
+
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 
-    if( indexPath.row == 0) {
+    if( indexPath.row == 0 || isLiveStream ) {
         return;
     }
 
     selectedIndexPath = indexPath;
-
     NSArray *elements = [ self getDataArrayForIndexPath:indexPath forDefaultTable:YES ];
 
     if (selectedIndexPath.row < [elements count] || loadMoreCellDisabled) {
 
-        currentItem = [elements objectAtIndex:indexPath.row];
-        [self initTableVariables];
-        [self removeCurrentPlayer];
-        [self configVideo];
-        [self loadData];
+        [self setData:[elements objectAtIndex:indexPath.row] andSection:currentSection];
 
     } else {// Se trata de la celda "Ver Más"
 
@@ -261,27 +281,126 @@
 
 
 
-/*
+
+
 #pragma mark -
-#pragma mark Table view delegate
+#pragma mark Custom Public Overrided Functions
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+- (void) initViewVariables {
 
-    selectedIndexPath = indexPath;
-
-    [self playSelectedClip:indexPath];
+    [super initViewVariables];
+    viewStatus = TS_VIEW_STATUS_DEFAULT;
+    loadMoreCellDisabled = YES;
+    addAtListEnd = YES;
 
 }
-*/
-#pragma mark -
-#pragma mark Acciones
-/*
-- (void)botonDescargarPresionado:(UIButton *)boton;
-{
-    //Comentado para pruebas
-//    [alert release];
+
+- (void) initTableVariables {
+
+    [super initTableVariables];
+    [self.tableViewController.tableView scrollRectToVisible:CGRectMake(0, 0, 1, 1) animated:NO];
+    loadMoreCellDisabled = NO;
+
 }
-*/
+
+- (void)loadData {
+
+    if ( ![self isAPIHostAvailable] ) {
+        return;
+    }
+
+    addAtListEnd = YES;
+
+    if ( isLiveStream ) {
+
+        [self loadCurrentProgramationXML];
+
+    } else {
+
+        tableElements = [NSMutableArray arrayWithObject:currentItem];
+        TSDataRequest *relatedReq = [[TSDataRequest alloc] initWithType:TS_CLIP_SLUG       forSection:@""  forSubsection:@""];
+        relatedReq.range = NSMakeRange(1, 5);
+        relatedReq.relatedSlug = [currentItem objectForKey:@"slug"];
+        NSArray *requests = [NSArray arrayWithObjects:relatedReq, nil];
+        [[[TSDataManager alloc] init] loadRequests:requests delegateResponseTo:self];
+
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#pragma mark -
+#pragma mark Custom Public Functions
+
+- (void) setData:(NSDictionary *)itemData andSection:(NSString *)section {
+
+    currentItem = itemData;
+    currentSection = section;
+    isLiveStream = NO;
+
+    [self initTableVariables];
+    [self removeCurrentPlayer];
+    [self configVideo];
+    [self loadData];
+
+    if ( viewStatus == TS_VIEW_STATUS_MINIMIZED ) {
+        [self restoreView];
+    }
+}
+
+- (void) setURL:(NSString *)URL andTitle:(NSString *)title {
+
+    liveURL = URL;
+    liveURLTitle = title;
+    isLiveStream = YES;
+
+    [self initTableVariables];
+    [self removeCurrentPlayer];
+    [self configVideo];
+    [self loadData];
+
+    if ( viewStatus == TS_VIEW_STATUS_MINIMIZED ) {
+        [self restoreView];
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#pragma mark -
+#pragma mark Custom Functions
 
 - (void) configLeftButton {
     
@@ -292,16 +411,16 @@
     [button addTarget:self.parentViewController.navigationController action:@selector(popViewControllerAnimated:) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *barButtonItem = [[UIBarButtonItem alloc] initWithCustomView:button];
     [self.parentViewController.navigationItem setLeftBarButtonItem:barButtonItem];
-    
+
 }
 
 - (void) configRightButton {
-    
+/*
     self.parentViewController.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"share.png"]
                                                                              style:UIBarButtonItemStylePlain
                                                                             target:self
                                                                             action:@selector(shareButtonClicked)];
-    
+*/
 }
 
 - (void) shareButtonClicked {
@@ -330,60 +449,10 @@
     
 }
 
-- (void) initTableVariables {
-
-    [super initTableVariables];
-
-    [self.tableViewController.tableView scrollRectToVisible:CGRectMake(0, 0, 1, 1) animated:NO];
-    loadMoreCellDisabled = NO;
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-#pragma mark - Custom Functions
-
-- (void)loadData {
-
-    if ( ![self isAPIHostAvailable] ) {
-        return;
-    }
-
-    addAtListEnd = YES;
-
-    tableElements = [NSMutableArray arrayWithObject:currentItem];
-    TSDataRequest *relatedReq = [[TSDataRequest alloc] initWithType:TS_CLIP_SLUG       forSection:@""  forSubsection:@""];
-    relatedReq.range = NSMakeRange(1, 5);
-    relatedReq.relatedSlug = [currentItem objectForKey:@"slug"];
-    NSArray *requests = [NSArray arrayWithObjects:relatedReq, nil];
-    [[[TSDataManager alloc] init] loadRequests:requests delegateResponseTo:self];
-
-}
-
-- (void)playerDidFinish {
-
-    if (selectedIndexPath.row == 0) {
-        return;
-    }
-
-//    [super playerDidFinish];
-
-}
-
 - (void) deviceOrientationDidChangeNotification:(NSNotification *)notification {
     
     UIDeviceOrientation orientation = [[UIDevice currentDevice] orientation];
-    if (orientation == UIDeviceOrientationFaceUp || orientation == UIDeviceOrientationFaceDown || orientation == UIDeviceOrientationUnknown || orientation == UIDeviceOrientationPortraitUpsideDown) {
+    if (orientation == UIDeviceOrientationFaceUp || orientation == UIDeviceOrientationFaceDown || orientation == UIDeviceOrientationUnknown || orientation == UIDeviceOrientationPortraitUpsideDown || viewStatus == TS_VIEW_STATUS_MINIMIZED) {
         return;
     }
 
@@ -395,8 +464,22 @@
 
     [UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
         playerController.view.frame = isLandscape ? screenBound : CGRectMake(0, 0, screenBound.size.width, screenBound.size.width * 0.7);
-    } completion:nil];
-    
+    } completion:^(BOOL finished) {
+        if ( finished ) {
+            [playerController setPlayerFrame: isLandscape ? screenBound : CGRectMake(0, 0, screenBound.size.width, screenBound.size.width * 0.7) hideMinimizeButton:isLandscape];
+        }
+    }];
+
+    viewStatus = isLandscape ? TS_VIEW_STATUS_FULLSCREEN : TS_VIEW_STATUS_MAXIMIZED;
+
+    if ( isLandscape ) {
+        [self.view removeGestureRecognizer:panRecognizer];
+    } else {
+        [self.view addGestureRecognizer:panRecognizer];
+    }
+
+    [playerController startTimer];
+
 }
 
 - (void) removeCurrentPlayer {
@@ -408,25 +491,64 @@
 }
 
 - (void)configVideo {
-    
-    playerController = [[TSClipPlayerViewController alloc] initConClip:currentItem];
-    
+
+    if ( !playerController ) {
+        if ( isLiveStream ) {
+            playerController = [[TSClipPlayerViewController alloc] initWithURL:liveURL andTitle:currentSection];
+        } else {
+            playerController = [[TSClipPlayerViewController alloc] initWithData:currentItem andSection:currentSection];
+        }
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(shareButtonClicked) name:@"sharedButtonTouched" object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(minimizeView) name:@"minimizeButtonTouched" object:nil];
+
+    }
+
     CGRect screenBound = [[UIScreen mainScreen] bounds];
-    
-    [playerController playAtView:self.view withFrame:CGRectMake(0, 0, screenBound.size.width, screenBound.size.width * 0.7) withObserver:self playbackFinish:@selector(playerDidFinish)];
-    
+
+    [playerController playAtView:self.view withFrame:CGRectMake(0, 0, screenBound.size.width, screenBound.size.width * 0.7) withObserver:self playbackFinish:nil];
+
 }
 
 - (void)setTableViewConfiguration {
-    
+
     CGRect screenBound = [[UIScreen mainScreen] bounds];
-    
+
     CGRect tableFrame = self.tableViewController.tableView.frame;
     tableFrame.origin.y = screenBound.size.width * 0.7;
-    tableFrame.size.height -= 145;
-    
+    tableFrame.size.height -= (112 + VIEW_Y_POSITION);
+
     self.tableViewController.tableView.frame = tableFrame;
     self.tableViewController.tableView.autoresizingMask = UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin;
+
+}
+
+- (void) setSearchBarConfiguration {
+
+    UISearchBar *searchBar = (UISearchBar *)[self.view viewWithTag:101];
+    searchBar.placeholder = [NSString stringWithFormat:NSLocalizedString(@"searchPlaceholder", nil)];
+    searchBar.hidden = YES;
+
+}
+
+- (void) loadShareImageInBackground {
+
+    thumb = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 300, 200)];
+    
+    [thumb sd_setImageWithURL:[self getThumbURLFromAPIItem:currentItem forceLargeImage:NO]
+             placeholderImage:[UIImage imageNamed:@"SinImagen.png"]];
+
+}
+
+- (void) setViewNotifications {
+
+    [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(deviceOrientationDidChangeNotification:)
+                                                 name:UIDeviceOrientationDidChangeNotification
+                                               object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reset) name:UIApplicationWillEnterForegroundNotification object:nil];
+
 }
 
 - (void) reset {
@@ -438,7 +560,20 @@
     
 }
 
+- (void) loadCurrentProgramationXML {
 
+    TSProgramListXMLParser *parser = [[TSProgramListXMLParser alloc] init];
+    parser.delegate = self;
+    [parser loadCurrentProgramationXML];
+
+}
+
+- (void) TSProgramListXML:(TSProgramListXMLParser *)parser didFinish:(NSMutableArray *)data {
+
+    tableElements = [NSMutableArray arrayWithArray:data];
+    [self.tableViewController.tableView reloadData];
+
+}
 
 
 
@@ -594,6 +729,221 @@
 - (void) connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
     //do something when downloading failed
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+- (void)initPanRecognizer {
+
+    if (!panRecognizer) {
+        panRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panDetected:)];
+        panRecognizer.delegate = self;
+    }
+
+}
+
+- (void)panDetected:(UIPanGestureRecognizer *)aPanRecognizer {
+
+    CGRect screenBound = [[UIScreen mainScreen] bounds];
+    CGPoint translation = [aPanRecognizer translationInView:aPanRecognizer.view];
+    CGPoint velocity = [aPanRecognizer velocityInView:aPanRecognizer.view];
+    NSInteger movement = translation.y - draggingPoint.y;
+
+    if (aPanRecognizer.state == UIGestureRecognizerStateBegan) {
+
+        draggingPoint = translation;
+        viewStatus = TS_VIEW_STATUS_ON_TRANSITION;
+        [[SlideNavigationController sharedInstance] setNeedsStatusBarAppearanceUpdate];
+
+    } else if (aPanRecognizer.state == UIGestureRecognizerStateChanged) {
+
+        [self moveVerticallyToLocation:self.view.frame.origin.y + movement];
+        draggingPoint = translation;
+
+    } else if (aPanRecognizer.state == UIGestureRecognizerStateEnded) {
+
+        NSInteger positiveVelocity = (velocity.y > 0) ? velocity.y : velocity.y * -1;
+
+        if (positiveVelocity >= MENU_FAST_VELOCITY_FOR_SWIPE_FOLLOW_DIRECTION) {
+            if (velocity.y > 0) {
+                [self minimizeView];
+            } else {
+                [self restoreView];
+            }
+        } else {
+            if ( self.view.frame.origin.y > screenBound.size.height * 0.4 ) {
+                if ( self.view.frame.origin.y > screenBound.size.height * 0.8 ) {
+                    [self removeDetailViewController];
+                } else {
+                    [self minimizeView];
+                }
+            } else {
+                [self restoreView];
+            }
+        }
+    }
+}
+
+- (void) minimizeView {
+
+    [playerController addAppearControlButton:NO];
+    [playerController removeTimer];
+
+    [UIView animateWithDuration:0.2 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+
+        CGRect screenBound = [[UIScreen mainScreen] bounds];
+        CGFloat playerW = screenBound.size.width * .5;
+        CGFloat playerH = playerW * .7;
+
+        playerController.view.frame = CGRectMake(0, 0, playerW, playerH);
+        playerController.controlsView.alpha = 0.0;
+        self.view.frame = CGRectMake(screenBound.size.width - playerW - RIGHT_BOTTOM_MINIMIZED_VIEW_MARGIN, screenBound.size.height - playerH - RIGHT_BOTTOM_MINIMIZED_VIEW_MARGIN, self.view.frame.size.width, self.view.frame.size.height);
+        self.tableViewController.tableView.alpha = 0.0;
+
+    } completion:^(BOOL finished) {
+        if ( finished ) {
+            viewStatus = TS_VIEW_STATUS_MINIMIZED;
+            [playerController updateSpinnerView];
+            [[SlideNavigationController sharedInstance] setNeedsStatusBarAppearanceUpdate];
+        }
+    }];
+
+    [SlideNavigationController sharedInstance].enableAutorotate = NO;
+    [SlideNavigationController sharedInstance].topViewController.view.userInteractionEnabled = YES;
+
+}
+
+- (void) restoreView {
+
+    [UIView animateWithDuration:0.2 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+
+        CGRect screenBound = [[UIScreen mainScreen] bounds];
+        playerController.view.frame = CGRectMake(0, 0, screenBound.size.width, screenBound.size.width * 0.7);
+        playerController.controlsView.alpha = 1.0;
+        self.view.frame = CGRectMake(0, VIEW_Y_POSITION, self.view.frame.size.width, self.view.frame.size.height);
+        self.tableViewController.tableView.alpha = 1.0;
+
+    } completion:^(BOOL finished) {
+        if ( finished ) {
+            [playerController addAppearControlButton:YES];
+            [playerController updateSpinnerView];
+            viewStatus = TS_VIEW_STATUS_MAXIMIZED;
+            [[SlideNavigationController sharedInstance] setNeedsStatusBarAppearanceUpdate];
+        }
+    }];
+
+    [SlideNavigationController sharedInstance].enableAutorotate = YES;
+    [SlideNavigationController sharedInstance].topViewController.view.userInteractionEnabled = NO;
+
+}
+
+- (void) showView {
+
+    CGRect screenBound = [[UIScreen mainScreen] bounds];
+
+    self.view.frame = CGRectMake(screenBound.size.width - 10, screenBound.size.height - 10, 10, 10);
+    self.view.alpha = 0.0;
+    
+    [UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
+
+        self.view.frame = CGRectMake(0, VIEW_Y_POSITION, screenBound.size.width, screenBound.size.height);
+        self.view.alpha = 1.0;
+        
+    } completion:^(BOOL finished) {
+        if ( finished ) {
+            viewStatus = TS_VIEW_STATUS_MAXIMIZED;
+            [self initPanRecognizer];
+            [self.view addGestureRecognizer:panRecognizer];
+            [[SlideNavigationController sharedInstance] setNeedsStatusBarAppearanceUpdate];
+        }
+    }];
+
+}
+
+- (void) removeDetailViewController {
+
+    [UIView animateWithDuration:0.2 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+
+        CGRect screenBound = [[UIScreen mainScreen] bounds];
+        self.view.frame = CGRectMake(self.view.frame.origin.x, screenBound.size.height, self.view.frame.size.width, self.view.frame.size.height);
+        self.view.alpha = 0.0;
+
+    } completion:^(BOOL finished) {
+        if ( finished ) {
+
+            [self removeCurrentPlayer];
+            [self.view removeGestureRecognizer:panRecognizer];
+            panRecognizer = nil;
+            [[SlideNavigationController sharedInstance] removeTopViewController];
+
+        }
+    }];
+}
+
+- (void) moveVerticallyToLocation:(CGFloat)location {
+
+    CGRect screenBound = [[UIScreen mainScreen] bounds];
+    CGRect rect = self.view.frame;
+    CGRect videoRect = CGRectMake(0, 0, screenBound.size.width, screenBound.size.width * 0.7);
+    CGRect finalVideoRect = CGRectMake(((screenBound.size.width - (screenBound.size.width * 0.5)) - RIGHT_BOTTOM_MINIMIZED_VIEW_MARGIN), ((screenBound.size.height - (screenBound.size.width * 0.35)) - RIGHT_BOTTOM_MINIMIZED_VIEW_MARGIN), screenBound.size.width * 0.5, screenBound.size.width * 0.35);
+    float percent = rect.origin.y / finalVideoRect.origin.y;
+
+    if ( percent < 0 ) {
+        return;
+    }
+
+    rect.origin.x = finalVideoRect.origin.x * MIN( percent, 1 );
+    rect.origin.y = location;
+    self.view.frame = rect;
+
+    if (percent > 1 ) {
+        playerController.view.alpha = 1 - ((percent - 1) * 8);
+        return;
+    }
+
+    float inversePercent = 1.0 - percent;
+    playerController.view.frame = CGRectMake(0, 0, finalVideoRect.size.width + ((videoRect.size.width - finalVideoRect.size.width) * inversePercent), finalVideoRect.size.height + ((videoRect.size.height - finalVideoRect.size.height) * inversePercent));
+    self.tableViewController.tableView.alpha = inversePercent;
+    playerController.controlsView.alpha = inversePercent;
+
+}
+
+- (BOOL) prefersStatusBarHidden {
+    if ( viewStatus == TS_VIEW_STATUS_MAXIMIZED || viewStatus == TS_VIEW_STATUS_FULLSCREEN ) {
+        return YES;
+    }
+    return NO;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

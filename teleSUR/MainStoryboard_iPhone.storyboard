@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="yzD-f0-X8n">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="yzD-f0-X8n">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
     <scenes>
         <!--Left Menu View Controller-->
@@ -13,7 +13,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="T7T-Ke-Ksy" customClass="CollapsableTableView">
-                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <rect key="frame" x="0.0" y="74" width="320" height="494"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.99607843137254903" green="0.25882352941176467" blue="0.25490196078431371" alpha="1" colorSpace="calibratedRGB"/>
                                 <inset key="insetFor6xAndEarlier" minX="0.0" minY="20" maxX="0.0" maxY="0.0"/>
@@ -24,11 +24,11 @@
                                 </connections>
                             </tableView>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="menu-logo.png" id="ENc-w9-S5P">
-                                <rect key="frame" x="53" y="13" width="112" height="39"/>
+                                <rect key="frame" x="53" y="27" width="112" height="39"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="iqE-4E-21k">
-                                <rect key="frame" x="16" y="69" width="192" height="34"/>
+                                <rect key="frame" x="16" y="78" width="192" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.56470588235294117" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -39,7 +39,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="dtE-Nu-Hqm">
-                                <rect key="frame" x="16" y="119" width="192" height="34"/>
+                                <rect key="frame" x="16" y="123" width="192" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.56470588239999997" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -59,6 +59,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uR4-tD-X8j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-463" y="-315"/>
+        </scene>
+        <!--Configuration Table View Controller-->
+        <scene sceneID="RY9-ID-hUF">
+            <objects>
+                <tableViewController storyboardIdentifier="TSConfigurationTableViewController" id="kNM-Gh-Tg2" customClass="TSConfigurationTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="0ie-Th-gnb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="kNM-Gh-Tg2" id="dkG-6g-V3Q"/>
+                            <outlet property="delegate" destination="kNM-Gh-Tg2" id="cCh-Ao-jEr"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MSx-8W-b0j" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1304" y="787"/>
         </scene>
         <!--Slide Navigation Controller-->
         <scene sceneID="cQY-wH-O5O">
@@ -211,7 +229,7 @@ Somos un espacio y una voz para la construcción de un nuevo orden comunicaciona
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ucw-zC-Zvl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="932" y="795"/>
+            <point key="canvasLocation" x="896" y="787"/>
         </scene>
         <!--Web View Controller-->
         <scene sceneID="zdC-zH-u4b">

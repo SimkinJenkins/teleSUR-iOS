@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "UIDropDownMenu.h"
 #import "NavigationBarsManager.h"
-#import "TSMultimediaDataDelegate.h"
 
 #import "TSClipPlayerViewController.h"
 
@@ -26,7 +25,7 @@
         NSArray *newsSectionsSlugs;
         NSArray *newsSectionsTitles;
 
-        UIView * livestreamLabelView;
+        UIView *livestreamLabelView;
 
         UIButton *videoButton;
 
@@ -50,8 +49,15 @@
 
 @property (nonatomic, retain) UIView *livestreamMenu;
 
-- (void) setNavigationTitle:(NSString *)title;
+@property (nonatomic, strong) UIViewController *topView;
 
-- (void) setCurrentSection:(NSString *)slug;
+- (void)setNavigationTitle:(NSString *)title;
+
+- (void)setCurrentSection:(NSString *)slug;
+
+- (void) addTopViewController:(UIViewController *)viewController;
+- (void) removeTopViewController;
+
+- (void) launchSectionWithIndex:(NSInteger)index animated:(BOOL)animated;
 
 @end

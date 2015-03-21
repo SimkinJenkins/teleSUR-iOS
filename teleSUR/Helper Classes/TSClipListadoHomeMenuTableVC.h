@@ -15,8 +15,10 @@
     IBOutlet UISearchBar *searchBar;
 
     @protected
-        NSArray *newsSectionsSlugs;
-        NSArray *newsSectionsTitles;
+        NSArray *submenuNewsSectionsSlugs;
+        NSArray *submenuVideoSectionsSlugs;
+        NSArray *submenuNewsSectionsTitles;
+        NSArray *submenuVideosSectionsTitles;
 
         UITextField *textfield;
         UIDropDownMenu *textMenu;

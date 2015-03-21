@@ -16,20 +16,24 @@
 #import "TSClipPlayerViewController.h"
 #import "NSDictionary_Datos.h"
 #import "NavigationBarsManager.h"
+#import "TSClipDetallesViewController.h"
 
 #import "UIView+TSBasicCell.h"
+#import "TSIpadNavigationViewController.h"
 
-NSInteger const TS_VD_DETAIL_VIEW_TAG = 150;
+NSInteger const TS_VD_DETAIL_VIEW_TAG = 9001;
 NSInteger const TS_VD_DETAIL_ASYNC_IMAGE_TAG = 106;
 
 NSInteger const TS_LIST_WIDTH = 346;
-NSInteger const VD_SIDE_MARGIN = 15;
+NSInteger const VD_SIDE_MARGIN = 30;
 
-NSInteger const TS_DETAIL_VIEW_HEIGHT = 764;
+NSInteger const TS_DETAIL_VIEW_HEIGHT = 870;
+
+CGFloat const IPAD_VIEW_Y_POSITION = 23;
 
 @implementation TSIPadVideoDetailViewController
 
-@synthesize playerController, player;
+@synthesize playerController, player, isLiveStream;
 
 - (id) initWithVideoData:(NSDictionary *)data inSection:(NSString *)section {
 
@@ -44,6 +48,19 @@ NSInteger const TS_DETAIL_VIEW_HEIGHT = 764;
     currentSubsection = @"";
 
     [self configRightButton];
+
+    return self;
+
+}
+
+- (id) initWithURL:(NSString *)URL andTitle:(NSString *)title {
+
+    isAnInitialScreen = NO;
+
+    liveURL = URL;
+    liveURLTitle = title;
+    isDownloading = NO;
+    isLiveStream = YES;
 
     return self;
 
@@ -66,16 +83,17 @@ NSInteger const TS_DETAIL_VIEW_HEIGHT = 764;
 
 
 
-
 - (void)viewWillAppear:(BOOL)animated {
-    
+
     [super viewWillAppear:animated];
+
     [self reset];
+    [self showView];
 
 }
 
 - (void) viewDidAppear:(BOOL)animated {
-    
+
     [super viewDidAppear:animated];
 
     [[NavigationBarsManager sharedInstance] setMasterView:[ [ self.view superview] superview] ];
@@ -90,7 +108,7 @@ NSInteger const TS_DETAIL_VIEW_HEIGHT = 764;
 
     if ( ![NavigationBarsManager sharedInstance].livestreamON ) {
 
-        [NavigationBarsManager sharedInstance].playerController = nil;
+        [NavigationBarsManager sharedInstance].playerController.playerController = nil;
 
     }
 
@@ -111,13 +129,25 @@ NSInteger const TS_DETAIL_VIEW_HEIGHT = 764;
     
     [super viewDidLoad];
 
-    [self.view setBackgroundColor:[UIColor whiteColor]];
+    self.view.autoresizesSubviews = NO;
+
+    minimizeVideoFrame = CGRectMake(0, 0, 300, 210);
+
+    [self configCustomBackground];
+
+    [self.view setBackgroundColor:[UIColor clearColor]];
 
     [self setVideoPlayerFrame];
-    
-    [self sectionSelected:currentSection withTitle:[self getSectionTitleWith:currentSection]];
-    
+
     [self setupVideoView];
+
+    if ( !isLiveStream ) {
+
+        [self sectionSelected:currentSection withTitle:[self getSectionTitleWith:currentSection]];
+
+        [self setupCurrentVideoData];
+
+    }
 
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reset) name:UIApplicationWillEnterForegroundNotification object:nil];
 
@@ -136,17 +166,88 @@ NSInteger const TS_DETAIL_VIEW_HEIGHT = 764;
 
 
 
-- (NSString *) getSectionTitleWith:(NSString *)slug {
 
-    NSArray *staticSections = [[[[NSBundle mainBundle] infoDictionary] objectForKey:@"Configuración"] objectForKey:@"principalMenuSections"];
-    for (uint i = 0; i < [staticSections count]; i++) {
-        if([slug isEqualToString:[staticSections objectAtIndex:i]]) {
-            NSString *localizeID = [NSString stringWithFormat:@"%@Section", [staticSections objectAtIndex:i]];
-            NSLog(@"%@", localizeID);
-            return [NSString stringWithFormat:NSLocalizedString(localizeID, nil)];
-        }
+
+
+
+
+#pragma mark -
+#pragma mark Custom Public Functions
+
+- (void) setData:(NSDictionary *)itemData {
+
+    [self restoreView];
+
+    if (currentItem == itemData ) {
+        return;
     }
-    return @"";
+
+    currentItem = itemData;
+    [self initTableVariables];
+
+    [self setupCurrentVideoData];
+    [self playVideoFromClip:currentItem];
+
+}
+
+- (void) setData:(NSDictionary *)itemData withSection:(NSString *)section {
+
+    if ( currentSection != section ) {
+        currentSection = section;
+        [self loadData];
+    }
+    [self setData:itemData];
+
+}
+
+- (void) setURL:(NSString *)URL andTitle:(NSString *)title {
+
+    [self restoreView];
+
+    currentItem = nil;
+
+    liveURL = URL;
+    liveURLTitle = title;
+    isLiveStream = YES;
+
+    [self initTableVariables];
+    [self removeCurrentPlayer];
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+- (void)configCustomBackground {
+    customBackground = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
+    customBackground.backgroundColor = [UIColor whiteColor];
+    [self.view addSubview:customBackground];
+}
+
+- (void)configVideo {
+
+    if ( !playerController ) {
+        playerController = [[TSClipPlayerViewController alloc] initWithData:currentItem andSection:[self getSectionTitleWith:currentSection]];
+    }
+
+    CGRect screenBound = [[UIScreen mainScreen] bounds];
+
+    [playerController playAtView:self.view withFrame:CGRectMake(0, 0, screenBound.size.width, screenBound.size.width * 0.7) withObserver:self playbackFinish:nil];
 
 }
 
@@ -158,12 +259,14 @@ NSInteger const TS_DETAIL_VIEW_HEIGHT = 764;
 
     currentSection = section;
     currentSubsection = @"";
-    
+
     [self loadData];
 
 }
 
 - (void)setupRelatedVideoTableView {
+
+    return;
 
     BOOL isLandscape = UIInterfaceOrientationIsLandscape([[UIApplication sharedApplication] statusBarOrientation]);
 
@@ -175,9 +278,9 @@ NSInteger const TS_DETAIL_VIEW_HEIGHT = 764;
     }
 
     CGRect screenRect = [[UIScreen mainScreen] bounds];
-    CGRect frameRect	= isLandscape ? CGRectMake(0, 0, TS_LIST_WIDTH, 638) : CGRectMake(0, TS_DETAIL_VIEW_HEIGHT + 11, screenRect.size.width, 120);
+    CGRect frameRect	= isLandscape ? CGRectMake( 0, 0, TS_LIST_WIDTH, 745 ) : ( isLiveStream ? CGRectMake( 0, playerFrame.origin.y + playerFrame.size.height, screenRect.size.width, 45 ) : CGRectMake( 0, TS_DETAIL_VIEW_HEIGHT + 11, screenRect.size.width, 120 ) );
 
-    relatedRSSTableView = isLandscape ? [[EasyTableView alloc] initWithFrame:frameRect numberOfRows:[tableElements count] ofHeight:120]
+    relatedRSSTableView = isLandscape ? [[EasyTableView alloc] initWithFrame:frameRect numberOfRows:[tableElements count] ofHeight:isLiveStream ? 45 : 120]
                                     : [[EasyTableView alloc] initWithFrame:frameRect numberOfColumns:[tableElements count] ofWidth:TS_LIST_WIDTH];
 
     relatedRSSTableView.delegate						= self;
@@ -188,7 +291,7 @@ NSInteger const TS_DETAIL_VIEW_HEIGHT = 764;
     relatedRSSTableView.tableView.separatorColor		= [UIColor clearColor];
     relatedRSSTableView.cellBackgroundColor             = [UIColor clearColor];
     //	horizontalView.autoresizingMask                 = UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleWidth;
-    [self.view addSubview:relatedRSSTableView];
+    [customBackground addSubview:relatedRSSTableView];
 
 }
 
@@ -197,18 +300,18 @@ NSInteger const TS_DETAIL_VIEW_HEIGHT = 764;
     wrapper = [[UIScrollView  alloc] init];
 
     [wrapper addSubview:[self.view viewWithTag:TS_VD_DETAIL_VIEW_TAG]];
-    [self.view addSubview:wrapper];
+    [customBackground addSubview:wrapper];
 
     UILabel *title = (UILabel *)[self.view viewWithTag:1001];
     UILabel *date = (UILabel *)[self.view viewWithTag:112];
-    UILabel *description = (UILabel *)[self.view viewWithTag:1004];
+    UILabel *description = (UILabel *)[self.view viewWithTag:2004];
     UILabelMarginSet *section = (UILabelMarginSet *)[self.view viewWithTag:107];
     UIButton *download = (UIButton *)[self.view viewWithTag:113];
 
-    section.frame = CGRectMake(0, VD_SIDE_MARGIN, 100, section.frame.size.height);
-    title.frame = CGRectMake(0, title.frame.origin.y, title.frame.size.width, title.frame.size.height);
-    date.frame = CGRectMake(0, date.frame.origin.y, date.frame.size.width, date.frame.size.height);
-    description.frame = CGRectMake(0, description.frame.origin.y, description.frame.size.width, description.frame.size.height);
+    section.frame = CGRectMake(VD_SIDE_MARGIN, VD_SIDE_MARGIN, 100, section.frame.size.height);
+    title.frame = CGRectMake(VD_SIDE_MARGIN, title.frame.origin.y, title.frame.size.width, title.frame.size.height);
+    date.frame = CGRectMake(VD_SIDE_MARGIN, date.frame.origin.y, date.frame.size.width, date.frame.size.height);
+    description.frame = CGRectMake(VD_SIDE_MARGIN, description.frame.origin.y, description.frame.size.width, description.frame.size.height);
 
     [section setPersistentBackgroundColor:[UIColor colorWithRed:255/255.0 green:2/255.0 blue:2/255.0 alpha:1.0]];
 
@@ -226,9 +329,13 @@ NSInteger const TS_DETAIL_VIEW_HEIGHT = 764;
 
 - (void) setupCurrentVideoData {
 
+    UIView *thisView = self.view;
+    NSLog(@"%d", thisView.tag);
+    
+
     UILabel *title = (UILabel *)[self.view viewWithTag:1001];
     UILabel *date = (UILabel *)[self.view viewWithTag:112];
-    UILabel *description = (UILabel *)[self.view viewWithTag:1004];
+    UILabel *description = (UILabel *)[self.view viewWithTag:2004];
     UILabelMarginSet *section = (UILabelMarginSet *)[self.view viewWithTag:107];
 
     date.hidden = NO;
@@ -237,7 +344,7 @@ NSInteger const TS_DETAIL_VIEW_HEIGHT = 764;
     NSString *clipType = [[currentItem valueForKey:@"tipo"] valueForKey:@"slug"];
     BOOL switchTitles = [clipType isEqualToString:@"programa"];
 
-    section.frame = CGRectMake(0, VD_SIDE_MARGIN, 100, section.frame.size.height);
+    section.frame = CGRectMake(VD_SIDE_MARGIN, VD_SIDE_MARGIN, 100, section.frame.size.height);
 
     if ( [clipType isEqualToString:@"programa"] ) {
 
@@ -276,14 +383,17 @@ NSInteger const TS_DETAIL_VIEW_HEIGHT = 764;
             section.text = @"";
         }
 
+        NSLog(@"%@", [currentItem obtenerDescripcion]);
         description.text = [currentItem obtenerDescripcion];
 
     }
 
+//    description.text = [ NSString stringWithFormat:@"%@%@%@%@%@%@%@%@%@%@%@%@", description.text, description.text, description.text, description.text, description.text, description.text, description.text, description.text , description.text, description.text, description.text, description.text];
+
     [section sizeToFit];
     section.frame = CGRectMake(section.frame.origin.x, section.frame.origin.y, section.frame.size.width + 20, section.frame.size.height + 10);
 
-    [self.view addSubview:thumb];
+    [customBackground addSubview:thumb];
     [thumb sd_setImageWithURL:[self getThumbURLFromAPIItem:currentItem forceLargeImage:NO]
              placeholderImage:[UIImage imageNamed:@"SinImagen.png"]];
 
@@ -295,23 +405,23 @@ NSInteger const TS_DETAIL_VIEW_HEIGHT = 764;
 
     UILabel *title = (UILabel *)[self.view viewWithTag:1001];
     UILabel *date = (UILabel *)[self.view viewWithTag:112];
-    UILabel *description = (UILabel *)[self.view viewWithTag:1004];
+    UILabel *description = (UILabel *)[self.view viewWithTag:2004];
     UIButton *download = (UIButton *)[self.view viewWithTag:113];
     UILabelMarginSet *section = (UILabelMarginSet *)[self.view viewWithTag:107];
 
-    [self.view adjustSizeFrameForLabel:title constriainedToSize:CGSizeMake(playerFrame.size.width, 300)];
+    [self.view adjustSizeFrameForLabel:title constriainedToSize:CGSizeMake(playerFrame.size.width - 60, 300)];
     [self.view setLabel:title underView:section withSeparation:2];
     
     [self.view setLabel:date underView:title withSeparation:10];
     
-    download.frame = CGRectMake(playerFrame.size.width - 110, date.hidden ? title.frame.origin.y + 7 : date.frame.origin.y - 4, download.frame.size.width, download.frame.size.height);
+    download.frame = CGRectMake(playerFrame.size.width - 170, date.hidden ? title.frame.origin.y + 7 : date.frame.origin.y - 4, download.frame.size.width, download.frame.size.height);
     
-    [self.view adjustSizeFrameForLabel:description constriainedToSize:CGSizeMake(playerFrame.size.width, 300)];
+    [self.view adjustSizeFrameForLabel:description constriainedToSize:CGSizeMake(playerFrame.size.width - 60, 300)];
     [self.view setLabel:description underView:download withSeparation:18];
 
     thumb.frame = playerFrame;
 
-    wrapper.frame = CGRectMake(playerFrame.origin.x, playerFrame.origin.y + playerFrame.size.height, playerFrame.size.width + VD_SIDE_MARGIN, UIInterfaceOrientationIsLandscape([[UIApplication sharedApplication] statusBarOrientation]) ? 192 : 285);
+    wrapper.frame = CGRectMake(playerFrame.origin.x, playerFrame.origin.y + playerFrame.size.height, (playerFrame.size.width + VD_SIDE_MARGIN) - 10, UIInterfaceOrientationIsLandscape([[UIApplication sharedApplication] statusBarOrientation]) ? 270 : 343);
 
     wrapper.contentOffset = CGPointMake(0, 0);
     wrapper.contentSize = CGSizeMake(playerFrame.size.width, description.frame.origin.y + description.frame.size.height + VD_SIDE_MARGIN);
@@ -322,7 +432,15 @@ NSInteger const TS_DETAIL_VIEW_HEIGHT = 764;
 
     [self removeCurrentPlayer];
 
-    playerController = [[TSClipPlayerViewController alloc] initConClip:clip];
+    if ( isLiveStream ) {
+        playerController = [[TSClipPlayerViewController alloc] initWithURL:liveURL andTitle:currentSection];
+    } else {
+        playerController = [[TSClipPlayerViewController alloc] initWithData:clip andSection:[self getSectionTitleWith:currentSection]];
+    }
+
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(shareButtonClicked) name:@"sharedButtonTouched" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(minimizeView) name:@"minimizeButtonTouched" object:nil];
+
     [playerController playAtView:self.view withFrame:playerFrame withObserver:self playbackFinish:@selector(playbackEnd:)];
 
 }
@@ -334,20 +452,29 @@ NSInteger const TS_DETAIL_VIEW_HEIGHT = 764;
 }
 
 - (void) removeCurrentPlayer {
+
     if(playerController) {
+
         [playerController.moviePlayer stop];
         [playerController.view removeFromSuperview];
+
+        [[NSNotificationCenter defaultCenter] removeObserver:self name:@"sharedButtonTouched" object:nil];
+        [[NSNotificationCenter defaultCenter] removeObserver:self name:@"minimizeButtonTouched" object:nil];
+
         playerController = nil;
     }
+
 }
 
 - (void) playbackEnd:(NSNotification *)notification {}
 
 - (void) setVideoPlayerFrame {
 
+    CGRect screenBound = [[UIScreen mainScreen] bounds];
+
     playerFrame = UIInterfaceOrientationIsLandscape( [ [ UIApplication sharedApplication ] statusBarOrientation ] )
-                                        ? CGRectMake( 360, 25, 640, 420 )
-                                        : CGRectMake( 30, 25, 700, 462 );
+                                        ? CGRectMake( 346, 0, 678, 475 )
+                                        : CGRectMake( 0, 0, screenBound.size.width, screenBound.size.width * 0.7 );
 
 }
 
@@ -358,6 +485,28 @@ NSInteger const TS_DETAIL_VIEW_HEIGHT = 764;
         [playerController.moviePlayer pause];
     }
     
+}
+
+- (void)removeDetailViewController {
+    
+    [UIView animateWithDuration:0.2 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+        
+        CGRect screenBound = [[UIScreen mainScreen] bounds];
+        self.view.frame = CGRectMake(self.view.frame.origin.x, screenBound.size.height, self.view.frame.size.width, self.view.frame.size.height);
+        self.view.alpha = 0.0;
+        
+    } completion:^(BOOL finished) {
+        if ( finished ) {
+
+            [self removeCurrentPlayer];
+            [self.view removeGestureRecognizer:panRecognizer];
+            panRecognizer = nil;
+
+            TSIpadNavigationViewController *topMenu = (TSIpadNavigationViewController *)[NavigationBarsManager sharedInstance].topNavigationInstance;
+            [topMenu removeTopViewController];
+            
+        }
+    }];
 }
 
 
@@ -385,10 +534,17 @@ NSInteger const TS_DETAIL_VIEW_HEIGHT = 764;
 #pragma mark - Custom Functions
 
 - (void) loadData {
-    
-    [super loadData];
-    [self removeCurrentPlayer];
-    
+
+    if ( isLiveStream ) {
+        
+        [self loadCurrentProgramationXML];
+        
+    } else {
+
+        [super loadData];
+        
+    }
+
 }
 
 - (void) shareButtonClicked {
@@ -405,6 +561,16 @@ NSInteger const TS_DETAIL_VIEW_HEIGHT = 764;
         return;
     }
 
+    CGRect screenBound = [[UIScreen mainScreen] bounds];
+
+    if ( viewStatus == TS_VIEW_STATUS_MINIMIZED ) {
+        self.view.frame = CGRectMake(screenBound.size.width - minimizeVideoFrame.size.width - RIGHT_BOTTOM_MINIMIZED_VIEW_MARGIN, screenBound.size.height - minimizeVideoFrame.size.height - RIGHT_BOTTOM_MINIMIZED_VIEW_MARGIN - 70, self.view.frame.size.width, self.view.frame.size.height);
+    } else {
+        self.view.frame = CGRectMake(0, IPAD_VIEW_Y_POSITION, self.view.frame.size.width, self.view.frame.size.height);
+    }
+
+    customBackground.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
+
     [self setVideoPlayerFrame];
 
     [relatedRSSTableView removeFromSuperview];
@@ -412,11 +578,20 @@ NSInteger const TS_DETAIL_VIEW_HEIGHT = 764;
 
     [self setupRelatedVideoTableView];
 
-    [self adjustLabelsSize];
+    if ( !isLiveStream ) {
+        [self adjustLabelsSize];
+    }
 
     if( playerController ) {
-        playerController.view.frame = playerFrame;
+        if ( viewStatus == TS_VIEW_STATUS_MINIMIZED ) {
+            playerController.view.frame = minimizeVideoFrame;
+        } else {
+            playerController.view.frame = playerFrame;
+        }
+        [playerController setPlayerFrame: playerController.view.frame hideMinimizeButton:NO];
     }
+
+    [playerController startTimer];
 
 }
 
@@ -426,6 +601,22 @@ NSInteger const TS_DETAIL_VIEW_HEIGHT = 764;
 
     [super handleTSConnectionError];
     
+}
+
+- (void) loadCurrentProgramationXML {
+    
+    TSProgramListXMLParser *parser = [[TSProgramListXMLParser alloc] init];
+    parser.delegate = self;
+    [parser loadCurrentProgramationXML];
+    
+}
+
+- (void) TSProgramListXML:(TSProgramListXMLParser *)parser didFinish:(NSMutableArray *)data {
+    
+    tableElements = [NSMutableArray arrayWithArray:data];
+
+    [self setupRelatedVideoTableView];
+
 }
 
 
@@ -451,28 +642,40 @@ NSInteger const TS_DETAIL_VIEW_HEIGHT = 764;
 
 - (UIView *)easyTableView:(EasyTableView *)easyTableView viewForRect:(CGRect)rect {
 
-    UITableViewCell *cell = [self getReuseCell:easyTableView.tableView withID:@"RelatedVideoTableViewCell"];
+    UITableViewCell *cell = [self getReuseCell:easyTableView.tableView withID:isLiveStream ? @"TSProgramListTableViewCell" : @"RelatedVideoTableViewCell"];
+
     return cell.contentView;
 
 }
 
 - (void)easyTableView:(EasyTableView *)easyTableView setDataForView:(UIView *)view forIndexPath:(NSIndexPath*)indexPath {
 
-    NSDictionary *data = [tableElements objectAtIndex:indexPath.row];
+    if ( isLiveStream ) {
 
-    [((DefaultIPadTableViewCell *)[view viewWithTag:99]) setData:data];
+        TSProgramListElement *data = [tableElements objectAtIndex:indexPath.row];
+        UILabel *title = (UILabel *)[view viewWithTag:5003];
+        UILabel *time = (UILabel *)[view viewWithTag:5002];
 
-    // Here we use the new provided setImageWithURL: method to load the web image
-    [(UIImageView *)[view viewWithTag:101] sd_setImageWithURL:[self getThumbURLForIndex:indexPath
-                                                                        forceLargeImage:NO
-                                                                        forDefaultTable:YES]
-                                             placeholderImage:[UIImage imageNamed:@"SinImagen.png"]];
+        title.text = data.name;
+        time.text = data.scheduleString;
 
+    } else {
+
+        NSDictionary *data = [tableElements objectAtIndex:indexPath.row];
+
+        [((DefaultIPadTableViewCell *)[view viewWithTag:99]) setData:data];
+
+        [(UIImageView *)[view viewWithTag:101] sd_setImageWithURL:[self getThumbURLForIndex:indexPath
+                                                                            forceLargeImage:NO
+                                                                            forDefaultTable:YES]
+                                                 placeholderImage:[UIImage imageNamed:@"SinImagen.png"]];
+
+    }
 }
 
 - (void)easyTableView:(EasyTableView *)easyTableView selectedView:(UIView *)selectedView atIndexPath:(NSIndexPath *)indexPath deselectedView:(UIView *)deselectedView {
 
-    if( selectedIndexPath.row == indexPath.row ) {
+    if( selectedIndexPath.row == indexPath.row || isLiveStream ) {
         return;
     }
 
@@ -508,8 +711,6 @@ NSInteger const TS_DETAIL_VIEW_HEIGHT = 764;
 
     [super TSDataManager:manager didProcessedRequests:requests];
 
-    NSLog(@"Antes del error TSIpadVideoDetailViewController");
-
     self.navigationController.navigationBarHidden = NO;
     self.navigationController.toolbarHidden = NO;
 
@@ -519,20 +720,11 @@ NSInteger const TS_DETAIL_VIEW_HEIGHT = 764;
 
     if ( ! currentItem ) {
         currentItem = [tableElements objectAtIndex:0];
-    }
-
-    [self setupCurrentVideoData];
-    [self setupRelatedVideoTableView];
-
-    if ( ! currentItem ) {
-
+        [self setupCurrentVideoData];
         [self playVideoFromClip:currentItem];
-
-    } else {
-
-        [self resumeVideoPlayer];
-
     }
+
+    [self setupRelatedVideoTableView];
 
 }
 
@@ -689,6 +881,184 @@ NSInteger const TS_DETAIL_VIEW_HEIGHT = 764;
 
 - (void) connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
     //do something when downloading failed
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+- (void)initPanRecognizer {
+
+    if (!panRecognizer) {
+        panRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panDetected:)];
+        panRecognizer.delegate = self;
+    }
+
+}
+
+- (void)panDetected:(UIPanGestureRecognizer *)aPanRecognizer {
+
+    CGRect screenBound = [[UIScreen mainScreen] bounds];
+    CGPoint translation = [aPanRecognizer translationInView:aPanRecognizer.view];
+    CGPoint velocity = [aPanRecognizer velocityInView:aPanRecognizer.view];
+    NSInteger movement = translation.y - draggingPoint.y;
+
+//    NSLog(@"asfdasf ad fasdfa sdf %ld", aPanRecognizer.state);
+    if (aPanRecognizer.state == UIGestureRecognizerStateBegan) {
+
+        draggingPoint = translation;
+        viewStatus = TS_VIEW_STATUS_ON_TRANSITION;
+
+    } else if (aPanRecognizer.state == UIGestureRecognizerStateChanged) {
+
+        [self moveVerticallyToLocation:self.view.frame.origin.y + movement];
+        draggingPoint = translation;
+
+    } else if (aPanRecognizer.state == UIGestureRecognizerStateEnded) {
+
+        NSInteger positiveVelocity = (velocity.y > 0) ? velocity.y : velocity.y * -1;
+
+        if (positiveVelocity >= MENU_FAST_VELOCITY_FOR_SWIPE_FOLLOW_DIRECTION) {
+            if (velocity.y > 0) {
+                [self minimizeView];
+            } else {
+                [self restoreView];
+            }
+        } else {
+            if ( self.view.frame.origin.y > screenBound.size.height * 0.4 ) {
+                if ( self.view.frame.origin.y > screenBound.size.height * 0.7 ) {
+                    [self removeDetailViewController];
+                } else {
+                    [self minimizeView];
+                }
+            } else {
+                [self restoreView];
+            }
+        }
+    }
+}
+
+- (void) minimizeView {
+
+    [playerController addAppearControlButton:NO];
+    [playerController removeTimer];
+
+    [UIView animateWithDuration:0.2 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+        
+        CGRect screenBound = [[UIScreen mainScreen] bounds];
+
+        playerController.view.alpha = 1.0;
+        playerController.view.frame = CGRectMake(0, 0, minimizeVideoFrame.size.width, minimizeVideoFrame.size.height);
+        playerController.controlsView.alpha = 0.0;
+
+        self.view.frame = CGRectMake(screenBound.size.width - minimizeVideoFrame.size.width - RIGHT_BOTTOM_MINIMIZED_VIEW_MARGIN, screenBound.size.height - minimizeVideoFrame.size.height - RIGHT_BOTTOM_MINIMIZED_VIEW_MARGIN - 70, self.view.frame.size.width, self.view.frame.size.height);
+        customBackground.alpha = 0.0;
+
+    } completion:^(BOOL finished) {
+        if ( finished ) {
+            self.view.frame = CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y, minimizeVideoFrame.size.width, minimizeVideoFrame.size.height);
+            [playerController updateSpinnerView];
+            viewStatus = TS_VIEW_STATUS_MINIMIZED;
+        }
+    }];
+
+    TSIpadNavigationViewController *topMenu = (TSIpadNavigationViewController *)[NavigationBarsManager sharedInstance].topNavigationInstance;
+    topMenu.topViewController.view.userInteractionEnabled = YES;
+    
+}
+
+- (void) restoreView {
+
+    CGRect screenBound = [[UIScreen mainScreen] bounds];
+    self.view.frame = CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y, screenBound.size.width, screenBound.size.height);
+
+    [UIView animateWithDuration:0.2 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+
+        playerController.view.frame = playerFrame;
+        self.view.frame = CGRectMake(0, IPAD_VIEW_Y_POSITION, self.view.frame.size.width, self.view.frame.size.height);
+        customBackground.alpha = 1.0;
+
+    } completion:^(BOOL finished) {
+        if ( finished ) {
+            viewStatus = TS_VIEW_STATUS_MAXIMIZED;
+            [playerController addAppearControlButton:YES];
+            [playerController setPlayerFrame:playerFrame hideMinimizeButton:NO];
+            if ( configVideoNeeded ) {
+                [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(configVideo) userInfo:nil repeats:NO];
+            }
+        }
+    }];
+
+    TSIpadNavigationViewController *topMenu = (TSIpadNavigationViewController *)[NavigationBarsManager sharedInstance].topNavigationInstance;
+    topMenu.topViewController.view.userInteractionEnabled = NO;
+    
+}
+
+- (void) showView {
+
+    CGRect screenBound = [[UIScreen mainScreen] bounds];
+
+    self.view.frame = CGRectMake(screenBound.size.width - 10, screenBound.size.height - 10, 10, 10);
+    self.view.alpha = 0.0;
+
+    [UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
+        
+        self.view.frame = CGRectMake(0, IPAD_VIEW_Y_POSITION, screenBound.size.width, screenBound.size.height);
+        self.view.alpha = 1.0;
+
+    } completion:^(BOOL finished) {
+        if ( finished ) {
+            viewStatus = TS_VIEW_STATUS_MAXIMIZED;
+            [self initPanRecognizer];
+            [self.view addGestureRecognizer:panRecognizer];
+            [self resumeVideoPlayer];
+//            [[SlideNavigationController sharedInstance] setNeedsStatusBarAppearanceUpdate];
+        }
+    }];
+    
+}
+
+- (void)moveVerticallyToLocation:(CGFloat)location {
+    
+    CGRect screenBound = [[UIScreen mainScreen] bounds];
+    CGRect rect = self.view.frame;
+    CGRect finalVideoRect = CGRectMake(screenBound.size.width - minimizeVideoFrame.size.width - RIGHT_BOTTOM_MINIMIZED_VIEW_MARGIN, screenBound.size.height - minimizeVideoFrame.size.height - RIGHT_BOTTOM_MINIMIZED_VIEW_MARGIN - 70, minimizeVideoFrame.size.width, minimizeVideoFrame.size.height);
+    float percent = rect.origin.y / finalVideoRect.origin.y;
+
+    if ( percent < 0 ) {
+        return;
+    }
+
+    rect.origin.x = finalVideoRect.origin.x * MIN( percent, 1 );
+    rect.origin.y = location;
+    self.view.frame = rect;
+
+    if (percent > 1 ) {
+        playerController.view.alpha = 1 - ((percent - 1) * 8);
+        return;
+    }
+
+    float inversePercent = 1.0 - percent;
+    playerController.view.frame = CGRectMake(playerFrame.origin.x * inversePercent,
+                                             playerFrame.origin.y * inversePercent,
+                                             finalVideoRect.size.width + ((playerFrame.size.width - finalVideoRect.size.width) * inversePercent),
+                                             finalVideoRect.size.height + ((playerFrame.size.height - finalVideoRect.size.height) * inversePercent));
+    customBackground.alpha = inversePercent;
+    
 }
 
 @end

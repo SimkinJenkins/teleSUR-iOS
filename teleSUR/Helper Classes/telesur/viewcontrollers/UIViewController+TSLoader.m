@@ -52,7 +52,7 @@ CGFloat const LOADING_ANIMATION_TIME = 0.4;
         loader.alpha = 0.0;
         
     }
-    
+
     UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
     
     CGFloat spinnerY = initial ? (isIpad ? (isLandscape ? 550 : 750) : (isIphone5 ? 410 : 380)) : (screenBound.size.height - 100) * .5;

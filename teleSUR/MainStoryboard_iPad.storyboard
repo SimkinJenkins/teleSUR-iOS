@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="Xhn-vr-UDM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="Xhn-vr-UDM">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
     <scenes>
         <!--Ipad Navigation View Controller-->
@@ -31,261 +31,6 @@
             </objects>
             <point key="canvasLocation" x="-1177" y="-2015"/>
         </scene>
-        <!--Detail Ipad View Controller-->
-        <scene sceneID="iDv-y8-VrT">
-            <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="fwS-65-hSq" customClass="DetailIpadViewController" sceneMemberID="viewController">
-                    <view key="view" autoresizesSubviews="NO" contentMode="scaleToFill" id="6b5-bw-5S0">
-                        <rect key="frame" x="0.0" y="0.0" width="703" height="768"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" tag="400" contentMode="scaleToFill" directionalLockEnabled="YES" bounces="NO" showsHorizontalScrollIndicator="NO" canCancelContentTouches="NO" id="iex-I1-6Qd">
-                                <rect key="frame" x="8" y="10" width="665" height="630"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <subviews>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nuestra misión" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Kbv-Pk-9m0">
-                                        <rect key="frame" x="33" y="20" width="172" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
-                                        <color key="textColor" red="0.7725490196" green="0.086274509799999996" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Lia-Qz-kYT">
-                                        <rect key="frame" x="28" y="49" width="611" height="123"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <string key="text">TeleSUR es un multimedio de comunicación latinoamericano de vocación social orientado a liderar y promover los procesos de unión de los pueblos del SUR*.
-
-Somos un espacio y una voz para la construcción de un nuevo orden comunicacional.
-
-(*) SUR: concepto geopolítico que promueve la lucha de los pueblos por la paz, autodeterminación, respeto por los Derechos Humanos y la Justicia Social.</string>
-                                        <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="15"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nuestra visión" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="TFm-uk-6jE">
-                                        <rect key="frame" x="33" y="201" width="172" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
-                                        <color key="textColor" red="0.7725490196" green="0.086274509799999996" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sBU-hS-szG">
-                                        <rect key="frame" x="28" y="230" width="611" height="57"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <string key="text">Ser un multimedio y multiplataforma de servicio público con cobertura global que, desde el SUR*, produce y divulga contenido informativo y formativo para una base de usuarios amplia y leal; con una visión integradora de los pueblos.</string>
-                                        <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="15"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Para sugerencias, comentarios y opiniones envíe un correo a la siguiente dirección:" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="g7J-qa-0c0">
-                                        <rect key="frame" x="28" y="346" width="611" height="37"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="15"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="contactenos@telesurtv.net" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ifg-Su-QgR">
-                                        <rect key="frame" x="39" y="391" width="186" height="23"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="15"/>
-                                        <color key="textColor" red="0.043137254899999998" green="0.58039215690000001" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="distribucion@telesurtv.net" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="uTP-fM-NFU">
-                                        <rect key="frame" x="39" y="418" width="186" height="23"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="15"/>
-                                        <color key="textColor" red="0.043137254899999998" green="0.58039215690000001" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contáctenos" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Aos-3E-mjS">
-                                        <rect key="frame" x="38" y="324" width="172" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
-                                        <color key="textColor" red="0.7725490196" green="0.086274509799999996" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calle Vargas con Calle Santa Clara, edificio TeleSUR. Urbanización Boleíta Norte." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="y7n-SR-hof">
-                                        <rect key="frame" x="28" y="514" width="611" height="25"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="15"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Más información:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hUv-po-veF">
-                                        <rect key="frame" x="38" y="485" width="172" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
-                                        <color key="textColor" red="0.7725490196" green="0.086274509799999996" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <view contentMode="scaleToFill" id="O7B-jO-d7I">
-                                        <rect key="frame" x="38" y="412" width="177" height="1"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.043137254899999998" green="0.58039215690000001" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    </view>
-                                    <view contentMode="scaleToFill" id="qWb-EX-rgq">
-                                        <rect key="frame" x="38" y="439" width="173" height="1"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.043137254899999998" green="0.58039215690000001" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    </view>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </scrollView>
-                            <scrollView autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" multipleTouchEnabled="YES" tag="50" contentMode="center" directionalLockEnabled="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" canCancelContentTouches="NO" id="Nx3-xA-Yq5">
-                                <rect key="frame" x="14" y="462" width="647" height="177"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                            </scrollView>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" tag="401" contentMode="scaleToFill" directionalLockEnabled="YES" bounces="NO" showsHorizontalScrollIndicator="NO" canCancelContentTouches="NO" id="LIh-Nx-eGB">
-                                <rect key="frame" x="8" y="10" width="665" height="630"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <subviews>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Our mission" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="IZf-1A-rPd">
-                                        <rect key="frame" x="33" y="20" width="172" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
-                                        <color key="textColor" red="0.7725490196" green="0.086274509799999996" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jew-pc-RKl">
-                                        <rect key="frame" x="28" y="45" width="611" height="123"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <string key="text">teleSUR is a Latin American multimedia platform oriented to lead and promote the unification of the peoples of the SOUTH*.
-
-We are a space and a voice for the construction of a new communications order.
-
-(*) SOUTH: Geopolitical concept that promotes the struggle of peoples for peace, self-determination, respect for Human Rights and Social Justice.</string>
-                                        <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="15"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Our vision" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cvO-j7-yvL">
-                                        <rect key="frame" x="33" y="191" width="172" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
-                                        <color key="textColor" red="0.7725490196" green="0.086274509799999996" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Pcu-IW-ush">
-                                        <rect key="frame" x="28" y="216" width="611" height="57"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <string key="text">Being a multimedia public service platform with global coverage and that produces and disseminates information from the SOUTH* for a broad base of loyal users, with a people at the center of their view. </string>
-                                        <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="15"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="For suggestions, comments and opinion send us mail to the following address:" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="d3C-TI-8Iv">
-                                        <rect key="frame" x="28" y="314" width="611" height="37"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="15"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="telesurenglish@gmail.com" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="YZd-qQ-HZa">
-                                        <rect key="frame" x="39" y="366" width="186" height="23"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="15"/>
-                                        <color key="textColor" red="0.043137254899999998" green="0.58039215690000001" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contact us" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="KTw-kh-rNp">
-                                        <rect key="frame" x="33" y="295" width="172" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
-                                        <color key="textColor" red="0.7725490196" green="0.086274509799999996" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calle Vargas con Calle Santa Clara, edificio TeleSUR. Urbanización Boleíta Norte. Caracas, Venezuela" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="e9G-52-Pig">
-                                        <rect key="frame" x="28" y="459" width="611" height="35"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="15"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="More Information" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xEf-GW-p9K">
-                                        <rect key="frame" x="38" y="430" width="172" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
-                                        <color key="textColor" red="0.7725490196" green="0.086274509799999996" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <view contentMode="scaleToFill" id="5OM-sj-Ulu">
-                                        <rect key="frame" x="38" y="387" width="177" height="1"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.043137254899999998" green="0.58039215690000001" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    </view>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </scrollView>
-                            <view tag="300" contentMode="scaleToFill" id="hP0-fC-pG6">
-                                <rect key="frame" x="408" y="0.0" width="229" height="77"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <button opaque="NO" tag="301" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="sv8-EZ-zIJ">
-                                        <rect key="frame" x="20" y="20" width="189" height="37"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="1" green="0.5647059083" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="18"/>
-                                        <state key="normal" title="  Señal en Vivo" image="senal.png">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" tag="302" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="7mZ-dK-0h1">
-                                        <rect key="frame" x="20" y="71" width="189" height="37"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="1" green="0.5647059083" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="18"/>
-                                        <state key="normal" title="  Audio en Vivo" image="audio.png">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" red="0.94509803920000002" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <toolbarItems/>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZgS-iv-bCt" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1466.5" y="-273"/>
-        </scene>
-        <!--Main Ipad View Controller-->
-        <scene sceneID="nve-iC-cZs">
-            <objects>
-                <tableViewController clearsSelectionOnViewWillAppear="NO" id="71F-5K-S7O" customClass="MainIpadViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" sectionIndexMinimumDisplayRowCount="-1" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="iwW-XP-dP9">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="768"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="tintColor" red="0.99607843139999996" green="0.25882352939999997" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="sectionIndexBackgroundColor" red="0.99607843139999996" green="0.25882352939999997" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
-                        <connections>
-                            <outlet property="dataSource" destination="71F-5K-S7O" id="Jp9-6b-auI"/>
-                            <outlet property="delegate" destination="71F-5K-S7O" id="5jH-9t-Meb"/>
-                        </connections>
-                    </tableView>
-                    <extendedEdge key="edgesForExtendedLayout"/>
-                    <navigationItem key="navigationItem" id="zPn-po-u6e"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="D8v-bw-Bj8" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1936" y="-1193"/>
-        </scene>
-        <!--Ipad Navigation View Controller-->
-        <scene sceneID="eaX-qN-DNj">
-            <objects>
-                <navigationController navigationBarHidden="YES" id="NrC-5P-2MD" customClass="TSIpadNavigationViewController" sceneMemberID="viewController">
-                    <extendedEdge key="edgesForExtendedLayout"/>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    <navigationBar key="navigationBar" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="XwI-IE-l4b">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" id="6e3-8S-zQ1" customClass="TSToolbar">
-                        <rect key="frame" x="0.0" y="724" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </toolbar>
-                    <connections>
-                        <segue destination="71F-5K-S7O" kind="relationship" relationship="rootViewController" id="R5b-j6-ohv"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FQt-c0-1yr" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1384" y="-1193"/>
-        </scene>
         <!--Pad Home View Controller-->
         <scene sceneID="hlY-fD-htH">
             <objects>
@@ -294,6 +39,7 @@ We are a space and a voice for the construction of a new communications order.
                         <rect key="frame" x="0.0" y="64" width="768" height="936"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <inset key="contentInset" minX="0.0" minY="60" maxX="0.0" maxY="0.0"/>
                         <collectionViewLayout key="collectionViewLayout" id="UrP-nD-l6u" customClass="RFQuiltLayout">
                             <connections>
                                 <outlet property="delegate" destination="Yuh-e3-3mk" id="zmJ-rS-JSf"/>
@@ -365,11 +111,11 @@ We are a space and a voice for the construction of a new communications order.
         <scene sceneID="vq3-3l-Pql">
             <objects>
                 <viewController storyboardIdentifier="TSIPadVideoDetailViewController" id="QsQ-8j-ds1" customClass="TSIPadVideoDetailViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="6OZ-Qf-C6v">
+                    <view key="view" tag="9000" contentMode="scaleToFill" id="6OZ-Qf-C6v">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view autoresizesSubviews="NO" tag="150" contentMode="scaleToFill" id="dws-BJ-OEQ">
+                            <view autoresizesSubviews="NO" tag="9001" contentMode="scaleToFill" id="dws-BJ-OEQ">
                                 <rect key="frame" x="0.0" y="0.0" width="714" height="400"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
@@ -389,7 +135,7 @@ We are a space and a voice for the construction of a new communications order.
                                         <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <size key="shadowOffset" width="0.0" height="0.0"/>
                                     </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eCs-eq-8ZN">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="2004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eCs-eq-8ZN">
                                         <rect key="frame" x="9" y="202" width="631" height="62"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <string key="text">En la plaza Bolívar del estado Vargas se realizó una discusión abierta sobre Ley del Empleo Productivo. Más de 200 jóvenes participaron en la actividad y se prevé que cerca de 90 mil jóvenes varguenses se beneficien de esta normativa que demoratiza la inclusión laboral.</string>
@@ -431,22 +177,6 @@ We are a space and a voice for the construction of a new communications order.
             </objects>
             <point key="canvasLocation" x="817" y="-3171"/>
         </scene>
-        <!--Split View Controller-->
-        <scene sceneID="XGs-jL-tBa">
-            <objects>
-                <splitViewController storyboardIdentifier="TSSplitViewController" id="aST-h1-6Dy" customClass="TSSplitViewController" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" id="tla-2J-FGJ"/>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    <connections>
-                        <segue destination="NrC-5P-2MD" kind="relationship" relationship="masterViewController" id="uL4-EA-A05"/>
-                        <segue destination="fwS-65-hSq" kind="relationship" relationship="detailViewController" id="8Tb-Qx-TNf"/>
-                    </connections>
-                </splitViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="SNL-A4-Sk3" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-56" y="-899"/>
-        </scene>
         <!--News View Controller-->
         <scene sceneID="yGm-7h-mcf">
             <objects>
@@ -471,6 +201,24 @@ We are a space and a voice for the construction of a new communications order.
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bax-Ur-bNL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-56" y="214"/>
+        </scene>
+        <!--Configuration Table View Controller-->
+        <scene sceneID="PdE-KH-BVl">
+            <objects>
+                <tableViewController storyboardIdentifier="TSConfigurationTableViewController" id="Iab-tt-egC" customClass="TSConfigurationTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="ZNu-mD-x2B">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="Iab-tt-egC" id="s8M-ft-VOo"/>
+                            <outlet property="delegate" destination="Iab-tt-egC" id="eyO-i0-bCr"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wmR-Y7-wPR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1187" y="-3182"/>
         </scene>
         <!--Pad Blog Home View Controller-->
         <scene sceneID="MIa-B5-FVr">
@@ -522,11 +270,32 @@ We are a space and a voice for the construction of a new communications order.
             </objects>
             <point key="canvasLocation" x="-228" y="-4303"/>
         </scene>
+        <!--Ipad Video Home View Controller-->
+        <scene sceneID="ld5-Eu-WmV">
+            <objects>
+                <viewController storyboardIdentifier="TSIpadVideoHomeViewController" id="5Ha-RN-r2D" customClass="TSIpadVideoHomeViewController" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" tag="101" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" id="aiE-TX-Gdp">
+                        <rect key="frame" x="0.0" y="64" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewLayout key="collectionViewLayout" id="6eD-NT-sEb" customClass="RFQuiltLayout">
+                            <connections>
+                                <outlet property="delegate" destination="5Ha-RN-r2D" id="FbW-J9-had"/>
+                            </connections>
+                        </collectionViewLayout>
+                        <cells/>
+                        <connections>
+                            <outlet property="dataSource" destination="5Ha-RN-r2D" id="isz-vb-RC2"/>
+                            <outlet property="delegate" destination="5Ha-RN-r2D" id="dUo-EE-3zg"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="zlk-qs-yXy"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uG1-NB-S0W" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-228" y="-5527"/>
+        </scene>
     </scenes>
-    <resources>
-        <image name="audio.png" width="35" height="23"/>
-        <image name="senal.png" width="36" height="26"/>
-    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

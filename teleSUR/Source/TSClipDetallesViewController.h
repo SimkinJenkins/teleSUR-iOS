@@ -9,11 +9,21 @@
 #import <UIKit/UIKit.h>
 #import "TSClipListadoTableViewController.h"
 #import "TSClipPlayerViewController.h"
+#import "TSProgramListElement.h"
+#import "TSProgramListXMLParser.h"
 
-@interface TSClipDetallesViewController : TSClipListadoTableViewController {
+extern CGFloat const RIGHT_BOTTOM_MINIMIZED_VIEW_MARGIN;
+extern NSInteger const MENU_FAST_VELOCITY_FOR_SWIPE_FOLLOW_DIRECTION;
+
+extern NSInteger const TS_VIEW_STATUS_DEFAULT;
+extern NSInteger const TS_VIEW_STATUS_MAXIMIZED;
+extern NSInteger const TS_VIEW_STATUS_MINIMIZED;
+extern NSInteger const TS_VIEW_STATUS_ON_TRANSITION;
+
+@interface TSClipDetallesViewController : TSClipListadoTableViewController <UIGestureRecognizerDelegate, TSProgramListXMLParserDelegate> {
 
     @protected
-    // Diccionario con la información del Item presentado en la vista de detalle
+
     NSDictionary *currentItem;
 
     UILabel *currentDownloadLabel;
@@ -34,9 +44,22 @@
     UIImageView *thumb;
 
     TSClipPlayerViewController *playerController;
+
+    UIPanGestureRecognizer *panRecognizer;
+    CGPoint draggingPoint;
+
+    NSInteger viewStatus;
+
+    NSString *liveURL;
+    NSString *liveURLTitle;
+    BOOL *isLiveStream;
+
 }
 
-// Inicia la vista con el diccionario enviado
-- (id)initWithData:(NSDictionary *)itemData;
+- (id) initWithData:(NSDictionary *)itemData andSection:(NSString *)section;
+- (id) initWithURL:(NSString *)URL andTitle:(NSString *)title;
+
+- (void) setData:(NSDictionary *)itemData andSection:(NSString *)section;
+- (void) setURL:(NSString *)URL andTitle:(NSString *)title;
 
 @end

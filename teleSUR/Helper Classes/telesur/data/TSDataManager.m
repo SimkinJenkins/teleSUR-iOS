@@ -17,6 +17,11 @@
 #pragma mark -
 #pragma mark Public methods
 
+- (void)loadNotificationRequests:(NSArray *)currentQueue delegateResponseTo:(id)dataDelegate {
+    isANotificationRequest = YES;
+    [self loadRequests:currentQueue delegateResponseTo:dataDelegate];
+}
+
 - (void)loadRequests:(NSArray *)currentQueue delegateResponseTo:(id) dataDelegate {
 
     queue = currentQueue;
@@ -100,8 +105,14 @@
             ((TSDataRequest *)[queue objectAtIndex:i]).result = [currentResults objectAtIndex:i];
         }
     }
-    if ([delegate respondsToSelector:@selector(TSDataManager:didProcessedRequests:)]) {
-        [delegate TSDataManager:self didProcessedRequests:queue];
+    if ( isANotificationRequest ) {
+        if ([delegate respondsToSelector:@selector(TSDataManager:didProcessedNotificationRequests:)]) {
+            [delegate TSDataManager:self didProcessedNotificationRequests:queue];
+        }
+    } else {
+        if ([delegate respondsToSelector:@selector(TSDataManager:didProcessedRequests:)]) {
+            [delegate TSDataManager:self didProcessedRequests:queue];
+        }
     }
 
 }
@@ -110,7 +121,7 @@
 
     parsedItems = [[NSMutableArray alloc] init];
 
-    NSURL *feedURL = [NSURL URLWithString:[self getRSSURLStringWithSection:currentRequest.section withSlug:currentRequest.subsection]];
+    NSURL *feedURL = [NSURL URLWithString:[NSString stringWithFormat:@"%@?x=%d", [self getRSSURLStringWithSection:currentRequest.section withSlug:currentRequest.subsection], (int)ceil(random() * 10000)]];
 
     NSLog(@"%@", feedURL);
 
@@ -202,30 +213,23 @@
 
 }
 
-- (NSString *) getRSSURLStringWithSection:(NSString *)section
+- (NSString *)getRSSURLStringWithSection:(NSString *)section
                                 withSlug:(NSString *)filterSlug {
-
-    NSString *langCode = [[[[NSBundle mainBundle] infoDictionary] objectForKey:@"Configuración"] objectForKey:@"langCode"];
-    BOOL defaultIdiom = [langCode isEqualToString:@"es"];
+    
     if ([section isEqualToString:@"blog"]) {
-        return defaultIdiom ? @"http://www.telesurtv.net/rss/RssBlogs.xml" : @"http://www.telesurtv.net/english/rss/RssBlogs.xml";
-    } else if ([section isEqualToString:@"opinion"]) {
-        if ([filterSlug isEqualToString:@"op-entrevistas"]) {
-            return defaultIdiom ? @"http://www.telesurtv.net/rss/RssInterviews.xml" : @"http://www.telesurtv.net/english/rss/RssInterviews.xml";
-        }
-        return defaultIdiom ? @"http://www.telesurtv.net/rss/RssOpinion.xml" : @"http://www.telesurtv.net/english/rss/RssOpinion.xml";
-    } else if ([section isEqualToString:@"noticias"]) {
-        if ([filterSlug isEqualToString:@"latinoamerica"]) {
-            return defaultIdiom ? @"http://www.telesurtv.net/rss/RssLatinoamerica.xml" : @"http://www.telesurtv.net/english/rss/RssLatinoamerica.xml";
-        } else if ([filterSlug isEqualToString:@"mundo"]) {
-            return defaultIdiom ? @"http://www.telesurtv.net/rss/RssMundo.xml" : @"http://www.telesurtv.net/english/rss/RssWorld.xml";
-        } else if ([filterSlug isEqualToString:@"deportes"]) {
-            return defaultIdiom ? @"http://www.telesurtv.net/rss/RssDeporte.xml" : @"http://www.telesurtv.net/english/rss/RssSports.xml";
-        } else if ([filterSlug isEqualToString:@"cultura"]) {
-            return defaultIdiom ? @"http://www.telesurtv.net/rss/RssCultura.xml" : @"http://www.telesurtv.net/english/rss/RssCulture.xml";
-        }
+        return [NSString stringWithFormat:NSLocalizedString(@"blogRSS", nil)];
     }
-    return defaultIdiom ? @"http://www.telesurtv.net/rss/RssPortada.xml" : @"http://www.telesurtv.net/english/rss/RssHome.xml";
+    if ([section isEqualToString:@"opinion"]) {
+        if ([filterSlug isEqualToString:@"op-entrevistas"]) {
+            return [NSString stringWithFormat:NSLocalizedString(@"op-entrevistasRSS", nil)];
+        }
+        return [NSString stringWithFormat:NSLocalizedString(@"opinionRSS", nil)];
+    }
+    if ([section isEqualToString:@"noticias"] && filterSlug && ![filterSlug isEqualToString:@""]) {
+        NSString *localizeID = [ NSString stringWithFormat:@"%@RSS", filterSlug ];
+        return [NSString stringWithFormat:NSLocalizedString(localizeID, nil)];
+    }
+    return [NSString stringWithFormat:NSLocalizedString(@"portadaRSS", nil)];
 }
 
 - (NSMutableArray *) getAPIFilterForSection:(NSString *)section andSubsection:(NSString *)subsection {

@@ -10,7 +10,6 @@
 
 @interface UIViewController (UIViewController_Configuracion)
 
-- (void) presentarVideoEnVivo;
 - (void) launchLiveAudio;
 - (void) stopLiveAudio;
 

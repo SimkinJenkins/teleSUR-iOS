@@ -26,16 +26,14 @@
 
 }
 
+@property(nonatomic, retain) UIViewController *detailViewController;
+
 //Regresa el ID de la celda correspondiente al index enviado.
 - (NSString *)getIDForCellAtIndexPath:(NSIndexPath *)indexPath;
 //Configura la WebCacheImage, de acuerdo al indexPath actual. También decide entre configurar con la URL de la imagen grande o pequeña.
 - (void)configureImageInCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath forceLargeImage:(BOOL)largeImage;
-// Se ejecuta al terminar de reproducir un video y crea la vista de detalle del clip que se acaba de reproducir.
-- (void)playerDidFinish;
 // Manda a reproducir el clip correspondiente al index enviado
 - (void)playSelectedClip:(NSIndexPath *)indexPath;
-// Manda a crear la vista de detalle de un item del tipo RSS
-- (void)showSelectedPost:(MWFeedItem *)post;
 
 
 @property (nonatomic, strong) IBOutlet UITableViewController *tableViewController;

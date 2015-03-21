@@ -16,4 +16,7 @@
 
 }
 
+- (void) initializeElements;
+- (void) setGradientDirectionUP:(BOOL)up;
+
 @end

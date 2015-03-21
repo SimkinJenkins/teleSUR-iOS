@@ -7,10 +7,11 @@
 //
 
 #import "TSBasicListViewController.h"
-#import "TSMultimediaData.h"
 #import "TSDataManager.h"
 
 #import "UIViewController+TSLoader.h"
+
+#import "TSWebViewController.h"
 
 NSInteger const TS_ITEMS_PER_PAGE = 15;
 NSInteger const TS_HOME_CLIPS_PER_PAGE = 10;
@@ -18,6 +19,9 @@ NSString* const TS_TIPO_CLIP_SLUG = @"tipo_clip";
 NSString* const TS_CLIP_SLUG = @"clip";
 NSString* const TS_PROGRAMA_SLUG = @"programa";
 NSString* const TS_NOTICIAS_SLUG = @"noticias-texto";
+
+NSString* const TS_ES_NEWS_URL = @"http://www.telesurtv.net/news/";
+NSString* const TS_EN_NEWS_URL = @"http://www.telesurtv.net/english/news/";
 
 @implementation TSBasicListViewController
 
@@ -36,6 +40,13 @@ NSString* const TS_NOTICIAS_SLUG = @"noticias-texto";
 
     return self;
 }
+
+
+
+
+
+
+
 
 
 
@@ -71,11 +82,18 @@ NSString* const TS_NOTICIAS_SLUG = @"noticias-texto";
 
 
 
+
+
+
+
+
+
 #pragma mark - Custom Public Functions
 
 - (void) initViewVariables {
     
     isAnInitialScreen = YES;
+    initialLoadIsComplete = NO;
     defaultDataResultIndex = 0;
     
     catalogs = [NSMutableDictionary dictionary];
@@ -142,24 +160,8 @@ NSString* const TS_NOTICIAS_SLUG = @"noticias-texto";
 
 - (void) reloadData {
 
-//    currentRange = NSMakeRange(1, TS_ITEMS_PER_PAGE);
     [self loadData];
 
-}
-
-- (void) loadDataWithSection:(NSString *)section withSlug:(NSString *)filter {
-
-    [self showLoaderWithAnimation:YES cancelUserInteraction:cancelUserInteraction withInitialView:NO];
-
-    TSMultimediaData *dataClips = [[TSMultimediaData alloc] init];
-    if ([section isEqualToString:@"noticias"] || [section isEqualToString:@"opinion"] || [section isEqualToString:@"blog"]) {
-        [dataClips getTextResourcesFor:section withSlug:filter withDelegate:self];
-    } else {
-        [dataClips getDatosParaEntidad:TS_CLIP_SLUG // otros ejemplos: programa, pais, categoria
-                            conFiltros:currentFilters // otro ejemplo: conFiltros:[NSDictionary dictionaryWithObject:@"2010-01-01" forKey:@"hasta"]
-                               enRango:NSMakeRange(1, TS_ITEMS_PER_PAGE) // otro ejemplo: NSMakeRange(1, 1) -s√≥lo uno-
-                           conDelegate:self];
-    }
 }
 
 - (void) initTableVariables {
@@ -183,8 +185,7 @@ NSString* const TS_NOTICIAS_SLUG = @"noticias-texto";
 
 - (void)setCatalog:(NSArray *)data forKey:(NSString *)key {
 
-    NSLog(@"-----setCatalog: %@ - %lu", key, (unsigned long)[data count]);
-
+//    NSLog(@"-----setCatalog: %@ - %lu", key, (unsigned long)[data count]);
     if ( ![data count] ) {
         return;
     }
@@ -264,13 +265,121 @@ NSString* const TS_NOTICIAS_SLUG = @"noticias-texto";
 
 }
 
-- (void) showNews {
-    NSLog(@"showNews");
-}
-
 - (NSArray *) getResultDataAtIndex:(int) index {
     return ((TSDataRequest *)[currentData objectAtIndex:index]).result;
 }
+
+- (void) loadNotificationRSSNewsWithURL:(NSString *)URL andSection:(NSString *)section {
+
+    notificationSection = section;
+
+    if ([URL isKindOfClass:[NSNull class]] || !URL) {
+        NSLog(@"Alerta hubo un error no se recibió la URL de la notificación");
+    }
+
+    if ( [[[[[NSBundle mainBundle] infoDictionary] valueForKey:@"Configuración"] valueForKey:@"langCode"] isEqualToString:@"es"] ) {
+        notificationSlug = [URL substringWithRange:NSMakeRange(29, [URL length] - 29)];
+    } else {
+        notificationSlug = [URL substringWithRange:NSMakeRange(38, [URL length] - 38)];
+    }
+
+    NSLog(@"%@", URL);
+    NSLog(@"-------------------========================%@", notificationSlug);
+    notificationSlug = [notificationSlug substringWithRange:NSMakeRange(0, [notificationSlug length] - 5)];
+    NSLog(@"-------------------========================%@", notificationSlug);
+
+    if ( initialLoadIsComplete ) {
+        [self loadNotificationSections];
+    }
+
+}
+
+- (void) loadNotificationSections {
+
+    if ( ![self isAPIHostAvailable] ) {
+        return;
+    }
+
+    TSDataRequest *RSSReq;
+
+    if ( [notificationSection isEqualToString:@"P"] ) {
+        RSSReq = [[TSDataRequest alloc] initWithType:TS_NOTICIAS_SLUG forSection:@"noticias" forSubsection:@"portada"];
+    } else if ( [notificationSection isEqualToString:@"L"] ) {
+        RSSReq = [[TSDataRequest alloc] initWithType:TS_NOTICIAS_SLUG forSection:@"noticias" forSubsection:@"latinoamerica"];
+    } else if ( [notificationSection isEqualToString:@"M"] ) {
+        RSSReq = [[TSDataRequest alloc] initWithType:TS_NOTICIAS_SLUG forSection:@"noticias" forSubsection:@"mundo"];
+    } else if ( [notificationSection isEqualToString:@"D"] ) {
+        RSSReq = [[TSDataRequest alloc] initWithType:TS_NOTICIAS_SLUG forSection:@"noticias" forSubsection:@"deportes"];
+    } else if ( [notificationSection isEqualToString:@"C"] ) {
+        RSSReq = [[TSDataRequest alloc] initWithType:TS_NOTICIAS_SLUG forSection:@"noticias" forSubsection:@"cultura"];
+    } else {
+        RSSReq = [[TSDataRequest alloc] initWithType:TS_NOTICIAS_SLUG forSection:@"noticias" forSubsection:@"ultimas"];
+    }
+
+    [self showLoaderWithAnimation:YES cancelUserInteraction:YES withInitialView:NO];
+
+    [[[TSDataManager alloc] init] loadNotificationRequests:[NSArray arrayWithObjects:RSSReq, nil] delegateResponseTo:self];
+
+}
+
+- (void) notificationsSectionsDidLoad:(NSArray *)requests {
+
+    [self hideLoaderWithAnimation:YES];
+    
+    NSString *trimmedNotificationSlug = [notificationSlug substringWithRange:NSMakeRange(0, 20)];
+
+    NSLog(@"-------------------========================notificationsSectionsDidLoad %@", trimmedNotificationSlug);
+
+    for ( uint i = 0; i < [requests count]; i++ ) {
+
+        TSDataRequest *RSSRequest = [requests objectAtIndex:i];
+
+        for ( uint j = 0; j < [RSSRequest.result count]; j++ ) {
+
+            MWFeedItem *item = [RSSRequest.result objectAtIndex:j];
+
+            NSLog(@"%d, %d - %@", i, j, item.link);
+
+            if ( [item.link rangeOfString:trimmedNotificationSlug].length != 0 ) {
+
+                [self showSelectedPost:item];
+                notificationSlug = nil;
+                return;
+
+            }
+
+        }
+
+    }
+
+    UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPhone" bundle: nil];
+
+    TSWebViewController *webView = [mainStoryboard instantiateViewControllerWithIdentifier: @"TSWebViewController"];
+    NSString *URL = [NSString stringWithFormat:@"%@%@.html", [[[[[NSBundle mainBundle] infoDictionary] valueForKey:@"Configuración"] valueForKey:@"langCode"] isEqualToString:@"es"] ? TS_ES_NEWS_URL : TS_EN_NEWS_URL, notificationSlug];
+    webView = [webView initWithURL:[[NSURL alloc] initWithString:URL]];
+
+    [self.navigationController pushViewController:webView animated:YES];
+
+    isNotificationWebViewLastView = YES;
+    notificationSlug = nil;
+//    self.headerMenu.hidden = YES;
+
+}
+
+- (NSString *) getSectionTitleWith:(NSString *)slug {
+
+    NSString *localizeID = [NSString stringWithFormat:@"%@Section", slug];
+    return [NSString stringWithFormat:NSLocalizedString(localizeID, nil)];
+    
+}
+
+- (void)showSelectedPost:(MWFeedItem *)post {}
+
+
+
+
+
+
 
 
 
@@ -296,6 +405,13 @@ NSString* const TS_NOTICIAS_SLUG = @"noticias-texto";
 
 
 
+
+
+
+
+
+
+
 #pragma mark -
 #pragma mark TSDataManagerDelegate
 
@@ -305,15 +421,7 @@ NSString* const TS_NOTICIAS_SLUG = @"noticias-texto";
 
     if ( [ currentSection isEqualToString:TS_PROGRAMA_SLUG ] && [ catalogs objectForKey:TS_PROGRAMA_SLUG ] == nil ) {
 
-        if ( ![requests count] ) {
-            NSLog(@"aaahhhhhh");
-        }
-
         TSDataRequest *catalogRequest = [requests objectAtIndex:0];
-
-        if ([catalogRequest.result isKindOfClass:[MWFeedInfo class]]) {
-            NSLog(@"lalala si era esto :o");
-        }
 
         [self setCatalog:catalogRequest.result forKey:catalogRequest.type];
         requests = [ requests subarrayWithRange:NSMakeRange(1, 1) ];
@@ -329,6 +437,22 @@ NSString* const TS_NOTICIAS_SLUG = @"noticias-texto";
     }
 
     [self hideLoaderWithAnimation:YES];
+
+    initialLoadIsComplete = YES;
+
+    if ( notificationSlug ) {
+        
+        [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(loadNotificationSections) userInfo:nil repeats:NO];
+
+    }
+
+}
+
+- (void)TSDataManager:(TSDataManager *)manager didProcessedNotificationRequests:(NSArray *)requests {
+
+    [self checkForRequestErrors:requests];
+
+    [self notificationsSectionsDidLoad:requests];
 
 }
 

@@ -46,7 +46,6 @@ NSInteger const TS_DETAIL_ASYNC_IMAGE_TAG = 106;
     [self.view viewWithTag:TS_ABOUT_EN_VIEW_TAG].hidden = YES;
     [self.view viewWithTag:TS_STREAM_VIEW_TAG].hidden = YES;
 
-    NSLog(@"%@", [NSString stringWithFormat:NSLocalizedString(@"aboutViewTag", nil)]);
     aboutViewTag = [[NSString stringWithFormat:NSLocalizedString(@"aboutViewTag", nil)] intValue];
 
     wrapper = [[UIScrollView  alloc] initWithFrame:CGRectMake(12, 445, 660, 192)];

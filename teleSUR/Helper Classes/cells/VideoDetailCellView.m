@@ -30,6 +30,7 @@
     loadMore.font = [UIFont fontWithName:@"Roboto-Regular" size:14];//fe4141
     loadMore.text = [NSString stringWithFormat:NSLocalizedString(@"masArchivos", nil)];
 
+    self.selectionStyle = UITableViewCellSelectionStyleNone;
 }
 
 - (NSInteger) getTitleLabelTag {

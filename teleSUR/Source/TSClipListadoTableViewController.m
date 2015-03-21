@@ -17,10 +17,11 @@
 #import "TSNewsViewController.h"
 #import "DefaultTableViewCell.h"
 #import "UIImageView+WebCache.h"
-#import "TSMultimediaData.h"
 
 
 #import "UIViewController+TSLoader.h"
+#import "NavigationBarsManager.h"
+#import "SlideNavigationController.h"
 
 #define kTHUMBNAIL_IMAGE_VIEW_TAG 2
 
@@ -91,16 +92,6 @@
 
 #pragma mark - Custom Public Functions
 
-- (void)playerDidFinish {
-
-    NSDictionary *item = [ [ self getDataArrayForIndexPath:selectedIndexPath forDefaultTable:YES ] objectAtIndex:selectedIndexPath.row];
-
-    TSClipDetallesViewController *detailView = [[TSClipDetallesViewController alloc] initWithData:item];
-
-    [self.navigationController pushViewController:detailView animated:NO];
-
-}
-
 - (void)playSelectedClip:(NSIndexPath *)indexPath {
     
     if(((HiddenVideoPlayerController *)[SlideNavigationController sharedInstance].rightMenu).isAudioPlaying) {
@@ -112,39 +103,12 @@
 
     NSDictionary *item = [ [ self getDataArrayForIndexPath:indexPath forDefaultTable:YES ] objectAtIndex:indexPath.row];
 
-    TSClipDetallesViewController *detailView = [[TSClipDetallesViewController alloc] initWithData:item];
-
-//    [[SlideNavigationController sharedInstance] addTopViewController:detailView withCompletion:nil];
-/*
-//    if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"7.0"))
-//        self.interactivePopGestureRecognizer.enabled = NO;
-    
-    self.view.userInteractionEnabled = NO;
-    
-    //    [viewController.view addGestureRecognizer:self.tapRecognizer];
-    
-    [self.view.window insertSubview:detailView.view aboveSubview:self.view];
-
-    [self addChildViewController:detailView];
-*/
-
-
-//    [self addChildViewController:detailView];
-//    [self.view addSubview:detailView.view];
-
-//    [self.view.window insertSubview:detailView.view aboveSubview:self.view];
-
-//    [detailView didMoveToParentViewController:self];
-    [self.navigationController pushViewController:detailView animated:YES];
-
-    
-    
-    //addChildViewController:detailView];
-
-//    TSClipPlayerViewController *playerController = [[TSClipPlayerViewController alloc] initConClip:item];
-
-//    CGRect screenBound = [[UIScreen mainScreen] bounds];
-//    [playerController playAtView:self.view withFrame:CGRectMake(0, 0, screenBound.size.width, screenBound.size.width * 0.66) withObserver:self playbackFinish:@selector(playerDidFinish)];
+    if ( [SlideNavigationController sharedInstance].topView ) {
+        [((TSClipDetallesViewController *)[SlideNavigationController sharedInstance].topView) setData:item andSection:[self getSectionTitleWith:currentSection]];
+    } else {
+        TSClipDetallesViewController *detailView = [[TSClipDetallesViewController alloc] initWithData:item andSection:[self getSectionTitleWith:currentSection]];
+        [[SlideNavigationController sharedInstance] addTopViewController:detailView];
+    }
 
 }
 
@@ -202,6 +166,8 @@
 
 - (void)setTableViewConfiguration {
 
+    self.navigationController.navigationBar.barTintColor = [UIColor blueColor];
+    self.navigationController.navigationBar.translucent = NO;
     [self.navigationController.navigationBar setTintColor:[UIColor darkGrayColor]];
     CGRect tableFrame = self.tableViewController.tableView.frame;
     CGRect navRect = self.navigationController.navigationBar.frame;
@@ -211,7 +177,6 @@
     NSLog(@"%@", NSStringFromCGRect(self.tableViewController.tableView.frame));
 
     self.tableViewController.tableView.autoresizingMask = UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin;
-    
 }
 
 - (void)liveAudioEnd:(NSNotification *)notification {
@@ -219,6 +184,12 @@
     [self playSelectedClip:selectedIndexPath];
     
 }
+
+
+
+
+
+
 
 
 
@@ -391,7 +362,7 @@
 #pragma mark UIViewController+TSLoader.h
 
 - (void)hideLoaderWithAnimation:(BOOL)animation {
-    
+
     if (animation) {
         [UIView beginAnimations:@"mostrarTableView" context:nil];
         self.tableViewController.tableView.alpha = 1.0;
@@ -404,7 +375,7 @@
 }
 
 - (void)showLoaderWithAnimation:(BOOL)animation cancelUserInteraction:(BOOL)userInteraction withInitialView:(BOOL)initial {
-    
+
     if (animation) {
         [UIView beginAnimations:@"opacarTableView" context:nil];
         self.tableViewController.tableView.alpha = 0.3;
@@ -415,6 +386,10 @@
     
     [super showLoaderWithAnimation:animation cancelUserInteraction:userInteraction withInitialView:initial];
 }
+
+
+
+
 
 
 

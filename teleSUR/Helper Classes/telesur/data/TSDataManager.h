@@ -26,9 +26,14 @@
         uint index;
 
         NSMutableArray *currentResults;
+
+        BOOL isANotificationRequest;
+
 }
 
 @property (nonatomic) id <TSDataManagerDelegate> delegate;
+
+- (void)loadNotificationRequests:(NSArray *)currentQueue delegateResponseTo:(id)dataDelegate;
 
 - (void)loadRequests:(NSArray *)currentQueue delegateResponseTo:(id) dataDelegate;
 - (void)loadRSSDataFor:(NSString *)section andSubsection:(NSString *)subsection delegateResponseTo:(id)dataDelegate;

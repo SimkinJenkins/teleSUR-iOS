@@ -42,7 +42,7 @@ typedef enum {
 
 @implementation SlideNavigationController
 
-@synthesize enableAutorotate;
+@synthesize enableAutorotate, topView;
 
 #define SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v)  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
 #define MENU_SLIDE_ANIMATION_DURATION .3
@@ -365,23 +365,26 @@ static SlideNavigationController *singletonInstance;
 	return nil;
 }
 
-- (void)addTopViewController:(UIViewController *)viewController withCompletion:(void (^)())completion {
+- (void)addTopViewController:(UIViewController *)viewController {
 
-    if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"7.0"))
+    if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"7.0")) {
         self.interactivePopGestureRecognizer.enabled = NO;
-    
+    }
     self.topViewController.view.userInteractionEnabled = NO;
 
-//    [viewController.view addGestureRecognizer:self.tapRecognizer];
-
+    self.topView = viewController;
     [self.view.window insertSubview:viewController.view aboveSubview:self.topViewController.view];
 
-    [self.topViewController addChildViewController:viewController];
-
-//    [self updateMenuFrameAndTransformAccordingToOrientation];
+    [self setNeedsStatusBarAppearanceUpdate];
 
 }
 
+- (void) removeTopViewController {
+
+    [self.topView.view removeFromSuperview];
+    self.topView = nil;
+
+}
 
 
 #pragma mark - Private Methods -
@@ -470,7 +473,7 @@ static SlideNavigationController *singletonInstance;
 	[self enableTapGestureToCloseMenu:YES];
 
 	[self prepareMenuForReveal:menu];
-	
+
 	[UIView animateWithDuration:duration
 						  delay:0
 						options:UIViewAnimationOptionCurveEaseOut
@@ -481,6 +484,7 @@ static SlideNavigationController *singletonInstance;
 						 [self moveHorizontallyToLocation:rect.origin.x];
 					 }
 					 completion:^(BOOL finished) {
+                         [self setNeedsStatusBarAppearanceUpdate];
 						 if (completion)
 							 completion();
 					 }];
@@ -499,6 +503,7 @@ static SlideNavigationController *singletonInstance;
 						 [self moveHorizontallyToLocation:rect.origin.x];
 					 }
 					 completion:^(BOOL finished) {
+                         [self setNeedsStatusBarAppearanceUpdate];
 						 if (completion)
 							 completion();
 					 }];
@@ -587,6 +592,7 @@ static SlideNavigationController *singletonInstance;
 	[self updateMenuFrameAndTransformAccordingToOrientation];
 	
 	[self.menuRevealAnimator prepareMenuForAnimation:menu];
+
 }
 
 - (CGFloat)horizontalLocation
@@ -837,6 +843,34 @@ static SlideNavigationController *singletonInstance;
 
     return enableAutorotate ? UIInterfaceOrientationMaskAllButUpsideDown : UIInterfaceOrientationMaskPortrait;
 
+}
+/*
+- (UIViewController *)childViewControllerForStatusBarStyle {
+    if ( self. ) {
+        return self.topView;
+    }
+    return nil;
+}
+*/
+- (UIViewController *)childViewControllerForStatusBarHidden {
+    if ( self.topView ) {
+        return self.topView;
+    }
+    return nil;
+}
+
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    if ([self isMenuOpen]) {
+        return UIStatusBarStyleLightContent;
+    }
+    return UIStatusBarStyleDefault;
+}
+
+- (BOOL)prefersStatusBarHidden {
+    if ( self.topView ) {
+        return YES;
+    }
+    return NO;
 }
 
 @end

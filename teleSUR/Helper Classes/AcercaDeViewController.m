@@ -10,22 +10,22 @@
 
 @implementation AcercaDeViewController
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
-}
+
+
+
 
 #pragma mark - SlideNavigationController Methods -
 
-- (BOOL)slideNavigationControllerShouldDisplayLeftMenu
-{
+- (BOOL)slideNavigationControllerShouldDisplayLeftMenu {
+
 	return YES;
+
 }
 
-- (BOOL)slideNavigationControllerShouldDisplayRightMenu
-{
+- (BOOL)slideNavigationControllerShouldDisplayRightMenu {
+
 	return NO;
+
 }
 
 

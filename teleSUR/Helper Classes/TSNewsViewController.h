@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "MWFeedItem.h"
+#import "TSBasicListViewController.h"
 
-@interface TSNewsViewController : UIViewController <UIWebViewDelegate> {
+@interface TSNewsViewController : TSBasicListViewController <UIWebViewDelegate> {
 
     @protected
         MWFeedItem *currentPost;

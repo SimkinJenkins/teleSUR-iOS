@@ -15,7 +15,7 @@
 
 @implementation TSNewsViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+- (id) initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
 
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
@@ -24,11 +24,11 @@
     return self;
 }
 
-- (void)initWithData:(MWFeedItem *)post {
+- (void) initWithData:(MWFeedItem *)post {
     currentPost = post;
 }
 
-- (void)viewDidLoad {
+- (void) viewDidLoad {
 
     [super viewDidLoad];
 
@@ -95,6 +95,7 @@
 
     [self configLeftButton];
     [self configRightButton];
+
 }
 
 - (void) viewWillAppear:(BOOL)animated {
@@ -105,6 +106,54 @@
                                                   placeholderImage:[UIImage imageNamed:@"SinImagen.png"]];
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+- (void) initViewVariables {
+
+    [super initViewVariables];
+
+    initialLoadIsComplete = YES;
+    
+}
+
+- (void) initTableVariables {}
+
+- (void) loadData {}
+
+- (void) showSelectedPost:(MWFeedItem *)post {
+
+    UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPhone"
+                                                             bundle: nil];
+
+    TSNewsViewController *detailView = [mainStoryboard instantiateViewControllerWithIdentifier: @"TSNewsViewController"];
+
+    [detailView initWithData:post];
+    [self.navigationController pushViewController:detailView animated:YES];
+
+}
+
+
+
+
+
+
 
 
 
@@ -145,7 +194,7 @@
 
 }
 
-- (void)shareText:(NSString *)text andImage:(UIImage *)image andUrl:(NSURL *)url {
+- (void) shareText:(NSString *)text andImage:(UIImage *)image andUrl:(NSURL *)url {
 
     NSMutableArray *sharingItems = [NSMutableArray new];
 
@@ -220,10 +269,15 @@
 
 
 
+
+
+
+
+
 #pragma mark -
 #pragma mark UIWebViewDelegate
 
-- (void)webViewDidStartLoad:(UIWebView *)webView {
+- (void) webViewDidStartLoad:(UIWebView *)webView {
 
     if(webView.frame.size.height != 0) {
         return;
@@ -235,7 +289,7 @@
 
 }
 
--(void)webViewDidFinishLoad:(UIWebView *)webView {
+- (void) webViewDidFinishLoad:(UIWebView *)webView {
 
     CGRect screenBound = [[UIScreen mainScreen] bounds];
 
@@ -251,7 +305,7 @@
 
 }
 
-- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
+- (BOOL) webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
 /*
     NSLog(@"%ld ----> %@ - %ld - %ld - %ld - %ld - %ld - %ld", navigationType, request.URL, (long)UIWebViewNavigationTypeLinkClicked, (long)UIWebViewNavigationTypeFormSubmitted, (long)UIWebViewNavigationTypeBackForward, (long)UIWebViewNavigationTypeFormResubmitted, (long)UIWebViewNavigationTypeFormResubmitted, (long)UIWebViewNavigationTypeOther);
 */
@@ -260,7 +314,7 @@
             /*aqui se manda la liga*/
             UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPhone"
                                                                      bundle: nil];
-            
+
             TSWebViewController *webView = [mainStoryboard instantiateViewControllerWithIdentifier: @"TSWebViewController"];
             webView = [webView initWithURL:request.URL];
 

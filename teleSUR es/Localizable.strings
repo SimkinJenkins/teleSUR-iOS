@@ -18,6 +18,7 @@
 "reportajeSection" = "Reportajes";
 "buscarSection" = "Buscar";
 "acercaSection" = "Acerca de";
+"configSection" = "Configuración";
 
 "homeSection" = "Inicio";
 
@@ -26,12 +27,37 @@
 "op-entrevistasSection" = "Entrevistas";
 
 //Secciones del Submenu para Noticias y entrevistas
+"portadaSection" = "Principales";
+"ultimasSection" = "Ultimo momento";
 "latinoamericaSection" = "Latinoamérica";
 "mundoSection" = "Vuelta al mundo";
 "deportesSection" = "Deportes";
 "culturaSection" = "Cultura";
 "saludSection" = "Salud";
 "ciencia-y-tecnologiaSection" = "Ciencia y Tecnología";
+
+
+
+
+
+//URL's de Secciones para Noticias
+"portadaRSS" = "http://www.telesurtv.net/rss/RssPortada.xml";
+"ultimasRSS" = "http://www.telesurtv.net/rss/RssLastNews.xml";
+"latinoamericaRSS" = "http://www.telesurtv.net/rss/RssLatinoamerica.xml";
+"mundoRSS" = "http://www.telesurtv.net/rss/RssMundo.xml";
+"deportesRSS" = "http://www.telesurtv.net/rss/RssDeporte.xml";
+"culturaRSS" = "http://www.telesurtv.net/rss/RssCultura.xml";
+
+//URL's de Blogs
+"blogsRSS" = "http://www.telesurtv.net/rss/RssBlogs.xml";
+
+//URL's de entrevistas y opinion
+"op-entrevistasRSS" = "http://www.telesurtv.net/rss/RssInterviews.xml";
+"opinionRSS" = "http://www.telesurtv.net/rss/RssOpinion.xml";
+
+
+
+
 
 //Secciones del Submenu para Especiales Web
 "sintesis-webSection" = "Sintesis Web";

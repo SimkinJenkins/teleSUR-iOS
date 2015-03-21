@@ -11,5 +11,6 @@
 @protocol TSDataManagerDelegate <NSObject>
 
 - (void) TSDataManager:(TSDataManager *)manager didProcessedRequests:(NSArray *)requests;
+- (void) TSDataManager:(TSDataManager *)manager didProcessedNotificationRequests:(NSArray *)requests;
 
 @end

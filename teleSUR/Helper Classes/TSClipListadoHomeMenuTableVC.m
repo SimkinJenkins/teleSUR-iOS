@@ -17,6 +17,8 @@
 #import "TSDataRequest.h"
 #import "TSDataManager.h"
 
+#import "NavigationBarsManager.h"
+
 @implementation TSClipListadoHomeMenuTableVC
 
 @synthesize currentTopMenuConfig, headerMenu, searchBar;
@@ -28,13 +30,7 @@
 
     [super viewDidLoad];
 
-    newsSectionsSlugs = [NSArray arrayWithObjects:@"latinoamerica", @"mundo", @"deportes", @"cultura", @"salud", @"ciencia-y-tecnologia", nil];
-    NSMutableArray *titles = [NSMutableArray array];
-    for (uint i = 0; i < [newsSectionsSlugs count]; i++) {
-        NSString *localizeID = [NSString stringWithFormat:@"%@Section", [newsSectionsSlugs objectAtIndex:i]];
-        [titles setObject:[NSString stringWithFormat:NSLocalizedString(localizeID, nil)] atIndexedSubscript:i];
-    }
-    newsSectionsTitles = [[NSArray alloc] initWithArray:titles];
+    [self configSubmenusArrays];
 
     searchBar = (UISearchBar *)[self.view viewWithTag:101];
     searchBar.placeholder = [NSString stringWithFormat:NSLocalizedString(@"searchPlaceholder", nil)];
@@ -93,6 +89,8 @@
 - (void) viewWillAppear:(BOOL)animated {
 
     [super viewWillAppear:animated];
+
+    [[NavigationBarsManager sharedInstance] setMasterView:[[ [ self.view superview] superview] superview] ];
 
     if([currentSection isEqualToString:@"buscar"]) {
         self.navigationController.navigationBarHidden = YES;
@@ -154,6 +152,60 @@
 
 
 
+
+
+
+- (void) sectionSelected:(NSString *)section withTitle:(NSString *)title {
+    
+    if ( [currentSection isEqualToString:@"buscar"] ) {
+        self.tableViewController.tableView.frame = beforeSearchSectionTableFrame;
+    }
+    
+    BOOL isSearchSection = [section isEqualToString:@"buscar"];
+    
+    if(currentSection == section) {
+        if(isSearchSection) {
+            [searchBar becomeFirstResponder];
+        }
+        return;
+    }
+    [textMenu dismissMenu];
+    currentSection = section;
+    [self setNavigationTitle:title];
+    searchBar.hidden = !isSearchSection;
+    self.navigationController.navigationBarHidden = isSearchSection;
+    
+    cancelUserInteraction = !isSearchSection;
+    currentSubsection = @"";
+    
+    [self configTopMenuWithCurrentConfiguration];
+    
+    NSLog(@"Section selected : %@ - %@", section, title);
+    
+    if(isSearchSection) {
+        beforeSearchSectionTableFrame = self.tableViewController.tableView.frame;
+        tableElements = [[NSMutableArray alloc] init];
+        [tableViewController.tableView reloadData];
+        [searchBar becomeFirstResponder];
+        searchBar.text = @"";
+        [self.view bringSubviewToFront:searchBar];
+        
+        [[self getSearhTextfield] addTarget:self
+                                     action:@selector(textfieldDidChange)
+                           forControlEvents:UIControlEventEditingChanged];
+        
+        [[self getCancelButton] addTarget:self
+                                   action:@selector(cancelClicked)
+                         forControlEvents:UIControlEventTouchUpInside];
+        
+    } else {
+        
+        [self initTableVariables];
+        [self loadData];
+        
+    }
+}
+
 - (void) configTopMenuWithCurrentConfiguration {
     currentTopMenuConfig = [self getTopMenuConfig:currentSection];
     textMenu.titleArray = [currentTopMenuConfig objectForKey:@"titles"];
@@ -162,6 +214,24 @@
     [textMenu makeMenu:textfield targetView:self.view];
     [self.navigationController.navigationBar bringSubviewToFront:headerMenu];
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 - (void) setNavigationTitle:(NSString *)title {
     CGSize stringsize = [self frameForText:title
@@ -185,65 +255,14 @@
     [self filterSelectedWithSlug:ReturnValue];
 }
 
-- (void) sectionSelected:(NSString *)section withTitle:(NSString *)title {
-
-    if ( [currentSection isEqualToString:@"buscar"] ) {
-        self.tableViewController.tableView.frame = beforeSearchSectionTableFrame;
-    }
-
-    BOOL isSearchSection = [section isEqualToString:@"buscar"];
-
-    if(currentSection == section) {
-        if(isSearchSection) {
-            [searchBar becomeFirstResponder];
-        }
-        return;
-    }
-    [textMenu dismissMenu];
-    currentSection = section;
-    [self setNavigationTitle:title];
-    searchBar.hidden = !isSearchSection;
-    self.navigationController.navigationBarHidden = isSearchSection;
-
-    cancelUserInteraction = !isSearchSection;
-    currentSubsection = @"";
-
-    [self configTopMenuWithCurrentConfiguration];
-
-    NSLog(@"Section selected : %@ - %@", section, title);
-
-    if(isSearchSection) {
-        beforeSearchSectionTableFrame = self.tableViewController.tableView.frame;
-        tableElements = [[NSMutableArray alloc] init];
-        [tableViewController.tableView reloadData];
-        [searchBar becomeFirstResponder];
-        searchBar.text = @"";
-        [self.view bringSubviewToFront:searchBar];
-
-        [[self getSearhTextfield] addTarget:self
-                                     action:@selector(textfieldDidChange)
-                           forControlEvents:UIControlEventEditingChanged];
-
-        [[self getCancelButton] addTarget:self
-                                   action:@selector(cancelClicked)
-                         forControlEvents:UIControlEventTouchUpInside];
-
-    } else {
-
-        [self initTableVariables];
-        [self loadData];
-
-    }
-}
-
 - (NSDictionary *)getTopMenuConfig:(NSString *)type {
     if ([type isEqualToString:@"video-noticia"] || [type isEqualToString:@"entrevista"]) {
-        return @{   @"keys":newsSectionsSlugs,
-                  @"titles":newsSectionsTitles
+        return @{   @"keys":submenuVideoSectionsSlugs,
+                  @"titles":submenuVideosSectionsTitles
                 };
     } else if ([type isEqualToString:@"noticias"]) {
-        return @{   @"keys":[newsSectionsSlugs subarrayWithRange:NSMakeRange(0, 4)],
-                    @"titles":[newsSectionsTitles subarrayWithRange:NSMakeRange(0, 4)]
+        return @{   @"keys":submenuNewsSectionsSlugs,
+                    @"titles":submenuNewsSectionsTitles
                     };
     } else if ([type isEqualToString:@"especial-web"]) {
         return @{   @"keys":[NSArray arrayWithObjects:@"sintesis-web", nil],
@@ -345,6 +364,27 @@
 
 }
 
+- (void) configSubmenusArrays {
+
+    submenuVideoSectionsSlugs = [[NSArray alloc] initWithArray:[[[[NSBundle mainBundle] infoDictionary] objectForKey:@"Configuración"] objectForKey:@"submenuVideoSections"]];
+    
+    NSMutableArray *titles = [NSMutableArray array];
+    for (uint i = 0; i < [submenuVideoSectionsSlugs count]; i++) {
+        NSString *localizeID = [NSString stringWithFormat:@"%@Section", [submenuVideoSectionsSlugs objectAtIndex:i]];
+        [titles setObject:[NSString stringWithFormat:NSLocalizedString(localizeID, nil)] atIndexedSubscript:i];
+    }
+    submenuVideosSectionsTitles = [[NSArray alloc] initWithArray:titles];
+
+    submenuNewsSectionsSlugs = [[NSArray alloc] initWithArray:[[[[NSBundle mainBundle] infoDictionary] objectForKey:@"Configuración"] objectForKey:@"submenuNewsSections"]];
+    
+    titles = [NSMutableArray array];
+    for (uint i = 0; i < [submenuNewsSectionsSlugs count]; i++) {
+        NSString *localizeID = [NSString stringWithFormat:@"%@Section", [submenuNewsSectionsSlugs objectAtIndex:i]];
+        [titles setObject:[NSString stringWithFormat:NSLocalizedString(localizeID, nil)] atIndexedSubscript:i];
+    }
+    submenuNewsSectionsTitles = [[NSArray alloc] initWithArray:titles];
+
+}
 
 
 
@@ -388,7 +428,7 @@
     [super tableView:tableView didSelectRowAtIndexPath:indexPath];
 
     if (selectedIndexPath.row != [tableElements count]) {
-        headerMenu.hidden = YES;
+//        headerMenu.hidden = YES;
     }
 
     if([currentSection isEqualToString:@"buscar"]) {

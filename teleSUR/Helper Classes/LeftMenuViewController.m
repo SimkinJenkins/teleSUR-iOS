@@ -11,6 +11,7 @@
 #import "UIViewController_Configuracion.h"
 #import "TSClipListadoHomeMenuTableVC.h"
 #import "HiddenVideoPlayerController.h"
+#import "TSClipDetallesViewController.h"
 
 #define kLIVE_VIDEO_BUTTON_TAG 1
 #define kLIVE_AUDIO_BUTTON_TAG 2
@@ -59,7 +60,7 @@
 
     UIButton *videoLiveButton = (UIButton *)[self.view viewWithTag:kLIVE_VIDEO_BUTTON_TAG];
     videoLiveButton.hidden = !livestreamEnabled;
-    [videoLiveButton addTarget:self action:@selector(presentarVideoEnVivo) forControlEvents:UIControlEventTouchUpInside];
+    [videoLiveButton addTarget:self action:@selector(videoLiveButtonTouched:) forControlEvents:UIControlEventTouchUpInside];
 
     audioLiveButton = (UIButton *)[self.view viewWithTag:kLIVE_AUDIO_BUTTON_TAG];
     audioLiveButton.hidden = !livestreamEnabled;
@@ -77,6 +78,20 @@
     } else {
         audioLiveButton.backgroundColor = [UIColor colorWithRed:255/255.0 green:144/255.0 blue:0/255.0 alpha:1.0];
     }
+}
+
+- (void) videoLiveButtonTouched:(UIButton *)sender {
+
+    ((HiddenVideoPlayerController *)[SlideNavigationController sharedInstance].rightMenu).isAudioPlaying = false;
+    NSString *moviePath = [[[[NSBundle mainBundle] infoDictionary] valueForKey:@"Configuración"] valueForKey:(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) ? @"Streaming URL Alta" : @"Streaming URL Media"];
+
+    if ( [SlideNavigationController sharedInstance].topView ) {
+        [((TSClipDetallesViewController *)[SlideNavigationController sharedInstance].topView) setURL:moviePath andTitle:[NSString stringWithFormat:@" %@", NSLocalizedString(@"liveVideo", nil)]];
+    } else {
+        TSClipDetallesViewController *detailView = [[TSClipDetallesViewController alloc] initWithURL:moviePath andTitle:[NSString stringWithFormat:@" %@", NSLocalizedString(@"liveVideo", nil)]];
+        [[SlideNavigationController sharedInstance] addTopViewController:detailView];
+    }
+
 }
 
 - (void) audioButtonTouched:(UIButton *)sender {
@@ -219,7 +234,7 @@
 
     [self collapseSection:tableView];
 
-    if (sectionIndex != [sectionsSlug count] - 1) {
+    if (sectionIndex < [sectionsSlug count] - 2) {
         [self setSelectedSection:(int)sectionIndex withSlugCollection:sectionsSlug withTitleCollection:sectionsTitle];
         return;
     }
@@ -227,9 +242,10 @@
     UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPhone"
                                                              bundle: nil];
     UIViewController *vc;
-    if (sectionIndex == [sectionsSlug count] - 1) {
-        NSString *aboutViewID = [NSString stringWithFormat:NSLocalizedString(@"acercaViewID", nil)];
-        vc = [mainStoryboard instantiateViewControllerWithIdentifier: aboutViewID];
+    if (sectionIndex == [sectionsSlug count] - 1 || sectionIndex == [sectionsSlug count] - 2) {
+        NSString *viewID = sectionIndex == [sectionsSlug count] - 1 ? [NSString stringWithFormat:NSLocalizedString(@"acercaViewID", nil)] :
+                            @"TSConfigurationTableViewController";
+        vc = [mainStoryboard instantiateViewControllerWithIdentifier: viewID];
     }
     [[SlideNavigationController sharedInstance] popToRootAndSwitchToViewController:vc
                                                              withSlideOutAnimation:self.slideOutAnimationEnabled

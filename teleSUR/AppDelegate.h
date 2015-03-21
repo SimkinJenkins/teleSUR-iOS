@@ -10,12 +10,10 @@
 #import "SlideNavigationController.h"
 #import "LeftMenuViewController.h"
 #import "HiddenVideoPlayerController.h"
-//#import <Pushwoosh/PushNotificationManager.h>
+#import <Pushwoosh/PushNotificationManager.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate/*, PushNotificationDelegate*/> {
+@interface AppDelegate : UIResponder <UIApplicationDelegate, PushNotificationDelegate> {
 
-    @protected
-    UIViewController *lastViewController;
 }
 
 @property (strong, nonatomic) UIWindow *window;

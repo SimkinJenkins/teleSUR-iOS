@@ -8,19 +8,19 @@
 
 #import "TSIpadNavigationViewController.h"
 #import "NavigationBarsManager.h"
-#import "MainIpadViewController.h"
-#import "TSMultimediaData.h"
-#import "DetailIpadViewController.h"
 #import "TSIPadRSSDetailViewController.h"
+#import "TSIPadVideoDetailViewController.h"
 #import "TSIPadOpinionViewController.h"
 #import "TSIPadBlogHomeViewController.h"
-#import "TSIPadVideoDetailViewController.h"
+#import "TSIpadVideoHomeViewController.h"
 
 #import "TSDataManager.h"
 
 @implementation TSIpadNavigationViewController
 
-@synthesize headerVw, headerTxf, leftMenuVw, menuTxf, currentTopMenuConfig, livestreamMenu, playerController;
+@synthesize headerVw, headerTxf, leftMenuVw, menuTxf, currentTopMenuConfig, livestreamMenu, playerController, topView;
+
+#define SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v)  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -118,6 +118,42 @@
 
 
 
+- (void)addTopViewController:(UIViewController *)viewController {
+    
+    if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"7.0")) {
+        self.interactivePopGestureRecognizer.enabled = NO;
+    }
+    self.topViewController.view.userInteractionEnabled = NO;
+    
+    self.topView = viewController;
+    [self.view.window insertSubview:viewController.view aboveSubview:self.topViewController.view];
+    
+    [self setNeedsStatusBarAppearanceUpdate];
+    
+}
+
+- (void) removeTopViewController {
+    
+    [self.topView.view removeFromSuperview];
+    self.topView = nil;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 - (void) initCatalogs {
@@ -132,7 +168,7 @@
 
     NSArray *staticSections = [[[[NSBundle mainBundle] infoDictionary] objectForKey:@"Configuración"] objectForKey:@"principalMenuSections"];
     NSMutableArray *sectionsAllOptions = [NSMutableArray array];
-    for (uint i = 0; i < [staticSections count]; i++) {
+    for (uint i = 0; i < [staticSections count] - 1; i++) {
         NSString *slug = [staticSections objectAtIndex:i];
         if(![slug isEqualToString:@"buscar"]) {
             [sectionsAllOptions addObject:slug];
@@ -279,7 +315,7 @@
 - (void) configureMenuButtons {
 
     NSInteger videoSectionIndex = [sectionsSlug indexOfObject:@"video"];
-    for (uint i = 0; i < [sectionsSlug count] - 1; i++) {
+    for (uint i = 0; i < [sectionsSlug count]; i++) {
         BOOL isVideoButton = videoSectionIndex == i;
         UIButton *newButton = [self getToolButton:[sectionsTitle objectAtIndex:i]
                                       withImageID:[NSString stringWithFormat:@"ipad-%@.png", [sectionsSlug objectAtIndex:i]]
@@ -316,8 +352,8 @@
     BOOL isLandscape = UIInterfaceOrientationIsLandscape([[UIApplication sharedApplication] statusBarOrientation]);
 
     UIButton *button = [[UIButton alloc] initWithFrame:isLandscape ?
-                                CGRectMake( ( 510 - [ sectionsSlug count ] * 50 ) + ( indexPos * 110 ), 0, 70, 59 ) :
-                                CGRectMake( ( 440 - [ sectionsSlug count ] * 50 ) + ( indexPos * 100 ), 0, 70, 59 )];
+                                CGRectMake( ( 480 - [ sectionsSlug count ] * 50 ) + ( indexPos * 110 ), 0, 88, 59 ) :
+                                CGRectMake( ( 400 - [ sectionsSlug count ] * 50 ) + ( indexPos * 94 ), 0, 88, 59 )];
 
     button.contentVerticalAlignment = UIControlContentVerticalAlignmentBottom;
     button.contentHorizontalAlignment = UIControlContentHorizontalAlignmentCenter;
@@ -375,10 +411,10 @@
 
     if ( index == 5 || index == 6 || (isMultimediaAPP && index < 10) ) {
         [self stopLiveAudio];
-        vc = [(TSIPadVideoDetailViewController *) vc initWithVideoData:nil inSection:[sectionsSlug objectAtIndex:index]];
+        vc = [(TSIpadVideoHomeViewController *) vc initWithSection:[sectionsSlug objectAtIndex:index]];
     } else if ( index > 9 ) {
         [self stopLiveAudio];
-        vc = [(TSIPadVideoDetailViewController *) vc initWithVideoData:nil inSection:[videoSectionsSlug objectAtIndex:index - 10]];
+        vc = [(TSIpadVideoHomeViewController *) vc initWithSection:[videoSectionsSlug objectAtIndex:index - 10]];
     } else if ( index == 1 ) {
         vc = [(TSIPadRSSDetailViewController *) vc initWithSection:[sectionsSlug objectAtIndex:index] andSubsection:@""];
     }
@@ -396,7 +432,7 @@
     BOOL isMultimediaAPP = [ [ [ [ [ NSBundle mainBundle ] infoDictionary ] valueForKey:@"Configuración" ] valueForKey:@"APPtype" ] isEqualToString:@"multimedia" ];
 
     if ( isMultimediaAPP ) {
-        return @"TSIPadVideoDetailViewController";
+        return @"TSIpadVideoHomeViewController";
     }
 
     if ( index == 0 ) {
@@ -406,7 +442,9 @@
     } else if ( index == 4 ) {
         return @"TSIPadBlogHomeViewController";
     } else if ( index == 5 || index == 6 || index > 9 ) {
-        return @"TSIPadVideoDetailViewController";
+        return @"TSIpadVideoHomeViewController";
+    } else if ( index == 7 ) {
+        return @"TSConfigurationTableViewController";
     }
 
     return @"TSIPadRSSDetailViewController";
@@ -576,6 +614,9 @@
 
     [livestreamMenu removeFromSuperview];
 
+    TSIpadNavigationViewController *topMenu = (TSIpadNavigationViewController *)[NavigationBarsManager sharedInstance].topNavigationInstance;
+    [topMenu removeTopViewController];
+
     [NavigationBarsManager sharedInstance].livestreamON = YES;
 
     if([NavigationBarsManager sharedInstance].playerController && [NavigationBarsManager sharedInstance].playerController.playerController) {
@@ -584,11 +625,12 @@
 
     NSString *moviePath = [[[[NSBundle mainBundle] infoDictionary] valueForKey:@"Configuración"] valueForKey:(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) ? @"Streaming URL Alta" : @"Streaming URL Media"];
 
-    playerController = [[TSClipPlayerViewController alloc] initConProgramaURL:moviePath];
-    // Reproducir video
-    [playerController playEnViewController:self
-                      finalizarConSelector:@selector(livestreamEnd)
-                         registrandoAccion:NO];
+    if ( topView ) {
+        [((TSIPadVideoDetailViewController *) topView) setURL:moviePath andTitle:[NSString stringWithFormat:@" %@", NSLocalizedString(@"liveVideo", nil)]];
+    } else {
+        TSIPadVideoDetailViewController *detailView = [[TSIPadVideoDetailViewController alloc] initWithURL:moviePath andTitle:[NSString stringWithFormat:@" %@", NSLocalizedString(@"liveVideo", nil)]];
+        [self addTopViewController:detailView];
+    }
 
 }
 
@@ -596,9 +638,12 @@
 
     [NavigationBarsManager sharedInstance].livestreamON = NO;
 
+    return;
+
     if( lastPlaybackStatus == MPMoviePlaybackStatePlaying && [NavigationBarsManager sharedInstance].playerController ) {
         [[NavigationBarsManager sharedInstance].playerController resumeVideoPlayer];
     }
+
 }
 
 - (void) launchLiveAudio {
@@ -625,9 +670,8 @@
 
     NSString *moviePath = [[[[NSBundle mainBundle] infoDictionary] valueForKey:@"Configuración"] valueForKey:(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) ? @"Streaming URL Alta" : @"Streaming URL Media"];
 
-    playerController = [[TSClipPlayerViewController alloc] initConProgramaURL:moviePath];
-    // Reproducir video
-    [playerController playAtView:self.view withFrame:CGRectMake(0, 0, 1, 1) withObserver:self playbackFinish:@selector(stopLiveAudio)];
+    playerController = [[TSClipPlayerViewController alloc] initWithURL:moviePath andTitle:@""];
+    [playerController playAtView:self.view withFrame:CGRectMake(0, 0, 1, 1) withObserver:self playbackFinish:nil];
 
 }
 
@@ -675,12 +719,30 @@
         videoMenu.menuPosition = isLandscape ? CGRectMake(230, 485, 1, 1) : CGRectMake(140, 740, 1, 1);
     }
 
-    for (uint i = 0; i < [sectionsSlug count] - 1; i++) {
+    for (uint i = 0; i < [sectionsSlug count]; i++) {
         UIView *button = [self.toolbar viewWithTag:(200 + i)];
-        button.frame = isLandscape ? CGRectMake( ( 510 - [ sectionsSlug count ] * 50 ) + ( i * 110 ), 0, 70, 59 ) :
-                                    CGRectMake( ( 440 - [ sectionsSlug count ] * 50 ) + ( i * 100 ), 0, 70, 59 );
+        button.frame = isLandscape ? CGRectMake( ( 480 - [ sectionsSlug count ] * 50 ) + ( i * 110 ), 0, 88, 59 ) :
+                                    CGRectMake( ( 400 - [ sectionsSlug count ] * 50 ) + ( i * 94 ), 0, 88, 59 );
     }
 
+}
+
+- (void)loadCatalog:(NSString *)type {
+    
+    [[[TSDataManager alloc] init] loadAPIDataFor:@"" andSubsection:@"" withDataType:type inRange:NSMakeRange(1, 300) delegateResponseTo:self];
+    
+}
+
+- (void)setCatalog:(NSArray *)data forKey:(NSString *)key {
+    NSMutableArray *keys = [NSMutableArray array];
+    NSMutableArray *titles = [NSMutableArray array];
+    for(uint i = 0; i < [data count]; i++) {
+        NSDictionary *row = [data objectAtIndex:i];
+        [keys addObject:[row objectForKey:@"slug"]];
+        [titles addObject:[row objectForKey:@"nombre"]];
+    }
+    [catalogs setObject:@{@"keys":keys, @"titles":titles, @"originalData":data} forKey:key];
+    [self configTopMenuWithCurrentConfiguration];
 }
 
 
@@ -704,6 +766,24 @@
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
     return NO;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #pragma mark DropDownMenu delegate
 
@@ -736,6 +816,27 @@
     }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#pragma mark -
+#pragma mark NavigationBarsManagerDelegate
+
 - (void) navigationManagerViewSet:(UIView *)masterView {
     if( leftMenu ) {
         [ leftMenu makeMenu:menuTxf targetView:masterView ];
@@ -745,23 +846,8 @@
     }
 }
 
-- (void)loadCatalog:(NSString *)type {
 
-    [[[TSDataManager alloc] init] loadAPIDataFor:@"" andSubsection:@"" withDataType:type inRange:NSMakeRange(1, 300) delegateResponseTo:self];
 
-}
-
-- (void)setCatalog:(NSArray *)data forKey:(NSString *)key {
-    NSMutableArray *keys = [NSMutableArray array];
-    NSMutableArray *titles = [NSMutableArray array];
-    for(uint i = 0; i < [data count]; i++) {
-        NSDictionary *row = [data objectAtIndex:i];
-        [keys addObject:[row objectForKey:@"slug"]];
-        [titles addObject:[row objectForKey:@"nombre"]];
-    }
-    [catalogs setObject:@{@"keys":keys, @"titles":titles, @"originalData":data} forKey:key];
-    [self configTopMenuWithCurrentConfiguration];
-}
 
 
 

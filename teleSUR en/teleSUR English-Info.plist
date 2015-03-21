@@ -217,7 +217,26 @@
 			<string>programa</string>
 			<string>reportaje</string>
 			<string>buscar</string>
+			<string>config</string>
 			<string>acerca</string>
+		</array>
+		<key>submenuNewsSections</key>
+		<array>
+			<string>portada</string>
+			<string>ultimas</string>
+			<string>latinoamerica</string>
+			<string>mundo</string>
+			<string>deportes</string>
+			<string>cultura</string>
+		</array>
+		<key>submenuVideoSections</key>
+		<array>
+			<string>latinoamerica</string>
+			<string>mundo</string>
+			<string>deportes</string>
+			<string>cultura</string>
+			<string>salud</string>
+			<string>ciencia-y-tecnologia</string>
 		</array>
 		<key>videoMenuSubsections</key>
 		<array>
@@ -229,6 +248,8 @@
 	</dict>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>Pushwoosh_APPID</key>
+	<string>F809F-79BED</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Roboto-Regular.ttf</string>

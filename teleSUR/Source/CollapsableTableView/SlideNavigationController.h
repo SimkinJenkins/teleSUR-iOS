@@ -52,6 +52,7 @@ typedef  enum{
 @property (nonatomic, assign) BOOL enableAutorotate;
 @property (nonatomic, strong) UIViewController *rightMenu;
 @property (nonatomic, strong) UIViewController *leftMenu;
+@property (nonatomic, strong) UIViewController *topView;
 @property (nonatomic, strong) UIBarButtonItem *leftBarButtonItem;
 @property (nonatomic, strong) UIBarButtonItem *rightBarButtonItem;
 @property (nonatomic, assign) CGFloat portraitSlideOffset;
@@ -71,5 +72,9 @@ typedef  enum{
 - (void)toggleLeftMenu;
 - (void)toggleRightMenu;
 - (BOOL)isMenuOpen;
+
+
+- (void) addTopViewController:(UIViewController *)viewController;
+- (void) removeTopViewController;
 
 @end

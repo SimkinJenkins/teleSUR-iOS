@@ -19,6 +19,8 @@
 #import "TSDataManager.h"
 #import "UIViewController+TSLoader.h"
 
+#import "TSWebViewController.h"
+#import "MarqueeLabel.h"
 
 
 NSString* const HOME_FIRST_CELL_REUSE_ID = @"NewsFirstCollectionCell";
@@ -171,6 +173,7 @@ NSString* const HOME_DEFAULT_CELL_REUSE_ID = @"NewsDefaultCollectionCell";
 
 
 
+
 #pragma mark - Custom Functions
 
 - (void) configureCollectionLayout {
@@ -178,7 +181,9 @@ NSString* const HOME_DEFAULT_CELL_REUSE_ID = @"NewsDefaultCollectionCell";
     RFQuiltLayout* layout = (id)[self.collectionView collectionViewLayout];
     layout.direction = UICollectionViewScrollDirectionVertical;
 
-    layout.blockPixels = CGSizeMake(255, UIInterfaceOrientationIsLandscape(currentOrientation) ? 211 : 223 );
+    layout.blockPixels = CGSizeMake(255, UIInterfaceOrientationIsLandscape(currentOrientation) ? 191 : 208 );
+
+//    self.collectionView.frame = CGRectMake(0, 60, self.collectionView.frame.size.width, self.collectionView.frame.size.height - 60);
 
 }
 
@@ -229,13 +234,18 @@ NSString* const HOME_DEFAULT_CELL_REUSE_ID = @"NewsDefaultCollectionCell";
 
 - (void) showPostAtIndex:(NSIndexPath *)indexPath {
 
-    UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPad" bundle: nil];
-
     MWFeedItem *item = [ [ self getDataArrayForIndexPath:selectedIndexPath forDefaultTable:YES ] objectAtIndex:selectedIndexPath.row];
+    [self showPost:item inSection:[self getSection:indexPath.row ]];
 
+}
+
+- (void) showPost:(MWFeedItem *)item inSection:(NSString *)section {
+
+    UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPad" bundle: nil];
+    
     TSIPadRSSDetailViewController *vc = [[mainStoryboard instantiateViewControllerWithIdentifier:@"TSIPadRSSDetailViewController"]
-                                         initWithRSSData:item inSection:[self getSection:indexPath.row ] andSubsection:currentSubsection];
-
+                                         initWithRSSData:item inSection:section andSubsection:currentSubsection];
+    
     [self.navigationController pushViewController:vc animated:YES];
 
 }
@@ -243,15 +253,24 @@ NSString* const HOME_DEFAULT_CELL_REUSE_ID = @"NewsDefaultCollectionCell";
 - (void) playSelectedClip:(NSInteger)index {
     
     UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPad" bundle: nil];
-    
+
     NSDictionary *item = [ [ self getDataArrayForIndexPath:selectedIndexPath forDefaultTable:YES ] objectAtIndex:selectedIndexPath.row];
-    
-    TSIPadVideoDetailViewController *vc = [[mainStoryboard instantiateViewControllerWithIdentifier:@"TSIPadVideoDetailViewController"]
-                                           initWithVideoData:item
-                                           inSection:[self getSection:index]];
-    
-    [self.navigationController pushViewController:vc animated:YES];
-    
+
+    TSIpadNavigationViewController *topMenu = (TSIpadNavigationViewController *)[NavigationBarsManager sharedInstance].topNavigationInstance;
+
+    if ( topMenu.topView && ((TSIPadVideoDetailViewController *)topMenu.topView).isLiveStream ) {
+        [((TSIPadVideoDetailViewController *)topMenu.topView) removeCurrentPlayer];
+        topMenu.topView = nil;
+    }
+    if ( topMenu.topView ) {
+        [((TSIPadVideoDetailViewController *)topMenu.topView) setData:item withSection:[self getSection:index]];
+    } else {
+        TSIPadVideoDetailViewController *vc = [[mainStoryboard instantiateViewControllerWithIdentifier:@"TSIPadVideoDetailViewController"]
+                                               initWithVideoData:item
+                                               inSection:[self getSection:index]];
+        [topMenu addTopViewController:vc];
+    }
+
 }
 
 - (void) deviceOrientationDidChangeNotification:(NSNotification *)notification {
@@ -282,6 +301,8 @@ NSString* const HOME_DEFAULT_CELL_REUSE_ID = @"NewsDefaultCollectionCell";
     
     tableElements = [ NSMutableArray arrayWithArray:[ RSSRequest.result subarrayWithRange:NSMakeRange(0, 1) ] ];
 
+    currentHeaderData = [NSArray arrayWithArray:RSSRequest.result];
+
     if UIInterfaceOrientationIsLandscape( currentOrientation ) {
         
         [ tableElements addObjectsFromArray: showRequest.result ];
@@ -300,6 +321,8 @@ NSString* const HOME_DEFAULT_CELL_REUSE_ID = @"NewsDefaultCollectionCell";
 
     [self.collectionView reloadData];
 
+    [self setupHeader];
+
 }
 
 - (void) configRightButton {
@@ -317,6 +340,13 @@ NSString* const HOME_DEFAULT_CELL_REUSE_ID = @"NewsDefaultCollectionCell";
     [self loadData];
 
 }
+
+
+
+
+
+
+
 
 
 
@@ -356,7 +386,6 @@ NSString* const HOME_DEFAULT_CELL_REUSE_ID = @"NewsDefaultCollectionCell";
     return cell;
 
 }
-
 
 
 
@@ -468,5 +497,89 @@ NSString* const HOME_DEFAULT_CELL_REUSE_ID = @"NewsDefaultCollectionCell";
 
 
 
+
+
+
+
+- (void)setupHeader {
+
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
+    CGRect frameRect	= CGRectMake(0, -60, screenRect.size.width, 60);
+
+    if ( breakingNewsMarquee ) {
+        breakingNewsMarquee.frame = frameRect;
+        return;
+    }
+
+    if ( !currentHeaderData || [currentHeaderData count] == 0 ) {
+        return;
+    }
+
+    breakingNewsMarquee = [[MarqueeLabel alloc] initWithFrame:frameRect duration:8.0 andFadeLength:10.0f];
+    breakingNewsMarquee.backgroundColor = [UIColor blackColor];
+    breakingNewsMarquee.textColor = [UIColor whiteColor];
+    NSString *text = [NSString stringWithFormat:@"    %@: ", NSLocalizedString(@"ultimasSection", nil)];
+
+    for ( int i = 0; i < [currentHeaderData count]; i++ ) {
+        MWFeedItem *rowData = [currentHeaderData objectAtIndex:i];
+        text = [ NSString stringWithFormat:@"%@%@%@%@", text, i != 0 ? @"   |   " : @"", rowData.title, i == [currentHeaderData count] - 1 ? @"    " : @"" ];
+    }
+
+    breakingNewsMarquee.text = text;
+
+    breakingNewsMarquee.scrollDuration = text.length / 4.0;
+    breakingNewsMarquee.textAlignment = NSTextAlignmentRight;
+
+    [self.view addSubview:breakingNewsMarquee];
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#pragma mark -
+#pragma mark EasyTableViewDelegate
+
+- (UIView *)easyTableView:(EasyTableView *)easyTableView viewForRect:(CGRect)rect {
+    
+    UITableViewCell *cell = [self getReuseCell:easyTableView.tableView withID:@"IpadBreakingNewsTableViewCell"];
+    return cell.contentView;
+    
+}
+
+- (void)easyTableView:(EasyTableView *)easyTableView setDataForView:(UIView *)view forIndexPath:(NSIndexPath*)indexPath {
+
+    [self configureHeaderCellView:view withData:[currentHeaderData objectAtIndex:indexPath.row]];
+
+}
+
+- (void)easyTableView:(EasyTableView *)easyTableView selectedView:(UIView *)selectedView atIndexPath:(NSIndexPath *)indexPath deselectedView:(UIView *)deselectedView {}
+
+- (void) configureHeaderCellView:(UIView *)view withData:(NSDictionary *)data {
+
+    UILabelMarginSet *title = (UILabelMarginSet *)[view viewWithTag:1];
+
+    [view setData:data];
+
+    [view adjustSizeFrameForLabel:title constriainedToSize:CGSizeMake(250, 60)];
+
+    title.frame = CGRectMake(title.frame.origin.x, ((60 - title.frame.size.height) * 0.5) + 0, title.frame.size.width, title.frame.size.height);
+
+}
 
 @end

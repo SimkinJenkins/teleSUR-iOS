@@ -83,7 +83,7 @@ NSInteger const TS_DETAIL_ASYNC_IMAGE_TAG = 106;
     UILabel *title = (UILabel *)[self.view viewWithTag:1001];
     UILabel *date = (UILabel *)[self.view viewWithTag:112];
     UILabel *download = (UILabel *)[self.view viewWithTag:113];
-    UILabel *description = (UILabel *)[self.view viewWithTag:1004];
+    UILabel *description = (UILabel *)[self.view viewWithTag:2004];
     UILabelMarginSet *section = (UILabelMarginSet *)[self.view viewWithTag:107];
     UIImageView *image = (UIImageView *)[self.view viewWithTag:TS_DETAIL_ASYNC_IMAGE_TAG];
 

@@ -45,6 +45,11 @@ extern NSString* const TS_NOTICIAS_SLUG;
     //Bandera que sirve para saber cuando se ha iniciado la aplicación y se necesita mostrar el cargador con la imagen del splash de teleSUR.
     BOOL isAnInitialScreen;
 
+    BOOL initialLoadIsComplete;
+    BOOL isNotificationWebViewLastView;
+
+    NSString *notificationSlug;
+    NSString *notificationSection;
 }
 
 @property (nonatomic, retain) NSMutableArray *currentFilters;
@@ -73,14 +78,15 @@ extern NSString* const TS_NOTICIAS_SLUG;
 // Regresa el array que contiene los datos de acuerdo al indexPath, decide de acuerdo a la sección. Util cuando se tiene una tabla con varias secciones y los datos están en arrays diferentes como en el caso del HOME.
 - (NSArray *) getDataArrayForIndexPath:(NSIndexPath *)indexPath forDefaultTable:(BOOL)defaultTable;
 
+// Manda a crear la vista de detalle de un item del tipo RSS
+- (void) showSelectedPost:(MWFeedItem *)post;
 
-
+- (void) loadNotificationSections;
+- (void) notificationsSectionsDidLoad:(NSArray *)requests;
+- (void) loadNotificationRSSNewsWithURL:(NSString *)URL andSection:(NSString *)section;
 
 - (void) reloadData;
 
-- (void) loadDataWithSection:(NSString *)section withSlug:(NSString *)slug;
-//- (void) configFilterWithSelectedSlug:(NSString *)slug;
-//- (void) initDataFilterWith:(NSString *)section;
 - (void) filterSelectedWithSlug:(NSString *)slug;
 
 
@@ -90,7 +96,7 @@ extern NSString* const TS_NOTICIAS_SLUG;
 
 - (UITableViewCell *)getReuseCell:(UITableView *)tableView withID:(NSString *)cellID;
 
-- (void) showNews;
 - (NSArray *) getResultDataAtIndex:(int) index;
+- (NSString *) getSectionTitleWith:(NSString *)slug;
 
 @end

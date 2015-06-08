@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 #import <Pushwoosh/PushNotificationManager.h>
 
+#import "LeftMenuViewController.h"
+#import "HiddenVideoPlayerController.h"
 #import "TSConfigurationTableViewController.h"
 #import "TSIpadNavigationViewController.h"
 #import "TSBasicListViewController.h"
@@ -71,7 +73,7 @@
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
     [[PushNotificationManager pushManager] handlePushRegistration:deviceToken];
 
-    BOOL *isRegister = [[NSUserDefaults standardUserDefaults] boolForKey:@"PUSHNotificationsIsRegister"];
+    BOOL isRegister = [[NSUserDefaults standardUserDefaults] boolForKey:@"PUSHNotificationsIsRegister"];
 
     if (!isRegister) {
         [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"PUSHNotificationsIsRegister"];
@@ -108,7 +110,9 @@
 
     NSLog(@"Push notification received");
 
-    TSBasicListViewController *vc = UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad ? (TSBasicListViewController *)[SlideNavigationController sharedInstance].topViewController : (TSBasicListViewController *)((TSIpadNavigationViewController *)[NavigationBarsManager sharedInstance].topNavigationInstance).topViewController;
+    TSBasicListViewController *vc = UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad ?
+                                    (TSBasicListViewController *)[SlideNavigationController sharedInstance].topViewController :
+                                    (TSBasicListViewController *)((TSIpadNavigationViewController *)[NavigationBarsManager sharedInstance].topNavigationInstance).topViewController;
 
     NSError *jsonError;
     NSData *objectData = [[pushNotification objectForKey:@"u"] dataUsingEncoding:NSUTF8StringEncoding];
@@ -116,7 +120,25 @@
                                                          options:NSJSONReadingMutableContainers
                                                            error:&jsonError];
 
-    [vc loadNotificationRSSNewsWithURL:[json objectForKey:@"link"] andSection:[json objectForKey:@"section"]];
+    if ( vc ) {
+
+        [vc loadNotificationRSSNewsWithURL:[json objectForKey:@"link"] andSection:[json objectForKey:@"section"]];
+
+    } else {
+
+        notificationLink = [json objectForKey:@"link"];
+        notificationSection = [json objectForKey:@"section"];
+        [NSTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(sendLateNotification) userInfo:nil repeats:NO];
+
+    }
+
+}
+
+- (void) sendLateNotification {
+
+    TSBasicListViewController *vc = (TSBasicListViewController *)((TSIpadNavigationViewController *)[NavigationBarsManager sharedInstance].topNavigationInstance).topViewController;
+    
+    [vc loadNotificationRSSNewsWithURL:notificationLink andSection:notificationSection];
 
 }
 

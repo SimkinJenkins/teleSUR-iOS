@@ -60,4 +60,6 @@
 
 - (void) launchSectionWithIndex:(NSInteger)index animated:(BOOL)animated;
 
+- (void) setNavigationItemsHidden:(BOOL)hidden;
+
 @end

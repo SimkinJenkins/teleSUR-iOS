@@ -50,11 +50,10 @@
 
         NSString *liveURL;
         NSString *liveURLTitle;
-//        BOOL *isLiveStream;
 
 }
 
-@property (nonatomic, assign) BOOL *isLiveStream;
+@property (nonatomic, assign) BOOL isLiveStream;
 
 @property (nonatomic, strong) TSClipPlayerViewController *playerController;
 

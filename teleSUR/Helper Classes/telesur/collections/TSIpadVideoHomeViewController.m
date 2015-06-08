@@ -17,6 +17,7 @@
 #import "UIImageView+WebCache.h"
 
 #import "TSVideoCollectionViewCell.h"
+#import "TSIPadRSSDetailViewController.h"
 
 
 
@@ -61,13 +62,6 @@ NSString* const VIDEO_HOME_DEFAULT_CELL_REUSE_ID = @"TSVideoCollectionCell";
     [super viewDidLoad];
     
     currentOrientation = [[ UIApplication sharedApplication ] statusBarOrientation];
-    
-    NSString *APPType = [ [ [ [ NSBundle mainBundle ] infoDictionary ] valueForKey:@"Configuración" ] valueForKey:@"APPtype" ];
-    if ( [ APPType isEqualToString:@"multimedia" ] ) {
-        return;
-    }
-
-    [self setSection:currentSection];
 
     self.collectionView = (UICollectionView *)[self.view viewWithTag:101];
     
@@ -75,6 +69,13 @@ NSString* const VIDEO_HOME_DEFAULT_CELL_REUSE_ID = @"TSVideoCollectionCell";
     [self.collectionView registerNib:[UINib nibWithNibName:VIDEO_HOME_DEFAULT_CELL_REUSE_ID bundle:nil] forCellWithReuseIdentifier:VIDEO_HOME_DEFAULT_CELL_REUSE_ID];
     
     [self configureCollectionLayout];
+
+    NSString *APPType = [ [ [ [ NSBundle mainBundle ] infoDictionary ] valueForKey:@"Configuración" ] valueForKey:@"APPtype" ];
+    if ( [ APPType isEqualToString:@"multimedia" ] ) {
+        return;
+    }
+
+    [self setSection:currentSection];
     
     [self configRightButton];
     
@@ -140,6 +141,16 @@ NSString* const VIDEO_HOME_DEFAULT_CELL_REUSE_ID = @"TSVideoCollectionCell";
 
 }
 
+- (void)showNotificationPost:(MWFeedItem *)post {
+    
+    UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPad" bundle: nil];
+    
+    TSIPadRSSDetailViewController *vc = [[mainStoryboard instantiateViewControllerWithIdentifier:@"TSIPadRSSDetailViewController"]
+                                         initWithRSSData:post inSection:@"noticias" andSubsection:[self getNotificationSubsection]];
+    
+    [self.navigationController pushViewController:vc animated:YES];
+
+}
 
 
 

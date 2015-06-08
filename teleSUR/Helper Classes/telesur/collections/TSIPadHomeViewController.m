@@ -22,11 +22,8 @@
 #import "TSWebViewController.h"
 #import "MarqueeLabel.h"
 
-
 NSString* const HOME_FIRST_CELL_REUSE_ID = @"NewsFirstCollectionCell";
 NSString* const HOME_DEFAULT_CELL_REUSE_ID = @"NewsDefaultCollectionCell";
-
-
 
 @implementation TSIPadHomeViewController
 
@@ -83,8 +80,18 @@ NSString* const HOME_DEFAULT_CELL_REUSE_ID = @"NewsDefaultCollectionCell";
 - (void) viewWillAppear:(BOOL)animated {
 
     [super viewWillAppear:animated];
+
     if( currentOrientation != [[ UIApplication sharedApplication ] statusBarOrientation] ) {
+
         [self deviceOrientationDidChangeNotification:nil];
+
+    }
+
+    if ( isNotificationWebViewLastView ) {
+
+        isNotificationWebViewLastView = NO;
+        [(TSIpadNavigationViewController *)[NavigationBarsManager sharedInstance].topNavigationInstance setNavigationItemsHidden:NO];
+
     }
 
 }
@@ -136,13 +143,14 @@ NSString* const HOME_DEFAULT_CELL_REUSE_ID = @"NewsDefaultCollectionCell";
     TSDataRequest *videoReq   = [[TSDataRequest alloc] initWithType:TS_CLIP_SLUG       forSection:@"video-noticia"  forSubsection:@""];
     TSDataRequest *showReq    = [[TSDataRequest alloc] initWithType:TS_CLIP_SLUG       forSection:@"programa"       forSubsection:@""];
     TSDataRequest *infoReq    = [[TSDataRequest alloc] initWithType:TS_CLIP_SLUG       forSection:@"infografia"     forSubsection:@""];
+    TSDataRequest *breaknewsReq = [[TSDataRequest alloc] initWithType:TS_NOTICIAS_SLUG forSection:@"noticias"       forSubsection:@"ultimas"];
 
     clipCatReq.range = NSMakeRange(1, 300);
     videoReq.range = NSMakeRange(1, 1);
     showReq.range = NSMakeRange(1, 1);
     infoReq.range = NSMakeRange(1, 1);
 
-    [[[TSDataManager alloc] init] loadRequests:[NSArray arrayWithObjects:clipCatReq, RSSReq, videoReq, showReq, infoReq, nil]
+    [[[TSDataManager alloc] init] loadRequests:[NSArray arrayWithObjects:clipCatReq, RSSReq, videoReq, showReq, infoReq, breaknewsReq, nil]
                             delegateResponseTo:self];
 
 }
@@ -156,6 +164,19 @@ NSString* const HOME_DEFAULT_CELL_REUSE_ID = @"NewsDefaultCollectionCell";
 
 }
 
+- (void)showNotificationPost:(MWFeedItem *)post {
+
+    [self showPost:post inSection:@"noticias" andSubsection:[self getNotificationSubsection]];
+
+}
+
+- (void) showUnlocatedNotification:(NSString *)URL {
+
+    [super showUnlocatedNotification:URL];
+
+    [(TSIpadNavigationViewController *)[NavigationBarsManager sharedInstance].topNavigationInstance setNavigationItemsHidden:YES];
+
+}
 
 
 
@@ -235,16 +256,16 @@ NSString* const HOME_DEFAULT_CELL_REUSE_ID = @"NewsDefaultCollectionCell";
 - (void) showPostAtIndex:(NSIndexPath *)indexPath {
 
     MWFeedItem *item = [ [ self getDataArrayForIndexPath:selectedIndexPath forDefaultTable:YES ] objectAtIndex:selectedIndexPath.row];
-    [self showPost:item inSection:[self getSection:indexPath.row ]];
+    [self showPost:item inSection:[self getSection:indexPath.row ] andSubsection:currentSubsection];
 
 }
 
-- (void) showPost:(MWFeedItem *)item inSection:(NSString *)section {
+- (void) showPost:(MWFeedItem *)item inSection:(NSString *)section andSubsection:(NSString *)subsection {
 
     UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPad" bundle: nil];
     
     TSIPadRSSDetailViewController *vc = [[mainStoryboard instantiateViewControllerWithIdentifier:@"TSIPadRSSDetailViewController"]
-                                         initWithRSSData:item inSection:section andSubsection:currentSubsection];
+                                         initWithRSSData:item inSection:section andSubsection:subsection];
     
     [self.navigationController pushViewController:vc animated:YES];
 
@@ -298,12 +319,13 @@ NSString* const HOME_DEFAULT_CELL_REUSE_ID = @"NewsDefaultCollectionCell";
     TSDataRequest *videoRequest = [requests objectAtIndex:2];
     TSDataRequest *showRequest = [requests objectAtIndex:3];
     TSDataRequest *infoRequest = [requests objectAtIndex:4];
+    TSDataRequest *breakNewsRequest = [requests objectAtIndex:5];
     
     tableElements = [ NSMutableArray arrayWithArray:[ RSSRequest.result subarrayWithRange:NSMakeRange(0, 1) ] ];
 
-    currentHeaderData = [NSArray arrayWithArray:RSSRequest.result];
+    currentHeaderData = [NSArray arrayWithArray:breakNewsRequest.result];
 
-    if UIInterfaceOrientationIsLandscape( currentOrientation ) {
+    if (  UIInterfaceOrientationIsLandscape( currentOrientation ) ) {
         
         [ tableElements addObjectsFromArray: showRequest.result ];
         [ tableElements addObjectsFromArray: videoRequest.result ];
@@ -511,14 +533,17 @@ NSString* const HOME_DEFAULT_CELL_REUSE_ID = @"NewsDefaultCollectionCell";
         return;
     }
 
-    if ( !currentHeaderData || [currentHeaderData count] == 0 ) {
-        return;
-    }
-
     breakingNewsMarquee = [[MarqueeLabel alloc] initWithFrame:frameRect duration:8.0 andFadeLength:10.0f];
     breakingNewsMarquee.backgroundColor = [UIColor blackColor];
     breakingNewsMarquee.textColor = [UIColor whiteColor];
     NSString *text = [NSString stringWithFormat:@"    %@: ", NSLocalizedString(@"ultimasSection", nil)];
+
+    [self.view addSubview:breakingNewsMarquee];
+
+    if ( !currentHeaderData || [currentHeaderData count] == 0 ) {
+        breakingNewsMarquee.text = text;
+        return;
+    }
 
     for ( int i = 0; i < [currentHeaderData count]; i++ ) {
         MWFeedItem *rowData = [currentHeaderData objectAtIndex:i];
@@ -529,8 +554,6 @@ NSString* const HOME_DEFAULT_CELL_REUSE_ID = @"NewsDefaultCollectionCell";
 
     breakingNewsMarquee.scrollDuration = text.length / 4.0;
     breakingNewsMarquee.textAlignment = NSTextAlignmentRight;
-
-    [self.view addSubview:breakingNewsMarquee];
 
 }
 

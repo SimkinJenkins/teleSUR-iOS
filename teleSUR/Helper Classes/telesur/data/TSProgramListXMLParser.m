@@ -65,6 +65,8 @@
         
         if ( [elementName isEqualToString:@"nombre"] ) {
             currentProgramListElement.name = currentText;
+        } else if ( [elementName isEqualToString:@"foto"] ) {
+            currentProgramListElement.imageID = currentText;
         } else if ( [elementName isEqualToString:@"sinopsis"] ) {
             currentProgramListElement.summary = currentText;
         } else if ( [elementName isEqualToString:@"hora_ini"] ) {

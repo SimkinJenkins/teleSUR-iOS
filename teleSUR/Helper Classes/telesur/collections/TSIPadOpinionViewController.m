@@ -136,6 +136,16 @@ NSString* const OPINION_HOME_DEFAULT_CELL_REUSE_ID = @"OpinionHomeCollectionView
 
 - (void) deviceOrientationDidChangeNotification:(NSNotification *)notification {}
 
+- (void)showNotificationPost:(MWFeedItem *)post {
+    
+    UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPad" bundle: nil];
+    
+    TSIPadRSSDetailViewController *vc = [[mainStoryboard instantiateViewControllerWithIdentifier:@"TSIPadRSSDetailViewController"]
+                                         initWithRSSData:post inSection:@"noticias" andSubsection:[self getNotificationSubsection]];
+    
+    [self.navigationController pushViewController:vc animated:YES];
+    
+}
 
 
 

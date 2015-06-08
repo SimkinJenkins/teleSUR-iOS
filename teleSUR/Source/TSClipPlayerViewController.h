@@ -27,7 +27,7 @@
         UIButton *minimizeButton;
         UIButton *shareButton;
         UIButton *statusButton;
-        UIButton *appearControlsButton;
+        UIButton *showControlsButton;
 
         UILabel *statusLabel;
         UILabel *durationLabel;

@@ -112,6 +112,12 @@
 
 }
 
+- (void) showNotificationPost:(MWFeedItem *)post {
+
+    [self showSelectedPost:post];
+
+}
+
 - (void)showSelectedPost:(MWFeedItem *)post {
 
     UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPhone"
@@ -141,13 +147,24 @@
 }
 
 - (void)configureImageInCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath forceLargeImage:(BOOL)largeImage {
-
-    [(UIImageView *)[cell viewWithTag:kTHUMBNAIL_IMAGE_VIEW_TAG] sd_setImageWithURL:[ self getThumbURLForIndex:indexPath
-                                                                                               forceLargeImage:indexPath.row == 0
-                                                                                               forDefaultTable:YES ]
-                                                                   placeholderImage:[ UIImage imageNamed:@"SinImagen.png" ] ];
-
+    
+    [self configureImageInCell:cell withNSURL:[ self getThumbURLForIndex:indexPath
+                                                        forceLargeImage:indexPath.row == 0
+                                                        forDefaultTable:YES ]];
+    
 }
+
+- (void)configureImageInCell:(UITableViewCell *)cell withNSURL:(NSURL *)URL {
+    
+    [(UIImageView *)[cell viewWithTag:kTHUMBNAIL_IMAGE_VIEW_TAG] sd_setImageWithURL:URL
+                                                                   placeholderImage:[ UIImage imageNamed:@"SinImagen.png" ] ];
+    
+}
+
+
+
+
+
 
 
 

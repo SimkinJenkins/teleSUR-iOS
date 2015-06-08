@@ -7,15 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "SlideNavigationController.h"
-#import "LeftMenuViewController.h"
-#import "HiddenVideoPlayerController.h"
 #import <Pushwoosh/PushNotificationManager.h>
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate, PushNotificationDelegate> {
-
+    @protected
+        NSString *notificationLink;
+        NSString *notificationSection;
 }
 
 @property (strong, nonatomic) UIWindow *window;
+
 
 @end

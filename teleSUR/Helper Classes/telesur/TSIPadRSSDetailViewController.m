@@ -99,12 +99,53 @@ NSInteger const SIDE_MARGIN = 20;
         ((TSIpadNavigationViewController *)self.navigationController).leftMenuVw.hidden = NO;
     }
 
+    if ( webViewActive ) {
+
+        [(TSIpadNavigationViewController *)[NavigationBarsManager sharedInstance].topNavigationInstance setNavigationItemsHidden:NO];
+
+    }
+
 }
 
 - (void) viewDidDisappear:(BOOL)animated {
 
     [super viewDidDisappear:animated];
 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+- (void)showSelectedPost:(MWFeedItem *)post {
+    
+    [self showPost:post inSection:@"noticias" andSubsection:[self getNotificationSubsection]];
+    
+}
+
+- (void) showPost:(MWFeedItem *)item inSection:(NSString *)section andSubsection:(NSString *)subsection {
+    
+    UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPad" bundle: nil];
+    
+    TSIPadRSSDetailViewController *vc = [[mainStoryboard instantiateViewControllerWithIdentifier:@"TSIPadRSSDetailViewController"]
+                                         initWithRSSData:item inSection:section andSubsection:subsection];
+    
+    [self.navigationController pushViewController:vc animated:YES];
+    
 }
 
 
@@ -447,7 +488,7 @@ NSInteger const SIDE_MARGIN = 20;
      */
     if(navigationType == UIWebViewNavigationTypeLinkClicked || navigationType == UIWebViewNavigationTypeFormSubmitted || (navigationType == UIWebViewNavigationTypeOther && [[request.URL absoluteString] rangeOfString:@"twitter"].length != 0)) {
         if(navigationType == UIWebViewNavigationTypeLinkClicked && [[request.URL absoluteString] rangeOfString:@"www.telesurtv.net"].length != 0) {
-            /*aqui se manda la liga*/
+
             UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPhone"
                                                                      bundle: nil];
             
@@ -455,9 +496,10 @@ NSInteger const SIDE_MARGIN = 20;
             webView = [webView initWithURL:request.URL];
             
             [self.navigationController pushViewController:webView animated:YES];
-            ((TSIpadNavigationViewController *)self.navigationController).headerTxf.hidden = YES;
-            ((TSIpadNavigationViewController *)self.navigationController).leftMenuVw.hidden = YES;
-            
+
+            [(TSIpadNavigationViewController *)[NavigationBarsManager sharedInstance].topNavigationInstance setNavigationItemsHidden:YES];
+
+            webViewActive = YES;
         }
         return NO;
     }

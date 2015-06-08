@@ -7,22 +7,36 @@
 		<key>teleSUR EN.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>2</integer>
+			<integer>21</integer>
 		</dict>
 		<key>teleSUR Multimedia EN.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>3</integer>
+			<integer>22</integer>
 		</dict>
 		<key>teleSUR Multimedia.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>20</integer>
+		</dict>
+		<key>teleSUR copy.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>29</integer>
 		</dict>
 		<key>teleSUR.xcscheme</key>
 		<dict>
+			<key>isShown</key>
+			<true/>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>18</integer>
+		</dict>
+		<key>teleSURTest.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>23</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
@@ -33,6 +47,21 @@
 			<true/>
 		</dict>
 		<key>15371F071728E3B400A508F4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BC18AFB61AF0512000C3DAD3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BC7E90171AEF4F0D004A3813</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BC7E90321AEF4F0E004A3813</key>
 		<dict>
 			<key>primary</key>
 			<true/>

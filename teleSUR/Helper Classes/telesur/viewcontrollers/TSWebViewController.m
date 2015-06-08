@@ -8,6 +8,9 @@
 
 #import "TSWebViewController.h"
 
+#import "TSNewsViewController.h"
+#import "TSIPadRSSDetailViewController.h"
+
 @implementation TSWebViewController
 
 - (id) initWithURL:(NSURL *)URL {
@@ -40,6 +43,8 @@
     CGRect barFrame = CGRectMake(0, navigaitonBarBounds.size.height - progressBarHeight, navigaitonBarBounds.size.width, progressBarHeight);
     progressView = [[NJKWebViewProgressView alloc] initWithFrame:barFrame];
     progressView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin;
+
+    initialLoadIsComplete = YES;
 
     [self loadCurrentURL];
 
@@ -75,10 +80,37 @@
 
 
 
+- (void)loadData {}
+
 -(void)loadCurrentURL {
 
     NSURLRequest *req = [[NSURLRequest alloc] initWithURL:currentURL];
     [webView loadRequest:req];
+
+}
+
+- (void)showNotificationPost:(MWFeedItem *)post {
+
+    if ( UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad ) {
+
+        UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPhone"
+                                                                 bundle: nil];
+
+        TSNewsViewController *detailView = [mainStoryboard instantiateViewControllerWithIdentifier: @"TSNewsViewController"];
+
+        [detailView initWithData:post];
+        [self.navigationController pushViewController:detailView animated:YES];
+
+    } else {
+
+        UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPad" bundle: nil];
+
+        TSIPadRSSDetailViewController *vc = [[mainStoryboard instantiateViewControllerWithIdentifier:@"TSIPadRSSDetailViewController"]
+                                             initWithRSSData:post inSection:@"noticias" andSubsection:[self getNotificationSubsection]];
+    
+        [self.navigationController pushViewController:vc animated:YES];
+
+    }
 
 }
 

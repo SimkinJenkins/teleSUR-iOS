@@ -52,7 +52,10 @@ extern NSInteger const TS_VIEW_STATUS_ON_TRANSITION;
 
     NSString *liveURL;
     NSString *liveURLTitle;
-    BOOL *isLiveStream;
+    BOOL isLiveStream;
+
+    UIView *backgroundView;
+    UIView *contentView;
 
 }
 

@@ -139,6 +139,13 @@
     
 }
 
+- (void) setNavigationItemsHidden:(BOOL)hidden {
+
+    leftMenuVw.hidden = [self.section isEqualToString:@"home"] || [self.section isEqualToString:@"opinion"] || [self.section isEqualToString:@"blog"] || hidden;
+    headerVw.hidden = hidden;
+    livestreamLabelView.hidden = hidden;
+
+}
 
 
 

@@ -20,9 +20,6 @@ NSString* const TS_CLIP_SLUG = @"clip";
 NSString* const TS_PROGRAMA_SLUG = @"programa";
 NSString* const TS_NOTICIAS_SLUG = @"noticias-texto";
 
-NSString* const TS_ES_NEWS_URL = @"http://www.telesurtv.net/news/";
-NSString* const TS_EN_NEWS_URL = @"http://www.telesurtv.net/english/news/";
-
 @implementation TSBasicListViewController
 
 @synthesize currentFilters;
@@ -272,6 +269,7 @@ NSString* const TS_EN_NEWS_URL = @"http://www.telesurtv.net/english/news/";
 - (void) loadNotificationRSSNewsWithURL:(NSString *)URL andSection:(NSString *)section {
 
     notificationSection = section;
+    notificationURL = URL;
 
     if ([URL isKindOfClass:[NSNull class]] || !URL) {
         NSLog(@"Alerta hubo un error no se recibió la URL de la notificación");
@@ -322,10 +320,28 @@ NSString* const TS_EN_NEWS_URL = @"http://www.telesurtv.net/english/news/";
 
 }
 
+- (NSString *) getNotificationSubsection {
+
+    if ( [notificationSection isEqualToString:@"P"] ) {
+        return @"portada";
+    } else if ( [notificationSection isEqualToString:@"L"] ) {
+        return @"latinoamerica";
+    } else if ( [notificationSection isEqualToString:@"M"] ) {
+        return @"mundo";
+    } else if ( [notificationSection isEqualToString:@"D"] ) {
+        return @"deportes";
+    } else if ( [notificationSection isEqualToString:@"C"] ) {
+        return @"cultura";
+    }
+
+    return @"ultimas";
+
+}
+
 - (void) notificationsSectionsDidLoad:(NSArray *)requests {
 
     [self hideLoaderWithAnimation:YES];
-    
+
     NSString *trimmedNotificationSlug = [notificationSlug substringWithRange:NSMakeRange(0, 20)];
 
     NSLog(@"-------------------========================notificationsSectionsDidLoad %@", trimmedNotificationSlug);
@@ -342,7 +358,7 @@ NSString* const TS_EN_NEWS_URL = @"http://www.telesurtv.net/english/news/";
 
             if ( [item.link rangeOfString:trimmedNotificationSlug].length != 0 ) {
 
-                [self showSelectedPost:item];
+                [self showNotificationPost:item];
                 notificationSlug = nil;
                 return;
 
@@ -352,17 +368,22 @@ NSString* const TS_EN_NEWS_URL = @"http://www.telesurtv.net/english/news/";
 
     }
 
-    UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPhone" bundle: nil];
-
-    TSWebViewController *webView = [mainStoryboard instantiateViewControllerWithIdentifier: @"TSWebViewController"];
-    NSString *URL = [NSString stringWithFormat:@"%@%@.html", [[[[[NSBundle mainBundle] infoDictionary] valueForKey:@"Configuración"] valueForKey:@"langCode"] isEqualToString:@"es"] ? TS_ES_NEWS_URL : TS_EN_NEWS_URL, notificationSlug];
-    webView = [webView initWithURL:[[NSURL alloc] initWithString:URL]];
-
-    [self.navigationController pushViewController:webView animated:YES];
+    [self showUnlocatedNotification:notificationURL];
 
     isNotificationWebViewLastView = YES;
     notificationSlug = nil;
-//    self.headerMenu.hidden = YES;
+    notificationURL = nil;
+
+}
+
+- (void) showUnlocatedNotification:(NSString *)URL {
+
+    UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPhone" bundle: nil];
+    
+    TSWebViewController *webView = [mainStoryboard instantiateViewControllerWithIdentifier: @"TSWebViewController"];
+    webView = [webView initWithURL:[[NSURL alloc] initWithString:URL]];
+    
+    [self.navigationController pushViewController:webView animated:YES];
 
 }
 
@@ -373,6 +394,7 @@ NSString* const TS_EN_NEWS_URL = @"http://www.telesurtv.net/english/news/";
     
 }
 
+- (void) showNotificationPost:(MWFeedItem *)post {}
 - (void)showSelectedPost:(MWFeedItem *)post {}
 
 
@@ -441,7 +463,7 @@ NSString* const TS_EN_NEWS_URL = @"http://www.telesurtv.net/english/news/";
     initialLoadIsComplete = YES;
 
     if ( notificationSlug ) {
-        
+
         [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(loadNotificationSections) userInfo:nil repeats:NO];
 
     }

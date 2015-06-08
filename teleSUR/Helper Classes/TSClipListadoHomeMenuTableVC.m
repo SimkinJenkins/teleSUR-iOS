@@ -138,6 +138,19 @@
 
 }
 
+- (void) showUnlocatedNotification:(NSString *)URL {
+
+    [super showUnlocatedNotification:URL];
+
+    if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) {
+
+        self.headerMenu.hidden = YES;
+
+    }
+
+}
+
+
 
 
 

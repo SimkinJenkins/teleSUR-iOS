@@ -61,6 +61,7 @@ NSInteger const TS_VIEW_STATUS_ON_TRANSITION = 4;
         liveURLTitle = title;
         isDownloading = NO;
         isLiveStream = YES;
+        catalogs = [NSMutableDictionary dictionary];
     }
 
     return self;
@@ -93,9 +94,23 @@ NSInteger const TS_VIEW_STATUS_ON_TRANSITION = 4;
 
     self.view.backgroundColor = [UIColor clearColor];
 
+    CGRect screenBound = [[UIScreen mainScreen] bounds];
+
+    self.view.frame = screenBound;
+
+    backgroundView = [[UIView alloc] initWithFrame:screenBound];
+    backgroundView.backgroundColor = [UIColor blackColor];
+    [self.view addSubview:backgroundView];
+
+    contentView = [[UIView alloc] initWithFrame:screenBound];
+    contentView.backgroundColor = [UIColor clearColor];
+    [self.view addSubview:contentView];
+
     [self setSearchBarConfiguration];
 
     [self setTableViewConfiguration];
+
+    [contentView addSubview:self.tableViewController.tableView];
 
     [self loadShareImageInBackground];
 
@@ -166,7 +181,7 @@ NSInteger const TS_VIEW_STATUS_ON_TRANSITION = 4;
 
     if ( isLiveStream ) {
         
-        return 45;
+        return 70;
 
     }
 
@@ -239,6 +254,26 @@ NSInteger const TS_VIEW_STATUS_ON_TRANSITION = 4;
 
         [super tableView:tableView willDisplayCell:cell forRowAtIndexPath:indexPath];
 
+    } else if ( isLiveStream ) {
+
+        TSProgramListElement *data = [tableElements objectAtIndex:indexPath.row];
+
+        NSArray *titles = [[ catalogs objectForKey:TS_PROGRAMA_SLUG ] objectForKey:@"titles" ];
+        NSString *URL;
+        for (uint i = 0; i < [titles count]; i++) {
+
+            if ( [data.name isEqualToString: [ titles objectAtIndex:i ] ] ) {
+
+                NSArray *originalData = [[catalogs objectForKey:TS_PROGRAMA_SLUG ] objectForKey:@"originalData"];
+                NSDictionary *programData = [originalData objectAtIndex:i];
+                URL = [programData objectForKey: @"imagen_url"];
+                break;
+            }
+
+        }
+        URL = URL == nil ? [NSString stringWithFormat:@"http://media-telesur.openmultimedia.biz/programas/%@", data.imageID ] : URL;
+        [self configureImageInCell:cell withNSURL:[ NSURL URLWithString:URL]];
+
     }
 
 }
@@ -289,6 +324,7 @@ NSInteger const TS_VIEW_STATUS_ON_TRANSITION = 4;
 - (void) initViewVariables {
 
     [super initViewVariables];
+
     viewStatus = TS_VIEW_STATUS_DEFAULT;
     loadMoreCellDisabled = YES;
     addAtListEnd = YES;
@@ -313,7 +349,10 @@ NSInteger const TS_VIEW_STATUS_ON_TRANSITION = 4;
 
     if ( isLiveStream ) {
 
-        [self loadCurrentProgramationXML];
+        TSDataRequest *showCatReq = [[TSDataRequest alloc] initWithType:TS_PROGRAMA_SLUG    forSection:nil      forSubsection:nil];
+        showCatReq.range = NSMakeRange(1, 300);
+
+        [[[TSDataManager alloc] init] loadRequests:[NSArray arrayWithObjects:showCatReq, nil] delegateResponseTo:self];
 
     } else {
 
@@ -360,7 +399,10 @@ NSInteger const TS_VIEW_STATUS_ON_TRANSITION = 4;
     [self loadData];
 
     if ( viewStatus == TS_VIEW_STATUS_MINIMIZED ) {
+
+        [self resetSelfAndContentViewToNormal];
         [self restoreView];
+
     }
 }
 
@@ -462,6 +504,12 @@ NSInteger const TS_VIEW_STATUS_ON_TRANSITION = 4;
 
     self.parentViewController.navigationController.navigationBarHidden = isLandscape;
 
+    if (isLandscape) {
+        [self.view addSubview:playerController.view];
+    } else {
+        [contentView addSubview:playerController.view];
+    }
+
     [UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
         playerController.view.frame = isLandscape ? screenBound : CGRectMake(0, 0, screenBound.size.width, screenBound.size.width * 0.7);
     } completion:^(BOOL finished) {
@@ -483,11 +531,17 @@ NSInteger const TS_VIEW_STATUS_ON_TRANSITION = 4;
 }
 
 - (void) removeCurrentPlayer {
+
     if(playerController) {
+
+        [[NSNotificationCenter defaultCenter] removeObserver:self name:@"minimizeButtonTouched" object:nil];
+        [[NSNotificationCenter defaultCenter] removeObserver:self name:@"sharedButtonTouched" object:nil];
+
         [playerController.moviePlayer stop];
         [playerController.view removeFromSuperview];
         playerController = nil;
     }
+
 }
 
 - (void)configVideo {
@@ -503,9 +557,9 @@ NSInteger const TS_VIEW_STATUS_ON_TRANSITION = 4;
 
     }
 
-    CGRect screenBound = [[UIScreen mainScreen] bounds];
+    CGRect screenBounds = [[UIScreen mainScreen] bounds];
 
-    [playerController playAtView:self.view withFrame:CGRectMake(0, 0, screenBound.size.width, screenBound.size.width * 0.7) withObserver:self playbackFinish:nil];
+    [playerController playAtView:contentView withFrame:CGRectMake(0, 0, screenBounds.size.width, screenBounds.size.width * 0.7) withObserver:self playbackFinish:nil];
 
 }
 
@@ -589,6 +643,47 @@ NSInteger const TS_VIEW_STATUS_ON_TRANSITION = 4;
 
 
 
+
+
+
+
+#pragma mark -
+#pragma mark TSDataManagerDelegate
+
+- (void)TSDataManager:(TSDataManager *)manager didProcessedRequests:(NSArray *)requests {
+
+    if ( !isLiveStream ) {
+
+        [super TSDataManager:manager didProcessedRequests:requests];
+        return;
+
+    }
+
+    TSDataRequest *catalogRequest = [requests objectAtIndex:0];
+    [self setCatalog:catalogRequest.result forKey:catalogRequest.type];
+
+    [self loadCurrentProgramationXML];
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 - (void)downloadClip:(UIButton *)sender {
 
     if ( isDownloading ) {
@@ -623,10 +718,20 @@ NSInteger const TS_VIEW_STATUS_ON_TRANSITION = 4;
     strFileName = [ NSString stringWithFormat:@"%@.mp4", [currentItem valueForKey:@"slug"] ];
     strFilePath = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingPathComponent:strFileName];
 
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:[currentItem valueForKey:@"archivo_url"]]
+    NSURL *url = [NSURL URLWithString:[currentItem valueForKey:@"archivo_url"]];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url
                                              cachePolicy:NSURLRequestUseProtocolCachePolicy
                                          timeoutInterval:60.0];
     connection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
+    
+    //Disable iCloud Backup for Image URL
+    NSError *error = nil;
+    BOOL success = [url setResourceValue: [NSNumber numberWithBool: YES] forKey: NSURLIsExcludedFromBackupKey error: &error];
+    if(!success){
+        NSLog(@"Error excluding %@ from backup %@", [url lastPathComponent], error);
+    }else{
+        NSLog(@"Success excluding %@ from backup %@", [url lastPathComponent], error);
+    }
 
 }
 
@@ -770,9 +875,11 @@ NSInteger const TS_VIEW_STATUS_ON_TRANSITION = 4;
         viewStatus = TS_VIEW_STATUS_ON_TRANSITION;
         [[SlideNavigationController sharedInstance] setNeedsStatusBarAppearanceUpdate];
 
+        [self resetSelfAndContentViewToNormal];
+
     } else if (aPanRecognizer.state == UIGestureRecognizerStateChanged) {
 
-        [self moveVerticallyToLocation:self.view.frame.origin.y + movement];
+        [self moveVerticallyToLocation:contentView.frame.origin.y + movement];
         draggingPoint = translation;
 
     } else if (aPanRecognizer.state == UIGestureRecognizerStateEnded) {
@@ -786,8 +893,8 @@ NSInteger const TS_VIEW_STATUS_ON_TRANSITION = 4;
                 [self restoreView];
             }
         } else {
-            if ( self.view.frame.origin.y > screenBound.size.height * 0.4 ) {
-                if ( self.view.frame.origin.y > screenBound.size.height * 0.8 ) {
+            if ( contentView.frame.origin.y > screenBound.size.height * 0.4 ) {
+                if ( contentView.frame.origin.y > screenBound.size.height * 0.8 ) {
                     [self removeDetailViewController];
                 } else {
                     [self minimizeView];
@@ -812,14 +919,20 @@ NSInteger const TS_VIEW_STATUS_ON_TRANSITION = 4;
 
         playerController.view.frame = CGRectMake(0, 0, playerW, playerH);
         playerController.controlsView.alpha = 0.0;
-        self.view.frame = CGRectMake(screenBound.size.width - playerW - RIGHT_BOTTOM_MINIMIZED_VIEW_MARGIN, screenBound.size.height - playerH - RIGHT_BOTTOM_MINIMIZED_VIEW_MARGIN, self.view.frame.size.width, self.view.frame.size.height);
+        contentView.frame = CGRectMake(screenBound.size.width - playerW - RIGHT_BOTTOM_MINIMIZED_VIEW_MARGIN, screenBound.size.height - playerH - RIGHT_BOTTOM_MINIMIZED_VIEW_MARGIN, contentView.frame.size.width, contentView.frame.size.height);
         self.tableViewController.tableView.alpha = 0.0;
+        contentView.alpha = 1.0;
+        backgroundView.alpha = 0.0;
+        [self.view removeGestureRecognizer:panRecognizer];
 
     } completion:^(BOOL finished) {
         if ( finished ) {
             viewStatus = TS_VIEW_STATUS_MINIMIZED;
             [playerController updateSpinnerView];
             [[SlideNavigationController sharedInstance] setNeedsStatusBarAppearanceUpdate];
+            self.view.frame = contentView.frame;
+            contentView.frame = CGRectMake(0, 0, contentView.frame.size.width, contentView.frame.size.height);
+            [self.view addGestureRecognizer:panRecognizer];
         }
     }];
 
@@ -835,8 +948,9 @@ NSInteger const TS_VIEW_STATUS_ON_TRANSITION = 4;
         CGRect screenBound = [[UIScreen mainScreen] bounds];
         playerController.view.frame = CGRectMake(0, 0, screenBound.size.width, screenBound.size.width * 0.7);
         playerController.controlsView.alpha = 1.0;
-        self.view.frame = CGRectMake(0, VIEW_Y_POSITION, self.view.frame.size.width, self.view.frame.size.height);
+        contentView.frame = CGRectMake(0, VIEW_Y_POSITION, contentView.frame.size.width, contentView.frame.size.height);
         self.tableViewController.tableView.alpha = 1.0;
+        backgroundView.alpha = 1.0;
 
     } completion:^(BOOL finished) {
         if ( finished ) {
@@ -856,14 +970,16 @@ NSInteger const TS_VIEW_STATUS_ON_TRANSITION = 4;
 
     CGRect screenBound = [[UIScreen mainScreen] bounds];
 
-    self.view.frame = CGRectMake(screenBound.size.width - 10, screenBound.size.height - 10, 10, 10);
-    self.view.alpha = 0.0;
+    backgroundView.alpha = 0.0;
+    contentView.frame = CGRectMake(screenBound.size.width - 10, screenBound.size.height - 10, 10, 10);
+    contentView.alpha = 0.0;
     
     [UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
 
-        self.view.frame = CGRectMake(0, VIEW_Y_POSITION, screenBound.size.width, screenBound.size.height);
-        self.view.alpha = 1.0;
-        
+        backgroundView.alpha = 1.0;
+        contentView.frame = CGRectMake(0, VIEW_Y_POSITION, screenBound.size.width, screenBound.size.height);
+        contentView.alpha = 1.0;
+
     } completion:^(BOOL finished) {
         if ( finished ) {
             viewStatus = TS_VIEW_STATUS_MAXIMIZED;
@@ -880,7 +996,7 @@ NSInteger const TS_VIEW_STATUS_ON_TRANSITION = 4;
     [UIView animateWithDuration:0.2 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
 
         CGRect screenBound = [[UIScreen mainScreen] bounds];
-        self.view.frame = CGRectMake(self.view.frame.origin.x, screenBound.size.height, self.view.frame.size.width, self.view.frame.size.height);
+        contentView.frame = CGRectMake(contentView.frame.origin.x, screenBound.size.height, contentView.frame.size.width, contentView.frame.size.height);
         self.view.alpha = 0.0;
 
     } completion:^(BOOL finished) {
@@ -898,7 +1014,7 @@ NSInteger const TS_VIEW_STATUS_ON_TRANSITION = 4;
 - (void) moveVerticallyToLocation:(CGFloat)location {
 
     CGRect screenBound = [[UIScreen mainScreen] bounds];
-    CGRect rect = self.view.frame;
+    CGRect rect = contentView.frame;
     CGRect videoRect = CGRectMake(0, 0, screenBound.size.width, screenBound.size.width * 0.7);
     CGRect finalVideoRect = CGRectMake(((screenBound.size.width - (screenBound.size.width * 0.5)) - RIGHT_BOTTOM_MINIMIZED_VIEW_MARGIN), ((screenBound.size.height - (screenBound.size.width * 0.35)) - RIGHT_BOTTOM_MINIMIZED_VIEW_MARGIN), screenBound.size.width * 0.5, screenBound.size.width * 0.35);
     float percent = rect.origin.y / finalVideoRect.origin.y;
@@ -909,7 +1025,7 @@ NSInteger const TS_VIEW_STATUS_ON_TRANSITION = 4;
 
     rect.origin.x = finalVideoRect.origin.x * MIN( percent, 1 );
     rect.origin.y = location;
-    self.view.frame = rect;
+    contentView.frame = rect;
 
     if (percent > 1 ) {
         playerController.view.alpha = 1 - ((percent - 1) * 8);
@@ -919,6 +1035,7 @@ NSInteger const TS_VIEW_STATUS_ON_TRANSITION = 4;
     float inversePercent = 1.0 - percent;
     playerController.view.frame = CGRectMake(0, 0, finalVideoRect.size.width + ((videoRect.size.width - finalVideoRect.size.width) * inversePercent), finalVideoRect.size.height + ((videoRect.size.height - finalVideoRect.size.height) * inversePercent));
     self.tableViewController.tableView.alpha = inversePercent;
+    backgroundView.alpha = inversePercent;
     playerController.controlsView.alpha = inversePercent;
 
 }
@@ -930,6 +1047,20 @@ NSInteger const TS_VIEW_STATUS_ON_TRANSITION = 4;
     return NO;
 }
 
+- (void) resetSelfAndContentViewToNormal {
+
+    CGRect screenBound = [[UIScreen mainScreen] bounds];
+
+    if ( self.view.frame.origin.x != 0 ) {
+
+        [self.view removeGestureRecognizer:panRecognizer];
+        contentView.frame = self.view.frame;
+        self.view.frame = CGRectMake(0, 0, screenBound.size.width, screenBound.size.height);
+        [self.view addGestureRecognizer:panRecognizer];
+
+    }
+
+}
 
 
 

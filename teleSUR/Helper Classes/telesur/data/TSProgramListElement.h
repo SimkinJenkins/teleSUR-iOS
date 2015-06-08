@@ -16,6 +16,8 @@
     NSString *name;
     NSString *summary;
 
+    NSString *imageID;
+
     NSString *scheduleString;
 
 }
@@ -25,6 +27,8 @@
 
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, copy) NSString *summary;
+
+@property (nonatomic, copy) NSString *imageID;
 
 @property (nonatomic, copy) NSString *scheduleString;
 

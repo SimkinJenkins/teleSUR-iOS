@@ -12,8 +12,6 @@
 	<dict>
 		<key>D4A2E9C14CD3381DE4C5898E281CD8D5FBB85FBA</key>
 		<string>https://github.com/SimkinJenkins/teleSUR-iOS.git</string>
-		<key>F13761E8C2E46ACAB7A5FB336D09A6D709BEC60B</key>
-		<string>https://github.com/teleSUR/teleSUR-iOS.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>teleSUR.xcodeproj</string>
@@ -21,8 +19,6 @@
 	<dict>
 		<key>D4A2E9C14CD3381DE4C5898E281CD8D5FBB85FBA</key>
 		<string>../..</string>
-		<key>F13761E8C2E46ACAB7A5FB336D09A6D709BEC60B</key>
-		<string>../../../TeleSUR%20iOS%20Universal</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/SimkinJenkins/teleSUR-iOS.git</string>
@@ -39,14 +35,6 @@
 			<string>D4A2E9C14CD3381DE4C5898E281CD8D5FBB85FBA</string>
 			<key>IDESourceControlWCCName</key>
 			<string>teleSUR%20iOS%20SimkinRepo</string>
-		</dict>
-		<dict>
-			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
-			<string>public.vcs.git</string>
-			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>F13761E8C2E46ACAB7A5FB336D09A6D709BEC60B</string>
-			<key>IDESourceControlWCCName</key>
-			<string>TeleSUR%20iOS%20Universal</string>
 		</dict>
 	</array>
 </dict>

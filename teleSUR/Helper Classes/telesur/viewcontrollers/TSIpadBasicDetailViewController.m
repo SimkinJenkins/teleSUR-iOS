@@ -15,6 +15,8 @@
 #import "UIViewController+TSLoader.h"
 #import "TSIpadNavigationViewController.h"
 
+#import "TSIPadRSSDetailViewController.h"
+
 NSInteger const TS_DETAIL_ASYNC_IMAGE_TAG = 106;
 
 @implementation TSIpadBasicDetailViewController
@@ -57,6 +59,28 @@ NSInteger const TS_DETAIL_ASYNC_IMAGE_TAG = 106;
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+- (void)showNotificationPost:(MWFeedItem *)post {
+
+    UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPad" bundle: nil];
+    
+    TSIPadRSSDetailViewController *vc = [[mainStoryboard instantiateViewControllerWithIdentifier:@"TSIPadRSSDetailViewController"]
+                                         initWithRSSData:post inSection:@"noticias" andSubsection:[self getNotificationSubsection]];
+
+    [self.navigationController pushViewController:vc animated:YES];
+
+}
 
 
 
@@ -146,7 +170,7 @@ NSInteger const TS_DETAIL_ASYNC_IMAGE_TAG = 106;
     }
     
     UIActivityViewController *activityController = [[UIActivityViewController alloc] initWithActivityItems:sharingItems applicationActivities:nil];
-    activityController.popoverPresentationController.barButtonItem = self.navigationItem.rightBarButtonItem;
+    activityController.popoverPresentationController.sourceView = self.view;
     [self presentViewController:activityController animated:YES completion:nil];
     
 }

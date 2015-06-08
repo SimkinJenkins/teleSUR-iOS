@@ -50,6 +50,7 @@ extern NSString* const TS_NOTICIAS_SLUG;
 
     NSString *notificationSlug;
     NSString *notificationSection;
+    NSString *notificationURL;
 }
 
 @property (nonatomic, retain) NSMutableArray *currentFilters;
@@ -80,10 +81,13 @@ extern NSString* const TS_NOTICIAS_SLUG;
 
 // Manda a crear la vista de detalle de un item del tipo RSS
 - (void) showSelectedPost:(MWFeedItem *)post;
+// Manda a crear la vista de la notificación aceptada
+- (void) showNotificationPost:(MWFeedItem *)post;
 
 - (void) loadNotificationSections;
 - (void) notificationsSectionsDidLoad:(NSArray *)requests;
 - (void) loadNotificationRSSNewsWithURL:(NSString *)URL andSection:(NSString *)section;
+- (void) showUnlocatedNotification:(NSString *)URL;
 
 - (void) reloadData;
 
@@ -98,5 +102,7 @@ extern NSString* const TS_NOTICIAS_SLUG;
 
 - (NSArray *) getResultDataAtIndex:(int) index;
 - (NSString *) getSectionTitleWith:(NSString *)slug;
+
+- (NSString *) getNotificationSubsection;
 
 @end

@@ -21,6 +21,9 @@
 #import "UIView+TSBasicCell.h"
 #import "TSIpadNavigationViewController.h"
 
+#import "TSDataManager.h"
+#import "TSDataRequest.h"
+
 NSInteger const TS_VD_DETAIL_VIEW_TAG = 9001;
 NSInteger const TS_VD_DETAIL_ASYNC_IMAGE_TAG = 106;
 
@@ -62,6 +65,8 @@ CGFloat const IPAD_VIEW_Y_POSITION = 23;
     isDownloading = NO;
     isLiveStream = YES;
 
+    catalogs = [NSMutableDictionary dictionary];
+
     return self;
 
 }
@@ -84,7 +89,11 @@ CGFloat const IPAD_VIEW_Y_POSITION = 23;
 
 
 - (void)viewWillAppear:(BOOL)animated {
-
+/*
+    if ( viewStatus == TS_VIEW_STATUS_MINIMIZED ) {
+        return;
+    }
+*/
     [super viewWillAppear:animated];
 
     [self reset];
@@ -93,7 +102,11 @@ CGFloat const IPAD_VIEW_Y_POSITION = 23;
 }
 
 - (void) viewDidAppear:(BOOL)animated {
-
+/*
+    if ( viewStatus == TS_VIEW_STATUS_MINIMIZED ) {
+        return;
+    }
+*/
     [super viewDidAppear:animated];
 
     [[NavigationBarsManager sharedInstance] setMasterView:[ [ self.view superview] superview] ];
@@ -103,7 +116,11 @@ CGFloat const IPAD_VIEW_Y_POSITION = 23;
 }
 
 - (void) viewDidDisappear:(BOOL)animated {
-
+/*
+    if ( viewStatus == TS_VIEW_STATUS_MINIMIZED ) {
+        return;
+    }
+*/
     [self removeCurrentPlayer];
 
     if ( ![NavigationBarsManager sharedInstance].livestreamON ) {
@@ -115,9 +132,13 @@ CGFloat const IPAD_VIEW_Y_POSITION = 23;
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
-    
+/*
+    if ( viewStatus == TS_VIEW_STATUS_MINIMIZED ) {
+        return;
+    }
+*/
     [super viewWillDisappear:animated];
-    
+
     if( isDownloading ) {
         
         [self resetDownloadButton];
@@ -266,8 +287,6 @@ CGFloat const IPAD_VIEW_Y_POSITION = 23;
 
 - (void)setupRelatedVideoTableView {
 
-    return;
-
     BOOL isLandscape = UIInterfaceOrientationIsLandscape([[UIApplication sharedApplication] statusBarOrientation]);
 
     if (relatedRSSTableView) {
@@ -278,9 +297,9 @@ CGFloat const IPAD_VIEW_Y_POSITION = 23;
     }
 
     CGRect screenRect = [[UIScreen mainScreen] bounds];
-    CGRect frameRect	= isLandscape ? CGRectMake( 0, 0, TS_LIST_WIDTH, 745 ) : ( isLiveStream ? CGRectMake( 0, playerFrame.origin.y + playerFrame.size.height, screenRect.size.width, 45 ) : CGRectMake( 0, TS_DETAIL_VIEW_HEIGHT + 11, screenRect.size.width, 120 ) );
+    CGRect frameRect	= isLandscape ? CGRectMake( 0, 0, TS_LIST_WIDTH, 745 ) : ( isLiveStream ? CGRectMake( 0, playerFrame.origin.y + playerFrame.size.height, screenRect.size.width, 72 ) : CGRectMake( 0, TS_DETAIL_VIEW_HEIGHT + 11, screenRect.size.width, 120 ) );
 
-    relatedRSSTableView = isLandscape ? [[EasyTableView alloc] initWithFrame:frameRect numberOfRows:[tableElements count] ofHeight:isLiveStream ? 45 : 120]
+    relatedRSSTableView = isLandscape ? [[EasyTableView alloc] initWithFrame:frameRect numberOfRows:[tableElements count] ofHeight:isLiveStream ? 72 : 120]
                                     : [[EasyTableView alloc] initWithFrame:frameRect numberOfColumns:[tableElements count] ofWidth:TS_LIST_WIDTH];
 
     relatedRSSTableView.delegate						= self;
@@ -328,10 +347,6 @@ CGFloat const IPAD_VIEW_Y_POSITION = 23;
 }
 
 - (void) setupCurrentVideoData {
-
-    UIView *thisView = self.view;
-    NSLog(@"%d", thisView.tag);
-    
 
     UILabel *title = (UILabel *)[self.view viewWithTag:1001];
     UILabel *date = (UILabel *)[self.view viewWithTag:112];
@@ -536,8 +551,11 @@ CGFloat const IPAD_VIEW_Y_POSITION = 23;
 - (void) loadData {
 
     if ( isLiveStream ) {
-        
-        [self loadCurrentProgramationXML];
+
+        TSDataRequest *showCatReq = [[TSDataRequest alloc] initWithType:TS_PROGRAMA_SLUG    forSection:nil      forSubsection:nil];
+        showCatReq.range = NSMakeRange(1, 300);
+
+        [[[TSDataManager alloc] init] loadRequests:[NSArray arrayWithObjects:showCatReq, nil] delegateResponseTo:self];
         
     } else {
 
@@ -550,6 +568,7 @@ CGFloat const IPAD_VIEW_Y_POSITION = 23;
 - (void) shareButtonClicked {
 
     NSLog(@"%@", [currentItem objectForKey:@"navegador_url"]);
+
     [self shareText:[currentItem objectForKey:@"titulo"] andImage:thumb.image andUrl:[ NSURL URLWithString:[currentItem objectForKey:@"navegador_url"] ]];
 
 }
@@ -564,7 +583,17 @@ CGFloat const IPAD_VIEW_Y_POSITION = 23;
     CGRect screenBound = [[UIScreen mainScreen] bounds];
 
     if ( viewStatus == TS_VIEW_STATUS_MINIMIZED ) {
+
+        [self.view removeGestureRecognizer:panRecognizer];
+        panRecognizer = nil;
+
+        TSIpadNavigationViewController *topMenu = (TSIpadNavigationViewController *)[NavigationBarsManager sharedInstance].topNavigationInstance;
+        [topMenu removeTopViewController];
+
         self.view.frame = CGRectMake(screenBound.size.width - minimizeVideoFrame.size.width - RIGHT_BOTTOM_MINIMIZED_VIEW_MARGIN, screenBound.size.height - minimizeVideoFrame.size.height - RIGHT_BOTTOM_MINIMIZED_VIEW_MARGIN - 70, self.view.frame.size.width, self.view.frame.size.height);
+
+        [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(setTapGestureRecognizer) userInfo:nil repeats:NO];
+
     } else {
         self.view.frame = CGRectMake(0, IPAD_VIEW_Y_POSITION, self.view.frame.size.width, self.view.frame.size.height);
     }
@@ -592,6 +621,19 @@ CGFloat const IPAD_VIEW_Y_POSITION = 23;
     }
 
     [playerController startTimer];
+
+}
+
+- (void) setTapGestureRecognizer {
+
+    TSIpadNavigationViewController *topMenu = (TSIpadNavigationViewController *)[NavigationBarsManager sharedInstance].topNavigationInstance;
+    [topMenu addTopViewController:self];
+
+    CGRect screenBound = [[UIScreen mainScreen] bounds];
+
+    self.view.frame = CGRectMake(screenBound.size.width - minimizeVideoFrame.size.width - RIGHT_BOTTOM_MINIMIZED_VIEW_MARGIN, screenBound.size.height - minimizeVideoFrame.size.height - RIGHT_BOTTOM_MINIMIZED_VIEW_MARGIN - 70, self.view.frame.size.width, self.view.frame.size.height);
+
+    [self initPanRecognizer];
 
 }
 
@@ -659,6 +701,25 @@ CGFloat const IPAD_VIEW_Y_POSITION = 23;
         title.text = data.name;
         time.text = data.scheduleString;
 
+        NSArray *titles = [[ catalogs objectForKey:TS_PROGRAMA_SLUG ] objectForKey:@"titles" ];
+        NSString *URL;
+        for (uint i = 0; i < [titles count]; i++) {
+            
+            if ( [data.name isEqualToString: [ titles objectAtIndex:i ] ] ) {
+                
+                NSArray *originalData = [[catalogs objectForKey:TS_PROGRAMA_SLUG ] objectForKey:@"originalData"];
+                NSDictionary *programData = [originalData objectAtIndex:i];
+                URL = [programData objectForKey: @"imagen_url"];
+                break;
+            }
+            
+        }
+        NSLog(@"%@ - %@", [view viewWithTag:2], URL);
+        URL = URL == nil ? [NSString stringWithFormat:@"http://media-telesur.openmultimedia.biz/programas/%@", data.imageID ] : URL;
+        NSLog(@"%@ - %@", [view viewWithTag:2], URL);
+        [(UIImageView *)[view viewWithTag:2] sd_setImageWithURL:[ NSURL URLWithString:URL]
+                                                 placeholderImage:[UIImage imageNamed:@"SinImagen.png"]];
+
     } else {
 
         NSDictionary *data = [tableElements objectAtIndex:indexPath.row];
@@ -706,6 +767,16 @@ CGFloat const IPAD_VIEW_Y_POSITION = 23;
 #pragma mark TSDataManagerDelegate
 
 - (void)TSDataManager:(TSDataManager *)manager didProcessedRequests:(NSArray *)requests {
+
+    if ( isLiveStream ) {
+        
+        TSDataRequest *catalogRequest = [requests objectAtIndex:0];
+        [self setCatalog:catalogRequest.result forKey:catalogRequest.type];
+        
+        [self loadCurrentProgramationXML];
+        return;
+        
+    }
 
     [self elementsHidden:NO];
 
@@ -775,12 +846,21 @@ CGFloat const IPAD_VIEW_Y_POSITION = 23;
     
     strFileName = [ NSString stringWithFormat:@"%@.mp4", [currentItem valueForKey:@"slug"] ];
     strFilePath = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingPathComponent:strFileName];
-    
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:[currentItem valueForKey:@"archivo_url"]]
+    NSURL *url = [NSURL URLWithString:[currentItem valueForKey:@"archivo_url"]];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url
                                              cachePolicy:NSURLRequestUseProtocolCachePolicy
                                          timeoutInterval:60.0];
     connection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
-    
+
+    //Disable iCloud Backup for Image URL
+    NSError *error = nil;
+    BOOL success = [url setResourceValue: [NSNumber numberWithBool: YES] forKey: NSURLIsExcludedFromBackupKey error: &error];
+    if(!success){
+        NSLog(@"Error excluding %@ from backup %@", [url lastPathComponent], error);
+    }else{
+        NSLog(@"Success excluding %@ from backup %@", [url lastPathComponent], error);
+    }
+
 }
 
 - (void) resetDownloadButton {
@@ -831,6 +911,7 @@ CGFloat const IPAD_VIEW_Y_POSITION = 23;
     if (file)   {
         [file seekToEndOfFile];
     }
+
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)receivedata {

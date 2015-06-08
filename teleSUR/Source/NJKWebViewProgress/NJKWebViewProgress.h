@@ -5,7 +5,7 @@
 //  Copyright (c) 2013 Satoshi Asano. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 #undef njk_weak
 #if __has_feature(objc_arc_weak)

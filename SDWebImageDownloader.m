@@ -171,6 +171,16 @@ static NSString *const kCompletedCallbackKey = @"completed";
         }
     }];
 
+    //Disable iCloud Backup for Image URL
+    NSError *error = nil;
+    BOOL success = [url setResourceValue: [NSNumber numberWithBool: YES] forKey: NSURLIsExcludedFromBackupKey error: &error];
+    if(!success){
+        NSLog(@"Error excluding %@ from backup %@", [url lastPathComponent], error);
+    }else{
+        NSLog(@"Success excluding %@ from backup %@", [url lastPathComponent], error);
+    }
+    //
+
     return operation;
 }
 

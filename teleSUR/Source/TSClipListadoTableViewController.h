@@ -32,6 +32,8 @@
 - (NSString *)getIDForCellAtIndexPath:(NSIndexPath *)indexPath;
 //Configura la WebCacheImage, de acuerdo al indexPath actual. También decide entre configurar con la URL de la imagen grande o pequeña.
 - (void)configureImageInCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath forceLargeImage:(BOOL)largeImage;
+
+- (void)configureImageInCell:(UITableViewCell *)cell withNSURL:(NSURL *)URL;
 // Manda a reproducir el clip correspondiente al index enviado
 - (void)playSelectedClip:(NSIndexPath *)indexPath;
 

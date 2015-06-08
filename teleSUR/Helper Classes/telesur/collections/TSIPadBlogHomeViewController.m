@@ -80,6 +80,14 @@ NSString* const BLOG_HOME_DEFAULT_CELL_REUSE_ID = @"BlogHomeCollectionCell";
 
 
 
+
+
+
+
+
+
+
+
 - (void) setSection:(NSString *)slug {
 
     [self configureWithSection:slug];
@@ -168,6 +176,17 @@ NSString* const BLOG_HOME_DEFAULT_CELL_REUSE_ID = @"BlogHomeCollectionCell";
 
     }
 
+}
+
+- (void)showNotificationPost:(MWFeedItem *)post {
+    
+    UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPad" bundle: nil];
+    
+    TSIPadRSSDetailViewController *vc = [[mainStoryboard instantiateViewControllerWithIdentifier:@"TSIPadRSSDetailViewController"]
+                                         initWithRSSData:post inSection:@"noticias" andSubsection:[self getNotificationSubsection]];
+    
+    [self.navigationController pushViewController:vc animated:YES];
+    
 }
 
 

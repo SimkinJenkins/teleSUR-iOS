@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "NJKWebViewProgress.h"
 #import "NJKWebViewProgressView.h"
+#import "TSBasicListViewController.h"
 
-@interface TSWebViewController : UIViewController <UIWebViewDelegate, NJKWebViewProgressDelegate> {
+@interface TSWebViewController : TSBasicListViewController <UIWebViewDelegate, NJKWebViewProgressDelegate> {
 
     @protected
         UIWebView *webView;

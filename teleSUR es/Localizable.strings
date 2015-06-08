@@ -41,6 +41,7 @@
 
 
 //URL's de Secciones para Noticias
+//"portadaRSS" = "http://www.telesurtv.net/rss/RssNewsDestacada.xml";
 "portadaRSS" = "http://www.telesurtv.net/rss/RssPortada.xml";
 "ultimasRSS" = "http://www.telesurtv.net/rss/RssLastNews.xml";
 "latinoamericaRSS" = "http://www.telesurtv.net/rss/RssLatinoamerica.xml";

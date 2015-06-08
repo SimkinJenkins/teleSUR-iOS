@@ -13,6 +13,7 @@
 #import "NSDictionary_Datos.m"
 #import "SlideNavigationController.h"
 #import "AlphaGradientView.h"
+#import "CircularGradientView.h"
 
 float const GRADIENT_HEIGHT = 40;
 int const HIDE_CONTROLS_TIME = 5;
@@ -116,7 +117,7 @@ int const HIDE_CONTROLS_TIME = 5;
     self.view.frame = frame;
     currentFrame = frame;
     self.view.frame = frame;
-    appearControlsButton.frame = controlsView.frame = CGRectMake(0, 0, currentFrame.size.width, currentFrame.size.height);
+    showControlsButton.frame = controlsView.frame = CGRectMake(0, 0, currentFrame.size.width, currentFrame.size.height);
 
     NSLog(@"setPlayerFrame : %@", NSStringFromCGRect(currentFrame));
 
@@ -124,7 +125,7 @@ int const HIDE_CONTROLS_TIME = 5;
 
     upGradient.frame = CGRectMake(0, 0, currentFrame.size.width, GRADIENT_HEIGHT);
     bottomGradient.frame = CGRectMake(0, currentFrame.size.height - GRADIENT_HEIGHT, currentFrame.size.width, GRADIENT_HEIGHT);
-    shareButton.frame = CGRectMake(currentFrame.size.width - 40, 6, shareButton.frame.size.width, shareButton.frame.size.height);
+    shareButton.frame = CGRectMake(currentFrame.size.width - 68, -17, shareButton.frame.size.width, shareButton.frame.size.height);
 
     sectionTxf.frame = CGRectMake(55 + ((statusBarWidth - sectionTxf.frame.size.width) * 0.5), 5, sectionTxf.frame.size.width, sectionTxf.frame.size.height);
 
@@ -207,10 +208,10 @@ int const HIDE_CONTROLS_TIME = 5;
     
     if ( add ) {
         if ( controlsView.alpha != 1.0 ) {
-            [self.view addSubview:appearControlsButton];
+            [self.view addSubview:showControlsButton];
         }
     } else {
-        [appearControlsButton removeFromSuperview];
+        [showControlsButton removeFromSuperview];
     }
     
 }
@@ -236,7 +237,7 @@ int const HIDE_CONTROLS_TIME = 5;
 
 - (void)loadStateDidChange:(NSNotification *)notification {
 
-    NSLog(@"loadStateDidChange : %u ", self.moviePlayer.loadState );
+//    NSLog(@"loadStateDidChange : %u ", self.moviePlayer.loadState );
 
     if( self.moviePlayer.loadState == MPMovieLoadStateStalled ) {
         [spinner startAnimating];
@@ -250,7 +251,7 @@ int const HIDE_CONTROLS_TIME = 5;
 
 - (void)playbackStart:(NSNotification *)notification {
 
-    NSLog(@"playbackStart : %d , %d, %d, %d ", self.moviePlayer.playbackState, MPMoviePlaybackStatePlaying, MPMoviePlaybackStatePaused, MPMoviePlaybackStateStopped );
+//    NSLog(@"playbackStart : %d , %d, %d, %d ", self.moviePlayer.playbackState, MPMoviePlaybackStatePlaying, MPMoviePlaybackStatePaused, MPMoviePlaybackStateStopped );
 
     if ( self.moviePlayer.playbackState == MPMoviePlaybackStatePlaying ) {
 
@@ -283,7 +284,7 @@ int const HIDE_CONTROLS_TIME = 5;
 
 - (void) onPlaybackStopped {
 
-    if ( appearControlsButton.superview ) {
+    if ( showControlsButton.superview ) {
         [self appearButtonTouched:nil];
     }
     
@@ -472,17 +473,22 @@ int const HIDE_CONTROLS_TIME = 5;
 - (void)constructCustomPlayerControls {
 
     controlsView = [[UIView alloc] initWithFrame:self.moviePlayer.view.frame];
-    appearControlsButton = [[UIButton alloc] initWithFrame:self.moviePlayer.view.frame];
-    appearControlsButton.backgroundColor = [UIColor clearColor];
-//    appearControlsButton.alpha = 0.5;
-    [appearControlsButton addTarget:self.parentViewController.navigationController action:@selector(appearButtonTouched:) forControlEvents:UIControlEventTouchUpInside];
+    showControlsButton = [[UIButton alloc] initWithFrame:self.moviePlayer.view.frame];
+    showControlsButton.backgroundColor = [UIColor clearColor];
+//    showControlsButton.alpha = 0.5;
+    [showControlsButton addTarget:self.parentViewController.navigationController action:@selector(appearButtonTouched:) forControlEvents:UIControlEventTouchUpInside];
 
     UIImage *minimizeImage = [UIImage imageNamed:@"player-minimize.png"];
+    UIImage *minimizeHighlightedImage = [UIImage imageNamed:@"player-minimize-highlighted.png"];
     UIImage *statusBulletImage = [UIImage imageNamed:@"player-playback-status.png"];
     UIImage *playImage = [UIImage imageNamed:@"player-play.png"];
+    UIImage *playHighlightedImage = [UIImage imageNamed:@"player-play-highlighted.png"];
     UIImage *pauseImage = [UIImage imageNamed:@"player-pause.png"];
+    UIImage *pauseHighlightedImage = [UIImage imageNamed:@"player-pause-highlighted.png"];
     UIImage *shareImage = [UIImage imageNamed:@"player-share.png"];
+    UIImage *shareHighlightedImage = [UIImage imageNamed:@"player-share-highlighted.png"];
     UIImage *repeatImage = [UIImage imageNamed:@"player-repeat.png"];
+    UIImage *repeatHighlightedImage = [UIImage imageNamed:@"player-repeat-highlighted.png"];
 
     float shadowWidth = 3.0f;
     float fontSize = 11.0f;
@@ -500,9 +506,10 @@ int const HIDE_CONTROLS_TIME = 5;
     [controlsView addSubview:bottomGradient];
 
     minimizeButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    minimizeButton.frame = CGRectMake(15, 8, minimizeImage.size.width, minimizeImage.size.height);
+    minimizeButton.frame = CGRectMake(-7, -17, minimizeImage.size.width, minimizeImage.size.height);
     minimizeButton.alpha = 0.6;
     [minimizeButton setImage:minimizeImage forState:UIControlStateNormal];
+    [minimizeButton setImage:minimizeHighlightedImage forState:UIControlStateHighlighted];
 
     [minimizeButton addTarget:self.parentViewController.navigationController action:@selector(minimizeButtonTouched:) forControlEvents:UIControlEventTouchUpInside];
 
@@ -517,6 +524,7 @@ int const HIDE_CONTROLS_TIME = 5;
     playButton.frame = CGRectMake(135, 85, playImage.size.width, playImage.size.height);
     playButton.alpha = 0.6;
     [playButton setImage:playImage forState:UIControlStateNormal];
+    [playButton setImage:playHighlightedImage forState:UIControlStateHighlighted];
 
     [playButton addTarget:self.parentViewController.navigationController action:@selector(playButtonTouched:) forControlEvents:UIControlEventTouchUpInside];
 
@@ -531,6 +539,7 @@ int const HIDE_CONTROLS_TIME = 5;
     pauseButton.frame = CGRectMake(135, 85, pauseImage.size.width, pauseImage.size.height);
     pauseButton.alpha = 0.6;
     [pauseButton setImage:pauseImage forState:UIControlStateNormal];
+    [pauseButton setImage:pauseHighlightedImage forState:UIControlStateHighlighted];
 
     [pauseButton addTarget:self.parentViewController.navigationController action:@selector(pauseButtonTouched:) forControlEvents:UIControlEventTouchUpInside];
 
@@ -545,6 +554,7 @@ int const HIDE_CONTROLS_TIME = 5;
     repeatButton.frame = CGRectMake(135, 85, repeatImage.size.width, repeatImage.size.height);
     repeatButton.alpha = 0.6;
     [repeatButton setImage:repeatImage forState:UIControlStateNormal];
+    [repeatButton setImage:repeatHighlightedImage forState:UIControlStateHighlighted];
 
     [repeatButton addTarget:self.parentViewController.navigationController action:@selector(repeatButtonTouched:) forControlEvents:UIControlEventTouchUpInside];
 
@@ -556,9 +566,10 @@ int const HIDE_CONTROLS_TIME = 5;
     repeatButton.layer.masksToBounds = NO;
 
     shareButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    shareButton.frame = CGRectMake(275, 6, shareImage.size.width, shareImage.size.height);
+    shareButton.frame = CGRectMake(205, -19, shareImage.size.width, shareImage.size.height);
     shareButton.alpha = 0.6;
     [shareButton setImage:shareImage forState:UIControlStateNormal];
+    [shareButton setImage:shareHighlightedImage forState:UIControlStateHighlighted];
 
     [shareButton addTarget:self.parentViewController.navigationController action:@selector(shareButtonTouched:) forControlEvents:UIControlEventTouchUpInside];
 
@@ -581,9 +592,6 @@ int const HIDE_CONTROLS_TIME = 5;
     [statusButton addGestureRecognizer:gesture];
 
     [controlsView addSubview:minimizeButton];
-//    [controlsView addSubview:playButton];
-//    [controlsView addSubview:repeatButton];
-//    [controlsView addSubview:pauseButton];
     [controlsView addSubview:shareButton];
 
     statusLabel = [[UILabel alloc] initWithFrame:
@@ -620,7 +628,7 @@ int const HIDE_CONTROLS_TIME = 5;
 
     [sectionTxf sizeToFit];
 
-    sectionTxf.frame = CGRectMake(55 + ((statusBarWidth - sectionTxf.frame.size.width) * 0.5), 5, sectionTxf.frame.size.width, logoImage.size.height);
+    sectionTxf.frame = CGRectMake(55 + ((statusBarWidth - sectionTxf.frame.size.width) * 0.5), 8, sectionTxf.frame.size.width, logoImage.size.height);
     [controlsView addSubview:sectionTxf];
 
     statusBar = [[UIView alloc] initWithFrame:CGRectMake(50, 203, 1, 10)];
@@ -652,6 +660,18 @@ int const HIDE_CONTROLS_TIME = 5;
 
     [self.view addSubview:spinner];
 
+}
+
+- (UIImage *) imageWithView:(UIView *)view
+{
+    UIGraphicsBeginImageContextWithOptions(view.bounds.size, view.opaque, 0.0);
+    [view.layer renderInContext:UIGraphicsGetCurrentContext()];
+    
+    UIImage * img = UIGraphicsGetImageFromCurrentImageContext();
+    
+    UIGraphicsEndImageContext();
+    
+    return img;
 }
 
 - (void)statusButtonDragged:(UIPanGestureRecognizer *)gesture {

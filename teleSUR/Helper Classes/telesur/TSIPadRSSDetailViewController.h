@@ -19,6 +19,7 @@
         MWFeedItem *currentItem;
         CGFloat webViewYPos;
         NSString *parsedHTML;
+        BOOL *webViewActive;
 
 }
 

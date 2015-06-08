@@ -14,7 +14,7 @@
 
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @protocol UIDropDownMenuDelegate <NSObject>
 @optional
@@ -24,8 +24,8 @@
 
 @end
 
-@interface UIDropDownMenu : NSObject <UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource, UIGestureRecognizerDelegate>
-{
+@interface UIDropDownMenu : NSObject <UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource, UIGestureRecognizerDelegate> {
+
     // general objects
     UITableView *dropdownTable;
     UIView *parentView;

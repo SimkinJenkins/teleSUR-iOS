@@ -205,8 +205,8 @@
 
 - (void)setupHeader {
 
-//    NSArray *data = currentData && [currentData count] > 3 ? ((TSDataRequest *)[currentData objectAtIndex:3]).result : [NSArray array];
-    NSArray *data = [self getHTableData];
+    NSArray *data = currentData && [currentData count] > 3 ? ((TSDataRequest *)[currentData objectAtIndex:3]).result : [NSArray array];
+//    NSArray *data = [self getHTableData];
 
     if ( !data || [data count] == 0 ) {
         topTablePosition = 0;

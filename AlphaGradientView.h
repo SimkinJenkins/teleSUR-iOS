@@ -6,6 +6,8 @@
 //
 //
 
+#import <UIKit/UIKit.h>
+
 @interface AlphaGradientView : UIView
 
 typedef enum gradientDirections

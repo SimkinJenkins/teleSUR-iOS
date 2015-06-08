@@ -10,6 +10,6 @@
 
 @implementation TSProgramListElement
 
-@synthesize name, summary, initialDate, endDate, scheduleString;
+@synthesize name, summary, initialDate, endDate, scheduleString, imageID;
 
 @end

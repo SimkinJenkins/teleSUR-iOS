@@ -1,3 +1,4 @@
+
  //
 //  main.m
 //  teleSUR
@@ -13,7 +14,21 @@
 int main(int argc, char *argv[]) {
 
     @autoreleasepool {
-	    return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
+
+        return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
+
 	}
 
 }
+
+/*
+#import "MultimediaAPPDelegate.h"
+
+int main(int argc, char *argv[]) {
+    @autoreleasepool {
+
+        return UIApplicationMain(argc, argv, nil, NSStringFromClass([MultimediaAPPDelegate class]));
+
+    }
+}
+*/

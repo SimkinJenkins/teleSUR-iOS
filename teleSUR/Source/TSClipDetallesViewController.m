@@ -492,7 +492,7 @@ NSInteger const TS_VIEW_STATUS_ON_TRANSITION = 4;
 }
 
 - (void) deviceOrientationDidChangeNotification:(NSNotification *)notification {
-    
+
     UIDeviceOrientation orientation = [[UIDevice currentDevice] orientation];
     if (orientation == UIDeviceOrientationFaceUp || orientation == UIDeviceOrientationFaceDown || orientation == UIDeviceOrientationUnknown || orientation == UIDeviceOrientationPortraitUpsideDown || viewStatus == TS_VIEW_STATUS_MINIMIZED) {
         return;

@@ -121,6 +121,8 @@ CGFloat const IPAD_VIEW_Y_POSITION = 23;
         return;
     }
 */
+    [super viewDidDisappear:animated];
+
     [self removeCurrentPlayer];
 
     if ( ![NavigationBarsManager sharedInstance].livestreamON ) {
@@ -847,10 +849,6 @@ CGFloat const IPAD_VIEW_Y_POSITION = 23;
     strFileName = [ NSString stringWithFormat:@"%@.mp4", [currentItem valueForKey:@"slug"] ];
     strFilePath = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingPathComponent:strFileName];
     NSURL *url = [NSURL URLWithString:[currentItem valueForKey:@"archivo_url"]];
-    NSURLRequest *request = [NSURLRequest requestWithURL:url
-                                             cachePolicy:NSURLRequestUseProtocolCachePolicy
-                                         timeoutInterval:60.0];
-    connection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
 
     //Disable iCloud Backup for Image URL
     NSError *error = nil;
@@ -860,6 +858,11 @@ CGFloat const IPAD_VIEW_Y_POSITION = 23;
     }else{
         NSLog(@"Success excluding %@ from backup %@", [url lastPathComponent], error);
     }
+
+    NSURLRequest *request = [NSURLRequest requestWithURL:url
+                                             cachePolicy:NSURLRequestUseProtocolCachePolicy
+                                         timeoutInterval:60.0];
+    connection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
 
 }
 
@@ -957,7 +960,7 @@ CGFloat const IPAD_VIEW_Y_POSITION = 23;
             }
         }];
     }
-    
+
 }
 
 - (void) connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {

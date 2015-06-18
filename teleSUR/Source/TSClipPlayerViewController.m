@@ -78,6 +78,8 @@ int const HIDE_CONTROLS_TIME = 5;
 
 - (void)viewDidLoad {
 
+    [super viewDidLoad];
+
     [self.view setBackgroundColor: [UIColor blackColor]];
 
     self.moviePlayer.controlStyle = MPMovieControlStyleNone;
@@ -89,6 +91,8 @@ int const HIDE_CONTROLS_TIME = 5;
 }
 
 - (void) viewDidDisappear:(BOOL)animated {
+
+    [super viewDidDisappear:animated];
 
     [[NSNotificationCenter defaultCenter] removeObserver:currentVC name:MPMoviePlayerPlaybackDidFinishNotification object:self.moviePlayer];
 

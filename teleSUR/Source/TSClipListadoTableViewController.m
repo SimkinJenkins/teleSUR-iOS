@@ -58,7 +58,9 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-    // Si ya había un clip seleccionado, asegurar que esté marcado 
+
+    [super viewWillAppear:animated];
+    // Si ya había un clip seleccionado, asegurar que esté marcado
     if (selectedIndexPath && animated) {
         [self.tableViewController.tableView selectRowAtIndexPath:selectedIndexPath animated:NO scrollPosition:UITableViewScrollPositionNone];
     }
@@ -66,6 +68,8 @@
 }
 
 - (void)viewDidAppear:(BOOL)animated {
+
+    [super viewDidAppear:animated];
     // Si ya había un clip seleccionado, desmarcarlo con animación
     if (selectedIndexPath && animated) {
         [self.tableViewController.tableView deselectRowAtIndexPath:selectedIndexPath animated:animated];

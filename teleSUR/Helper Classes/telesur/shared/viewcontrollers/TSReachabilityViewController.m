@@ -15,6 +15,8 @@
 
 - (void)viewDidLoad {
 
+    [super viewDidLoad];
+
     [self startReachabilityConnections];
 
 }

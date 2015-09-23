@@ -379,10 +379,10 @@ NSString* const TS_NOTICIAS_SLUG = @"noticias-texto";
 - (void) showUnlocatedNotification:(NSString *)URL {
 
     UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPhone" bundle: nil];
-    
+
     TSWebViewController *webView = [mainStoryboard instantiateViewControllerWithIdentifier: @"TSWebViewController"];
     webView = [webView initWithURL:[[NSURL alloc] initWithString:URL]];
-    
+
     [self.navigationController pushViewController:webView animated:YES];
 
 }

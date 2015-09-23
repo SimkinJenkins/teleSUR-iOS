@@ -341,7 +341,9 @@ CGFloat const IPAD_VIEW_Y_POSITION = 23;
     date.font = [UIFont fontWithName:@"Roboto-Bold" size:16];//696969
     description.font = [UIFont fontWithName:@"Roboto-Regular" size:16];//black
 
+    [download removeFromSuperview];
     [download setTitle:NSLocalizedString(@"descarga", nil) forState:UIControlStateNormal];
+    download.hidden = YES;
     [download addTarget:self action:@selector(downloadClip:) forControlEvents:UIControlEventTouchUpInside];
 
     thumb = [[UIImageView alloc] initWithFrame:playerFrame];
@@ -434,7 +436,7 @@ CGFloat const IPAD_VIEW_Y_POSITION = 23;
     download.frame = CGRectMake(playerFrame.size.width - 170, date.hidden ? title.frame.origin.y + 7 : date.frame.origin.y - 4, download.frame.size.width, download.frame.size.height);
     
     [self.view adjustSizeFrameForLabel:description constriainedToSize:CGSizeMake(playerFrame.size.width - 60, 300)];
-    [self.view setLabel:description underView:download withSeparation:18];
+    [self.view setLabel:description underView:date withSeparation:18];
 
     thumb.frame = playerFrame;
 
@@ -841,11 +843,11 @@ CGFloat const IPAD_VIEW_Y_POSITION = 23;
     currentDownloadLabel.textAlignment = NSTextAlignmentCenter;
     
     [sender.titleLabel removeFromSuperview];
-    
+
     [currentSender addSubview:currentDownloadLabel];
-    
+
     [currentSender setAlpha:0.75];
-    
+
     strFileName = [ NSString stringWithFormat:@"%@.mp4", [currentItem valueForKey:@"slug"] ];
     strFilePath = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingPathComponent:strFileName];
     NSURL *url = [NSURL URLWithString:[currentItem valueForKey:@"archivo_url"]];

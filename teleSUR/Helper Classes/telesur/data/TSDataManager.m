@@ -175,7 +175,7 @@
         NSLog(@"El nombre de la entidad no se reconoce: %@", currentRequest.type);
         return;
     }
-    
+
     // cualquier entidad puede ser paginada
     if (currentRequest.range.location) {
 

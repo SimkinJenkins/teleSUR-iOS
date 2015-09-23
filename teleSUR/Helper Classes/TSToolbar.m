@@ -10,14 +10,12 @@
 
 @implementation TSToolbar
 
-- (id)initWithFrame:(CGRect)frame {
-    return [super initWithFrame:frame];
-}
-
 - (CGSize)sizeThatFits:(CGSize)size {
+
     CGSize result = [super sizeThatFits:size];
     result.height = 65;
     return result;
+
 }
 
 @end

@@ -24,7 +24,7 @@
 }
 
 - (void) parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qualifiedName attributes:(NSDictionary *)attributeDict {
-    
+
     if ( ([elementName isEqualToString:@"lunes"] && currentDay == 2 ) || ([elementName isEqualToString:@"martes"] && currentDay == 3 ) ||
         ([elementName isEqualToString:@"miercoles"] && currentDay == 4 ) || ([elementName isEqualToString:@"jueves"] && currentDay == 5 ) ||
         ([elementName isEqualToString:@"viernes"] && currentDay == 6 ) || ([elementName isEqualToString:@"sabado"] && currentDay == 7 ) ||
@@ -48,21 +48,21 @@
 }
 
 - (void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string {
-    
+
     if ( programList  && currentProgramListElement ) {
-        
+
         [currentText appendString:string];
 //        NSLog(@"Processing Value: %@ - %@", string, currentText);
-        
+
     }
-    
+
 }
 
 - (void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName
   namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName {
-    
+
     if ( programList && currentProgramListElement ) {
-        
+
         if ( [elementName isEqualToString:@"nombre"] ) {
             currentProgramListElement.name = currentText;
         } else if ( [elementName isEqualToString:@"foto"] ) {
@@ -70,25 +70,25 @@
         } else if ( [elementName isEqualToString:@"sinopsis"] ) {
             currentProgramListElement.summary = currentText;
         } else if ( [elementName isEqualToString:@"hora_ini"] ) {
-            
+
             NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
             NSLocale *locale = [[NSLocale alloc] initWithLocaleIdentifier:@"es_MX"];
-            
+
             [formatter setLocale:locale];
             [formatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
-            
+
             currentProgramListElement.initialDate = [formatter dateFromString:[NSString stringWithFormat:@"%@", currentText]];
-            
+
         } else if ( [elementName isEqualToString:@"hora_fin"] ) {
-            
+
             NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
             NSLocale *locale = [[NSLocale alloc] initWithLocaleIdentifier:@"es_MX"];
-            
+
             [formatter setLocale:locale];
             [formatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
-            
+
             currentProgramListElement.endDate = [formatter dateFromString:[NSString stringWithFormat:@"%@", currentText]];
-            
+
         } else if ( [elementName isEqualToString:@"programa"] ) {
 
             NSDateFormatter* formatter = [[NSDateFormatter alloc] init];
@@ -97,16 +97,16 @@
             currentProgramListElement.scheduleString = [NSString stringWithFormat:@"%@ - %@", [formatter stringFromDate:currentProgramListElement.initialDate], [formatter stringFromDate:currentProgramListElement.endDate]];
             [programList addObject:currentProgramListElement];
             currentProgramListElement = nil;
-            
+
         }
 //        NSLog(@"End Processing Element: %@ - %@", elementName, currentText);
-        
+
     } else if ( programList ) {
-        
+
         isTodayListParsingFinish = YES;
-        
+
     }
-    
+
 }
 
 - (void)parserDidEndDocument:(NSXMLParser *)parser {

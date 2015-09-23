@@ -845,6 +845,7 @@
 #pragma mark NavigationBarsManagerDelegate
 
 - (void) navigationManagerViewSet:(UIView *)masterView {
+
     if( leftMenu ) {
         [ leftMenu makeMenu:menuTxf targetView:masterView ];
     }

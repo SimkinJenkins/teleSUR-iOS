@@ -327,7 +327,6 @@
 	return indexPath;
 }
 
-
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
 	if ([delegate respondsToSelector:@selector(easyTableView:scrolledToOffset:)])
 		[delegate easyTableView:self scrolledToOffset:self.contentOffset];

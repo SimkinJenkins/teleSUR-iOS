@@ -232,6 +232,7 @@ NSInteger const TS_VIEW_STATUS_ON_TRANSITION = 4;
                 cell = (UITableViewCell *)[[[NSBundle mainBundle] loadNibNamed:@"VideoDetailCellView" owner:self options:nil] lastObject];
             }
 
+            ((UIButton *)[cell viewWithTag:103]).hidden = YES;
             [(UIButton *)[cell viewWithTag:103] addTarget:self action:@selector(downloadClip:) forControlEvents:UIControlEventTouchUpInside];
 
             [((DefaultTableViewCell *)cell) setData:[tableElements objectAtIndex:indexPath.row]];

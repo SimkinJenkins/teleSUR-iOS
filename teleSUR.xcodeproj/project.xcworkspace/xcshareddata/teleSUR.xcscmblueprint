@@ -1,0 +1,114 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "D4A2E9C14CD3381DE4C5898E281CD8D5FBB85FBA",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "227EEE304ADB8C378DFDDE5C2B133285B321E9DB" : 0,
+    "07DE42F364F2885E8B480C59BF37284D48EDAB20" : 0,
+    "3952FD7912224F5A9187AF9540D679390D7E9E87" : 0,
+    "5C1B4BF3F1C04B7EF5D69336D6BCEC096D4E1EA0" : 0,
+    "8779D3E0D9EDB816083F9C3CA830B4068464CFFB" : 0,
+    "00E26964EA63CC87A44E867291930D0C506072B9" : 0,
+    "C69F3EA97980AFA9CC5F8D20156C6543C5EDF223" : 0,
+    "43214AC14EA3370655E522EF8FE3D68086E679FD" : 0,
+    "73BC51D985EBDD396D3CD83428870FF22E808166" : 0,
+    "F13761E8C2E46ACAB7A5FB336D09A6D709BEC60B" : 0,
+    "D4A2E9C14CD3381DE4C5898E281CD8D5FBB85FBA" : 0,
+    "1C0DD351DA2E635C75E5C59B77C1B93C5E8FA0F8" : 0,
+    "3B0A140AD0BA93A33F2412E13997636DDC55DB06" : 0,
+    "3280C5C34A7D6BF0D0FFE06BBA00FEF85AF77441" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "E2EF18EE-02B2-43C8-9EF7-794DEF2567FE",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "227EEE304ADB8C378DFDDE5C2B133285B321E9DB" : "FNCA\/",
+    "07DE42F364F2885E8B480C59BF37284D48EDAB20" : "Zeehow\/",
+    "3952FD7912224F5A9187AF9540D679390D7E9E87" : "videoANE\/",
+    "5C1B4BF3F1C04B7EF5D69336D6BCEC096D4E1EA0" : "Gestouch\/",
+    "8779D3E0D9EDB816083F9C3CA830B4068464CFFB" : "Mi%20Amigo%20Hugo\/",
+    "00E26964EA63CC87A44E867291930D0C506072B9" : "Social\/",
+    "C69F3EA97980AFA9CC5F8D20156C6543C5EDF223" : "DatePicker\/",
+    "43214AC14EA3370655E522EF8FE3D68086E679FD" : "SJIOS\/",
+    "73BC51D985EBDD396D3CD83428870FF22E808166" : "Starling\/",
+    "F13761E8C2E46ACAB7A5FB336D09A6D709BEC60B" : "test\/TeleSUR%20iOS%20Universal\/",
+    "D4A2E9C14CD3381DE4C5898E281CD8D5FBB85FBA" : "teleSUR%20iOS%20SimkinRepo",
+    "1C0DD351DA2E635C75E5C59B77C1B93C5E8FA0F8" : "JornadaIpad\/",
+    "3B0A140AD0BA93A33F2412E13997636DDC55DB06" : "WCW\/",
+    "3280C5C34A7D6BF0D0FFE06BBA00FEF85AF77441" : "JornadaIosXcode\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "teleSUR",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "teleSUR.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/SimkinJenkins\/Social-ANE.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "00E26964EA63CC87A44E867291930D0C506072B9"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/bitbucket.org\/zeehow\/zh.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "07DE42F364F2885E8B480C59BF37284D48EDAB20"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/bitbucket.org\/simkinjerkin\/jornada-ipad.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "1C0DD351DA2E635C75E5C59B77C1B93C5E8FA0F8"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/bitbucket.org\/simkinjerkin\/fnca.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "227EEE304ADB8C378DFDDE5C2B133285B321E9DB"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/bitbucket.org\/lsjcp\/lajornada-ios.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "3280C5C34A7D6BF0D0FFE06BBA00FEF85AF77441"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/SimkinJenkins\/ANE-Video.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "3952FD7912224F5A9187AF9540D679390D7E9E87"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/bitbucket.org\/jonykalavera\/world-click-war.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "3B0A140AD0BA93A33F2412E13997636DDC55DB06"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/bitbucket.org\/simkinjerkin\/sjios.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "43214AC14EA3370655E522EF8FE3D68086E679FD"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/SimkinJenkins\/Gestouch.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "5C1B4BF3F1C04B7EF5D69336D6BCEC096D4E1EA0"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/SimkinJenkins\/Starling-Framework.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "73BC51D985EBDD396D3CD83428870FF22E808166"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/bitbucket.org\/simkinjerkin\/mi-amigo-hugo.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "8779D3E0D9EDB816083F9C3CA830B4068464CFFB"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/SimkinJenkins\/ANE-DatePicker.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "C69F3EA97980AFA9CC5F8D20156C6543C5EDF223"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/SimkinJenkins\/teleSUR-iOS.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "D4A2E9C14CD3381DE4C5898E281CD8D5FBB85FBA"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/teleSUR\/teleSUR-iOS.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "F13761E8C2E46ACAB7A5FB336D09A6D709BEC60B"
+    }
+  ]
+}

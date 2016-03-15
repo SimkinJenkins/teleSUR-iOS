@@ -20,9 +20,7 @@
 }
 
 - (void)awakeFromNib {
-
     [self initializeCell];
-
 }
 
 @end

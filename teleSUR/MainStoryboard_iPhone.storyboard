@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="yzD-f0-X8n">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="yzD-f0-X8n">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
         <!--Left Menu View Controller-->
@@ -24,31 +24,9 @@
                                 </connections>
                             </tableView>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="menu-logo.png" id="ENc-w9-S5P">
-                                <rect key="frame" x="53" y="27" width="112" height="39"/>
+                                <rect key="frame" x="0.0" y="5" width="292" height="68"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="iqE-4E-21k">
-                                <rect key="frame" x="16" y="78" width="192" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.56470588235294117" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <inset key="contentEdgeInsets" minX="7" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" title=" Señal en Vivo" image="senal.png">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="dtE-Nu-Hqm">
-                                <rect key="frame" x="16" y="123" width="192" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.56470588239999997" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <inset key="contentEdgeInsets" minX="7" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" title=" Audio en vivo" image="audio.png">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" red="1" green="0.56470590829849243" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.16862745098039217" green="0.16862745098039217" blue="0.16862745098039217" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -58,7 +36,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uR4-tD-X8j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-463" y="-315"/>
+            <point key="canvasLocation" x="-448" y="-292"/>
         </scene>
         <!--Configuration Table View Controller-->
         <scene sceneID="RY9-ID-hUF">
@@ -86,12 +64,31 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="V6g-dZ-tus" kind="relationship" relationship="rootViewController" id="cwd-r9-7tr"/>
+                        <segue destination="PTJ-uJ-12t" kind="relationship" relationship="rootViewController" id="yQb-Jb-NN1"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Qg-wo-U2C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="91" y="49"/>
+        </scene>
+        <!--Main Home View Controller-->
+        <scene sceneID="jR0-Yq-37O">
+            <objects>
+                <tableViewController storyboardIdentifier="TSMainHomeViewController" id="PTJ-uJ-12t" customClass="TSMainHomeViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="R2y-XQ-vxO">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="PTJ-uJ-12t" id="4Q7-lx-hl1"/>
+                            <outlet property="delegate" destination="PTJ-uJ-12t" id="Eeg-X4-em4"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="qHZ-54-GLz"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N3i-na-ef9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="515" y="-615"/>
         </scene>
         <!--Home Table View Controller-->
         <scene sceneID="i9H-g4-Eu9">
@@ -102,7 +99,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Gq-vG-rxx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="499" y="49"/>
+            <point key="canvasLocation" x="515" y="49"/>
         </scene>
         <!--Acerca De View Controller-->
         <scene sceneID="xeE-nX-pb6">
@@ -356,13 +353,6 @@ We are a space and a voice for the construction of a new communications order.
         </scene>
     </scenes>
     <resources>
-        <image name="audio.png" width="30" height="30"/>
         <image name="menu-logo.png" width="112" height="39"/>
-        <image name="senal.png" width="36" height="26"/>
     </resources>
-    <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar"/>
-        <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
-    </simulatedMetricsContainer>
 </document>

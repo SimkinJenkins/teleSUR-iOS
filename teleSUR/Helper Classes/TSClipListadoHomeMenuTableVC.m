@@ -21,7 +21,7 @@
 
 @implementation TSClipListadoHomeMenuTableVC
 
-@synthesize currentTopMenuConfig, headerMenu, searchBar;
+@synthesize currentTopMenuConfig, searchBar;
 
 - (void)viewDidLoad {
 
@@ -52,14 +52,11 @@
 
     UIImageView *rightImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"icon-menu-header.png"]];
     rightImage.frame = CGRectMake(0, 0, 13, 7);
-
-    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent
-                                                animated:NO];
-
+/*
     [self.navigationController.navigationBar setBackgroundColor:headerMenu.backgroundColor];
     self.navigationController.navigationBar.barTintColor = headerMenu.backgroundColor;
     self.navigationController.navigationBar.backgroundColor = headerMenu.backgroundColor;
-
+*/
     [self.navigationController.navigationBar addSubview:headerMenu];
 
     //Crear Menu Superior
@@ -104,6 +101,8 @@
 
     }
 
+    headerMenu.hidden = YES;
+
 }
 
 
@@ -144,7 +143,7 @@
 
     if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) {
 
-        self.headerMenu.hidden = YES;
+        headerMenu.hidden = YES;
 
     }
 
@@ -352,51 +351,38 @@
 }
 
 // Codifica parámetros para URL
-- (NSString *)urlEncode:(NSString *)string
-{
-	return (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(NULL,
-                                                                                 (CFStringRef)string,
-                                                                                 NULL,
-                                                                                 CFSTR("!*'();:@&=+$,/?%#[]"),
-                                                                                 CFStringConvertNSStringEncodingToEncoding(NSUTF8StringEncoding)));
+- (NSString *)urlEncode:(NSString *)string {
+	return (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(NULL, (CFStringRef)string, NULL, CFSTR("!*'();:@&=+$,/?%#[]"),
+        CFStringConvertNSStringEncodingToEncoding(NSUTF8StringEncoding)));
 }
 
 - (void) configRightButton {
-
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"refresh.png"]
                                                                              style:UIBarButtonItemStylePlain
                                                                             target:self
                                                                             action:@selector(refreshButtonClicked)];
-
 }
 
 - (void) refreshButtonClicked {
-
     [self initTableVariables];
     [self loadData];
-
 }
 
 - (void) configSubmenusArrays {
-
     submenuVideoSectionsSlugs = [[NSArray alloc] initWithArray:[[[[NSBundle mainBundle] infoDictionary] objectForKey:@"Configuración"] objectForKey:@"submenuVideoSections"]];
-    
     NSMutableArray *titles = [NSMutableArray array];
     for (uint i = 0; i < [submenuVideoSectionsSlugs count]; i++) {
         NSString *localizeID = [NSString stringWithFormat:@"%@Section", [submenuVideoSectionsSlugs objectAtIndex:i]];
         [titles setObject:[NSString stringWithFormat:NSLocalizedString(localizeID, nil)] atIndexedSubscript:i];
     }
     submenuVideosSectionsTitles = [[NSArray alloc] initWithArray:titles];
-
     submenuNewsSectionsSlugs = [[NSArray alloc] initWithArray:[[[[NSBundle mainBundle] infoDictionary] objectForKey:@"Configuración"] objectForKey:@"submenuNewsSections"]];
-    
     titles = [NSMutableArray array];
     for (uint i = 0; i < [submenuNewsSectionsSlugs count]; i++) {
         NSString *localizeID = [NSString stringWithFormat:@"%@Section", [submenuNewsSectionsSlugs objectAtIndex:i]];
         [titles setObject:[NSString stringWithFormat:NSLocalizedString(localizeID, nil)] atIndexedSubscript:i];
     }
     submenuNewsSectionsTitles = [[NSArray alloc] initWithArray:titles];
-
 }
 
 
@@ -437,26 +423,20 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-
     [super tableView:tableView didSelectRowAtIndexPath:indexPath];
-
     if (selectedIndexPath.row != [tableElements count]) {
 //        headerMenu.hidden = YES;
     }
-
     if([currentSection isEqualToString:@"buscar"]) {
         self.navigationController.navigationBarHidden = NO;
     }
-
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-
     if ([currentSection isEqualToString:@"home"]) {
         return 2;
     }
     return 1;
-
 }
 
 - (void) tableView:(UITableView *)tableView willDisplayHeaderView:(UIView *)view forSection:(NSInteger)section {
@@ -464,18 +444,14 @@
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-
     if(![currentSection isEqualToString:@"home"]) {
         return [[UIView alloc] init];
     }
-
     UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 150, 50)];
     view.backgroundColor = [UIColor blackColor];
-
     UILabel *title = [[UILabel alloc] initWithFrame:CGRectMake(55, 14, 130, 30)];
     title.font = [UIFont fontWithName:@"Roboto-Regular" size:18];
     title.textColor = [UIColor whiteColor];
-
     UIImageView *imageView;
     if( section == 0 ) {
         NSString *videoTitle = [NSString stringWithFormat:@"%@", NSLocalizedString(@"videoSection", nil)];
@@ -486,14 +462,10 @@
         title.text = [showTitle uppercaseString];
         imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"programa.png"]];
     }
-
     imageView.frame = (CGRect) {{10, 12}, imageView.frame.size};
-
     [view addSubview:title];
     [view addSubview:imageView];
-
     return view;
-
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
@@ -519,13 +491,11 @@
 
 #pragma mark - SlideNavigationController Methods -
 
-- (BOOL)slideNavigationControllerShouldDisplayLeftMenu
-{
+- (BOOL)slideNavigationControllerShouldDisplayLeftMenu {
 	return YES;
 }
 
-- (BOOL)slideNavigationControllerShouldDisplayRightMenu
-{
+- (BOOL)slideNavigationControllerShouldDisplayRightMenu {
 	return NO;
 }
 
@@ -552,13 +522,9 @@
 
 #pragma mark - UISearchBar Methods -
 
-- (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar {
-    
-}
+- (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar { }
 
--(void) searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
-
-}
+-(void) searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText { }
 
 
 
@@ -582,18 +548,13 @@
 #pragma mark TSDataManagerDelegate
 
 - (void)TSDataManager:(TSDataManager *)manager didProcessedRequests:(NSArray *)requests {
-
     [super TSDataManager:manager didProcessedRequests:requests];
-
     if([currentSection isEqualToString:@"buscar"]) {
-
         [searchBar becomeFirstResponder];
         CGRect tframe = self.tableViewController.tableView.frame;
         tframe.origin.y = searchBar.frame.origin.y + searchBar.frame.size.height;
         self.tableViewController.tableView.frame = tframe;
-
     }
-
 }
 
 

@@ -31,6 +31,8 @@
 
         [SlideNavigationController sharedInstance].leftMenu = leftMenu;
         [SlideNavigationController sharedInstance].rightMenu = hiddenView;
+        [[UINavigationBar appearance] setBarTintColor:[TSUtils colorRedNavigationBar]];
+        [[UINavigationBar appearance] setTranslucent:NO];
     }
 
     if ( [[[[[NSBundle mainBundle] infoDictionary] valueForKey:@"Configuración"] valueForKey:@"APPtype"] isEqualToString:@"multimedia"] ) {

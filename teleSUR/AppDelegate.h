@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import <Pushwoosh/PushNotificationManager.h>
 
+#import "TSUtils.h"
+
 @interface AppDelegate : UIResponder <UIApplicationDelegate, PushNotificationDelegate> {
     @protected
         NSString *notificationLink;

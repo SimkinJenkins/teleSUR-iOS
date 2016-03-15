@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Source/TSClipListadoTableViewController.m"
-            timestampString = "456533944.715082"
+            timestampString = "475722513.068269"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "241"
-            endingLineNumber = "241"
+            startingLineNumber = "240"
+            endingLineNumber = "240"
             landmarkName = "-tableView:cellForRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -442,11 +442,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Helper Classes/LeftMenuViewController.m"
-            timestampString = "448446684.928406"
+            timestampString = "479688764.517991"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
             landmarkName = "-viewDidLoad"
             landmarkType = "5">
          </BreakpointContent>
@@ -458,12 +458,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Helper Classes/LeftMenuViewController.m"
-            timestampString = "452048847.314936"
+            timestampString = "479688946.664595"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "234"
-            endingLineNumber = "234"
-            landmarkName = "-tableView:heightForRowAtIndexPath:"
+            startingLineNumber = "236"
+            endingLineNumber = "236"
+            landmarkName = "-collapsableTableView:didUnselectSection:title:headerView:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -666,12 +666,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Helper Classes/LeftMenuViewController.m"
-            timestampString = "452048847.314936"
+            timestampString = "479688946.664595"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "267"
-            endingLineNumber = "267"
-            landmarkName = "-collapsableTableView:didSelectSection:title:headerView:"
+            startingLineNumber = "269"
+            endingLineNumber = "269"
+            landmarkName = "-collapseSection:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -698,11 +698,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Helper Classes/LeftMenuViewController.m"
-            timestampString = "452048847.314936"
+            timestampString = "479688946.664595"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "319"
-            endingLineNumber = "319"
+            startingLineNumber = "321"
+            endingLineNumber = "321"
             landmarkName = "@implementation LeftMenuViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -714,11 +714,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Helper Classes/LeftMenuViewController.m"
-            timestampString = "452048847.314936"
+            timestampString = "479688946.664595"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "324"
-            endingLineNumber = "324"
+            startingLineNumber = "326"
+            endingLineNumber = "326"
             landmarkName = "@implementation LeftMenuViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -730,11 +730,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Helper Classes/LeftMenuViewController.m"
-            timestampString = "452048847.314936"
+            timestampString = "479688946.664595"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "313"
-            endingLineNumber = "313"
+            startingLineNumber = "315"
+            endingLineNumber = "315"
             landmarkName = "-collapsableTableView:willExpandSection:title:headerView:"
             landmarkType = "5">
          </BreakpointContent>
@@ -746,11 +746,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Helper Classes/LeftMenuViewController.m"
-            timestampString = "452048847.314936"
+            timestampString = "479688946.664595"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "307"
-            endingLineNumber = "307"
+            startingLineNumber = "309"
+            endingLineNumber = "309"
             landmarkName = "-collapsableTableView:didCollapseSection:title:headerView:"
             landmarkType = "5">
          </BreakpointContent>
@@ -858,11 +858,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Helper Classes/LeftMenuViewController.m"
-            timestampString = "452048847.314936"
+            timestampString = "479688946.664595"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "252"
-            endingLineNumber = "252"
+            startingLineNumber = "254"
+            endingLineNumber = "254"
             landmarkName = "-collapsableTableView:didSelectSection:title:headerView:"
             landmarkType = "5">
          </BreakpointContent>
@@ -874,11 +874,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Helper Classes/LeftMenuViewController.m"
-            timestampString = "452048847.314936"
+            timestampString = "479688946.664595"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "257"
-            endingLineNumber = "257"
+            startingLineNumber = "259"
+            endingLineNumber = "259"
             landmarkName = "-collapsableTableView:didSelectSection:title:headerView:"
             landmarkType = "5">
          </BreakpointContent>
@@ -954,11 +954,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Helper Classes/LeftMenuViewController.m"
-            timestampString = "448446684.928406"
+            timestampString = "479688764.517991"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "71"
-            endingLineNumber = "71"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
             landmarkName = "-viewDidLoad"
             landmarkType = "5">
          </BreakpointContent>
@@ -970,12 +970,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Helper Classes/LeftMenuViewController.m"
-            timestampString = "452048847.314936"
+            timestampString = "479688764.517991"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "177"
-            endingLineNumber = "177"
-            landmarkName = "-createHeaderLabel::"
+            startingLineNumber = "178"
+            endingLineNumber = "178"
+            landmarkName = "-tableView:viewForHeaderInSection:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -986,12 +986,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Helper Classes/LeftMenuViewController.m"
-            timestampString = "452048847.314936"
+            timestampString = "479688764.517991"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "191"
-            endingLineNumber = "191"
-            landmarkName = "-tableView:viewForHeaderInSection:"
+            startingLineNumber = "192"
+            endingLineNumber = "192"
+            landmarkName = "-tableView:numberOfRowsInSection:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1354,11 +1354,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Helper Classes/LeftMenuViewController.m"
-            timestampString = "452048847.314936"
+            timestampString = "479688946.664595"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "220"
-            endingLineNumber = "220"
+            startingLineNumber = "222"
+            endingLineNumber = "222"
             landmarkName = "-tableView:cellForRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1370,11 +1370,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Source/TSClipDetallesViewController.m"
-            timestampString = "453947454.920594"
+            timestampString = "475422747.081554"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "229"
-            endingLineNumber = "229"
+            startingLineNumber = "223"
+            endingLineNumber = "223"
             landmarkName = "-tableView:cellForRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1386,7 +1386,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Source/TSClipListadoTableViewController.m"
-            timestampString = "456533944.715082"
+            timestampString = "475722513.068269"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "258"
@@ -1450,11 +1450,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Source/TSClipDetallesViewController.m"
-            timestampString = "448494619.652941"
+            timestampString = "475422492.256385"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
             landmarkName = "-initWithData:andSection:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1466,11 +1466,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Source/TSClipDetallesViewController.m"
-            timestampString = "456533944.715082"
+            timestampString = "475422747.081554"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "244"
-            endingLineNumber = "244"
+            startingLineNumber = "238"
+            endingLineNumber = "238"
             landmarkName = "-tableView:cellForRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1674,11 +1674,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Helper Classes/TSClipListadoHomeMenuTableVC.m"
-            timestampString = "446681693.931714"
+            timestampString = "479688176.43207"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "82"
-            endingLineNumber = "82"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
             landmarkName = "-viewDidLoad"
             landmarkType = "5">
          </BreakpointContent>
@@ -1754,12 +1754,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Helper Classes/LeftMenuViewController.m"
-            timestampString = "448447057.420301"
+            timestampString = "479688764.517991"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "127"
-            endingLineNumber = "127"
-            landmarkName = "-setSelectedSection:withSlugCollection:withTitleCollection:"
+            startingLineNumber = "128"
+            endingLineNumber = "128"
+            landmarkName = "-getVideoHomeView"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1770,12 +1770,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Helper Classes/LeftMenuViewController.m"
-            timestampString = "452048847.314936"
+            timestampString = "479688764.517991"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "159"
-            endingLineNumber = "159"
-            landmarkName = "-numberOfSectionsInTableView:"
+            startingLineNumber = "160"
+            endingLineNumber = "160"
+            landmarkName = "-createHeaderLabel::"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1802,7 +1802,23 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Helper Classes/TSClipListadoHomeMenuTableVC.m"
-            timestampString = "452052294.050051"
+            timestampString = "479688176.43207"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "306"
+            endingLineNumber = "306"
+            landmarkName = "-getCancelButton"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "teleSUR/Helper Classes/TSClipListadoHomeMenuTableVC.m"
+            timestampString = "479688176.43207"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "307"
@@ -1818,43 +1834,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Helper Classes/TSClipListadoHomeMenuTableVC.m"
-            timestampString = "452052294.050051"
+            timestampString = "479688176.43207"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "308"
-            endingLineNumber = "308"
-            landmarkName = "-getCancelButton"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "teleSUR/Helper Classes/TSClipListadoHomeMenuTableVC.m"
-            timestampString = "452052294.050051"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "560"
-            endingLineNumber = "560"
-            landmarkName = "-searchBar:textDidChange:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "teleSUR/Helper Classes/TSClipListadoHomeMenuTableVC.m"
-            timestampString = "452052294.050051"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "556"
-            endingLineNumber = "556"
+            startingLineNumber = "525"
+            endingLineNumber = "525"
             landmarkName = "-searchBarTextDidBeginEditing:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1866,11 +1850,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Helper Classes/TSClipListadoHomeMenuTableVC.m"
-            timestampString = "452052294.050051"
+            timestampString = "479688176.43207"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "350"
-            endingLineNumber = "350"
+            startingLineNumber = "349"
+            endingLineNumber = "349"
             landmarkName = "-dismissKeyboard"
             landmarkType = "5">
          </BreakpointContent>
@@ -1882,11 +1866,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Helper Classes/TSClipListadoHomeMenuTableVC.m"
-            timestampString = "452052294.050051"
+            timestampString = "479688176.43207"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "433"
-            endingLineNumber = "433"
+            startingLineNumber = "419"
+            endingLineNumber = "419"
             landmarkName = "-scrollViewDidScroll:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1914,11 +1898,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Source/UIViewController_Configuracion.m"
-            timestampString = "448610048.918624"
+            timestampString = "478730004.288309"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "70"
-            endingLineNumber = "70"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
             landmarkName = "-playMediaFinished:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1930,11 +1914,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Source/UIViewController_Configuracion.m"
-            timestampString = "448610048.918624"
+            timestampString = "478730004.288309"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
             landmarkName = "-videoStateChange:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1994,11 +1978,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Source/TSClipListadoTableViewController.m"
-            timestampString = "456533944.715082"
+            timestampString = "479275601.376513"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "305"
-            endingLineNumber = "305"
+            startingLineNumber = "304"
+            endingLineNumber = "304"
             landmarkName = "-tableView:didSelectRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -2298,11 +2282,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Source/TSClipListadoTableViewController.m"
-            timestampString = "456533944.715082"
+            timestampString = "475722513.068269"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "244"
-            endingLineNumber = "244"
+            startingLineNumber = "243"
+            endingLineNumber = "243"
             landmarkName = "-tableView:cellForRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -2586,12 +2570,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Helper Classes/LeftMenuViewController.m"
-            timestampString = "452048847.314936"
+            timestampString = "479688764.517991"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "172"
-            endingLineNumber = "172"
-            landmarkName = "-createHeaderLabel::"
+            startingLineNumber = "173"
+            endingLineNumber = "173"
+            landmarkName = "-tableView:viewForHeaderInSection:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -2762,11 +2746,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Helper Classes/LeftMenuViewController.m"
-            timestampString = "448446684.928406"
+            timestampString = "479688764.517991"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
             landmarkName = "-viewDidLoad"
             landmarkType = "5">
          </BreakpointContent>
@@ -2778,11 +2762,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Helper Classes/LeftMenuViewController.m"
-            timestampString = "448446684.928406"
+            timestampString = "479688764.517991"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
             landmarkName = "-viewDidLoad"
             landmarkType = "5">
          </BreakpointContent>
@@ -2794,11 +2778,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Helper Classes/TSClipListadoHomeMenuTableVC.m"
-            timestampString = "452052294.050051"
+            timestampString = "479688176.43207"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "251"
-            endingLineNumber = "251"
+            startingLineNumber = "250"
+            endingLineNumber = "250"
             landmarkName = "-setNavigationTitle:"
             landmarkType = "5">
          </BreakpointContent>
@@ -2810,12 +2794,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Helper Classes/LeftMenuViewController.m"
-            timestampString = "452048847.314936"
+            timestampString = "479688946.664595"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "273"
-            endingLineNumber = "273"
-            landmarkName = "-collapsableTableView:didSelectSection:title:headerView:"
+            startingLineNumber = "275"
+            endingLineNumber = "275"
+            landmarkName = "-collapseSection:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -2842,11 +2826,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Helper Classes/LeftMenuViewController.m"
-            timestampString = "448446684.928406"
+            timestampString = "479688764.517991"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
             landmarkName = "-viewDidLoad"
             landmarkType = "5">
          </BreakpointContent>
@@ -2858,11 +2842,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Helper Classes/LeftMenuViewController.m"
-            timestampString = "448446684.928406"
+            timestampString = "479688764.517991"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
             landmarkName = "-viewDidLoad"
             landmarkType = "5">
          </BreakpointContent>
@@ -2906,11 +2890,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Helper Classes/LeftMenuViewController.m"
-            timestampString = "448446684.928406"
+            timestampString = "479688764.517991"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "81"
-            endingLineNumber = "81"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
             landmarkName = "-viewWillAppear:"
             landmarkType = "5">
          </BreakpointContent>
@@ -2922,11 +2906,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Helper Classes/LeftMenuViewController.m"
-            timestampString = "448447057.420301"
+            timestampString = "479688764.517991"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "99"
-            endingLineNumber = "99"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
             landmarkName = "-audioButtonTouched:"
             landmarkType = "5">
          </BreakpointContent>
@@ -2938,27 +2922,27 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Helper Classes/LeftMenuViewController.m"
-            timestampString = "448447057.420301"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "97"
-            endingLineNumber = "97"
-            landmarkName = "-audioButtonTouched:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "teleSUR/Helper Classes/LeftMenuViewController.m"
-            timestampString = "448447057.420301"
+            timestampString = "479688764.517991"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "98"
             endingLineNumber = "98"
+            landmarkName = "-audioButtonTouched:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "teleSUR/Helper Classes/LeftMenuViewController.m"
+            timestampString = "479688764.517991"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "99"
+            endingLineNumber = "99"
             landmarkName = "-audioButtonTouched:"
             landmarkType = "5">
          </BreakpointContent>
@@ -2986,11 +2970,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Helper Classes/LeftMenuViewController.m"
-            timestampString = "448446684.928406"
+            timestampString = "479688764.517991"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "70"
-            endingLineNumber = "70"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
             landmarkName = "-viewDidLoad"
             landmarkType = "5">
          </BreakpointContent>
@@ -3274,7 +3258,23 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Helper Classes/LeftMenuViewController.m"
-            timestampString = "448446684.928406"
+            timestampString = "479688764.517991"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "-viewDidLoad"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "teleSUR/Helper Classes/LeftMenuViewController.m"
+            timestampString = "479688764.517991"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "51"
@@ -3289,28 +3289,12 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "teleSUR/Helper Classes/LeftMenuViewController.m"
-            timestampString = "448446684.928406"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
-            landmarkName = "-viewDidLoad"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "teleSUR/Helper Classes/TSClipListadoHomeMenuTableVC.m"
-            timestampString = "452052294.050051"
+            timestampString = "479688176.43207"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "273"
-            endingLineNumber = "273"
+            startingLineNumber = "272"
+            endingLineNumber = "272"
             landmarkName = "-getTopMenuConfig:"
             landmarkType = "5">
          </BreakpointContent>
@@ -3322,11 +3306,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Helper Classes/TSClipListadoHomeMenuTableVC.m"
-            timestampString = "452052294.050051"
+            timestampString = "479688176.43207"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "272"
-            endingLineNumber = "272"
+            startingLineNumber = "271"
+            endingLineNumber = "271"
             landmarkName = "-getTopMenuConfig:"
             landmarkType = "5">
          </BreakpointContent>
@@ -3354,12 +3338,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Helper Classes/LeftMenuViewController.m"
-            timestampString = "452048847.314936"
+            timestampString = "479688946.664595"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "271"
-            endingLineNumber = "271"
-            landmarkName = "-collapsableTableView:didSelectSection:title:headerView:"
+            startingLineNumber = "273"
+            endingLineNumber = "273"
+            landmarkName = "-collapseSection:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -3370,11 +3354,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Helper Classes/LeftMenuViewController.m"
-            timestampString = "452048847.314936"
+            timestampString = "479688946.664595"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "258"
-            endingLineNumber = "258"
+            startingLineNumber = "260"
+            endingLineNumber = "260"
             landmarkName = "-collapsableTableView:didSelectSection:title:headerView:"
             landmarkType = "5">
          </BreakpointContent>
@@ -3418,11 +3402,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Helper Classes/TSClipListadoHomeMenuTableVC.m"
-            timestampString = "446681693.931714"
+            timestampString = "479688176.43207"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "96"
-            endingLineNumber = "96"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
             landmarkName = "-viewWillAppear:"
             landmarkType = "5">
          </BreakpointContent>
@@ -3434,11 +3418,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Helper Classes/TSClipListadoHomeMenuTableVC.m"
-            timestampString = "452052294.050051"
+            timestampString = "479688176.43207"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "448"
-            endingLineNumber = "448"
+            startingLineNumber = "431"
+            endingLineNumber = "431"
             landmarkName = "-tableView:didSelectRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -3450,11 +3434,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Helper Classes/TSClipListadoHomeMenuTableVC.m"
-            timestampString = "452052294.050051"
+            timestampString = "479688176.43207"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "441"
-            endingLineNumber = "441"
+            startingLineNumber = "426"
+            endingLineNumber = "426"
             landmarkName = "-tableView:didSelectRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -3466,11 +3450,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Helper Classes/LeftMenuViewController.m"
-            timestampString = "452048847.314936"
+            timestampString = "479688764.517991"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "211"
-            endingLineNumber = "211"
+            startingLineNumber = "212"
+            endingLineNumber = "212"
             landmarkName = "-tableView:cellForRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -3866,11 +3850,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Helper Classes/TSHomeTableViewController.m"
-            timestampString = "448437615.600022"
+            timestampString = "475722476.574659"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "301"
-            endingLineNumber = "301"
+            startingLineNumber = "283"
+            endingLineNumber = "283"
             landmarkName = "-easyTableView:viewForRect:"
             landmarkType = "5">
          </BreakpointContent>
@@ -3882,11 +3866,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Helper Classes/TSHomeTableViewController.m"
-            timestampString = "448437615.600022"
+            timestampString = "478743224.357941"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "314"
-            endingLineNumber = "314"
+            startingLineNumber = "292"
+            endingLineNumber = "292"
             landmarkName = "-easyTableView:setDataForView:forIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -3898,11 +3882,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Helper Classes/TSHomeTableViewController.m"
-            timestampString = "448437615.600022"
+            timestampString = "478743224.357941"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "462"
-            endingLineNumber = "462"
+            startingLineNumber = "405"
+            endingLineNumber = "405"
             landmarkName = "@implementation TSHomeTableViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -3914,11 +3898,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Helper Classes/TSHomeTableViewController.m"
-            timestampString = "448437615.600022"
+            timestampString = "478743224.357941"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "457"
-            endingLineNumber = "457"
+            startingLineNumber = "400"
+            endingLineNumber = "400"
             landmarkName = "@implementation TSHomeTableViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -3946,11 +3930,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Helper Classes/TSHomeTableViewController.m"
-            timestampString = "448437454.53145"
+            timestampString = "475722476.574659"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "202"
-            endingLineNumber = "202"
+            startingLineNumber = "185"
+            endingLineNumber = "185"
             landmarkName = "-setupHorizontalView"
             landmarkType = "5">
          </BreakpointContent>
@@ -3994,7 +3978,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Source/TSClipListadoTableViewController.m"
-            timestampString = "456533944.715082"
+            timestampString = "475722513.068269"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "260"
@@ -4042,11 +4026,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Helper Classes/TSHomeTableViewController.m"
-            timestampString = "448437615.600022"
+            timestampString = "475722476.574659"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "275"
-            endingLineNumber = "275"
+            startingLineNumber = "257"
+            endingLineNumber = "257"
             landmarkName = "-sectionSelected:withTitle:"
             landmarkType = "5">
          </BreakpointContent>
@@ -4058,11 +4042,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Helper Classes/TSHomeTableViewController.m"
-            timestampString = "448437615.600022"
+            timestampString = "475722476.574659"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "272"
-            endingLineNumber = "272"
+            startingLineNumber = "254"
+            endingLineNumber = "254"
             landmarkName = "-hideHeaderTable"
             landmarkType = "5">
          </BreakpointContent>
@@ -4074,11 +4058,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Helper Classes/TSHomeTableViewController.m"
-            timestampString = "448437615.600022"
+            timestampString = "475722476.574659"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "249"
-            endingLineNumber = "249"
+            startingLineNumber = "231"
+            endingLineNumber = "231"
             landmarkName = "-changeTableViewConfiguration"
             landmarkType = "5">
          </BreakpointContent>
@@ -4090,11 +4074,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Helper Classes/TSHomeTableViewController.m"
-            timestampString = "448437615.600022"
+            timestampString = "478743224.357941"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "328"
-            endingLineNumber = "328"
+            startingLineNumber = "302"
+            endingLineNumber = "302"
             landmarkName = "-easyTableView:selectedView:atIndexPath:deselectedView:"
             landmarkType = "5">
          </BreakpointContent>
@@ -4170,11 +4154,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Helper Classes/TSHomeTableViewController.m"
-            timestampString = "448437615.600022"
+            timestampString = "478743224.357941"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "304"
-            endingLineNumber = "304"
+            startingLineNumber = "285"
+            endingLineNumber = "285"
             landmarkName = "-easyTableView:viewForRect:"
             landmarkType = "5">
          </BreakpointContent>
@@ -4186,11 +4170,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Helper Classes/TSClipListadoHomeMenuTableVC.m"
-            timestampString = "452052294.050051"
+            timestampString = "479688176.43207"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "443"
-            endingLineNumber = "443"
+            startingLineNumber = "427"
+            endingLineNumber = "427"
             landmarkName = "-tableView:didSelectRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -4202,11 +4186,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Helper Classes/TSHomeTableViewController.m"
-            timestampString = "448437615.600022"
+            timestampString = "475722476.574659"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "276"
-            endingLineNumber = "276"
+            startingLineNumber = "258"
+            endingLineNumber = "258"
             landmarkName = "-sectionSelected:withTitle:"
             landmarkType = "5">
          </BreakpointContent>
@@ -4218,11 +4202,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Helper Classes/TSHomeTableViewController.m"
-            timestampString = "448437615.600022"
+            timestampString = "475722476.574659"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "277"
-            endingLineNumber = "277"
+            startingLineNumber = "259"
+            endingLineNumber = "259"
             landmarkName = "-sectionSelected:withTitle:"
             landmarkType = "5">
          </BreakpointContent>
@@ -4234,11 +4218,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Helper Classes/TSHomeTableViewController.m"
-            timestampString = "448437615.600022"
+            timestampString = "475722476.574659"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "263"
-            endingLineNumber = "263"
+            startingLineNumber = "245"
+            endingLineNumber = "245"
             landmarkName = "-showTopTable"
             landmarkType = "5">
          </BreakpointContent>
@@ -4250,11 +4234,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Helper Classes/TSHomeTableViewController.m"
-            timestampString = "448437615.600022"
+            timestampString = "475722476.574659"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "269"
-            endingLineNumber = "269"
+            startingLineNumber = "251"
+            endingLineNumber = "251"
             landmarkName = "-hideHeaderTable"
             landmarkType = "5">
          </BreakpointContent>
@@ -4266,11 +4250,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Helper Classes/TSHomeTableViewController.m"
-            timestampString = "448437615.600022"
+            timestampString = "478743224.357941"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "461"
-            endingLineNumber = "461"
+            startingLineNumber = "404"
+            endingLineNumber = "404"
             landmarkName = "@implementation TSHomeTableViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -4759,45 +4743,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "teleSUR/AppDelegate.m"
-            timestampString = "448858468.957517"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
-            landmarkName = "-application:didFinishLaunchingWithOptions:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "teleSUR/AppDelegate.m"
-            timestampString = "448858468.957517"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
-            landmarkName = "-application:didFinishLaunchingWithOptions:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "teleSUR/Helper Classes/LeftMenuViewController.m"
-            timestampString = "452048847.314936"
+            timestampString = "479688946.664595"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "268"
-            endingLineNumber = "268"
-            landmarkName = "-collapsableTableView:didSelectSection:title:headerView:"
+            startingLineNumber = "270"
+            endingLineNumber = "270"
+            landmarkName = "-collapseSection:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -5320,11 +5272,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Helper Classes/TSHomeTableViewController.m"
-            timestampString = "448437454.53145"
+            timestampString = "475722476.574659"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "183"
-            endingLineNumber = "183"
+            startingLineNumber = "166"
+            endingLineNumber = "166"
             landmarkName = "-setupHorizontalView"
             landmarkType = "5">
          </BreakpointContent>
@@ -5336,11 +5288,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Helper Classes/TSHomeTableViewController.m"
-            timestampString = "448437615.600022"
+            timestampString = "475722476.574659"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "261"
-            endingLineNumber = "261"
+            startingLineNumber = "243"
+            endingLineNumber = "243"
             landmarkName = "-showTopTable"
             landmarkType = "5">
          </BreakpointContent>
@@ -5352,11 +5304,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Helper Classes/TSHomeTableViewController.m"
-            timestampString = "448437454.53145"
+            timestampString = "475722476.574659"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "184"
-            endingLineNumber = "184"
+            startingLineNumber = "167"
+            endingLineNumber = "167"
             landmarkName = "-setupHorizontalView"
             landmarkType = "5">
          </BreakpointContent>
@@ -5368,11 +5320,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Helper Classes/TSHomeTableViewController.m"
-            timestampString = "448437327.467661"
+            timestampString = "475722476.574659"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
             landmarkName = "-viewDidLoad"
             landmarkType = "5">
          </BreakpointContent>
@@ -5384,11 +5336,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Helper Classes/TSClipListadoHomeMenuTableVC.m"
-            timestampString = "446681693.931714"
+            timestampString = "479688176.43207"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
             landmarkName = "-viewDidLoad"
             landmarkType = "5">
          </BreakpointContent>
@@ -6280,11 +6232,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Source/UIViewController_Configuracion.m"
-            timestampString = "448610048.918624"
+            timestampString = "478730004.288309"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "56"
-            endingLineNumber = "56"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
             landmarkName = "-playerFinalizado:"
             landmarkType = "5">
          </BreakpointContent>
@@ -6296,11 +6248,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Helper Classes/TSClipListadoHomeMenuTableVC.m"
-            timestampString = "452052294.050051"
+            timestampString = "479688176.43207"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "457"
-            endingLineNumber = "457"
+            startingLineNumber = "438"
+            endingLineNumber = "438"
             landmarkName = "-numberOfSectionsInTableView:"
             landmarkType = "5">
          </BreakpointContent>
@@ -6312,11 +6264,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Helper Classes/DefaultTableViewCell.m"
-            timestampString = "434028459.190427"
+            timestampString = "479256992.151507"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
             landmarkName = "-awakeFromNib"
             landmarkType = "5">
          </BreakpointContent>
@@ -6328,11 +6280,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Source/TSClipListadoTableViewController.m"
-            timestampString = "456533944.715082"
+            timestampString = "475722513.068269"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "251"
-            endingLineNumber = "251"
+            startingLineNumber = "250"
+            endingLineNumber = "250"
             landmarkName = "-tableView:cellForRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -6424,11 +6376,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Helper Classes/TSClipListadoHomeMenuTableVC.m"
-            timestampString = "452052294.050051"
+            timestampString = "479688176.43207"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "469"
-            endingLineNumber = "469"
+            startingLineNumber = "448"
+            endingLineNumber = "448"
             landmarkName = "-tableView:viewForHeaderInSection:"
             landmarkType = "5">
          </BreakpointContent>
@@ -6440,11 +6392,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Helper Classes/HighlightTableViewCell.m"
-            timestampString = "434479522.854654"
+            timestampString = "479065483.223992"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
             landmarkName = "-awakeFromNib"
             landmarkType = "5">
          </BreakpointContent>
@@ -6456,11 +6408,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Helper Classes/TSHomeTableViewController.m"
-            timestampString = "448437327.467661"
+            timestampString = "475722476.574659"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
             landmarkName = "-viewDidLoad"
             landmarkType = "5">
          </BreakpointContent>
@@ -6808,11 +6760,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Source/TSClipDetallesViewController.m"
-            timestampString = "456533944.715082"
+            timestampString = "475422747.081554"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "237"
-            endingLineNumber = "237"
+            startingLineNumber = "231"
+            endingLineNumber = "231"
             landmarkName = "-tableView:cellForRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -6920,7 +6872,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Source/TSClipListadoTableViewController.m"
-            timestampString = "456533944.715082"
+            timestampString = "475722513.068269"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "257"
@@ -6952,11 +6904,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Source/TSClipListadoTableViewController.m"
-            timestampString = "456533944.715082"
+            timestampString = "479275601.376513"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "362"
-            endingLineNumber = "362"
+            startingLineNumber = "349"
+            endingLineNumber = "349"
             landmarkName = "-TSDataManager:didProcessedRequests:"
             landmarkType = "5">
          </BreakpointContent>
@@ -6984,11 +6936,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Helper Classes/TSHomeTableViewController.m"
-            timestampString = "448437615.600022"
+            timestampString = "478743224.357941"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "442"
-            endingLineNumber = "442"
+            startingLineNumber = "387"
+            endingLineNumber = "387"
             landmarkName = "-tableView:numberOfRowsInSection:"
             landmarkType = "5">
          </BreakpointContent>
@@ -7016,11 +6968,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Source/TSClipListadoTableViewController.m"
-            timestampString = "456533944.715082"
+            timestampString = "479275601.376513"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "327"
-            endingLineNumber = "327"
+            startingLineNumber = "316"
+            endingLineNumber = "316"
             landmarkName = "-tableView:didSelectRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -7064,11 +7016,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Source/TSClipDetallesViewController.m"
-            timestampString = "456533944.715082"
+            timestampString = "475422747.081554"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "241"
-            endingLineNumber = "241"
+            startingLineNumber = "235"
+            endingLineNumber = "235"
             landmarkName = "-tableView:cellForRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -7080,11 +7032,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Source/TSClipDetallesViewController.m"
-            timestampString = "453947454.920594"
+            timestampString = "475422747.081554"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "179"
-            endingLineNumber = "179"
+            startingLineNumber = "173"
+            endingLineNumber = "173"
             landmarkName = "-tableView:heightForRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -7112,11 +7064,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Source/TSClipDetallesViewController.m"
-            timestampString = "456533944.715082"
+            timestampString = "475422747.081554"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "236"
-            endingLineNumber = "236"
+            startingLineNumber = "230"
+            endingLineNumber = "230"
             landmarkName = "-tableView:cellForRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -7224,11 +7176,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Helper Classes/TSHomeTableViewController.m"
-            timestampString = "448437615.600022"
+            timestampString = "478743224.357941"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "378"
-            endingLineNumber = "378"
+            startingLineNumber = "341"
+            endingLineNumber = "341"
             landmarkName = "-loadData"
             landmarkType = "5">
          </BreakpointContent>
@@ -7304,11 +7256,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Source/TSClipListadoTableViewController.m"
-            timestampString = "456533944.715082"
+            timestampString = "479275601.376513"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "358"
-            endingLineNumber = "358"
+            startingLineNumber = "345"
+            endingLineNumber = "345"
             landmarkName = "-TSDataManager:didProcessedRequests:"
             landmarkType = "5">
          </BreakpointContent>
@@ -7320,11 +7272,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Helper Classes/TSHomeTableViewController.m"
-            timestampString = "448437615.600022"
+            timestampString = "478743224.357941"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "524"
-            endingLineNumber = "524"
+            startingLineNumber = "467"
+            endingLineNumber = "467"
             landmarkName = "@implementation TSHomeTableViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -7336,11 +7288,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Helper Classes/TSHomeTableViewController.m"
-            timestampString = "448437615.600022"
+            timestampString = "478743224.357941"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "376"
-            endingLineNumber = "376"
+            startingLineNumber = "340"
+            endingLineNumber = "340"
             landmarkName = "-loadData"
             landmarkType = "5">
          </BreakpointContent>
@@ -7448,11 +7400,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Helper Classes/TSHomeTableViewController.m"
-            timestampString = "448437615.600022"
+            timestampString = "478743224.357941"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "408"
-            endingLineNumber = "408"
+            startingLineNumber = "359"
+            endingLineNumber = "359"
             landmarkName = "-getDataArrayForIndexPath:forDefaultTable:"
             landmarkType = "5">
          </BreakpointContent>
@@ -7496,11 +7448,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Helper Classes/TSClipListadoHomeMenuTableVC.m"
-            timestampString = "446681693.931714"
+            timestampString = "479688176.43207"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
             landmarkName = "-viewDidLoad"
             landmarkType = "5">
          </BreakpointContent>
@@ -7512,11 +7464,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Helper Classes/TSHomeTableViewController.m"
-            timestampString = "448437434.410554"
+            timestampString = "475722476.574659"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "126"
-            endingLineNumber = "126"
+            startingLineNumber = "109"
+            endingLineNumber = "109"
             landmarkName = "-homeDataDidLoad"
             landmarkType = "5">
          </BreakpointContent>
@@ -7528,11 +7480,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Helper Classes/TSClipListadoHomeMenuTableVC.m"
-            timestampString = "446681693.931714"
+            timestampString = "479688176.43207"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "99"
-            endingLineNumber = "99"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
             landmarkName = "-viewWillAppear:"
             landmarkType = "5">
          </BreakpointContent>
@@ -8392,11 +8344,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Helper Classes/telesur/TSBasicListViewController.m"
-            timestampString = "452631407.707046"
+            timestampString = "479275601.376513"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "453"
-            endingLineNumber = "453"
+            startingLineNumber = "451"
+            endingLineNumber = "451"
             landmarkName = "-TSDataManager:didProcessedRequests:"
             landmarkType = "5">
          </BreakpointContent>
@@ -8456,11 +8408,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Helper Classes/TSHomeTableViewController.m"
-            timestampString = "448437454.53145"
+            timestampString = "475722476.574659"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "177"
-            endingLineNumber = "177"
+            startingLineNumber = "160"
+            endingLineNumber = "160"
             landmarkName = "-setupHorizontalView"
             landmarkType = "5">
          </BreakpointContent>
@@ -8584,27 +8536,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Helper Classes/telesur/TSBasicListViewController.m"
-            timestampString = "452631407.707046"
+            timestampString = "479275601.376513"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "449"
-            endingLineNumber = "449"
-            landmarkName = "-TSDataManager:didProcessedRequests:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "teleSUR/Helper Classes/TSHomeTableViewController.m"
-            timestampString = "448437615.600022"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "547"
-            endingLineNumber = "547"
+            startingLineNumber = "447"
+            endingLineNumber = "447"
             landmarkName = "-TSDataManager:didProcessedRequests:"
             landmarkType = "5">
          </BreakpointContent>
@@ -8712,11 +8648,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Helper Classes/telesur/TSBasicListViewController.m"
-            timestampString = "452631407.707046"
+            timestampString = "479275601.376513"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "446"
-            endingLineNumber = "446"
+            startingLineNumber = "444"
+            endingLineNumber = "444"
             landmarkName = "-TSDataManager:didProcessedRequests:"
             landmarkType = "5">
          </BreakpointContent>
@@ -8728,11 +8664,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Source/TSClipDetallesViewController.m"
-            timestampString = "456533944.715082"
+            timestampString = "475422747.081554"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "826"
-            endingLineNumber = "826"
+            startingLineNumber = "811"
+            endingLineNumber = "811"
             landmarkName = "-connectionDidFinishLoading:"
             landmarkType = "5">
          </BreakpointContent>
@@ -8744,11 +8680,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Source/TSClipDetallesViewController.m"
-            timestampString = "456533944.715082"
+            timestampString = "475422747.081554"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "812"
-            endingLineNumber = "812"
+            startingLineNumber = "797"
+            endingLineNumber = "797"
             landmarkName = "-connectionDidFinishLoading:"
             landmarkType = "5">
          </BreakpointContent>
@@ -8760,11 +8696,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Source/TSClipDetallesViewController.m"
-            timestampString = "456533944.715082"
+            timestampString = "475422747.081554"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "810"
-            endingLineNumber = "810"
+            startingLineNumber = "795"
+            endingLineNumber = "795"
             landmarkName = "-connectionDidFinishLoading:"
             landmarkType = "5">
          </BreakpointContent>
@@ -8776,11 +8712,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Source/TSClipDetallesViewController.m"
-            timestampString = "456533944.715082"
+            timestampString = "475422747.081554"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "710"
-            endingLineNumber = "710"
+            startingLineNumber = "695"
+            endingLineNumber = "695"
             landmarkName = "-downloadClip:"
             landmarkType = "5">
          </BreakpointContent>
@@ -8792,11 +8728,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Source/TSClipDetallesViewController.m"
-            timestampString = "456533944.715082"
+            timestampString = "475422747.081554"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "806"
-            endingLineNumber = "806"
+            startingLineNumber = "791"
+            endingLineNumber = "791"
             landmarkName = "-connection:didReceiveData:"
             landmarkType = "5">
          </BreakpointContent>
@@ -8808,11 +8744,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Source/TSClipDetallesViewController.m"
-            timestampString = "456533944.715082"
+            timestampString = "475422747.081554"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "807"
-            endingLineNumber = "807"
+            startingLineNumber = "792"
+            endingLineNumber = "792"
             landmarkName = "-connection:didReceiveData:"
             landmarkType = "5">
          </BreakpointContent>
@@ -8824,11 +8760,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Source/TSClipDetallesViewController.m"
-            timestampString = "456533944.715082"
+            timestampString = "475422747.081554"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "809"
-            endingLineNumber = "809"
+            startingLineNumber = "794"
+            endingLineNumber = "794"
             landmarkName = "-connectionDidFinishLoading:"
             landmarkType = "5">
          </BreakpointContent>
@@ -8840,11 +8776,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Source/TSClipDetallesViewController.m"
-            timestampString = "456533944.715082"
+            timestampString = "475422747.081554"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "808"
-            endingLineNumber = "808"
+            startingLineNumber = "793"
+            endingLineNumber = "793"
             landmarkName = "-connection:didReceiveData:"
             landmarkType = "5">
             <Locations>
@@ -8888,11 +8824,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Source/TSClipDetallesViewController.m"
-            timestampString = "456533944.715082"
+            timestampString = "475422747.081554"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "769"
-            endingLineNumber = "769"
+            startingLineNumber = "754"
+            endingLineNumber = "754"
             landmarkName = "@implementation TSClipDetallesViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -8904,11 +8840,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Source/TSClipDetallesViewController.m"
-            timestampString = "456533944.715082"
+            timestampString = "475422747.081554"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "686"
-            endingLineNumber = "686"
+            startingLineNumber = "671"
+            endingLineNumber = "671"
             landmarkName = "@implementation TSClipDetallesViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -8920,11 +8856,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Source/TSClipDetallesViewController.m"
-            timestampString = "453947454.920594"
+            timestampString = "475422747.081554"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "232"
-            endingLineNumber = "232"
+            startingLineNumber = "226"
+            endingLineNumber = "226"
             landmarkName = "-tableView:cellForRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -8968,11 +8904,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Source/TSClipListadoTableViewController.m"
-            timestampString = "456533944.715082"
+            timestampString = "479275601.376513"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "356"
-            endingLineNumber = "356"
+            startingLineNumber = "343"
+            endingLineNumber = "343"
             landmarkName = "-TSDataManager:didProcessedRequests:"
             landmarkType = "5">
          </BreakpointContent>
@@ -8984,11 +8920,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Helper Classes/TSClipListadoHomeMenuTableVC.m"
-            timestampString = "452052294.050051"
+            timestampString = "479688176.43207"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "586"
-            endingLineNumber = "586"
+            startingLineNumber = "551"
+            endingLineNumber = "551"
             landmarkName = "-TSDataManager:didProcessedRequests:"
             landmarkType = "5">
          </BreakpointContent>
@@ -9000,11 +8936,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Helper Classes/TSClipListadoHomeMenuTableVC.m"
-            timestampString = "452052294.050051"
+            timestampString = "479688176.43207"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "636"
-            endingLineNumber = "636"
+            startingLineNumber = "597"
+            endingLineNumber = "597"
             landmarkName = "-showLoaderWithAnimation:cancelUserInteraction:withInitialView:"
             landmarkType = "5">
          </BreakpointContent>
@@ -9048,12 +8984,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Helper Classes/cells/UIView+TSBasicCell.m"
-            timestampString = "442360088.144585"
+            timestampString = "479274953.319362"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "320"
-            endingLineNumber = "320"
-            landmarkName = "-setLabel:underView:withSeparation:"
+            startingLineNumber = "308"
+            endingLineNumber = "308"
+            landmarkName = "-getLongFormatDateFromData:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -9112,12 +9048,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Helper Classes/cells/UIView+TSBasicCell.m"
-            timestampString = "442360088.144585"
+            timestampString = "479274953.319362"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "308"
-            endingLineNumber = "308"
-            landmarkName = "-alignLabel:atTopsView:withSeparation:"
+            startingLineNumber = "296"
+            endingLineNumber = "296"
+            landmarkName = "-setLabel:underView:withSeparation:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -9128,13 +9064,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Helper Classes/cells/UIView+TSBasicCell.m"
-            timestampString = "442478270.044017"
+            timestampString = "479274953.319362"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "338"
-            endingLineNumber = "338"
-            landmarkName = "-getLongFormatDateFromRSS:"
-            landmarkType = "5">
+            startingLineNumber = "326"
+            endingLineNumber = "326"
+            landmarkName = "@implementation UIView(TSBasicCell)"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -9352,11 +9288,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Helper Classes/telesur/TSBasicListViewController.m"
-            timestampString = "452631407.707046"
+            timestampString = "479275601.376513"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "444"
-            endingLineNumber = "444"
+            startingLineNumber = "442"
+            endingLineNumber = "442"
             landmarkName = "-TSDataManager:didProcessedRequests:"
             landmarkType = "5">
          </BreakpointContent>
@@ -10120,11 +10056,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Helper Classes/cells/UIView+TSBasicCell.m"
-            timestampString = "442289948.422188"
+            timestampString = "479274607.489131"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "108"
-            endingLineNumber = "108"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
             landmarkName = "-fitSizesForVideoItemTitle:andSection:"
             landmarkType = "5">
          </BreakpointContent>
@@ -10136,11 +10072,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Helper Classes/cells/UIView+TSBasicCell.m"
-            timestampString = "442360088.144585"
+            timestampString = "479274953.319362"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "283"
-            endingLineNumber = "283"
+            startingLineNumber = "271"
+            endingLineNumber = "271"
             landmarkName = "-frameForText:sizeWithFont:constrainedToSize:lineBreakMode:"
             landmarkType = "5">
          </BreakpointContent>
@@ -10152,11 +10088,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Helper Classes/cells/UIView+TSBasicCell.m"
-            timestampString = "442360088.144585"
+            timestampString = "479274953.319362"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "285"
-            endingLineNumber = "285"
+            startingLineNumber = "273"
+            endingLineNumber = "273"
             landmarkName = "-frameForText:sizeWithFont:constrainedToSize:lineBreakMode:"
             landmarkType = "5">
          </BreakpointContent>
@@ -10168,12 +10104,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Helper Classes/cells/UIView+TSBasicCell.m"
-            timestampString = "442360088.144585"
+            timestampString = "479274953.319362"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "292"
-            endingLineNumber = "292"
-            landmarkName = "-frameForText:sizeWithFont:constrainedToSize:lineBreakMode:"
+            startingLineNumber = "280"
+            endingLineNumber = "280"
+            landmarkName = "-setLabel:atBottomsView:withSeparation:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -10184,11 +10120,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Helper Classes/cells/UIView+TSBasicCell.m"
-            timestampString = "442360088.144585"
+            timestampString = "479274607.489131"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "155"
-            endingLineNumber = "155"
+            startingLineNumber = "150"
+            endingLineNumber = "150"
             landmarkName = "-fitSizesForRSSItemTitle:andSection:"
             landmarkType = "5">
          </BreakpointContent>
@@ -10216,11 +10152,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Helper Classes/TSClipListadoHomeMenuTableVC.m"
-            timestampString = "446681693.931714"
+            timestampString = "479688176.43207"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "103"
-            endingLineNumber = "103"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
             landmarkName = "-viewWillAppear:"
             landmarkType = "5">
          </BreakpointContent>
@@ -10232,11 +10168,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Helper Classes/TSHomeTableViewController.m"
-            timestampString = "448437615.600022"
+            timestampString = "478743224.357941"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "484"
-            endingLineNumber = "484"
+            startingLineNumber = "427"
+            endingLineNumber = "427"
             landmarkName = "-hideLoaderWithAnimation:"
             landmarkType = "5">
          </BreakpointContent>
@@ -10248,11 +10184,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Helper Classes/TSHomeTableViewController.m"
-            timestampString = "448437454.53145"
+            timestampString = "475722476.574659"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "133"
-            endingLineNumber = "133"
+            startingLineNumber = "116"
+            endingLineNumber = "116"
             landmarkName = "-getHTableData"
             landmarkType = "5">
          </BreakpointContent>
@@ -10264,11 +10200,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Helper Classes/TSHomeTableViewController.m"
-            timestampString = "448437454.53145"
+            timestampString = "475722476.574659"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "134"
-            endingLineNumber = "134"
+            startingLineNumber = "117"
+            endingLineNumber = "117"
             landmarkName = "-getHTableData"
             landmarkType = "5">
          </BreakpointContent>
@@ -10280,7 +10216,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Helper Classes/LeftMenuViewController.m"
-            timestampString = "448446684.928406"
+            timestampString = "479688764.517991"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "30"
@@ -10296,11 +10232,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Helper Classes/TSHomeTableViewController.m"
-            timestampString = "448437327.467661"
+            timestampString = "475722476.574659"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "95"
-            endingLineNumber = "95"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
             landmarkName = "-loadHomeData"
             landmarkType = "5">
          </BreakpointContent>
@@ -10312,11 +10248,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Helper Classes/TSHomeTableViewController.m"
-            timestampString = "448437454.53145"
+            timestampString = "475722476.574659"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "150"
-            endingLineNumber = "150"
+            startingLineNumber = "133"
+            endingLineNumber = "133"
             landmarkName = "-handleTSConnectionError"
             landmarkType = "5">
          </BreakpointContent>
@@ -10392,11 +10328,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Helper Classes/TSHomeTableViewController.m"
-            timestampString = "448437454.53145"
+            timestampString = "475722476.574659"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "160"
-            endingLineNumber = "160"
+            startingLineNumber = "143"
+            endingLineNumber = "143"
             landmarkName = "-handleTSConnectionError"
             landmarkType = "5">
          </BreakpointContent>
@@ -10535,28 +10471,12 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "teleSUR/Helper Classes/telesur/data/TSDataManager.m"
-            timestampString = "447874855.260317"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "138"
-            endingLineNumber = "138"
-            landmarkName = "-loadCurrentAPIRequest"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "teleSUR/Helper Classes/TSClipListadoHomeMenuTableVC.m"
-            timestampString = "452052294.050051"
+            timestampString = "479688176.43207"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "338"
-            endingLineNumber = "338"
+            startingLineNumber = "337"
+            endingLineNumber = "337"
             landmarkName = "-textfieldDidChange"
             landmarkType = "5">
          </BreakpointContent>
@@ -11096,13 +11016,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Helper Classes/cells/UIView+TSBasicCell.m"
-            timestampString = "442478270.044017"
+            timestampString = "479274953.319362"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "353"
-            endingLineNumber = "353"
-            landmarkName = "-getNSDateParaFromData:"
-            landmarkType = "5">
+            startingLineNumber = "341"
+            endingLineNumber = "341"
+            landmarkName = "@implementation UIView(TSBasicCell)"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -11112,13 +11032,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Helper Classes/cells/UIView+TSBasicCell.m"
-            timestampString = "442478270.044017"
+            timestampString = "479274953.319362"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "354"
-            endingLineNumber = "354"
-            landmarkName = "-getNSDateParaFromData:"
-            landmarkType = "5">
+            startingLineNumber = "342"
+            endingLineNumber = "342">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -11128,11 +11046,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Source/TSClipDetallesViewController.m"
-            timestampString = "456533944.715082"
+            timestampString = "475422747.081554"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "499"
-            endingLineNumber = "499"
+            startingLineNumber = "484"
+            endingLineNumber = "484"
             landmarkName = "-deviceOrientationDidChangeNotification:"
             landmarkType = "5">
          </BreakpointContent>
@@ -11144,11 +11062,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Source/TSClipDetallesViewController.m"
-            timestampString = "453947454.920594"
+            timestampString = "475422747.081554"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "126"
-            endingLineNumber = "126"
+            startingLineNumber = "120"
+            endingLineNumber = "120"
             landmarkName = "-viewWillAppear:"
             landmarkType = "5">
          </BreakpointContent>
@@ -11160,11 +11078,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Source/TSClipDetallesViewController.m"
-            timestampString = "453947454.920594"
+            timestampString = "475422747.081554"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "125"
-            endingLineNumber = "125"
+            startingLineNumber = "119"
+            endingLineNumber = "119"
             landmarkName = "-viewWillAppear:"
             landmarkType = "5">
          </BreakpointContent>
@@ -11192,11 +11110,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Source/TSClipDetallesViewController.m"
-            timestampString = "453947454.920594"
+            timestampString = "475422747.081554"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "127"
-            endingLineNumber = "127"
+            startingLineNumber = "121"
+            endingLineNumber = "121"
             landmarkName = "-viewWillAppear:"
             landmarkType = "5">
          </BreakpointContent>
@@ -11208,11 +11126,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Helper Classes/TSClipListadoHomeMenuTableVC.m"
-            timestampString = "452052294.050051"
+            timestampString = "479688176.43207"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "261"
-            endingLineNumber = "261"
+            startingLineNumber = "260"
+            endingLineNumber = "260"
             landmarkName = "-DropDownMenuWillAppear:"
             landmarkType = "5">
          </BreakpointContent>
@@ -11224,11 +11142,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Helper Classes/TSClipListadoHomeMenuTableVC.m"
-            timestampString = "446681693.931714"
+            timestampString = "479688176.43207"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "93"
-            endingLineNumber = "93"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
             landmarkName = "-viewWillAppear:"
             landmarkType = "5">
          </BreakpointContent>
@@ -11240,11 +11158,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Source/TSClipDetallesViewController.m"
-            timestampString = "456533944.715082"
+            timestampString = "475422747.081554"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "860"
-            endingLineNumber = "860"
+            startingLineNumber = "845"
+            endingLineNumber = "845"
             landmarkName = "-initPanRecognizer"
             landmarkType = "5">
          </BreakpointContent>
@@ -11256,11 +11174,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Source/TSClipDetallesViewController.m"
-            timestampString = "456533944.715082"
+            timestampString = "475422747.081554"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "450"
-            endingLineNumber = "450"
+            startingLineNumber = "435"
+            endingLineNumber = "435"
             landmarkName = "-configLeftButton"
             landmarkType = "5">
          </BreakpointContent>
@@ -11293,8 +11211,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "852"
             endingLineNumber = "852"
-            landmarkName = "@implementation SlideNavigationController"
-            landmarkType = "3">
+            landmarkName = "-childViewControllerForStatusBarHidden"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -11304,11 +11222,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Source/TSClipDetallesViewController.m"
-            timestampString = "456533944.715082"
+            timestampString = "475422747.081554"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1048"
-            endingLineNumber = "1048"
+            startingLineNumber = "1033"
+            endingLineNumber = "1033"
             landmarkName = "-prefersStatusBarHidden"
             landmarkType = "5">
          </BreakpointContent>
@@ -11320,11 +11238,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Source/CollapsableTableView/SlideNavigationController.m"
-            timestampString = "447193644.094591"
+            timestampString = "479688119.129028"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "871"
-            endingLineNumber = "871"
+            startingLineNumber = "872"
+            endingLineNumber = "872"
             landmarkName = "-prefersStatusBarHidden"
             landmarkType = "5">
          </BreakpointContent>
@@ -11352,13 +11270,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Source/CollapsableTableView/SlideNavigationController.m"
-            timestampString = "447193644.094591"
+            timestampString = "479688119.129028"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "873"
-            endingLineNumber = "873"
-            landmarkName = "-prefersStatusBarHidden"
-            landmarkType = "5">
+            startingLineNumber = "874"
+            endingLineNumber = "874"
+            landmarkName = "@implementation SlideNavigationController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -11384,11 +11302,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Source/TSClipDetallesViewController.m"
-            timestampString = "456533944.715082"
+            timestampString = "475422747.081554"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1045"
-            endingLineNumber = "1045"
+            startingLineNumber = "1030"
+            endingLineNumber = "1030"
             landmarkName = "-prefersStatusBarHidden"
             landmarkType = "5">
          </BreakpointContent>
@@ -11400,11 +11318,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Source/TSClipDetallesViewController.m"
-            timestampString = "456533944.715082"
+            timestampString = "475422747.081554"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "960"
-            endingLineNumber = "960"
+            startingLineNumber = "945"
+            endingLineNumber = "945"
             landmarkName = "-restoreView"
             landmarkType = "5">
          </BreakpointContent>
@@ -11416,11 +11334,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Source/TSClipDetallesViewController.m"
-            timestampString = "456533944.715082"
+            timestampString = "475422747.081554"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1046"
-            endingLineNumber = "1046"
+            startingLineNumber = "1031"
+            endingLineNumber = "1031"
             landmarkName = "-prefersStatusBarHidden"
             landmarkType = "5">
          </BreakpointContent>
@@ -11559,54 +11477,6 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "teleSUR/AppDelegate.m"
-            timestampString = "448858468.957517"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "76"
-            endingLineNumber = "76"
-            landmarkName = "-application:didRegisterForRemoteNotificationsWithDeviceToken:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "teleSUR/AppDelegate.m"
-            timestampString = "448858468.957517"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "99"
-            endingLineNumber = "99"
-            landmarkName = "-application:didFailToRegisterForRemoteNotificationsWithError:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "teleSUR/AppDelegate.m"
-            timestampString = "452627813.837504"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "117"
-            endingLineNumber = "117"
-            landmarkName = "-onPushAccepted:withNotification:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "teleSUR/Helper Classes/telesur/data/TSDataManager.m"
             timestampString = "447874855.260317"
             startingColumnNumber = "9223372036854775807"
@@ -11720,11 +11590,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Source/TSClipDetallesViewController.m"
-            timestampString = "456533944.715082"
+            timestampString = "475422747.081554"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "559"
-            endingLineNumber = "559"
+            startingLineNumber = "544"
+            endingLineNumber = "544"
             landmarkName = "-configVideo"
             landmarkType = "5">
          </BreakpointContent>
@@ -11736,11 +11606,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Source/TSClipDetallesViewController.m"
-            timestampString = "456533944.715082"
+            timestampString = "475422747.081554"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "556"
-            endingLineNumber = "556"
+            startingLineNumber = "541"
+            endingLineNumber = "541"
             landmarkName = "-configVideo"
             landmarkType = "5">
          </BreakpointContent>
@@ -11752,11 +11622,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Source/TSClipDetallesViewController.m"
-            timestampString = "456533944.715082"
+            timestampString = "475422747.081554"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "563"
-            endingLineNumber = "563"
+            startingLineNumber = "548"
+            endingLineNumber = "548"
             landmarkName = "-configVideo"
             landmarkType = "5">
          </BreakpointContent>
@@ -11768,11 +11638,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Source/TSClipDetallesViewController.m"
-            timestampString = "456533944.715082"
+            timestampString = "475422747.081554"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "551"
-            endingLineNumber = "551"
+            startingLineNumber = "536"
+            endingLineNumber = "536"
             landmarkName = "-configVideo"
             landmarkType = "5">
          </BreakpointContent>
@@ -11928,11 +11798,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Source/TSClipDetallesViewController.m"
-            timestampString = "456533944.715082"
+            timestampString = "475422747.081554"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "502"
-            endingLineNumber = "502"
+            startingLineNumber = "487"
+            endingLineNumber = "487"
             landmarkName = "-deviceOrientationDidChangeNotification:"
             landmarkType = "5">
          </BreakpointContent>
@@ -11944,60 +11814,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Source/TSClipDetallesViewController.m"
-            timestampString = "456533944.715082"
+            timestampString = "475422747.081554"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "471"
-            endingLineNumber = "471"
+            startingLineNumber = "456"
+            endingLineNumber = "456"
             landmarkName = "-shareButtonClicked"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "teleSUR/AppDelegate.m"
-            timestampString = "448858468.957517"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
-            landmarkName = "-application:didFinishLaunchingWithOptions:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "teleSUR/AppDelegate.m"
-            timestampString = "448858468.957517"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
-            landmarkName = "-application:didFinishLaunchingWithOptions:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "teleSUR/AppDelegate.m"
-            timestampString = "448858468.957517"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
-            landmarkName = "-application:didFinishLaunchingWithOptions:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -12094,38 +11916,6 @@
             startingLineNumber = "27"
             endingLineNumber = "27"
             landmarkName = "-fitSizesForVideoItemTitle:andSection:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "teleSUR/AppDelegate.m"
-            timestampString = "452631407.707046"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "126"
-            endingLineNumber = "126"
-            landmarkName = "-onPushAccepted:withNotification:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "teleSUR/AppDelegate.m"
-            timestampString = "452627813.837504"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "114"
-            endingLineNumber = "114"
-            landmarkName = "-onPushAccepted:withNotification:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -12248,11 +12038,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Source/TSClipDetallesViewController.m"
-            timestampString = "456533944.715082"
+            timestampString = "475422747.081554"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "394"
-            endingLineNumber = "394"
+            startingLineNumber = "379"
+            endingLineNumber = "379"
             landmarkName = "-setData:andSection:"
             landmarkType = "5">
          </BreakpointContent>
@@ -12328,11 +12118,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Helper Classes/telesur/TSBasicListViewController.m"
-            timestampString = "452631407.707046"
+            timestampString = "479275601.376513"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "467"
-            endingLineNumber = "467"
+            startingLineNumber = "465"
+            endingLineNumber = "465"
             landmarkName = "-TSDataManager:didProcessedRequests:"
             landmarkType = "5">
          </BreakpointContent>
@@ -12344,11 +12134,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Helper Classes/TSHomeTableViewController.m"
-            timestampString = "448437454.53145"
+            timestampString = "475722476.574659"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "208"
-            endingLineNumber = "208"
+            startingLineNumber = "191"
+            endingLineNumber = "191"
             landmarkName = "-setupHeader"
             landmarkType = "5">
          </BreakpointContent>
@@ -12360,11 +12150,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Helper Classes/TSHomeTableViewController.m"
-            timestampString = "448437454.53145"
+            timestampString = "475722476.574659"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "218"
-            endingLineNumber = "218"
+            startingLineNumber = "201"
+            endingLineNumber = "201"
             landmarkName = "-setupHeader"
             landmarkType = "5">
          </BreakpointContent>
@@ -12392,11 +12182,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Source/TSClipDetallesViewController.m"
-            timestampString = "453947454.920594"
+            timestampString = "475422747.081554"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
             landmarkName = "-initWithURL:andTitle:"
             landmarkType = "5">
          </BreakpointContent>
@@ -12440,11 +12230,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Source/TSClipDetallesViewController.m"
-            timestampString = "453947454.920594"
+            timestampString = "475422747.081554"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "206"
-            endingLineNumber = "206"
+            startingLineNumber = "200"
+            endingLineNumber = "200"
             landmarkName = "-tableView:numberOfRowsInSection:"
             landmarkType = "5">
          </BreakpointContent>
@@ -12456,11 +12246,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Source/TSClipDetallesViewController.m"
-            timestampString = "453947454.920594"
+            timestampString = "475422747.081554"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "224"
-            endingLineNumber = "224"
+            startingLineNumber = "218"
+            endingLineNumber = "218"
             landmarkName = "-tableView:cellForRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -12792,11 +12582,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/main.m"
-            timestampString = "449042084.065356"
+            timestampString = "479065483.223992"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "18"
-            endingLineNumber = "18"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
             landmarkName = "main()"
             landmarkType = "7">
          </BreakpointContent>
@@ -12904,11 +12694,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/AppDelegate.h"
-            timestampString = "452633945.691915"
+            timestampString = "479687240.945836"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "18"
-            endingLineNumber = "18"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
             landmarkName = "window"
             landmarkType = "19">
             <Locations>
@@ -13030,11 +12820,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Source/TSClipDetallesViewController.m"
-            timestampString = "456533944.715082"
+            timestampString = "475422747.081554"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "877"
-            endingLineNumber = "877"
+            startingLineNumber = "862"
+            endingLineNumber = "862"
             landmarkName = "-panDetected:"
             landmarkType = "5">
          </BreakpointContent>
@@ -13046,11 +12836,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Source/TSClipDetallesViewController.m"
-            timestampString = "456533944.715082"
+            timestampString = "475422747.081554"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "933"
-            endingLineNumber = "933"
+            startingLineNumber = "918"
+            endingLineNumber = "918"
             landmarkName = "-minimizeView"
             landmarkType = "5">
          </BreakpointContent>
@@ -13062,11 +12852,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Source/TSClipDetallesViewController.m"
-            timestampString = "456533944.715082"
+            timestampString = "475422747.081554"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "961"
-            endingLineNumber = "961"
+            startingLineNumber = "946"
+            endingLineNumber = "946"
             landmarkName = "-restoreView"
             landmarkType = "5">
          </BreakpointContent>
@@ -13078,11 +12868,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Source/TSClipDetallesViewController.m"
-            timestampString = "456533944.715082"
+            timestampString = "475422747.081554"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "989"
-            endingLineNumber = "989"
+            startingLineNumber = "974"
+            endingLineNumber = "974"
             landmarkName = "-showView"
             landmarkType = "5">
          </BreakpointContent>
@@ -13094,11 +12884,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Source/TSClipDetallesViewController.m"
-            timestampString = "456533944.715082"
+            timestampString = "475422747.081554"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "913"
-            endingLineNumber = "913"
+            startingLineNumber = "898"
+            endingLineNumber = "898"
             landmarkName = "-minimizeView"
             landmarkType = "5">
          </BreakpointContent>
@@ -13110,11 +12900,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Source/TSClipDetallesViewController.m"
-            timestampString = "456533944.715082"
+            timestampString = "475422747.081554"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "931"
-            endingLineNumber = "931"
+            startingLineNumber = "916"
+            endingLineNumber = "916"
             landmarkName = "-minimizeView"
             landmarkType = "5">
          </BreakpointContent>
@@ -13126,11 +12916,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Source/TSClipDetallesViewController.m"
-            timestampString = "456533944.715082"
+            timestampString = "475422747.081554"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "917"
-            endingLineNumber = "917"
+            startingLineNumber = "902"
+            endingLineNumber = "902"
             landmarkName = "-minimizeView"
             landmarkType = "5">
          </BreakpointContent>
@@ -13158,11 +12948,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Helper Classes/telesur/TSBasicListViewController.m"
-            timestampString = "452631407.707046"
+            timestampString = "479275601.376513"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "465"
-            endingLineNumber = "465"
+            startingLineNumber = "463"
+            endingLineNumber = "463"
             landmarkName = "-TSDataManager:didProcessedRequests:"
             landmarkType = "5">
          </BreakpointContent>
@@ -13286,11 +13076,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Source/TSClipDetallesViewController.m"
-            timestampString = "453947454.920594"
+            timestampString = "475422747.081554"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "194"
-            endingLineNumber = "194"
+            startingLineNumber = "188"
+            endingLineNumber = "188"
             landmarkName = "-tableView:heightForRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -13302,11 +13092,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Source/TSClipDetallesViewController.m"
-            timestampString = "456533944.715082"
+            timestampString = "475422747.081554"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "276"
-            endingLineNumber = "276"
+            startingLineNumber = "270"
+            endingLineNumber = "270"
             landmarkName = "-tableView:willDisplayCell:forRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -13318,11 +13108,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Source/TSClipDetallesViewController.m"
-            timestampString = "456533944.715082"
+            timestampString = "475422747.081554"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "264"
-            endingLineNumber = "264"
+            startingLineNumber = "258"
+            endingLineNumber = "258"
             landmarkName = "-tableView:willDisplayCell:forRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -13334,71 +13124,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Source/TSClipDetallesViewController.m"
-            timestampString = "456533944.715082"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "275"
-            endingLineNumber = "275"
-            landmarkName = "-tableView:willDisplayCell:forRowAtIndexPath:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "teleSUR/Source/TSClipDetallesViewController.m"
-            timestampString = "456533944.715082"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "663"
-            endingLineNumber = "663"
-            landmarkName = "-TSDataManager:didProcessedRequests:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "teleSUR/Source/TSClipDetallesViewController.m"
-            timestampString = "456533944.715082"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "628"
-            endingLineNumber = "628"
-            landmarkName = "-TSProgramListXML:didFinish:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "teleSUR/Source/TSClipDetallesViewController.m"
-            timestampString = "456533944.715082"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "664"
-            endingLineNumber = "664"
-            landmarkName = "-TSDataManager:didProcessedRequests:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "teleSUR/Source/TSClipDetallesViewController.m"
-            timestampString = "456533944.715082"
+            timestampString = "475422747.081554"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "269"
@@ -13414,11 +13140,75 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "teleSUR/Source/TSClipDetallesViewController.m"
-            timestampString = "456533944.715082"
+            timestampString = "475422747.081554"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "270"
-            endingLineNumber = "270"
+            startingLineNumber = "648"
+            endingLineNumber = "648"
+            landmarkName = "-TSDataManager:didProcessedRequests:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "teleSUR/Source/TSClipDetallesViewController.m"
+            timestampString = "475422747.081554"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "613"
+            endingLineNumber = "613"
+            landmarkName = "-TSProgramListXML:didFinish:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "teleSUR/Source/TSClipDetallesViewController.m"
+            timestampString = "475422747.081554"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "649"
+            endingLineNumber = "649"
+            landmarkName = "-TSDataManager:didProcessedRequests:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "teleSUR/Source/TSClipDetallesViewController.m"
+            timestampString = "475422747.081554"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "263"
+            endingLineNumber = "263"
+            landmarkName = "-tableView:willDisplayCell:forRowAtIndexPath:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "teleSUR/Source/TSClipDetallesViewController.m"
+            timestampString = "475422747.081554"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "264"
+            endingLineNumber = "264"
             landmarkName = "-tableView:willDisplayCell:forRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -13692,6 +13482,486 @@
             startingLineNumber = "93"
             endingLineNumber = "93"
             landmarkName = "-elementsHidden:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "teleSUR/Helper Classes/TSHomeTableViewController.m"
+            timestampString = "478743224.357941"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "302"
+            endingLineNumber = "302"
+            landmarkName = "-easyTableView:selectedView:atIndexPath:deselectedView:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "teleSUR/Source/TSClipDetallesViewController.m"
+            timestampString = "475422647.125758"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "758"
+            endingLineNumber = "758"
+            landmarkName = "-connection:didReceiveResponse:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "teleSUR/Source/TSClipDetallesViewController.m"
+            timestampString = "475422650.761338"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "776"
+            endingLineNumber = "776"
+            landmarkName = "-connection:didReceiveData:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "teleSUR/Source/TSClipDetallesViewController.m"
+            timestampString = "475422842.162735"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "605"
+            endingLineNumber = "605"
+            landmarkName = "-loadCurrentProgramationXML"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "teleSUR/Helper Classes/TSHomeTableViewController.m"
+            timestampString = "478743224.357941"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "391"
+            endingLineNumber = "391"
+            landmarkName = "-tableView:numberOfRowsInSection:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "teleSUR/Helper Classes/TSHomeTableViewController.m"
+            timestampString = "478743224.357941"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "480"
+            endingLineNumber = "480"
+            landmarkName = "-TSDataManager:didProcessedRequests:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "teleSUR/Helper Classes/TSHomeTableViewController.m"
+            timestampString = "478743224.357941"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "479"
+            endingLineNumber = "479"
+            landmarkName = "-TSDataManager:didProcessedRequests:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "teleSUR/Helper Classes/telesur/viewcontrollers/TSMainHomeViewController.m"
+            timestampString = "479277190.535179"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "265"
+            endingLineNumber = "265"
+            landmarkName = "@implementation TSMainHomeViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "teleSUR/Helper Classes/telesur/viewcontrollers/TSMainHomeViewController.m"
+            timestampString = "477870820.35185"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "-loadHomeData"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "teleSUR/Helper Classes/telesur/viewcontrollers/TSMainHomeViewController.m"
+            timestampString = "477702824.193971"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "-viewWillAppear:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "teleSUR/Helper Classes/telesur/viewcontrollers/TSMainHomeViewController.m"
+            timestampString = "477870820.35185"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
+            landmarkName = "-TSDataManager:didProcessedRequests:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "teleSUR/Helper Classes/telesur/viewcontrollers/TSMainHomeViewController.m"
+            timestampString = "477870820.35185"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
+            landmarkName = "@implementation TSMainHomeViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "teleSUR/Helper Classes/telesur/viewcontrollers/TSMainHomeViewController.m"
+            timestampString = "479277190.535179"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "138"
+            endingLineNumber = "138"
+            landmarkName = "-getParsedTextNewsFromRequest:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "teleSUR/Helper Classes/telesur/viewcontrollers/TSMainHomeViewController.m"
+            timestampString = "479277190.535179"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "141"
+            endingLineNumber = "141"
+            landmarkName = "-getParsedTextNewsFromRequest:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "teleSUR/Helper Classes/telesur/viewcontrollers/TSMainHomeViewController.m"
+            timestampString = "479277190.535179"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "139"
+            endingLineNumber = "139"
+            landmarkName = "-getParsedTextNewsFromRequest:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "teleSUR/Helper Classes/telesur/viewcontrollers/TSMainHomeViewController.m"
+            timestampString = "479274607.489131"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
+            landmarkName = "-getParsedClipsFromRequest:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "teleSUR/Helper Classes/telesur/viewcontrollers/TSMainHomeViewController.m"
+            timestampString = "479277190.535179"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "145"
+            endingLineNumber = "145"
+            landmarkName = "-getParsedTextNewsFromRequest:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "teleSUR/Helper Classes/telesur/viewcontrollers/TSMainHomeViewController.m"
+            timestampString = "479274607.489131"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "112"
+            endingLineNumber = "112"
+            landmarkName = "-getParsedClipsFromRequest:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "teleSUR/Helper Classes/telesur/viewcontrollers/TSMainHomeViewController.m"
+            timestampString = "479274607.489131"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "130"
+            endingLineNumber = "130"
+            landmarkName = "-getParsedTextNewsFromRequest:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "teleSUR/Source/UIViewController_Configuracion.m"
+            timestampString = "478730004.288309"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "-launchLiveAudio"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "teleSUR/Helper Classes/telesur/cells/UIView+TSHighlightedViewCell.m"
+            timestampString = "479256992.151507"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "-setupHighlightedViewCell"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "teleSUR/Helper Classes/telesur/viewcontrollers/TSMainHomeViewController.m"
+            timestampString = "479688082.106006"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "398"
+            endingLineNumber = "398"
+            landmarkName = "-configureCell:withData:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "teleSUR/Kafeina/tables/KABasicHTableViewController.m"
+            timestampString = "479066725.522729"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "-tableView:cellForRowAtIndexPath:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "teleSUR/Kafeina/tables/KABasicHTableViewController.m"
+            timestampString = "479066825.929174"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "-tableView:cellForRowAtIndexPath:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "teleSUR/Kafeina/tables/KABasicHTableViewController.m"
+            timestampString = "479258398.562241"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "131"
+            endingLineNumber = "131"
+            landmarkName = "-easyTableView:setDataForView:forIndexPath:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "teleSUR/Helper Classes/telesur/cells/UIView+TSHighlightedViewCell.m"
+            timestampString = "479274953.319362"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "-configRedBackgroundSectionTo:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "teleSUR/Helper Classes/telesur/viewcontrollers/TSMainHomeViewController.m"
+            timestampString = "479277190.535179"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "225"
+            endingLineNumber = "225"
+            landmarkName = "-didSelectRowWithData:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "teleSUR/Kafeina/tables/KABasicHTableViewController.m"
+            timestampString = "479276515.805357"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "146"
+            endingLineNumber = "146"
+            landmarkName = "-easyTableView:selectedView:atIndexPath:deselectedView:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "teleSUR/Kafeina/tables/KABasicHTableViewController.m"
+            timestampString = "479276547.766465"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "136"
+            endingLineNumber = "136"
+            landmarkName = "-getDataForHTable:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "teleSUR/Helper Classes/telesur/viewcontrollers/TSMainHomeViewController.m"
+            timestampString = "479277190.535179"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "244"
+            endingLineNumber = "244"
+            landmarkName = "-playSelectedClip:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

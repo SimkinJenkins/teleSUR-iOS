@@ -28,14 +28,15 @@
 - (void)viewDidLoad {
 
 	[super viewDidLoad];
+    self.view.backgroundColor = [TSUtils colorRedLeftMenu];
 
 //    isLiveAudioON = NO;
 
     bool livestreamEnabled = [[[[[NSBundle mainBundle] infoDictionary] objectForKey:@"Configuración"] objectForKey:@"livestreamEnabled"] boolValue] == YES;
 
     CGRect tableFrame = self.tableView.frame;
-    tableFrame.origin.y = livestreamEnabled ? 170 : tableFrame.origin.y;
-    tableFrame.size.height -= livestreamEnabled ? 106 : 0;
+    tableFrame.origin.y = livestreamEnabled ? 82 : tableFrame.origin.y;
+    tableFrame.size.height -= livestreamEnabled ? 10 : 0;
     self.tableView.frame = tableFrame;
 
     videoSectionsSlug = [[NSArray alloc] initWithArray:[[[[NSBundle mainBundle] infoDictionary] objectForKey:@"Configuración"] objectForKey:@"videoMenuSubsections"]];
@@ -104,16 +105,6 @@
     }
 }
 
-- (void)collapseSection:(CollapsableTableView *)tableView
-{
-    NSString* vSectionTitle = @"Tag 0";
-//    [LeftMenuViewController titleForHeaderForSection:1]; // Use this expression when specifying text for headers.
-    BOOL isCollapsed = [[tableView.headerTitleToIsCollapsedMap objectForKey:vSectionTitle] boolValue];
-    if(!isCollapsed) {
-        [tableView setIsCollapsed:YES forHeaderWithTitle:vSectionTitle];
-    }
-}
-
 - (void) setSelectedSection:(int)index withSlugCollection:(NSArray *)slugs withTitleCollection:(NSArray *)titles {
     TSClipListadoHomeMenuTableVC *view = [self getVideoHomeView];
     if(view) {
@@ -170,7 +161,7 @@
     UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectZero];
     titleLabel.frame =CGRectMake(35, 0, 200, 50);
     titleLabel.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin;
-    titleLabel.text = headerTitle;
+    titleLabel.text = [headerTitle uppercaseString];
     titleLabel.textAlignment = NSTextAlignmentLeft;
 
     titleLabel.textColor = [UIColor whiteColor];
@@ -185,16 +176,16 @@
 
     UILabel *titleLabel = [self createHeaderLabel: tableView :[sectionsTitle objectAtIndex:section]];
     [customView addSubview:titleLabel];
-
+/*
     UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@.png", [sectionsSlug objectAtIndex:section]]]];
     imageView.frame = CGRectMake(14, 10, imageView.frame.size.width * .8, imageView.frame.size.height * .8);
     UIView *separator = [[UIView alloc] initWithFrame:CGRectMake(0.0, 44, 300, 1)];
     separator.backgroundColor = [UIColor colorWithRed:(217/255.0) green:(25/255.0) blue:(24/255.0) alpha:1];
-
-    [customView addSubview:imageView];
-    [customView addSubview:separator];
+*/
+//    [customView addSubview:imageView];
+//    [customView addSubview:separator];
     customView.tag = section;
-    customView.backgroundColor = [UIColor colorWithRed:(254/255.0) green:(66/255.0) blue:(65/255.0) alpha:1];
+    customView.backgroundColor = [TSUtils colorRedLeftMenu];
 
     return customView;
 }
@@ -224,7 +215,8 @@
     bgColorView.backgroundColor = [UIColor colorWithRed:(217/255.0) green:(25/255.0) blue:(24/255.0) alpha:1];
     [cell setSelectedBackgroundView:bgColorView];
     cell.textLabel.textColor = [UIColor whiteColor];
-    cell.backgroundColor = [UIColor colorWithRed:(254/255.0) green:(66/255.0) blue:(65/255.0) alpha:1];
+    cell.textLabel.textAlignment = NSTextAlignmentCenter;
+    cell.backgroundColor = [TSUtils colorRedLeftMenu];
     cell.textLabel.font = [UIFont fontWithName:@"Roboto-Light" size:16];
 
     return cell;
@@ -242,7 +234,7 @@
 
 - (void) collapsableTableView:(CollapsableTableView *)tableView didUnselectSection:(NSInteger)sectionIndex title:(NSString *)sectionTitle headerView:(UIView *)headerView {
 
-    headerView.backgroundColor = [UIColor colorWithRed:(254/255.0) green:(66/255.0) blue:(65/255.0) alpha:1];
+    headerView.backgroundColor = [TSUtils colorRedLeftMenu];
 
 }
 
@@ -274,6 +266,16 @@
     }
 }
 
+- (void)collapseSection:(CollapsableTableView *)tableView
+{
+    NSString* vSectionTitle = @"Tag 0";
+    //    [LeftMenuViewController titleForHeaderForSection:1]; // Use this expression when specifying text for headers.
+    BOOL isCollapsed = [[tableView.headerTitleToIsCollapsedMap objectForKey:vSectionTitle] boolValue];
+    if(!isCollapsed) {
+        [tableView setIsCollapsed:YES forHeaderWithTitle:vSectionTitle];
+    }
+}
+
 
 
 
@@ -298,23 +300,23 @@
 - (void) collapsableTableView:(CollapsableTableView*) tableView willCollapseSection:(NSInteger) section title:(NSString*) sectionTitle headerView:(UIView*) headerView
 {
     headerView.backgroundColor = [UIColor colorWithRed:(254/255.0) green:(66/255.0) blue:(65/255.0) alpha:1];
-    [spinner startAnimating];
+//    [spinner startAnimating];
 }
 
 - (void) collapsableTableView:(CollapsableTableView*) tableView didCollapseSection:(NSInteger) section title:(NSString*) sectionTitle headerView:(UIView*) headerView
 {
-    [spinner stopAnimating];
+//    [spinner stopAnimating];
 }
 
 - (void) collapsableTableView:(CollapsableTableView*) tableView willExpandSection:(NSInteger) section title:(NSString*) sectionTitle headerView:(UIView*) headerView
 {
     headerView.backgroundColor = [UIColor colorWithRed:(217/255.0) green:(25/255.0) blue:(24/255.0) alpha:1];
-    [spinner startAnimating];
+//    [spinner startAnimating];
 }
 
 - (void) collapsableTableView:(CollapsableTableView*) tableView didExpandSection:(NSInteger) section title:(NSString*) sectionTitle headerView:(UIView*) headerView
 {
-    [spinner stopAnimating];
+//    [spinner stopAnimating];
 }
 
 @end

@@ -43,19 +43,16 @@ NSInteger const TS_VIEW_STATUS_ON_TRANSITION = 4;
 #pragma mark Init
 
 - (id) initWithData:(NSDictionary *)itemData andSection:(NSString *)section {
-
     if ((self = [super init])) {
         currentItem = itemData;
         currentSection = section;
         isDownloading = NO;
         isLiveStream = NO;
     }
-
     return self;
 }
 
 - (id) initWithURL:(NSString *)URL andTitle:(NSString *)title {
-
     if ((self = [super init])) {
         liveURL = URL;
         liveURLTitle = title;
@@ -63,11 +60,8 @@ NSInteger const TS_VIEW_STATUS_ON_TRANSITION = 4;
         isLiveStream = YES;
         catalogs = [NSMutableDictionary dictionary];
     }
-
     return self;
-
 }
-
 
 
 
@@ -341,31 +335,22 @@ NSInteger const TS_VIEW_STATUS_ON_TRANSITION = 4;
 }
 
 - (void)loadData {
-
     if ( ![self isAPIHostAvailable] ) {
         return;
     }
-
     addAtListEnd = YES;
-
     if ( isLiveStream ) {
-
         TSDataRequest *showCatReq = [[TSDataRequest alloc] initWithType:TS_PROGRAMA_SLUG    forSection:nil      forSubsection:nil];
         showCatReq.range = NSMakeRange(1, 300);
-
         [[[TSDataManager alloc] init] loadRequests:[NSArray arrayWithObjects:showCatReq, nil] delegateResponseTo:self];
-
     } else {
-
         tableElements = [NSMutableArray arrayWithObject:currentItem];
         TSDataRequest *relatedReq = [[TSDataRequest alloc] initWithType:TS_CLIP_SLUG       forSection:@""  forSubsection:@""];
         relatedReq.range = NSMakeRange(1, 5);
         relatedReq.relatedSlug = [currentItem objectForKey:@"slug"];
         NSArray *requests = [NSArray arrayWithObjects:relatedReq, nil];
         [[[TSDataManager alloc] init] loadRequests:requests delegateResponseTo:self];
-
     }
-    
 }
 
 

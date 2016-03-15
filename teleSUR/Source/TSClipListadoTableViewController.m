@@ -302,33 +302,20 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-
     selectedIndexPath = indexPath;
-
     NSArray *elements = [ self getDataArrayForIndexPath:indexPath forDefaultTable:YES ];
-
     if (selectedIndexPath.row < [elements count] || loadMoreCellDisabled) {
-
         NSDictionary *clipData = [elements objectAtIndex:indexPath.row];
         BOOL isRSS = [clipData isKindOfClass:[MWFeedItem class]];
-
         if (isRSS) {
-
             [self showSelectedPost:(MWFeedItem *)clipData];
-
         } else {
-
             [self playSelectedClip:indexPath];
-
         }
-
     } else {// Se trata de la celda "Ver Más"
-
         addAtListEnd = YES;
         [self loadData];
-
     }
-
 }
 
 

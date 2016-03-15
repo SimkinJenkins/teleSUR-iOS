@@ -79,14 +79,10 @@
 
 
 - (void) setDataForVideoItem:(NSDictionary *)data forTitle:(UILabel *)title andSection:(UILabel *)section withType:(NSString *)clipType {
-
     section.hidden = NO;
-
     BOOL switchTitles = [clipType isEqualToString:@"programa"];
     NSObject *category = [data valueForKey:@"categoria"];
-
     title.text = switchTitles ? @"" : [data valueForKey:@"titulo"];
-
     if(category != [NSNull null]) {
         section.text = [[category valueForKey:@"nombre"] uppercaseString];
     } else if(switchTitles) {
@@ -96,7 +92,6 @@
     } else {
         section.text = @"";
     }
-
 }
 
 - (void) fitSizesForVideoItemTitle:(UILabel *)title andSection:(UILabel *)section {
@@ -230,22 +225,15 @@
 
 
 - (void) configRedBackgroundSectionLabel {
-    
-    UILabelMarginSet *section = (UILabelMarginSet *)[ self viewWithTag: [ self getSectionLabelTag ] ];
-    
+    UILabelMarginSet *section = (UILabelMarginSet *)[self viewWithTag:[self getSectionLabelTag]];
     section.font = [UIFont fontWithName:@"Roboto-Black" size:8];
-    
     section.leftMargin = 5;
     [section setPersistentBackgroundColor:[UIColor colorWithRed:255/255.0 green:2/255.0 blue:2/255.0 alpha:1.0]];
-    
 }
 
 - (void) sizeToFitRedBackgroundLabel:(UILabelMarginSet *)section {
-    
     CGSize sectionSize = [self frameForText:section.text sizeWithFont:section.font constrainedToSize:CGSizeMake(150, 20) lineBreakMode:NSLineBreakByWordWrapping];
-    
     [section setFrame:CGRectMake(section.frame.origin.x, section.frame.origin.y, sectionSize.width + 11, sectionSize.height + 6)];
-    
 }
 
 - (UIFont *) getTitleFont {
@@ -272,25 +260,16 @@
 
 
 - (void) adjustSizeFrameForLabel:(UILabel *)label constriainedToSize:(CGSize)size {
-
     CGSize labelSize = [self frameForText:label.text sizeWithFont:label.font constrainedToSize:size lineBreakMode:NSLineBreakByWordWrapping];
     [label setFrame:CGRectMake(label.frame.origin.x, label.frame.origin.y, labelSize.width, labelSize.height)];
-
 }
 
 -(CGSize)frameForText:(NSString*)text sizeWithFont:(UIFont*)font constrainedToSize:(CGSize)size lineBreakMode:(NSLineBreakMode)lineBreakMode {
-
     NSMutableParagraphStyle * paragraphStyle = [[NSMutableParagraphStyle defaultParagraphStyle] mutableCopy];
     paragraphStyle.lineBreakMode = lineBreakMode;
-    NSDictionary * attributes = @{NSFontAttributeName:font,
-                                  NSParagraphStyleAttributeName:paragraphStyle
-                                  };
-    CGRect textRect = [text boundingRectWithSize:size
-                                         options:NSStringDrawingUsesLineFragmentOrigin
-                                      attributes:attributes
-                                         context:nil];
+    NSDictionary * attributes = @{NSFontAttributeName:font, NSParagraphStyleAttributeName:paragraphStyle};
+    CGRect textRect = [text boundingRectWithSize:size options:NSStringDrawingUsesLineFragmentOrigin attributes:attributes context:nil];
     return textRect.size;
-
 }
 
 - (void) setLabel:(UILabel *)label atBottomsView:(UIView *)view withSeparation:(CGFloat)indent {

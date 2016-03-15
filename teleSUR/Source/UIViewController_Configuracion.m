@@ -31,15 +31,11 @@
 }
 
 - (void) launchLiveAudio {
-
     NSString *moviePath = [[[[NSBundle mainBundle] infoDictionary] valueForKey:@"Configuración"] valueForKey:(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) ? @"Streaming URL Alta" : @"Streaming URL Media"];
-
     TSClipPlayerViewController *playerController = [[TSClipPlayerViewController alloc] initWithURL:moviePath andTitle:@""];
     [playerController playAtView:self.view withFrame:CGRectMake(0, 0, 1, 1) withObserver:self playbackFinish:nil];
-
     ((HiddenVideoPlayerController *)[SlideNavigationController sharedInstance].rightMenu).isAudioPlaying = YES;
     ((HiddenVideoPlayerController *)[SlideNavigationController sharedInstance].rightMenu).currentPlayer = playerController;
-
 }
 
 - (void) stopLiveAudio {

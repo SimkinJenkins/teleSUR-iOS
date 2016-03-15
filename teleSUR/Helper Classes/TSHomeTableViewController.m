@@ -27,51 +27,34 @@
 @implementation TSHomeTableViewController
 
 - (void) initViewVariables {
-
     [super initViewVariables];
     defaultDataResultIndex = 1;
-
 }
 
 - (void)viewDidLoad {
-
     [super viewDidLoad];
-
     topTablePosition = 0;
     secondaryTablePosition = 208;
-
     self.navigationController.navigationBarHidden = YES;
     self.tableViewController.tableView.hidden = YES;
-
     if( [currentSection isEqualToString:@"home"]) {
-
         [self changeTableViewConfiguration];
-
     } else {
-
         [self configTopMenuWithCurrentConfiguration];
-
     }
-
     cancelNextHideLoader = NO;
-
 }
 
 - (void) viewWillDisappear:(BOOL)animated {
-
     [super viewWillDisappear:animated];
-
 }
 
 - (void) viewWillAppear:(BOOL)animated {
-    
     [super viewWillAppear:animated];
-
     if ( isNotificationWebViewLastView ) {
         isNotificationWebViewLastView = NO;
-        self.headerMenu.hidden = NO;
+        headerMenu.hidden = NO;
     }
-    
 }
 
 
@@ -221,7 +204,6 @@
     breakingNewsMarquee.backgroundColor = [UIColor blackColor];
     breakingNewsMarquee.textColor = [UIColor whiteColor];
     NSString *text = [NSString stringWithFormat:@"    %@: ", NSLocalizedString(@"ultimasSection", nil)];
-    
 
     for ( int i = 0; i < [data count]; i++ ) {
         MWFeedItem *rowData = [data objectAtIndex:i];
@@ -300,55 +282,38 @@
 #pragma mark EasyTableViewDelegate
 
 - (UIView *)easyTableView:(EasyTableView *)easyTableView viewForRect:(CGRect)rect {
-
     UITableViewCell *cell = [ self getReuseCell:easyTableView.tableView withID:@"HomeTopTableViewCell" ];
 	return cell.contentView;
-
 }
 
 - (void)easyTableView:(EasyTableView *)easyTableView scrolledToFraction:(CGFloat)fraction {
-
     pageControl.currentPage = round(fraction * ([[self getHTableData] count] - 1));
-
 }
 
 - (void)easyTableView:(EasyTableView *)easyTableView setDataForView:(UIView *)view forIndexPath:(NSIndexPath*)indexPath {
-
     [self configureTopTableCellView:view withData:[[self getHTableData] objectAtIndex:indexPath.row]];
-
     [(UIImageView *)[view viewWithTag:2] sd_setImageWithURL:[self getThumbURLForIndex:indexPath
                                                                       forceLargeImage:NO
                                                                       forDefaultTable:NO]
                                                 placeholderImage:[UIImage imageNamed:@"SinImagen.png"]];
-
 }
 
 - (void)easyTableView:(EasyTableView *)easyTableView selectedView:(UIView *)selectedView atIndexPath:(NSIndexPath *)indexPath deselectedView:(UIView *)deselectedView {
-
     selectedIndexPath = indexPath;
-
     if (selectedIndexPath.row < [[self getHTableData] count] || loadMoreCellDisabled) {// Se trata de un video
-        self.headerMenu.hidden = YES;
+        headerMenu.hidden = YES;
         [self showSelectedPost:[[self getHTableData] objectAtIndex:indexPath.row]];
     }
-
 }
 
 - (void) configureTopTableCellView:(UIView *)view withData:(NSDictionary *)data {
-
     UILabelMarginSet *title = (UILabelMarginSet *)[view viewWithTag:1];
     UILabelMarginSet *section = (UILabelMarginSet *)[view viewWithTag:3];
-
     [view setData:data];
-    
     [view adjustSizeFrameForLabel:title constriainedToSize:CGSizeMake(300, 80)];
-
     title.frame = CGRectMake(title.frame.origin.x, view.frame.size.height - title.frame.size.height - 30, title.frame.size.width, title.frame.size.height);
-
     [view sizeToFitRedBackgroundLabel:section];
-    
     section.frame = CGRectMake(section.frame.origin.x, title.frame.origin.y - section.frame.size.height, section.frame.size.width, section.frame.size.height);
-    
 }
 
 
@@ -372,49 +337,30 @@
 #pragma mark - Custom Public Functions
 
 - (void)loadData {
-
     [self showLoaderWithAnimation:YES cancelUserInteraction:cancelUserInteraction withInitialView:isAnInitialScreen];
-
-    if ( [currentSection isEqualToString:@"home"] ) {
-
+    if ([currentSection isEqualToString:@"home"]) {
         defaultDataResultIndex = 1;
         [self loadHomeData];
-
     } else {
-
         defaultDataResultIndex = 0;
         [self loadCurrentSectionData];
-
     }
-
 }
 
 - (NSString *)getIDForCellAtIndexPath:(NSIndexPath *)indexPath {
-
     if ([currentSection isEqualToString:@"home"]) {
-
-     return @"HomeVideoTableViewCell";
-
+        return @"HomeVideoTableViewCell";
     }
-
     return [super getIDForCellAtIndexPath:indexPath];
-    
 }
 
 - (NSArray *) getDataArrayForIndexPath:(NSIndexPath *)indexPath forDefaultTable:(BOOL)defaultTable {
-
     if ( !defaultTable ) {
-
         return [self getHTableData];
-
     } else if ( indexPath.section == 1 ) {
-
         return secondSectionElements;
-
     }
-
     return [ super getDataArrayForIndexPath:indexPath forDefaultTable:defaultTable ];
-
 }
 
 
@@ -439,13 +385,10 @@
 #pragma mark Table view data source
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-
     if ( section == 1) {
         return secondSectionElements ? [secondSectionElements count] : 0;
     }
-
     return [super tableView:tableView numberOfRowsInSection:section];
-
 }
 
 
@@ -533,7 +476,6 @@
 #pragma mark TSDataManagerDelegate
 
 - (void)TSDataManager:(TSDataManager *)manager didProcessedRequests:(NSArray *)requests {
-
     uint dataIndex = 0;
     if( [requests count] > 2 ) {
         for( uint i = 0; i < 2; i++ ) {
@@ -543,17 +485,11 @@
         dataIndex = 2;
         secondSectionElements = [NSMutableArray arrayWithArray:((TSDataRequest *)[requests objectAtIndex:[requests count] - 1]).result];
     }
-
     [super TSDataManager:manager didProcessedRequests:[requests subarrayWithRange:NSMakeRange(dataIndex, [ requests count ] - dataIndex)]];
-
     if( [ currentSection isEqualToString:@"home" ] ) {
-
         [self homeDataDidLoad];
-
     }
-
     isAnInitialScreen = NO;
-
 }
 
 

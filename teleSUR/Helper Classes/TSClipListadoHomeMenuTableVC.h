@@ -24,14 +24,13 @@
         UIDropDownMenu *textMenu;
 
         CGRect beforeSearchSectionTableFrame;
+        UIView *headerMenu;
 
 }
 
 @property (nonatomic, strong) IBOutlet UISearchBar *searchBar;
 
 @property (nonatomic, strong) NSDictionary *currentTopMenuConfig;
-
-@property (nonatomic, retain) UIView *headerMenu;
 
 - (void) configTopMenuWithCurrentConfiguration;
 - (void) sectionSelected:(NSString *)section withTitle:(NSString *)title;

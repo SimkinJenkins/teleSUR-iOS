@@ -10,10 +10,9 @@
 #import "SlideNavigationController.h"
 #import "CollapsableTableViewDelegate.h"
 
-@interface LeftMenuViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, CollapsableTableViewDelegate>
-{
+#import "TSUtils.h"
 
-    IBOutlet UIActivityIndicatorView *spinner;
+@interface LeftMenuViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, CollapsableTableViewDelegate> {
 
     @protected
         NSArray *videoSections;
@@ -21,7 +20,7 @@
         NSArray *sectionsTitle;
         NSArray *sectionsSlug;
         BOOL *isLiveAudioON;
-    UIButton *audioLiveButton;
+        UIButton *audioLiveButton;
 
 }
 

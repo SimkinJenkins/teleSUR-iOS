@@ -388,10 +388,8 @@ NSString* const TS_NOTICIAS_SLUG = @"noticias-texto";
 }
 
 - (NSString *) getSectionTitleWith:(NSString *)slug {
-
     NSString *localizeID = [NSString stringWithFormat:@"%@Section", slug];
     return [NSString stringWithFormat:NSLocalizedString(localizeID, nil)];
-    
 }
 
 - (void) showNotificationPost:(MWFeedItem *)post {}

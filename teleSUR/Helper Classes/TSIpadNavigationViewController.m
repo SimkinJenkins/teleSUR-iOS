@@ -488,14 +488,14 @@
         NSArray *catalog = [catalogs objectForKey:type];
         if(!catalog) {
             [self loadCatalog:type];
-            return @{   @"keys":[NSArray arrayWithObjects:nil],
-                        @"titles":[NSArray arrayWithObjects:nil]
+            return @{   @"keys":[NSArray array],
+                        @"titles":[NSArray array]
                         };
         }
         return [catalogs objectForKey:type];
     } else if ([type isEqualToString:@"reportaje"] || [type isEqualToString:@"blog"] || [type isEqualToString:@"home"] || [type isEqualToString:@"video"]) {
-        return @{   @"keys":[NSArray arrayWithObjects:nil],
-                    @"titles":[NSArray arrayWithObjects:nil]
+        return @{   @"keys":[NSArray array],
+                    @"titles":[NSArray array]
                     };
     } else if ([type isEqualToString:@"opinion"]) {
         return @{   @"keys":[NSArray arrayWithObjects:@"op-articulos", @"op-entrevistas", nil],

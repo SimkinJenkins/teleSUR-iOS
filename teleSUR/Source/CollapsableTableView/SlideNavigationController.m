@@ -380,10 +380,8 @@ static SlideNavigationController *singletonInstance;
 }
 
 - (void) removeTopViewController {
-
     [self.topView.view removeFromSuperview];
     self.topView = nil;
-
 }
 
 
@@ -860,6 +858,7 @@ static SlideNavigationController *singletonInstance;
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleDefault;
     if ([self isMenuOpen]) {
         return UIStatusBarStyleLightContent;
     }

@@ -18,6 +18,8 @@
 @property (nonatomic, strong) UIPageControl *pager;
 @property (nonatomic, assign) CGRect hTableFrame;
 @property (nonatomic, assign) CGRect hPagerFrame;
+@property (nonatomic, assign) CGRect hTableCustomSize;
 @property (nonatomic, assign) uint hTableIndex;
+@property (nonatomic, assign) BOOL pagerHidden;
 
 @end

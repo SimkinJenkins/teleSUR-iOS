@@ -91,7 +91,6 @@
 		BC18AFB91AF0512000C3DAD3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BC9B8CC219C77D020033D34A /* AppDelegate.m */; };
 		BC18AFBA1AF0512000C3DAD3 /* LeftMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5637A619CA4EF600C10BCB /* LeftMenuViewController.m */; };
 		BC18AFBB1AF0512000C3DAD3 /* GTMNSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = BC56384819CA542900C10BCB /* GTMNSString+HTML.m */; };
-		BC18AFBC1AF0512000C3DAD3 /* SlideNavigationContorllerAnimatorScale.m in Sources */ = {isa = PBXBuildFile; fileRef = BC56378A19CA4EA800C10BCB /* SlideNavigationContorllerAnimatorScale.m */; };
 		BC18AFBD1AF0512000C3DAD3 /* TSDefaultVideoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC944C861AA93CCF00F9EB18 /* TSDefaultVideoCollectionViewCell.m */; };
 		BC18AFBE1AF0512000C3DAD3 /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = BCA7708819D4575C00A1CFBD /* UIView+WebCacheOperation.m */; };
 		BC18AFBF1AF0512000C3DAD3 /* TSIPadBlogHomeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC3024DD19DC830700298BED /* TSIPadBlogHomeCollectionViewCell.m */; };
@@ -149,15 +148,12 @@
 		BC18AFF41AF0512000C3DAD3 /* SDWebImageDownloaderOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = BCA7707519D4575C00A1CFBD /* SDWebImageDownloaderOperation.m */; };
 		BC18AFF51AF0512000C3DAD3 /* SDWebImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = BCA7707319D4575C00A1CFBD /* SDWebImageDownloader.m */; };
 		BC18AFF61AF0512000C3DAD3 /* TSBasicListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC8BA43219D09D1B0018BA0B /* TSBasicListViewController.m */; };
-		BC18AFF71AF0512000C3DAD3 /* SlideNavigationContorllerAnimatorSlideAndFade.m in Sources */ = {isa = PBXBuildFile; fileRef = BC56379019CA4EA800C10BCB /* SlideNavigationContorllerAnimatorSlideAndFade.m */; };
 		BC18AFF81AF0512000C3DAD3 /* TSReachabilityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC4524AA1A5D299600F4F3ED /* TSReachabilityViewController.m */; };
-		BC18AFF91AF0512000C3DAD3 /* SlideNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5637DC19CA4F8200C10BCB /* SlideNavigationController.m */; };
 		BC18AFFA1AF0512000C3DAD3 /* TSProgramListXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = BCDCADA61ABB6BBB007099AF /* TSProgramListXMLParser.m */; };
 		BC18AFFB1AF0512000C3DAD3 /* AcercaDeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5637AC19CA4F0000C10BCB /* AcercaDeViewController.m */; };
 		BC18AFFC1AF0512000C3DAD3 /* SDWebImageCompat.m in Sources */ = {isa = PBXBuildFile; fileRef = BCA7706F19D4575C00A1CFBD /* SDWebImageCompat.m */; };
 		BC18AFFD1AF0512000C3DAD3 /* NSDate_Utilidad.m in Sources */ = {isa = PBXBuildFile; fileRef = BC56385619CA547E00C10BCB /* NSDate_Utilidad.m */; };
 		BC18AFFE1AF0512000C3DAD3 /* CollapsableTableViewTapRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5637BF19CA4F4600C10BCB /* CollapsableTableViewTapRecognizer.m */; };
-		BC18AFFF1AF0512000C3DAD3 /* SlideNavigationContorllerAnimatorScaleAndFade.m in Sources */ = {isa = PBXBuildFile; fileRef = BC56378C19CA4EA800C10BCB /* SlideNavigationContorllerAnimatorScaleAndFade.m */; };
 		BC18B0001AF0512000C3DAD3 /* UIImageView+HighlightedWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = BCA7708419D4575C00A1CFBD /* UIImageView+HighlightedWebCache.m */; };
 		BC18B0011AF0512000C3DAD3 /* MWFeedItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BCA6A2AA19CCDA1E0021B243 /* MWFeedItem.m */; };
 		BC18B0021AF0512000C3DAD3 /* TSIPadHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC8BA43919D142730018BA0B /* TSIPadHomeViewController.m */; };
@@ -165,12 +161,10 @@
 		BC18B0041AF0512000C3DAD3 /* SDWebImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BCA7707719D4575C00A1CFBD /* SDWebImageManager.m */; };
 		BC18B0051AF0512000C3DAD3 /* TSDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = BCA6278E19FECBDC00B24198 /* TSDataRequest.m */; };
 		BC18B0061AF0512000C3DAD3 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = BC4524A31A5D28DC00F4F3ED /* Reachability.m */; };
-		BC18B0071AF0512000C3DAD3 /* SlideNavigationContorllerAnimatorFade.m in Sources */ = {isa = PBXBuildFile; fileRef = BC56378819CA4EA800C10BCB /* SlideNavigationContorllerAnimatorFade.m */; };
 		BC18B0081AF0512000C3DAD3 /* TSNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC56380319CA507C00C10BCB /* TSNewsViewController.m */; };
 		BC18B0091AF0512000C3DAD3 /* UIImage+WebP.m in Sources */ = {isa = PBXBuildFile; fileRef = BCA7708219D4575C00A1CFBD /* UIImage+WebP.m */; };
 		BC18B00A1AF0512000C3DAD3 /* UIButton+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = BCA7707C19D4575C00A1CFBD /* UIButton+WebCache.m */; };
 		BC18B00B1AF0512000C3DAD3 /* LoadMoreTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5638A319CA56A200C10BCB /* LoadMoreTableViewCell.m */; };
-		BC18B00C1AF0512000C3DAD3 /* SlideNavigationContorllerAnimatorSlide.m in Sources */ = {isa = PBXBuildFile; fileRef = BC56378E19CA4EA800C10BCB /* SlideNavigationContorllerAnimatorSlide.m */; };
 		BC18B00D1AF0512000C3DAD3 /* TSIpadBasicDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6B09FB1A51F1CE00077A12 /* TSIpadBasicDetailViewController.m */; };
 		BC18B00E1AF0512000C3DAD3 /* RFQuiltLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = BC8BA3AC19CFF5270018BA0B /* RFQuiltLayout.m */; };
 		BC18B00F1AF0512000C3DAD3 /* VideoDetailCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC15AD961A0B7BCC00D9F442 /* VideoDetailCellView.m */; };
@@ -361,7 +355,6 @@
 		BC18B0CB1AF0512000C3DAD3 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCE31E4C1AF041B3002ADAA9 /* MainStoryboard_iPhone.storyboard */; };
 		BC18B0CC1AF0512000C3DAD3 /* ipad-noticias@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BC8BA3CC19D07E5D0018BA0B /* ipad-noticias@2x.png */; };
 		BC18B0CD1AF0512000C3DAD3 /* ipad-blog.png in Resources */ = {isa = PBXBuildFile; fileRef = BC8BA3C319D07E5D0018BA0B /* ipad-blog.png */; };
-		BC18B0CE1AF0512000C3DAD3 /* menu-button.png in Resources */ = {isa = PBXBuildFile; fileRef = BC9B8CC719C7851D0033D34A /* menu-button.png */; };
 		BC18B0CF1AF0512000C3DAD3 /* videos-bullet.png in Resources */ = {isa = PBXBuildFile; fileRef = BCEDABC41A60B18B0059C357 /* videos-bullet.png */; };
 		BC18B0D01AF0512000C3DAD3 /* player-playback-status@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BC4ADC701AA4E8A100C54860 /* player-playback-status@2x.png */; };
 		BC18B0D11AF0512000C3DAD3 /* Roboto-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BC56399719CA57F700C10BCB /* Roboto-LightItalic.ttf */; };
@@ -371,7 +364,6 @@
 		BC18B0D51AF0512000C3DAD3 /* ipad-config@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCDCADB61ABBAE84007099AF /* ipad-config@2x.png */; };
 		BC18B0D61AF0512000C3DAD3 /* SinImagen.png in Resources */ = {isa = PBXBuildFile; fileRef = BCF294E219CCD395007EEE84 /* SinImagen.png */; };
 		BC18B0D71AF0512000C3DAD3 /* config@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCCA68EC1A97F494006604DB /* config@2x.png */; };
-		BC18B0D81AF0512000C3DAD3 /* menu-button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BC5637E819CA501600C10BCB /* menu-button@2x.png */; };
 		BC18B0D91AF0512000C3DAD3 /* ipad-buscar.png in Resources */ = {isa = PBXBuildFile; fileRef = BC8BA3C519D07E5D0018BA0B /* ipad-buscar.png */; };
 		BC18B0DA1AF0512000C3DAD3 /* ipad-acerca@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BC8BA3C219D07E5D0018BA0B /* ipad-acerca@2x.png */; };
 		BC18B0DB1AF0512000C3DAD3 /* logo-menu-header@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCEDAC121A6861720059C357 /* logo-menu-header@3x.png */; };
@@ -567,26 +559,6 @@
 		BC54B22E1C74DAE5001566EB /* UIViewController+TSDataMG.m in Sources */ = {isa = PBXBuildFile; fileRef = BC54B22B1C74DAE5001566EB /* UIViewController+TSDataMG.m */; };
 		BC54B22F1C74DAE5001566EB /* UIViewController+TSDataMG.m in Sources */ = {isa = PBXBuildFile; fileRef = BC54B22B1C74DAE5001566EB /* UIViewController+TSDataMG.m */; };
 		BC54B2301C74DAE5001566EB /* UIViewController+TSDataMG.m in Sources */ = {isa = PBXBuildFile; fileRef = BC54B22B1C74DAE5001566EB /* UIViewController+TSDataMG.m */; };
-		BC56379119CA4EA800C10BCB /* SlideNavigationContorllerAnimatorFade.m in Sources */ = {isa = PBXBuildFile; fileRef = BC56378819CA4EA800C10BCB /* SlideNavigationContorllerAnimatorFade.m */; };
-		BC56379219CA4EA800C10BCB /* SlideNavigationContorllerAnimatorFade.m in Sources */ = {isa = PBXBuildFile; fileRef = BC56378819CA4EA800C10BCB /* SlideNavigationContorllerAnimatorFade.m */; };
-		BC56379319CA4EA800C10BCB /* SlideNavigationContorllerAnimatorFade.m in Sources */ = {isa = PBXBuildFile; fileRef = BC56378819CA4EA800C10BCB /* SlideNavigationContorllerAnimatorFade.m */; };
-		BC56379419CA4EA800C10BCB /* SlideNavigationContorllerAnimatorFade.m in Sources */ = {isa = PBXBuildFile; fileRef = BC56378819CA4EA800C10BCB /* SlideNavigationContorllerAnimatorFade.m */; };
-		BC56379519CA4EA800C10BCB /* SlideNavigationContorllerAnimatorScale.m in Sources */ = {isa = PBXBuildFile; fileRef = BC56378A19CA4EA800C10BCB /* SlideNavigationContorllerAnimatorScale.m */; };
-		BC56379619CA4EA800C10BCB /* SlideNavigationContorllerAnimatorScale.m in Sources */ = {isa = PBXBuildFile; fileRef = BC56378A19CA4EA800C10BCB /* SlideNavigationContorllerAnimatorScale.m */; };
-		BC56379719CA4EA800C10BCB /* SlideNavigationContorllerAnimatorScale.m in Sources */ = {isa = PBXBuildFile; fileRef = BC56378A19CA4EA800C10BCB /* SlideNavigationContorllerAnimatorScale.m */; };
-		BC56379819CA4EA800C10BCB /* SlideNavigationContorllerAnimatorScale.m in Sources */ = {isa = PBXBuildFile; fileRef = BC56378A19CA4EA800C10BCB /* SlideNavigationContorllerAnimatorScale.m */; };
-		BC56379919CA4EA800C10BCB /* SlideNavigationContorllerAnimatorScaleAndFade.m in Sources */ = {isa = PBXBuildFile; fileRef = BC56378C19CA4EA800C10BCB /* SlideNavigationContorllerAnimatorScaleAndFade.m */; };
-		BC56379A19CA4EA800C10BCB /* SlideNavigationContorllerAnimatorScaleAndFade.m in Sources */ = {isa = PBXBuildFile; fileRef = BC56378C19CA4EA800C10BCB /* SlideNavigationContorllerAnimatorScaleAndFade.m */; };
-		BC56379B19CA4EA800C10BCB /* SlideNavigationContorllerAnimatorScaleAndFade.m in Sources */ = {isa = PBXBuildFile; fileRef = BC56378C19CA4EA800C10BCB /* SlideNavigationContorllerAnimatorScaleAndFade.m */; };
-		BC56379C19CA4EA800C10BCB /* SlideNavigationContorllerAnimatorScaleAndFade.m in Sources */ = {isa = PBXBuildFile; fileRef = BC56378C19CA4EA800C10BCB /* SlideNavigationContorllerAnimatorScaleAndFade.m */; };
-		BC56379D19CA4EA800C10BCB /* SlideNavigationContorllerAnimatorSlide.m in Sources */ = {isa = PBXBuildFile; fileRef = BC56378E19CA4EA800C10BCB /* SlideNavigationContorllerAnimatorSlide.m */; };
-		BC56379E19CA4EA800C10BCB /* SlideNavigationContorllerAnimatorSlide.m in Sources */ = {isa = PBXBuildFile; fileRef = BC56378E19CA4EA800C10BCB /* SlideNavigationContorllerAnimatorSlide.m */; };
-		BC56379F19CA4EA800C10BCB /* SlideNavigationContorllerAnimatorSlide.m in Sources */ = {isa = PBXBuildFile; fileRef = BC56378E19CA4EA800C10BCB /* SlideNavigationContorllerAnimatorSlide.m */; };
-		BC5637A019CA4EA800C10BCB /* SlideNavigationContorllerAnimatorSlide.m in Sources */ = {isa = PBXBuildFile; fileRef = BC56378E19CA4EA800C10BCB /* SlideNavigationContorllerAnimatorSlide.m */; };
-		BC5637A119CA4EA800C10BCB /* SlideNavigationContorllerAnimatorSlideAndFade.m in Sources */ = {isa = PBXBuildFile; fileRef = BC56379019CA4EA800C10BCB /* SlideNavigationContorllerAnimatorSlideAndFade.m */; };
-		BC5637A219CA4EA800C10BCB /* SlideNavigationContorllerAnimatorSlideAndFade.m in Sources */ = {isa = PBXBuildFile; fileRef = BC56379019CA4EA800C10BCB /* SlideNavigationContorllerAnimatorSlideAndFade.m */; };
-		BC5637A319CA4EA800C10BCB /* SlideNavigationContorllerAnimatorSlideAndFade.m in Sources */ = {isa = PBXBuildFile; fileRef = BC56379019CA4EA800C10BCB /* SlideNavigationContorllerAnimatorSlideAndFade.m */; };
-		BC5637A419CA4EA800C10BCB /* SlideNavigationContorllerAnimatorSlideAndFade.m in Sources */ = {isa = PBXBuildFile; fileRef = BC56379019CA4EA800C10BCB /* SlideNavigationContorllerAnimatorSlideAndFade.m */; };
 		BC5637A719CA4EF600C10BCB /* LeftMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5637A619CA4EF600C10BCB /* LeftMenuViewController.m */; };
 		BC5637A819CA4EF600C10BCB /* LeftMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5637A619CA4EF600C10BCB /* LeftMenuViewController.m */; };
 		BC5637A919CA4EF600C10BCB /* LeftMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5637A619CA4EF600C10BCB /* LeftMenuViewController.m */; };
@@ -619,19 +591,10 @@
 		BC5637D819CA4F6C00C10BCB /* plaintableheader.png in Resources */ = {isa = PBXBuildFile; fileRef = BC5637D619CA4F6C00C10BCB /* plaintableheader.png */; };
 		BC5637D919CA4F6C00C10BCB /* plaintableheader.png in Resources */ = {isa = PBXBuildFile; fileRef = BC5637D619CA4F6C00C10BCB /* plaintableheader.png */; };
 		BC5637DA19CA4F6C00C10BCB /* plaintableheader.png in Resources */ = {isa = PBXBuildFile; fileRef = BC5637D619CA4F6C00C10BCB /* plaintableheader.png */; };
-		BC5637DD19CA4F8200C10BCB /* SlideNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5637DC19CA4F8200C10BCB /* SlideNavigationController.m */; };
-		BC5637DE19CA4F8200C10BCB /* SlideNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5637DC19CA4F8200C10BCB /* SlideNavigationController.m */; };
-		BC5637DF19CA4F8200C10BCB /* SlideNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5637DC19CA4F8200C10BCB /* SlideNavigationController.m */; };
-		BC5637E019CA4F8200C10BCB /* SlideNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5637DC19CA4F8200C10BCB /* SlideNavigationController.m */; };
 		BC5637E319CA4FD700C10BCB /* HiddenVideoPlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5637E219CA4FD700C10BCB /* HiddenVideoPlayerController.m */; };
 		BC5637E419CA4FD700C10BCB /* HiddenVideoPlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5637E219CA4FD700C10BCB /* HiddenVideoPlayerController.m */; };
 		BC5637E519CA4FD700C10BCB /* HiddenVideoPlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5637E219CA4FD700C10BCB /* HiddenVideoPlayerController.m */; };
 		BC5637E619CA4FD700C10BCB /* HiddenVideoPlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5637E219CA4FD700C10BCB /* HiddenVideoPlayerController.m */; };
-		BC5637EA19CA501600C10BCB /* menu-button.png in Resources */ = {isa = PBXBuildFile; fileRef = BC5637E719CA501600C10BCB /* menu-button.png */; };
-		BC5637ED19CA501600C10BCB /* menu-button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BC5637E819CA501600C10BCB /* menu-button@2x.png */; };
-		BC5637EE19CA501600C10BCB /* menu-button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BC5637E819CA501600C10BCB /* menu-button@2x.png */; };
-		BC5637EF19CA501600C10BCB /* menu-button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BC5637E819CA501600C10BCB /* menu-button@2x.png */; };
-		BC5637F019CA501600C10BCB /* menu-button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BC5637E819CA501600C10BCB /* menu-button@2x.png */; };
 		BC5637F519CA504B00C10BCB /* TSClipDetallesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5637F219CA504B00C10BCB /* TSClipDetallesViewController.m */; };
 		BC5637F619CA504B00C10BCB /* TSClipDetallesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5637F219CA504B00C10BCB /* TSClipDetallesViewController.m */; };
 		BC5637F719CA504B00C10BCB /* TSClipDetallesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5637F219CA504B00C10BCB /* TSClipDetallesViewController.m */; };
@@ -1073,9 +1036,6 @@
 		BC9833841A34AA540034BE27 /* UIViewController+TSClipDownload.m in Sources */ = {isa = PBXBuildFile; fileRef = BC9833801A34AA540034BE27 /* UIViewController+TSClipDownload.m */; };
 		BC9B8CC319C77D020033D34A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BC9B8CC219C77D020033D34A /* AppDelegate.m */; };
 		BC9B8CC519C77D020033D34A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BC9B8CC219C77D020033D34A /* AppDelegate.m */; };
-		BC9B8CC919C7851D0033D34A /* menu-button.png in Resources */ = {isa = PBXBuildFile; fileRef = BC9B8CC719C7851D0033D34A /* menu-button.png */; };
-		BC9B8CCB19C7851D0033D34A /* menu-button.png in Resources */ = {isa = PBXBuildFile; fileRef = BC9B8CC719C7851D0033D34A /* menu-button.png */; };
-		BC9B8CCC19C7851D0033D34A /* menu-button.png in Resources */ = {isa = PBXBuildFile; fileRef = BC9B8CC719C7851D0033D34A /* menu-button.png */; };
 		BC9CAAD71AC10741008103A0 /* MultimediaAPPDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BC9CAAD51AC10741008103A0 /* MultimediaAPPDelegate.m */; };
 		BC9CAAD91AC10741008103A0 /* MultimediaAPPDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BC9CAAD51AC10741008103A0 /* MultimediaAPPDelegate.m */; };
 		BC9D36D919DB2151009D09A8 /* TSIPadVideoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC9D36D819DB2151009D09A8 /* TSIPadVideoDetailViewController.m */; };
@@ -1330,6 +1290,21 @@
 		BCA770C819D4575D00A1CFBD /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = BCA7708819D4575C00A1CFBD /* UIView+WebCacheOperation.m */; };
 		BCA770CA19D459F600A1CFBD /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCA770C919D459F600A1CFBD /* ImageIO.framework */; };
 		BCA770CC19D45A2000A1CFBD /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCA770CB19D45A2000A1CFBD /* MapKit.framework */; };
+		BCA7BD201CC2E16E00BE2FAB /* VideoHomeHighlightedTebleViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCA7BD1F1CC2E16E00BE2FAB /* VideoHomeHighlightedTebleViewCell.xib */; };
+		BCA7BD211CC2E16E00BE2FAB /* VideoHomeHighlightedTebleViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCA7BD1F1CC2E16E00BE2FAB /* VideoHomeHighlightedTebleViewCell.xib */; };
+		BCA7BD221CC2E16E00BE2FAB /* VideoHomeHighlightedTebleViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCA7BD1F1CC2E16E00BE2FAB /* VideoHomeHighlightedTebleViewCell.xib */; };
+		BCA7BD231CC2E16E00BE2FAB /* VideoHomeHighlightedTebleViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCA7BD1F1CC2E16E00BE2FAB /* VideoHomeHighlightedTebleViewCell.xib */; };
+		BCA7BD241CC2E16E00BE2FAB /* VideoHomeHighlightedTebleViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCA7BD1F1CC2E16E00BE2FAB /* VideoHomeHighlightedTebleViewCell.xib */; };
+		BCA7BD261CC2FD6000BE2FAB /* VideoHomeBasicTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCA7BD251CC2FD6000BE2FAB /* VideoHomeBasicTableViewCell.xib */; };
+		BCA7BD271CC2FD6000BE2FAB /* VideoHomeBasicTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCA7BD251CC2FD6000BE2FAB /* VideoHomeBasicTableViewCell.xib */; };
+		BCA7BD281CC2FD6000BE2FAB /* VideoHomeBasicTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCA7BD251CC2FD6000BE2FAB /* VideoHomeBasicTableViewCell.xib */; };
+		BCA7BD291CC2FD6000BE2FAB /* VideoHomeBasicTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCA7BD251CC2FD6000BE2FAB /* VideoHomeBasicTableViewCell.xib */; };
+		BCA7BD2A1CC2FD6000BE2FAB /* VideoHomeBasicTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCA7BD251CC2FD6000BE2FAB /* VideoHomeBasicTableViewCell.xib */; };
+		BCA7BD341CC7E06700BE2FAB /* TSTextNewsHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCA7BD331CC7E06700BE2FAB /* TSTextNewsHomeViewController.m */; };
+		BCA7BD351CC7E06700BE2FAB /* TSTextNewsHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCA7BD331CC7E06700BE2FAB /* TSTextNewsHomeViewController.m */; };
+		BCA7BD361CC7E06700BE2FAB /* TSTextNewsHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCA7BD331CC7E06700BE2FAB /* TSTextNewsHomeViewController.m */; };
+		BCA7BD371CC7E06700BE2FAB /* TSTextNewsHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCA7BD331CC7E06700BE2FAB /* TSTextNewsHomeViewController.m */; };
+		BCA7BD381CC7E06700BE2FAB /* TSTextNewsHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCA7BD331CC7E06700BE2FAB /* TSTextNewsHomeViewController.m */; };
 		BCAB99691A35938F002E4F41 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCAB99681A35938F002E4F41 /* AssetsLibrary.framework */; };
 		BCBC3C8819F059F100C3379F /* icon22.png in Resources */ = {isa = PBXBuildFile; fileRef = BCBC3C7819F059F100C3379F /* icon22.png */; };
 		BCBC3C8919F059F100C3379F /* icon22.png in Resources */ = {isa = PBXBuildFile; fileRef = BCBC3C7819F059F100C3379F /* icon22.png */; };
@@ -1447,6 +1422,38 @@
 		BCC464EF1AF9FC4400543591 /* player-repeat-highlighted@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCC464E21AF9FC4300543591 /* player-repeat-highlighted@3x.png */; };
 		BCC464F01AF9FC4400543591 /* player-repeat-highlighted@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCC464E21AF9FC4300543591 /* player-repeat-highlighted@3x.png */; };
 		BCC464F11AF9FC4400543591 /* player-repeat-highlighted@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCC464E21AF9FC4300543591 /* player-repeat-highlighted@3x.png */; };
+		BCC635871CA235AB00A83A3A /* highlighted-color-shadow-bis@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCC635851CA235AB00A83A3A /* highlighted-color-shadow-bis@2x.png */; };
+		BCC635881CA235AB00A83A3A /* highlighted-color-shadow-bis@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCC635861CA235AB00A83A3A /* highlighted-color-shadow-bis@3x.png */; };
+		BCC6358A1CA23E3200A83A3A /* PTF55F.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BCC635891CA23E3200A83A3A /* PTF55F.ttf */; };
+		BCC6358B1CA23E3200A83A3A /* PTF55F.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BCC635891CA23E3200A83A3A /* PTF55F.ttf */; };
+		BCC6358C1CA23E3200A83A3A /* PTF55F.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BCC635891CA23E3200A83A3A /* PTF55F.ttf */; };
+		BCC6358D1CA23E3200A83A3A /* PTF55F.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BCC635891CA23E3200A83A3A /* PTF55F.ttf */; };
+		BCC6358E1CA23E3200A83A3A /* PTF55F.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BCC635891CA23E3200A83A3A /* PTF55F.ttf */; };
+		BCC635901CA2412500A83A3A /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BCC6358F1CA2412500A83A3A /* OpenSans-Bold.ttf */; };
+		BCC635911CA2412500A83A3A /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BCC6358F1CA2412500A83A3A /* OpenSans-Bold.ttf */; };
+		BCC635921CA2412500A83A3A /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BCC6358F1CA2412500A83A3A /* OpenSans-Bold.ttf */; };
+		BCC635931CA2412500A83A3A /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BCC6358F1CA2412500A83A3A /* OpenSans-Bold.ttf */; };
+		BCC635941CA2412500A83A3A /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BCC6358F1CA2412500A83A3A /* OpenSans-Bold.ttf */; };
+		BCC635981CA2A1E800A83A3A /* TSiPhoneNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC635971CA2A1E800A83A3A /* TSiPhoneNavigationController.m */; };
+		BCC635991CA2A1E800A83A3A /* TSiPhoneNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC635971CA2A1E800A83A3A /* TSiPhoneNavigationController.m */; };
+		BCC6359A1CA2A1E800A83A3A /* TSiPhoneNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC635971CA2A1E800A83A3A /* TSiPhoneNavigationController.m */; };
+		BCC6359B1CA2A1E800A83A3A /* TSiPhoneNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC635971CA2A1E800A83A3A /* TSiPhoneNavigationController.m */; };
+		BCC6359C1CA2A1E800A83A3A /* TSiPhoneNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC635971CA2A1E800A83A3A /* TSiPhoneNavigationController.m */; };
+		BCC6359F1CA2A29200A83A3A /* TSiPhoneNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC6359E1CA2A29200A83A3A /* TSiPhoneNavigationBar.m */; };
+		BCC635A01CA2A29200A83A3A /* TSiPhoneNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC6359E1CA2A29200A83A3A /* TSiPhoneNavigationBar.m */; };
+		BCC635A11CA2A29200A83A3A /* TSiPhoneNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC6359E1CA2A29200A83A3A /* TSiPhoneNavigationBar.m */; };
+		BCC635A21CA2A29200A83A3A /* TSiPhoneNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC6359E1CA2A29200A83A3A /* TSiPhoneNavigationBar.m */; };
+		BCC635A31CA2A29200A83A3A /* TSiPhoneNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC6359E1CA2A29200A83A3A /* TSiPhoneNavigationBar.m */; };
+		BCC635A61CA2A5D400A83A3A /* KABasicDoubleCellData.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC635A51CA2A5D400A83A3A /* KABasicDoubleCellData.m */; };
+		BCC635A71CA2A5D400A83A3A /* KABasicDoubleCellData.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC635A51CA2A5D400A83A3A /* KABasicDoubleCellData.m */; };
+		BCC635A81CA2A5D400A83A3A /* KABasicDoubleCellData.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC635A51CA2A5D400A83A3A /* KABasicDoubleCellData.m */; };
+		BCC635A91CA2A5D400A83A3A /* KABasicDoubleCellData.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC635A51CA2A5D400A83A3A /* KABasicDoubleCellData.m */; };
+		BCC635AA1CA2A5D400A83A3A /* KABasicDoubleCellData.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC635A51CA2A5D400A83A3A /* KABasicDoubleCellData.m */; };
+		BCC635AC1CA2A69900A83A3A /* HomeDoubleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCC635AB1CA2A69900A83A3A /* HomeDoubleTableViewCell.xib */; };
+		BCC635AD1CA2A69900A83A3A /* HomeDoubleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCC635AB1CA2A69900A83A3A /* HomeDoubleTableViewCell.xib */; };
+		BCC635AE1CA2A69900A83A3A /* HomeDoubleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCC635AB1CA2A69900A83A3A /* HomeDoubleTableViewCell.xib */; };
+		BCC635AF1CA2A69900A83A3A /* HomeDoubleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCC635AB1CA2A69900A83A3A /* HomeDoubleTableViewCell.xib */; };
+		BCC635B01CA2A69900A83A3A /* HomeDoubleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCC635AB1CA2A69900A83A3A /* HomeDoubleTableViewCell.xib */; };
 		BCCA68E81A97D57B006604DB /* TSConfigurationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCCA68E71A97D57B006604DB /* TSConfigurationTableViewController.m */; };
 		BCCA68EA1A97D5E9006604DB /* TSSwitchViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCCA68E91A97D5E9006604DB /* TSSwitchViewCell.xib */; };
 		BCCA68EE1A97F494006604DB /* config.png in Resources */ = {isa = PBXBuildFile; fileRef = BCCA68EB1A97F494006604DB /* config.png */; };
@@ -1476,6 +1483,65 @@
 		BCCF7ADA1C97715300859084 /* TSUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = BCCF7AD71C97715300859084 /* TSUtils.m */; };
 		BCCF7ADB1C97715300859084 /* TSUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = BCCF7AD71C97715300859084 /* TSUtils.m */; };
 		BCCF7ADC1C97715300859084 /* TSUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = BCCF7AD71C97715300859084 /* TSUtils.m */; };
+		BCCF7BDD1C98BC9500859084 /* SlideNavigationContorllerAnimatorFade.m in Sources */ = {isa = PBXBuildFile; fileRef = BCCF7BCC1C98BC9500859084 /* SlideNavigationContorllerAnimatorFade.m */; };
+		BCCF7BDE1C98BC9500859084 /* SlideNavigationContorllerAnimatorFade.m in Sources */ = {isa = PBXBuildFile; fileRef = BCCF7BCC1C98BC9500859084 /* SlideNavigationContorllerAnimatorFade.m */; };
+		BCCF7BDF1C98BC9500859084 /* SlideNavigationContorllerAnimatorFade.m in Sources */ = {isa = PBXBuildFile; fileRef = BCCF7BCC1C98BC9500859084 /* SlideNavigationContorllerAnimatorFade.m */; };
+		BCCF7BE01C98BC9500859084 /* SlideNavigationContorllerAnimatorFade.m in Sources */ = {isa = PBXBuildFile; fileRef = BCCF7BCC1C98BC9500859084 /* SlideNavigationContorllerAnimatorFade.m */; };
+		BCCF7BE11C98BC9500859084 /* SlideNavigationContorllerAnimatorFade.m in Sources */ = {isa = PBXBuildFile; fileRef = BCCF7BCC1C98BC9500859084 /* SlideNavigationContorllerAnimatorFade.m */; };
+		BCCF7BE21C98BC9500859084 /* SlideNavigationContorllerAnimatorScale.m in Sources */ = {isa = PBXBuildFile; fileRef = BCCF7BCE1C98BC9500859084 /* SlideNavigationContorllerAnimatorScale.m */; };
+		BCCF7BE31C98BC9500859084 /* SlideNavigationContorllerAnimatorScale.m in Sources */ = {isa = PBXBuildFile; fileRef = BCCF7BCE1C98BC9500859084 /* SlideNavigationContorllerAnimatorScale.m */; };
+		BCCF7BE41C98BC9500859084 /* SlideNavigationContorllerAnimatorScale.m in Sources */ = {isa = PBXBuildFile; fileRef = BCCF7BCE1C98BC9500859084 /* SlideNavigationContorllerAnimatorScale.m */; };
+		BCCF7BE51C98BC9500859084 /* SlideNavigationContorllerAnimatorScale.m in Sources */ = {isa = PBXBuildFile; fileRef = BCCF7BCE1C98BC9500859084 /* SlideNavigationContorllerAnimatorScale.m */; };
+		BCCF7BE61C98BC9500859084 /* SlideNavigationContorllerAnimatorScale.m in Sources */ = {isa = PBXBuildFile; fileRef = BCCF7BCE1C98BC9500859084 /* SlideNavigationContorllerAnimatorScale.m */; };
+		BCCF7BE71C98BC9500859084 /* SlideNavigationContorllerAnimatorScaleAndFade.m in Sources */ = {isa = PBXBuildFile; fileRef = BCCF7BD01C98BC9500859084 /* SlideNavigationContorllerAnimatorScaleAndFade.m */; };
+		BCCF7BE81C98BC9500859084 /* SlideNavigationContorllerAnimatorScaleAndFade.m in Sources */ = {isa = PBXBuildFile; fileRef = BCCF7BD01C98BC9500859084 /* SlideNavigationContorllerAnimatorScaleAndFade.m */; };
+		BCCF7BE91C98BC9500859084 /* SlideNavigationContorllerAnimatorScaleAndFade.m in Sources */ = {isa = PBXBuildFile; fileRef = BCCF7BD01C98BC9500859084 /* SlideNavigationContorllerAnimatorScaleAndFade.m */; };
+		BCCF7BEA1C98BC9500859084 /* SlideNavigationContorllerAnimatorScaleAndFade.m in Sources */ = {isa = PBXBuildFile; fileRef = BCCF7BD01C98BC9500859084 /* SlideNavigationContorllerAnimatorScaleAndFade.m */; };
+		BCCF7BEB1C98BC9500859084 /* SlideNavigationContorllerAnimatorScaleAndFade.m in Sources */ = {isa = PBXBuildFile; fileRef = BCCF7BD01C98BC9500859084 /* SlideNavigationContorllerAnimatorScaleAndFade.m */; };
+		BCCF7BED1C98BC9500859084 /* SlideNavigationContorllerAnimatorScaleSlideAndFade.m in Sources */ = {isa = PBXBuildFile; fileRef = BCCF7BD21C98BC9500859084 /* SlideNavigationContorllerAnimatorScaleSlideAndFade.m */; };
+		BCCF7BEE1C98BC9500859084 /* SlideNavigationContorllerAnimatorScaleSlideAndFade.m in Sources */ = {isa = PBXBuildFile; fileRef = BCCF7BD21C98BC9500859084 /* SlideNavigationContorllerAnimatorScaleSlideAndFade.m */; };
+		BCCF7BEF1C98BC9500859084 /* SlideNavigationContorllerAnimatorScaleSlideAndFade.m in Sources */ = {isa = PBXBuildFile; fileRef = BCCF7BD21C98BC9500859084 /* SlideNavigationContorllerAnimatorScaleSlideAndFade.m */; };
+		BCCF7BF01C98BC9500859084 /* SlideNavigationContorllerAnimatorScaleSlideAndFade.m in Sources */ = {isa = PBXBuildFile; fileRef = BCCF7BD21C98BC9500859084 /* SlideNavigationContorllerAnimatorScaleSlideAndFade.m */; };
+		BCCF7BF11C98BC9500859084 /* SlideNavigationContorllerAnimatorSlide.m in Sources */ = {isa = PBXBuildFile; fileRef = BCCF7BD41C98BC9500859084 /* SlideNavigationContorllerAnimatorSlide.m */; };
+		BCCF7BF21C98BC9500859084 /* SlideNavigationContorllerAnimatorSlide.m in Sources */ = {isa = PBXBuildFile; fileRef = BCCF7BD41C98BC9500859084 /* SlideNavigationContorllerAnimatorSlide.m */; };
+		BCCF7BF31C98BC9500859084 /* SlideNavigationContorllerAnimatorSlide.m in Sources */ = {isa = PBXBuildFile; fileRef = BCCF7BD41C98BC9500859084 /* SlideNavigationContorllerAnimatorSlide.m */; };
+		BCCF7BF41C98BC9500859084 /* SlideNavigationContorllerAnimatorSlide.m in Sources */ = {isa = PBXBuildFile; fileRef = BCCF7BD41C98BC9500859084 /* SlideNavigationContorllerAnimatorSlide.m */; };
+		BCCF7BF51C98BC9500859084 /* SlideNavigationContorllerAnimatorSlide.m in Sources */ = {isa = PBXBuildFile; fileRef = BCCF7BD41C98BC9500859084 /* SlideNavigationContorllerAnimatorSlide.m */; };
+		BCCF7BF61C98BC9500859084 /* SlideNavigationContorllerAnimatorSlideAndFade.m in Sources */ = {isa = PBXBuildFile; fileRef = BCCF7BD61C98BC9500859084 /* SlideNavigationContorllerAnimatorSlideAndFade.m */; };
+		BCCF7BF71C98BC9500859084 /* SlideNavigationContorllerAnimatorSlideAndFade.m in Sources */ = {isa = PBXBuildFile; fileRef = BCCF7BD61C98BC9500859084 /* SlideNavigationContorllerAnimatorSlideAndFade.m */; };
+		BCCF7BF81C98BC9500859084 /* SlideNavigationContorllerAnimatorSlideAndFade.m in Sources */ = {isa = PBXBuildFile; fileRef = BCCF7BD61C98BC9500859084 /* SlideNavigationContorllerAnimatorSlideAndFade.m */; };
+		BCCF7BF91C98BC9500859084 /* SlideNavigationContorllerAnimatorSlideAndFade.m in Sources */ = {isa = PBXBuildFile; fileRef = BCCF7BD61C98BC9500859084 /* SlideNavigationContorllerAnimatorSlideAndFade.m */; };
+		BCCF7BFA1C98BC9500859084 /* SlideNavigationContorllerAnimatorSlideAndFade.m in Sources */ = {isa = PBXBuildFile; fileRef = BCCF7BD61C98BC9500859084 /* SlideNavigationContorllerAnimatorSlideAndFade.m */; };
+		BCCF7BFB1C98BC9500859084 /* menu-button.png in Resources */ = {isa = PBXBuildFile; fileRef = BCCF7BD81C98BC9500859084 /* menu-button.png */; };
+		BCCF7BFC1C98BC9500859084 /* menu-button.png in Resources */ = {isa = PBXBuildFile; fileRef = BCCF7BD81C98BC9500859084 /* menu-button.png */; };
+		BCCF7BFD1C98BC9500859084 /* menu-button.png in Resources */ = {isa = PBXBuildFile; fileRef = BCCF7BD81C98BC9500859084 /* menu-button.png */; };
+		BCCF7BFE1C98BC9500859084 /* menu-button.png in Resources */ = {isa = PBXBuildFile; fileRef = BCCF7BD81C98BC9500859084 /* menu-button.png */; };
+		BCCF7BFF1C98BC9500859084 /* menu-button.png in Resources */ = {isa = PBXBuildFile; fileRef = BCCF7BD81C98BC9500859084 /* menu-button.png */; };
+		BCCF7C001C98BC9500859084 /* menu-button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCCF7BD91C98BC9500859084 /* menu-button@2x.png */; };
+		BCCF7C011C98BC9500859084 /* menu-button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCCF7BD91C98BC9500859084 /* menu-button@2x.png */; };
+		BCCF7C021C98BC9500859084 /* menu-button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCCF7BD91C98BC9500859084 /* menu-button@2x.png */; };
+		BCCF7C031C98BC9500859084 /* menu-button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCCF7BD91C98BC9500859084 /* menu-button@2x.png */; };
+		BCCF7C041C98BC9500859084 /* menu-button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCCF7BD91C98BC9500859084 /* menu-button@2x.png */; };
+		BCCF7C051C98BC9500859084 /* plaintableheader.png in Resources */ = {isa = PBXBuildFile; fileRef = BCCF7BDA1C98BC9500859084 /* plaintableheader.png */; };
+		BCCF7C061C98BC9500859084 /* plaintableheader.png in Resources */ = {isa = PBXBuildFile; fileRef = BCCF7BDA1C98BC9500859084 /* plaintableheader.png */; };
+		BCCF7C071C98BC9500859084 /* plaintableheader.png in Resources */ = {isa = PBXBuildFile; fileRef = BCCF7BDA1C98BC9500859084 /* plaintableheader.png */; };
+		BCCF7C081C98BC9500859084 /* plaintableheader.png in Resources */ = {isa = PBXBuildFile; fileRef = BCCF7BDA1C98BC9500859084 /* plaintableheader.png */; };
+		BCCF7C091C98BC9500859084 /* plaintableheader.png in Resources */ = {isa = PBXBuildFile; fileRef = BCCF7BDA1C98BC9500859084 /* plaintableheader.png */; };
+		BCCF7C0A1C98BC9500859084 /* SlideNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCCF7BDC1C98BC9500859084 /* SlideNavigationController.m */; };
+		BCCF7C0B1C98BC9500859084 /* SlideNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCCF7BDC1C98BC9500859084 /* SlideNavigationController.m */; };
+		BCCF7C0C1C98BC9500859084 /* SlideNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCCF7BDC1C98BC9500859084 /* SlideNavigationController.m */; };
+		BCCF7C0D1C98BC9500859084 /* SlideNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCCF7BDC1C98BC9500859084 /* SlideNavigationController.m */; };
+		BCCF7C0E1C98BC9500859084 /* SlideNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCCF7BDC1C98BC9500859084 /* SlideNavigationController.m */; };
+		BCCF7C1B1C9B8C2500859084 /* highlighted-color-shadow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCCF7C191C9B8C2400859084 /* highlighted-color-shadow@2x.png */; };
+		BCCF7C1C1C9B8C2500859084 /* highlighted-color-shadow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCCF7C191C9B8C2400859084 /* highlighted-color-shadow@2x.png */; };
+		BCCF7C1D1C9B8C2500859084 /* highlighted-color-shadow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCCF7C191C9B8C2400859084 /* highlighted-color-shadow@2x.png */; };
+		BCCF7C1E1C9B8C2600859084 /* highlighted-color-shadow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCCF7C191C9B8C2400859084 /* highlighted-color-shadow@2x.png */; };
+		BCCF7C1F1C9B8C2600859084 /* highlighted-color-shadow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCCF7C191C9B8C2400859084 /* highlighted-color-shadow@2x.png */; };
+		BCCF7C201C9B8C2600859084 /* highlighted-color-shadow@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCCF7C1A1C9B8C2400859084 /* highlighted-color-shadow@3x.png */; };
+		BCCF7C211C9B8C2600859084 /* highlighted-color-shadow@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCCF7C1A1C9B8C2400859084 /* highlighted-color-shadow@3x.png */; };
+		BCCF7C221C9B8C2600859084 /* highlighted-color-shadow@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCCF7C1A1C9B8C2400859084 /* highlighted-color-shadow@3x.png */; };
+		BCCF7C231C9B8C2600859084 /* highlighted-color-shadow@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCCF7C1A1C9B8C2400859084 /* highlighted-color-shadow@3x.png */; };
+		BCCF7C241C9B8C2600859084 /* highlighted-color-shadow@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCCF7C1A1C9B8C2400859084 /* highlighted-color-shadow@3x.png */; };
 		BCD44FFD19A541AE00EC1DAA /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCC8DBD119A51E8A00621450 /* CFNetwork.framework */; };
 		BCD44FFE19A541B700EC1DAA /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCC8DBD119A51E8A00621450 /* CFNetwork.framework */; };
 		BCD514611A5F049700F50484 /* Default-Portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = BCD5145F1A5F049700F50484 /* Default-Portrait.png */; };
@@ -1519,6 +1585,81 @@
 		BCE31E4E1AF041B3002ADAA9 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCE31E4C1AF041B3002ADAA9 /* MainStoryboard_iPhone.storyboard */; };
 		BCE31E4F1AF041B3002ADAA9 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCE31E4C1AF041B3002ADAA9 /* MainStoryboard_iPhone.storyboard */; };
 		BCE31E501AF041B3002ADAA9 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCE31E4C1AF041B3002ADAA9 /* MainStoryboard_iPhone.storyboard */; };
+		BCE828001CADDDAB00128232 /* video-carrusel-0.png in Resources */ = {isa = PBXBuildFile; fileRef = BCE827FA1CADDDAB00128232 /* video-carrusel-0.png */; };
+		BCE828011CADDDAB00128232 /* video-carrusel-0.png in Resources */ = {isa = PBXBuildFile; fileRef = BCE827FA1CADDDAB00128232 /* video-carrusel-0.png */; };
+		BCE828021CADDDAB00128232 /* video-carrusel-0.png in Resources */ = {isa = PBXBuildFile; fileRef = BCE827FA1CADDDAB00128232 /* video-carrusel-0.png */; };
+		BCE828031CADDDAB00128232 /* video-carrusel-0.png in Resources */ = {isa = PBXBuildFile; fileRef = BCE827FA1CADDDAB00128232 /* video-carrusel-0.png */; };
+		BCE828041CADDDAB00128232 /* video-carrusel-0.png in Resources */ = {isa = PBXBuildFile; fileRef = BCE827FA1CADDDAB00128232 /* video-carrusel-0.png */; };
+		BCE828051CADDDAB00128232 /* video-carrusel-0@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCE827FB1CADDDAB00128232 /* video-carrusel-0@2x.png */; };
+		BCE828061CADDDAB00128232 /* video-carrusel-0@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCE827FB1CADDDAB00128232 /* video-carrusel-0@2x.png */; };
+		BCE828071CADDDAB00128232 /* video-carrusel-0@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCE827FB1CADDDAB00128232 /* video-carrusel-0@2x.png */; };
+		BCE828081CADDDAB00128232 /* video-carrusel-0@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCE827FB1CADDDAB00128232 /* video-carrusel-0@2x.png */; };
+		BCE828091CADDDAB00128232 /* video-carrusel-0@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCE827FB1CADDDAB00128232 /* video-carrusel-0@2x.png */; };
+		BCE8280A1CADDDAB00128232 /* video-carrusel-0@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCE827FC1CADDDAB00128232 /* video-carrusel-0@3x.png */; };
+		BCE8280B1CADDDAB00128232 /* video-carrusel-0@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCE827FC1CADDDAB00128232 /* video-carrusel-0@3x.png */; };
+		BCE8280C1CADDDAB00128232 /* video-carrusel-0@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCE827FC1CADDDAB00128232 /* video-carrusel-0@3x.png */; };
+		BCE8280D1CADDDAB00128232 /* video-carrusel-0@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCE827FC1CADDDAB00128232 /* video-carrusel-0@3x.png */; };
+		BCE8280E1CADDDAB00128232 /* video-carrusel-0@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCE827FC1CADDDAB00128232 /* video-carrusel-0@3x.png */; };
+		BCE8280F1CADDDAB00128232 /* video-carrusel-1.png in Resources */ = {isa = PBXBuildFile; fileRef = BCE827FD1CADDDAB00128232 /* video-carrusel-1.png */; };
+		BCE828101CADDDAB00128232 /* video-carrusel-1.png in Resources */ = {isa = PBXBuildFile; fileRef = BCE827FD1CADDDAB00128232 /* video-carrusel-1.png */; };
+		BCE828111CADDDAB00128232 /* video-carrusel-1.png in Resources */ = {isa = PBXBuildFile; fileRef = BCE827FD1CADDDAB00128232 /* video-carrusel-1.png */; };
+		BCE828121CADDDAB00128232 /* video-carrusel-1.png in Resources */ = {isa = PBXBuildFile; fileRef = BCE827FD1CADDDAB00128232 /* video-carrusel-1.png */; };
+		BCE828131CADDDAB00128232 /* video-carrusel-1.png in Resources */ = {isa = PBXBuildFile; fileRef = BCE827FD1CADDDAB00128232 /* video-carrusel-1.png */; };
+		BCE828141CADDDAB00128232 /* video-carrusel-1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCE827FE1CADDDAB00128232 /* video-carrusel-1@2x.png */; };
+		BCE828151CADDDAB00128232 /* video-carrusel-1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCE827FE1CADDDAB00128232 /* video-carrusel-1@2x.png */; };
+		BCE828161CADDDAB00128232 /* video-carrusel-1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCE827FE1CADDDAB00128232 /* video-carrusel-1@2x.png */; };
+		BCE828171CADDDAB00128232 /* video-carrusel-1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCE827FE1CADDDAB00128232 /* video-carrusel-1@2x.png */; };
+		BCE828181CADDDAB00128232 /* video-carrusel-1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCE827FE1CADDDAB00128232 /* video-carrusel-1@2x.png */; };
+		BCE828191CADDDAB00128232 /* video-carrusel-1@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCE827FF1CADDDAB00128232 /* video-carrusel-1@3x.png */; };
+		BCE8281A1CADDDAB00128232 /* video-carrusel-1@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCE827FF1CADDDAB00128232 /* video-carrusel-1@3x.png */; };
+		BCE8281B1CADDDAB00128232 /* video-carrusel-1@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCE827FF1CADDDAB00128232 /* video-carrusel-1@3x.png */; };
+		BCE8281C1CADDDAB00128232 /* video-carrusel-1@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCE827FF1CADDDAB00128232 /* video-carrusel-1@3x.png */; };
+		BCE8281D1CADDDAB00128232 /* video-carrusel-1@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCE827FF1CADDDAB00128232 /* video-carrusel-1@3x.png */; };
+		BCE8281F1CADDF7800128232 /* HomeVideoCarrouselTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCE8281E1CADDF7800128232 /* HomeVideoCarrouselTableViewCell.xib */; };
+		BCE828201CADDF7800128232 /* HomeVideoCarrouselTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCE8281E1CADDF7800128232 /* HomeVideoCarrouselTableViewCell.xib */; };
+		BCE828211CADDF7800128232 /* HomeVideoCarrouselTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCE8281E1CADDF7800128232 /* HomeVideoCarrouselTableViewCell.xib */; };
+		BCE828221CADDF7800128232 /* HomeVideoCarrouselTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCE8281E1CADDF7800128232 /* HomeVideoCarrouselTableViewCell.xib */; };
+		BCE828231CADDF7800128232 /* HomeVideoCarrouselTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCE8281E1CADDF7800128232 /* HomeVideoCarrouselTableViewCell.xib */; };
+		BCE828271CADE88200128232 /* video-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = BCE828241CADE88200128232 /* video-icon.png */; };
+		BCE828281CADE88200128232 /* video-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = BCE828241CADE88200128232 /* video-icon.png */; };
+		BCE828291CADE88200128232 /* video-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = BCE828241CADE88200128232 /* video-icon.png */; };
+		BCE8282A1CADE88200128232 /* video-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = BCE828241CADE88200128232 /* video-icon.png */; };
+		BCE8282B1CADE88200128232 /* video-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = BCE828241CADE88200128232 /* video-icon.png */; };
+		BCE8282C1CADE88200128232 /* video-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCE828251CADE88200128232 /* video-icon@2x.png */; };
+		BCE8282D1CADE88200128232 /* video-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCE828251CADE88200128232 /* video-icon@2x.png */; };
+		BCE8282E1CADE88200128232 /* video-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCE828251CADE88200128232 /* video-icon@2x.png */; };
+		BCE8282F1CADE88200128232 /* video-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCE828251CADE88200128232 /* video-icon@2x.png */; };
+		BCE828301CADE88200128232 /* video-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCE828251CADE88200128232 /* video-icon@2x.png */; };
+		BCE828311CADE88200128232 /* video-icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCE828261CADE88200128232 /* video-icon@3x.png */; };
+		BCE828321CADE88200128232 /* video-icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCE828261CADE88200128232 /* video-icon@3x.png */; };
+		BCE828331CADE88200128232 /* video-icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCE828261CADE88200128232 /* video-icon@3x.png */; };
+		BCE828341CADE88200128232 /* video-icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCE828261CADE88200128232 /* video-icon@3x.png */; };
+		BCE828351CADE88200128232 /* video-icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCE828261CADE88200128232 /* video-icon@3x.png */; };
+		BCE828371CADEC6C00128232 /* HomeShowTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCE828361CADEC6C00128232 /* HomeShowTableViewCell.xib */; };
+		BCE828381CADEC6C00128232 /* HomeShowTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCE828361CADEC6C00128232 /* HomeShowTableViewCell.xib */; };
+		BCE828391CADEC6C00128232 /* HomeShowTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCE828361CADEC6C00128232 /* HomeShowTableViewCell.xib */; };
+		BCE8283A1CADEC6C00128232 /* HomeShowTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCE828361CADEC6C00128232 /* HomeShowTableViewCell.xib */; };
+		BCE8283B1CADEC6C00128232 /* HomeShowTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCE828361CADEC6C00128232 /* HomeShowTableViewCell.xib */; };
+		BCE8283D1CADFF4A00128232 /* HomeHSecondaryCarrouselTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCE8283C1CADFF4A00128232 /* HomeHSecondaryCarrouselTableViewCell.xib */; };
+		BCE8283E1CADFF4A00128232 /* HomeHSecondaryCarrouselTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCE8283C1CADFF4A00128232 /* HomeHSecondaryCarrouselTableViewCell.xib */; };
+		BCE8283F1CADFF4A00128232 /* HomeHSecondaryCarrouselTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCE8283C1CADFF4A00128232 /* HomeHSecondaryCarrouselTableViewCell.xib */; };
+		BCE828401CADFF4A00128232 /* HomeHSecondaryCarrouselTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCE8283C1CADFF4A00128232 /* HomeHSecondaryCarrouselTableViewCell.xib */; };
+		BCE828411CADFF4A00128232 /* HomeHSecondaryCarrouselTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCE8283C1CADFF4A00128232 /* HomeHSecondaryCarrouselTableViewCell.xib */; };
+		BCE828451CAE072800128232 /* nlogo-telesur-header.png in Resources */ = {isa = PBXBuildFile; fileRef = BCE828421CAE072800128232 /* nlogo-telesur-header.png */; };
+		BCE828461CAE072900128232 /* nlogo-telesur-header.png in Resources */ = {isa = PBXBuildFile; fileRef = BCE828421CAE072800128232 /* nlogo-telesur-header.png */; };
+		BCE828471CAE072900128232 /* nlogo-telesur-header.png in Resources */ = {isa = PBXBuildFile; fileRef = BCE828421CAE072800128232 /* nlogo-telesur-header.png */; };
+		BCE828481CAE072900128232 /* nlogo-telesur-header.png in Resources */ = {isa = PBXBuildFile; fileRef = BCE828421CAE072800128232 /* nlogo-telesur-header.png */; };
+		BCE828491CAE072900128232 /* nlogo-telesur-header.png in Resources */ = {isa = PBXBuildFile; fileRef = BCE828421CAE072800128232 /* nlogo-telesur-header.png */; };
+		BCE8284A1CAE072900128232 /* nlogo-telesur-header@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCE828431CAE072800128232 /* nlogo-telesur-header@2x.png */; };
+		BCE8284B1CAE072900128232 /* nlogo-telesur-header@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCE828431CAE072800128232 /* nlogo-telesur-header@2x.png */; };
+		BCE8284C1CAE072900128232 /* nlogo-telesur-header@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCE828431CAE072800128232 /* nlogo-telesur-header@2x.png */; };
+		BCE8284D1CAE072900128232 /* nlogo-telesur-header@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCE828431CAE072800128232 /* nlogo-telesur-header@2x.png */; };
+		BCE8284E1CAE072900128232 /* nlogo-telesur-header@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCE828431CAE072800128232 /* nlogo-telesur-header@2x.png */; };
+		BCE8284F1CAE072900128232 /* nlogo-telesur-header@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCE828441CAE072800128232 /* nlogo-telesur-header@3x.png */; };
+		BCE828501CAE072900128232 /* nlogo-telesur-header@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCE828441CAE072800128232 /* nlogo-telesur-header@3x.png */; };
+		BCE828511CAE072900128232 /* nlogo-telesur-header@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCE828441CAE072800128232 /* nlogo-telesur-header@3x.png */; };
+		BCE828521CAE072900128232 /* nlogo-telesur-header@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCE828441CAE072800128232 /* nlogo-telesur-header@3x.png */; };
+		BCE828531CAE072900128232 /* nlogo-telesur-header@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCE828441CAE072800128232 /* nlogo-telesur-header@3x.png */; };
 		BCEDABC71A60B18B0059C357 /* acerca@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCEDABBC1A60B18B0059C357 /* acerca@3x.png */; };
 		BCEDABC81A60B18B0059C357 /* acerca@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCEDABBC1A60B18B0059C357 /* acerca@3x.png */; };
 		BCEDABC91A60B18B0059C357 /* acerca@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCEDABBC1A60B18B0059C357 /* acerca@3x.png */; };
@@ -1599,8 +1740,33 @@
 		BCEDAC221A68A4E30059C357 /* home@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCEDAC201A68A4E30059C357 /* home@3x.png */; };
 		BCEDAC231A68A4E30059C357 /* home@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCEDAC201A68A4E30059C357 /* home@3x.png */; };
 		BCEDAC241A68A4E30059C357 /* home@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCEDAC201A68A4E30059C357 /* home@3x.png */; };
+		BCEE07771CBF06FD0023EC01 /* TSVideoHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEE07761CBF06FD0023EC01 /* TSVideoHomeViewController.m */; };
+		BCEE07781CBF06FD0023EC01 /* TSVideoHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEE07761CBF06FD0023EC01 /* TSVideoHomeViewController.m */; };
+		BCEE07791CBF06FD0023EC01 /* TSVideoHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEE07761CBF06FD0023EC01 /* TSVideoHomeViewController.m */; };
+		BCEE077A1CBF06FD0023EC01 /* TSVideoHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEE07761CBF06FD0023EC01 /* TSVideoHomeViewController.m */; };
+		BCEE077B1CBF06FD0023EC01 /* TSVideoHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEE07761CBF06FD0023EC01 /* TSVideoHomeViewController.m */; };
+		BCEE077F1CC01B970023EC01 /* header-menu-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = BCEE077C1CC01B970023EC01 /* header-menu-logo.png */; };
+		BCEE07801CC01B970023EC01 /* header-menu-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = BCEE077C1CC01B970023EC01 /* header-menu-logo.png */; };
+		BCEE07811CC01B970023EC01 /* header-menu-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = BCEE077C1CC01B970023EC01 /* header-menu-logo.png */; };
+		BCEE07821CC01B970023EC01 /* header-menu-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = BCEE077C1CC01B970023EC01 /* header-menu-logo.png */; };
+		BCEE07831CC01B970023EC01 /* header-menu-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = BCEE077C1CC01B970023EC01 /* header-menu-logo.png */; };
+		BCEE07841CC01B970023EC01 /* header-menu-logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCEE077D1CC01B970023EC01 /* header-menu-logo@2x.png */; };
+		BCEE07851CC01B970023EC01 /* header-menu-logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCEE077D1CC01B970023EC01 /* header-menu-logo@2x.png */; };
+		BCEE07861CC01B970023EC01 /* header-menu-logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCEE077D1CC01B970023EC01 /* header-menu-logo@2x.png */; };
+		BCEE07871CC01B970023EC01 /* header-menu-logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCEE077D1CC01B970023EC01 /* header-menu-logo@2x.png */; };
+		BCEE07881CC01B970023EC01 /* header-menu-logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCEE077D1CC01B970023EC01 /* header-menu-logo@2x.png */; };
+		BCEE07891CC01B970023EC01 /* header-menu-logo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCEE077E1CC01B970023EC01 /* header-menu-logo@3x.png */; };
+		BCEE078A1CC01B970023EC01 /* header-menu-logo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCEE077E1CC01B970023EC01 /* header-menu-logo@3x.png */; };
+		BCEE078B1CC01B970023EC01 /* header-menu-logo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCEE077E1CC01B970023EC01 /* header-menu-logo@3x.png */; };
+		BCEE078C1CC01B970023EC01 /* header-menu-logo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCEE077E1CC01B970023EC01 /* header-menu-logo@3x.png */; };
+		BCEE078D1CC01B970023EC01 /* header-menu-logo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCEE077E1CC01B970023EC01 /* header-menu-logo@3x.png */; };
 		BCEE971F1972CAC300E03F83 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCEE971E1972CAC300E03F83 /* AudioToolbox.framework */; };
 		BCEE97211972CAFB00E03F83 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCEE97201972CAFB00E03F83 /* MediaPlayer.framework */; };
+		BCF02B651CACB9FE00EA32BA /* HomeSingleImageNewsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCF02B641CACB9FE00EA32BA /* HomeSingleImageNewsTableViewCell.xib */; };
+		BCF02B661CACB9FE00EA32BA /* HomeSingleImageNewsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCF02B641CACB9FE00EA32BA /* HomeSingleImageNewsTableViewCell.xib */; };
+		BCF02B671CACB9FE00EA32BA /* HomeSingleImageNewsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCF02B641CACB9FE00EA32BA /* HomeSingleImageNewsTableViewCell.xib */; };
+		BCF02B681CACB9FE00EA32BA /* HomeSingleImageNewsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCF02B641CACB9FE00EA32BA /* HomeSingleImageNewsTableViewCell.xib */; };
+		BCF02B691CACB9FE00EA32BA /* HomeSingleImageNewsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCF02B641CACB9FE00EA32BA /* HomeSingleImageNewsTableViewCell.xib */; };
 		BCF294D819CCC9D4007EEE84 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCE9C4C419B4F22E0085A5ED /* GameKit.framework */; };
 		BCF294DA19CCC9E3007EEE84 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCE9C4C419B4F22E0085A5ED /* GameKit.framework */; };
 		BCF294DC19CCC9E7007EEE84 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCE9C4C419B4F22E0085A5ED /* GameKit.framework */; };
@@ -1734,17 +1900,6 @@
 		BC54B2231C74D9C5001566EB /* TSMainHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TSMainHomeViewController.m; path = "teleSUR/Helper Classes/telesur/viewcontrollers/TSMainHomeViewController.m"; sourceTree = SOURCE_ROOT; };
 		BC54B22A1C74DAE5001566EB /* UIViewController+TSDataMG.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+TSDataMG.h"; path = "teleSUR/Helper Classes/telesur/data/UIViewController+TSDataMG.h"; sourceTree = SOURCE_ROOT; };
 		BC54B22B1C74DAE5001566EB /* UIViewController+TSDataMG.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+TSDataMG.m"; path = "teleSUR/Helper Classes/telesur/data/UIViewController+TSDataMG.m"; sourceTree = SOURCE_ROOT; };
-		BC56378619CA4EA800C10BCB /* SlideNavigationContorllerAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SlideNavigationContorllerAnimator.h; path = teleSUR/Source/Animations/SlideNavigationContorllerAnimator.h; sourceTree = SOURCE_ROOT; };
-		BC56378719CA4EA800C10BCB /* SlideNavigationContorllerAnimatorFade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SlideNavigationContorllerAnimatorFade.h; path = teleSUR/Source/Animations/SlideNavigationContorllerAnimatorFade.h; sourceTree = SOURCE_ROOT; };
-		BC56378819CA4EA800C10BCB /* SlideNavigationContorllerAnimatorFade.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SlideNavigationContorllerAnimatorFade.m; path = teleSUR/Source/Animations/SlideNavigationContorllerAnimatorFade.m; sourceTree = SOURCE_ROOT; };
-		BC56378919CA4EA800C10BCB /* SlideNavigationContorllerAnimatorScale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SlideNavigationContorllerAnimatorScale.h; path = teleSUR/Source/Animations/SlideNavigationContorllerAnimatorScale.h; sourceTree = SOURCE_ROOT; };
-		BC56378A19CA4EA800C10BCB /* SlideNavigationContorllerAnimatorScale.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SlideNavigationContorllerAnimatorScale.m; path = teleSUR/Source/Animations/SlideNavigationContorllerAnimatorScale.m; sourceTree = SOURCE_ROOT; };
-		BC56378B19CA4EA800C10BCB /* SlideNavigationContorllerAnimatorScaleAndFade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SlideNavigationContorllerAnimatorScaleAndFade.h; path = teleSUR/Source/Animations/SlideNavigationContorllerAnimatorScaleAndFade.h; sourceTree = SOURCE_ROOT; };
-		BC56378C19CA4EA800C10BCB /* SlideNavigationContorllerAnimatorScaleAndFade.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SlideNavigationContorllerAnimatorScaleAndFade.m; path = teleSUR/Source/Animations/SlideNavigationContorllerAnimatorScaleAndFade.m; sourceTree = SOURCE_ROOT; };
-		BC56378D19CA4EA800C10BCB /* SlideNavigationContorllerAnimatorSlide.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SlideNavigationContorllerAnimatorSlide.h; path = teleSUR/Source/Animations/SlideNavigationContorllerAnimatorSlide.h; sourceTree = SOURCE_ROOT; };
-		BC56378E19CA4EA800C10BCB /* SlideNavigationContorllerAnimatorSlide.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SlideNavigationContorllerAnimatorSlide.m; path = teleSUR/Source/Animations/SlideNavigationContorllerAnimatorSlide.m; sourceTree = SOURCE_ROOT; };
-		BC56378F19CA4EA800C10BCB /* SlideNavigationContorllerAnimatorSlideAndFade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SlideNavigationContorllerAnimatorSlideAndFade.h; path = teleSUR/Source/Animations/SlideNavigationContorllerAnimatorSlideAndFade.h; sourceTree = SOURCE_ROOT; };
-		BC56379019CA4EA800C10BCB /* SlideNavigationContorllerAnimatorSlideAndFade.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SlideNavigationContorllerAnimatorSlideAndFade.m; path = teleSUR/Source/Animations/SlideNavigationContorllerAnimatorSlideAndFade.m; sourceTree = SOURCE_ROOT; };
 		BC5637A519CA4EF600C10BCB /* LeftMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LeftMenuViewController.h; path = "teleSUR/Helper Classes/LeftMenuViewController.h"; sourceTree = SOURCE_ROOT; };
 		BC5637A619CA4EF600C10BCB /* LeftMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LeftMenuViewController.m; path = "teleSUR/Helper Classes/LeftMenuViewController.m"; sourceTree = SOURCE_ROOT; };
 		BC5637AB19CA4F0000C10BCB /* AcercaDeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AcercaDeViewController.h; path = "teleSUR/Helper Classes/AcercaDeViewController.h"; sourceTree = SOURCE_ROOT; };
@@ -1762,12 +1917,8 @@
 		BC5637BF19CA4F4600C10BCB /* CollapsableTableViewTapRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CollapsableTableViewTapRecognizer.m; path = teleSUR/Source/CollapsableTableView/Classes/CollapsableTableViewTapRecognizer.m; sourceTree = SOURCE_ROOT; };
 		BC5637C019CA4F4600C10BCB /* TapDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TapDelegate.h; path = teleSUR/Source/CollapsableTableView/Classes/TapDelegate.h; sourceTree = SOURCE_ROOT; };
 		BC5637D619CA4F6C00C10BCB /* plaintableheader.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = plaintableheader.png; path = teleSUR/Source/CollapsableTableView/plaintableheader.png; sourceTree = SOURCE_ROOT; };
-		BC5637DB19CA4F8200C10BCB /* SlideNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SlideNavigationController.h; path = teleSUR/Source/CollapsableTableView/SlideNavigationController.h; sourceTree = SOURCE_ROOT; };
-		BC5637DC19CA4F8200C10BCB /* SlideNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SlideNavigationController.m; path = teleSUR/Source/CollapsableTableView/SlideNavigationController.m; sourceTree = SOURCE_ROOT; };
 		BC5637E119CA4FD700C10BCB /* HiddenVideoPlayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HiddenVideoPlayerController.h; path = "teleSUR/Helper Classes/HiddenVideoPlayerController.h"; sourceTree = SOURCE_ROOT; };
 		BC5637E219CA4FD700C10BCB /* HiddenVideoPlayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HiddenVideoPlayerController.m; path = "teleSUR/Helper Classes/HiddenVideoPlayerController.m"; sourceTree = SOURCE_ROOT; };
-		BC5637E719CA501600C10BCB /* menu-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "menu-button.png"; path = "teleSUR/Source/Assets/menu-button.png"; sourceTree = SOURCE_ROOT; };
-		BC5637E819CA501600C10BCB /* menu-button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "menu-button@2x.png"; path = "teleSUR/Source/Assets/menu-button@2x.png"; sourceTree = SOURCE_ROOT; };
 		BC5637F119CA504B00C10BCB /* TSClipDetallesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TSClipDetallesViewController.h; path = teleSUR/Source/TSClipDetallesViewController.h; sourceTree = SOURCE_ROOT; };
 		BC5637F219CA504B00C10BCB /* TSClipDetallesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TSClipDetallesViewController.m; path = teleSUR/Source/TSClipDetallesViewController.m; sourceTree = SOURCE_ROOT; };
 		BC5637F319CA504B00C10BCB /* TSClipPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TSClipPlayerViewController.h; path = teleSUR/Source/TSClipPlayerViewController.h; sourceTree = SOURCE_ROOT; };
@@ -1927,8 +2078,6 @@
 		BC9833801A34AA540034BE27 /* UIViewController+TSClipDownload.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+TSClipDownload.m"; path = "teleSUR/Helper Classes/telesur/viewcontrollers/UIViewController+TSClipDownload.m"; sourceTree = SOURCE_ROOT; };
 		BC9B8CC119C77D020033D34A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = teleSUR/AppDelegate.h; sourceTree = SOURCE_ROOT; };
 		BC9B8CC219C77D020033D34A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = teleSUR/AppDelegate.m; sourceTree = SOURCE_ROOT; };
-		BC9B8CC719C7851D0033D34A /* menu-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "menu-button.png"; path = "teleSUR/Source/Assets/menu-button.png"; sourceTree = SOURCE_ROOT; };
-		BC9B8CC819C7851D0033D34A /* menu-button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "menu-button@2x.png"; path = "teleSUR/Source/Assets/menu-button@2x.png"; sourceTree = SOURCE_ROOT; };
 		BC9CAAD41AC10741008103A0 /* MultimediaAPPDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MultimediaAPPDelegate.h; path = teleSUR/MultimediaAPPDelegate.h; sourceTree = SOURCE_ROOT; };
 		BC9CAAD51AC10741008103A0 /* MultimediaAPPDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MultimediaAPPDelegate.m; path = teleSUR/MultimediaAPPDelegate.m; sourceTree = SOURCE_ROOT; };
 		BC9D36D719DB2151009D09A8 /* TSIPadVideoDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TSIPadVideoDetailViewController.h; path = "teleSUR/Helper Classes/telesur/views/TSIPadVideoDetailViewController.h"; sourceTree = SOURCE_ROOT; };
@@ -2033,6 +2182,10 @@
 		BCA7708819D4575C00A1CFBD /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCacheOperation.m"; sourceTree = SOURCE_ROOT; };
 		BCA770C919D459F600A1CFBD /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		BCA770CB19D45A2000A1CFBD /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		BCA7BD1F1CC2E16E00BE2FAB /* VideoHomeHighlightedTebleViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = VideoHomeHighlightedTebleViewCell.xib; path = "teleSUR/Helper Classes/telesur/cells/VideoHomeHighlightedTebleViewCell.xib"; sourceTree = SOURCE_ROOT; };
+		BCA7BD251CC2FD6000BE2FAB /* VideoHomeBasicTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = VideoHomeBasicTableViewCell.xib; path = "teleSUR/Helper Classes/telesur/cells/VideoHomeBasicTableViewCell.xib"; sourceTree = SOURCE_ROOT; };
+		BCA7BD321CC7E06700BE2FAB /* TSTextNewsHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TSTextNewsHomeViewController.h; path = "teleSUR/Helper Classes/telesur/viewcontrollers/TSTextNewsHomeViewController.h"; sourceTree = SOURCE_ROOT; };
+		BCA7BD331CC7E06700BE2FAB /* TSTextNewsHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TSTextNewsHomeViewController.m; path = "teleSUR/Helper Classes/telesur/viewcontrollers/TSTextNewsHomeViewController.m"; sourceTree = SOURCE_ROOT; };
 		BCAB99681A35938F002E4F41 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		BCBC3C7819F059F100C3379F /* icon22.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon22.png; path = teleSUR/resources/icon22.png; sourceTree = SOURCE_ROOT; };
 		BCBC3C7919F059F100C3379F /* icon25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon25.png; path = teleSUR/resources/icon25.png; sourceTree = SOURCE_ROOT; };
@@ -2069,6 +2222,17 @@
 		BCC464E01AF9FC4300543591 /* player-repeat-highlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "player-repeat-highlighted.png"; path = "teleSUR/Images/player-repeat-highlighted.png"; sourceTree = SOURCE_ROOT; };
 		BCC464E11AF9FC4300543591 /* player-repeat-highlighted@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "player-repeat-highlighted@2x.png"; path = "teleSUR/Images/player-repeat-highlighted@2x.png"; sourceTree = SOURCE_ROOT; };
 		BCC464E21AF9FC4300543591 /* player-repeat-highlighted@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "player-repeat-highlighted@3x.png"; path = "teleSUR/Images/player-repeat-highlighted@3x.png"; sourceTree = SOURCE_ROOT; };
+		BCC635851CA235AB00A83A3A /* highlighted-color-shadow-bis@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "highlighted-color-shadow-bis@2x.png"; path = "teleSUR/Images/highlighted-color-shadow-bis@2x.png"; sourceTree = SOURCE_ROOT; };
+		BCC635861CA235AB00A83A3A /* highlighted-color-shadow-bis@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "highlighted-color-shadow-bis@3x.png"; path = "teleSUR/Images/highlighted-color-shadow-bis@3x.png"; sourceTree = SOURCE_ROOT; };
+		BCC635891CA23E3200A83A3A /* PTF55F.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = PTF55F.ttf; path = "teleSUR/resources/fonts/PT Serif Caption/PTF55F.ttf"; sourceTree = SOURCE_ROOT; };
+		BCC6358F1CA2412500A83A3A /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Bold.ttf"; path = "teleSUR/resources/fonts/Open_Sans/OpenSans-Bold.ttf"; sourceTree = SOURCE_ROOT; };
+		BCC635961CA2A1E800A83A3A /* TSiPhoneNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TSiPhoneNavigationController.h; path = "teleSUR/Helper Classes/telesur/navigation/TSiPhoneNavigationController.h"; sourceTree = SOURCE_ROOT; };
+		BCC635971CA2A1E800A83A3A /* TSiPhoneNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TSiPhoneNavigationController.m; path = "teleSUR/Helper Classes/telesur/navigation/TSiPhoneNavigationController.m"; sourceTree = SOURCE_ROOT; };
+		BCC6359D1CA2A29200A83A3A /* TSiPhoneNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TSiPhoneNavigationBar.h; path = "teleSUR/Helper Classes/telesur/navigation/TSiPhoneNavigationBar.h"; sourceTree = SOURCE_ROOT; };
+		BCC6359E1CA2A29200A83A3A /* TSiPhoneNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TSiPhoneNavigationBar.m; path = "teleSUR/Helper Classes/telesur/navigation/TSiPhoneNavigationBar.m"; sourceTree = SOURCE_ROOT; };
+		BCC635A41CA2A5D400A83A3A /* KABasicDoubleCellData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KABasicDoubleCellData.h; sourceTree = "<group>"; };
+		BCC635A51CA2A5D400A83A3A /* KABasicDoubleCellData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KABasicDoubleCellData.m; sourceTree = "<group>"; };
+		BCC635AB1CA2A69900A83A3A /* HomeDoubleTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HomeDoubleTableViewCell.xib; path = "teleSUR/Helper Classes/telesur/cells/HomeDoubleTableViewCell.xib"; sourceTree = SOURCE_ROOT; };
 		BCC8DBD119A51E8A00621450 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		BCCA68E61A97D57B006604DB /* TSConfigurationTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TSConfigurationTableViewController.h; path = "teleSUR/Helper Classes/telesur/viewcontrollers/TSConfigurationTableViewController.h"; sourceTree = SOURCE_ROOT; };
 		BCCA68E71A97D57B006604DB /* TSConfigurationTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TSConfigurationTableViewController.m; path = "teleSUR/Helper Classes/telesur/viewcontrollers/TSConfigurationTableViewController.m"; sourceTree = SOURCE_ROOT; };
@@ -2081,6 +2245,26 @@
 		BCCBEF1219DCAF230001C2BD /* TSIPadOpinionCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TSIPadOpinionCollectionViewCell.m; path = "teleSUR/Helper Classes/telesur/collections/TSIPadOpinionCollectionViewCell.m"; sourceTree = SOURCE_ROOT; };
 		BCCF7AD61C97715300859084 /* TSUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TSUtils.h; path = "teleSUR/Helper Classes/telesur/utils/TSUtils.h"; sourceTree = SOURCE_ROOT; };
 		BCCF7AD71C97715300859084 /* TSUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TSUtils.m; path = "teleSUR/Helper Classes/telesur/utils/TSUtils.m"; sourceTree = SOURCE_ROOT; };
+		BCCF7BCA1C98BC9500859084 /* SlideNavigationContorllerAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideNavigationContorllerAnimator.h; sourceTree = "<group>"; };
+		BCCF7BCB1C98BC9500859084 /* SlideNavigationContorllerAnimatorFade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideNavigationContorllerAnimatorFade.h; sourceTree = "<group>"; };
+		BCCF7BCC1C98BC9500859084 /* SlideNavigationContorllerAnimatorFade.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideNavigationContorllerAnimatorFade.m; sourceTree = "<group>"; };
+		BCCF7BCD1C98BC9500859084 /* SlideNavigationContorllerAnimatorScale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideNavigationContorllerAnimatorScale.h; sourceTree = "<group>"; };
+		BCCF7BCE1C98BC9500859084 /* SlideNavigationContorllerAnimatorScale.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideNavigationContorllerAnimatorScale.m; sourceTree = "<group>"; };
+		BCCF7BCF1C98BC9500859084 /* SlideNavigationContorllerAnimatorScaleAndFade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideNavigationContorllerAnimatorScaleAndFade.h; sourceTree = "<group>"; };
+		BCCF7BD01C98BC9500859084 /* SlideNavigationContorllerAnimatorScaleAndFade.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideNavigationContorllerAnimatorScaleAndFade.m; sourceTree = "<group>"; };
+		BCCF7BD11C98BC9500859084 /* SlideNavigationContorllerAnimatorScaleSlideAndFade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideNavigationContorllerAnimatorScaleSlideAndFade.h; sourceTree = "<group>"; };
+		BCCF7BD21C98BC9500859084 /* SlideNavigationContorllerAnimatorScaleSlideAndFade.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideNavigationContorllerAnimatorScaleSlideAndFade.m; sourceTree = "<group>"; };
+		BCCF7BD31C98BC9500859084 /* SlideNavigationContorllerAnimatorSlide.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideNavigationContorllerAnimatorSlide.h; sourceTree = "<group>"; };
+		BCCF7BD41C98BC9500859084 /* SlideNavigationContorllerAnimatorSlide.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideNavigationContorllerAnimatorSlide.m; sourceTree = "<group>"; };
+		BCCF7BD51C98BC9500859084 /* SlideNavigationContorllerAnimatorSlideAndFade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideNavigationContorllerAnimatorSlideAndFade.h; sourceTree = "<group>"; };
+		BCCF7BD61C98BC9500859084 /* SlideNavigationContorllerAnimatorSlideAndFade.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideNavigationContorllerAnimatorSlideAndFade.m; sourceTree = "<group>"; };
+		BCCF7BD81C98BC9500859084 /* menu-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu-button.png"; sourceTree = "<group>"; };
+		BCCF7BD91C98BC9500859084 /* menu-button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu-button@2x.png"; sourceTree = "<group>"; };
+		BCCF7BDA1C98BC9500859084 /* plaintableheader.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plaintableheader.png; sourceTree = "<group>"; };
+		BCCF7BDB1C98BC9500859084 /* SlideNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideNavigationController.h; sourceTree = "<group>"; };
+		BCCF7BDC1C98BC9500859084 /* SlideNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideNavigationController.m; sourceTree = "<group>"; };
+		BCCF7C191C9B8C2400859084 /* highlighted-color-shadow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "highlighted-color-shadow@2x.png"; path = "teleSUR/Images/highlighted-color-shadow@2x.png"; sourceTree = SOURCE_ROOT; };
+		BCCF7C1A1C9B8C2400859084 /* highlighted-color-shadow@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "highlighted-color-shadow@3x.png"; path = "teleSUR/Images/highlighted-color-shadow@3x.png"; sourceTree = SOURCE_ROOT; };
 		BCD4504619A84D4B00EC1DAA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		BCD4504719A84D4B00EC1DAA /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		BCD4504819A84D4B00EC1DAA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -2104,6 +2288,21 @@
 		BCE09DF619FB03C400528944 /* TSDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TSDataManager.m; path = "teleSUR/Helper Classes/telesur/data/TSDataManager.m"; sourceTree = SOURCE_ROOT; };
 		BCE09DFB19FB2ED300528944 /* TSDataManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TSDataManagerDelegate.h; path = "teleSUR/Helper Classes/telesur/data/TSDataManagerDelegate.h"; sourceTree = SOURCE_ROOT; };
 		BCE31E4C1AF041B3002ADAA9 /* MainStoryboard_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = MainStoryboard_iPhone.storyboard; path = teleSUR/MainStoryboard_iPhone.storyboard; sourceTree = SOURCE_ROOT; };
+		BCE827FA1CADDDAB00128232 /* video-carrusel-0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "video-carrusel-0.png"; path = "teleSUR/Images/video-carrusel-0.png"; sourceTree = SOURCE_ROOT; };
+		BCE827FB1CADDDAB00128232 /* video-carrusel-0@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "video-carrusel-0@2x.png"; path = "teleSUR/Images/video-carrusel-0@2x.png"; sourceTree = SOURCE_ROOT; };
+		BCE827FC1CADDDAB00128232 /* video-carrusel-0@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "video-carrusel-0@3x.png"; path = "teleSUR/Images/video-carrusel-0@3x.png"; sourceTree = SOURCE_ROOT; };
+		BCE827FD1CADDDAB00128232 /* video-carrusel-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "video-carrusel-1.png"; path = "teleSUR/Images/video-carrusel-1.png"; sourceTree = SOURCE_ROOT; };
+		BCE827FE1CADDDAB00128232 /* video-carrusel-1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "video-carrusel-1@2x.png"; path = "teleSUR/Images/video-carrusel-1@2x.png"; sourceTree = SOURCE_ROOT; };
+		BCE827FF1CADDDAB00128232 /* video-carrusel-1@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "video-carrusel-1@3x.png"; path = "teleSUR/Images/video-carrusel-1@3x.png"; sourceTree = SOURCE_ROOT; };
+		BCE8281E1CADDF7800128232 /* HomeVideoCarrouselTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HomeVideoCarrouselTableViewCell.xib; path = "teleSUR/Helper Classes/telesur/cells/HomeVideoCarrouselTableViewCell.xib"; sourceTree = SOURCE_ROOT; };
+		BCE828241CADE88200128232 /* video-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "video-icon.png"; path = "teleSUR/Images/video-icon.png"; sourceTree = SOURCE_ROOT; };
+		BCE828251CADE88200128232 /* video-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "video-icon@2x.png"; path = "teleSUR/Images/video-icon@2x.png"; sourceTree = SOURCE_ROOT; };
+		BCE828261CADE88200128232 /* video-icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "video-icon@3x.png"; path = "teleSUR/Images/video-icon@3x.png"; sourceTree = SOURCE_ROOT; };
+		BCE828361CADEC6C00128232 /* HomeShowTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HomeShowTableViewCell.xib; path = "teleSUR/Helper Classes/telesur/cells/HomeShowTableViewCell.xib"; sourceTree = SOURCE_ROOT; };
+		BCE8283C1CADFF4A00128232 /* HomeHSecondaryCarrouselTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HomeHSecondaryCarrouselTableViewCell.xib; path = "teleSUR/Helper Classes/telesur/cells/HomeHSecondaryCarrouselTableViewCell.xib"; sourceTree = SOURCE_ROOT; };
+		BCE828421CAE072800128232 /* nlogo-telesur-header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "nlogo-telesur-header.png"; path = "teleSUR/Images/nlogo-telesur-header.png"; sourceTree = SOURCE_ROOT; };
+		BCE828431CAE072800128232 /* nlogo-telesur-header@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "nlogo-telesur-header@2x.png"; path = "teleSUR/Images/nlogo-telesur-header@2x.png"; sourceTree = SOURCE_ROOT; };
+		BCE828441CAE072800128232 /* nlogo-telesur-header@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "nlogo-telesur-header@3x.png"; path = "teleSUR/Images/nlogo-telesur-header@3x.png"; sourceTree = SOURCE_ROOT; };
 		BCE9C4C419B4F22E0085A5ED /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		BCEDABBC1A60B18B0059C357 /* acerca@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "acerca@3x.png"; path = "teleSUR/Images/acerca@3x.png"; sourceTree = SOURCE_ROOT; };
 		BCEDABBD1A60B18B0059C357 /* blog@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "blog@3x.png"; path = "teleSUR/Images/blog@3x.png"; sourceTree = SOURCE_ROOT; };
@@ -2125,10 +2324,16 @@
 		BCEDAC121A6861720059C357 /* logo-menu-header@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "logo-menu-header@3x.png"; path = "teleSUR/Images/logo-menu-header@3x.png"; sourceTree = SOURCE_ROOT; };
 		BCEDAC1B1A6863190059C357 /* home-cell-shadow@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "home-cell-shadow@3x.png"; path = "teleSUR/Images/home-cell-shadow@3x.png"; sourceTree = SOURCE_ROOT; };
 		BCEDAC201A68A4E30059C357 /* home@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "home@3x.png"; path = "teleSUR/Images/home@3x.png"; sourceTree = SOURCE_ROOT; };
+		BCEE07751CBF06FD0023EC01 /* TSVideoHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TSVideoHomeViewController.h; path = "teleSUR/Helper Classes/telesur/viewcontrollers/TSVideoHomeViewController.h"; sourceTree = SOURCE_ROOT; };
+		BCEE07761CBF06FD0023EC01 /* TSVideoHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TSVideoHomeViewController.m; path = "teleSUR/Helper Classes/telesur/viewcontrollers/TSVideoHomeViewController.m"; sourceTree = SOURCE_ROOT; };
+		BCEE077C1CC01B970023EC01 /* header-menu-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "header-menu-logo.png"; path = "teleSUR/Images/header-menu-logo.png"; sourceTree = SOURCE_ROOT; };
+		BCEE077D1CC01B970023EC01 /* header-menu-logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "header-menu-logo@2x.png"; path = "teleSUR/Images/header-menu-logo@2x.png"; sourceTree = SOURCE_ROOT; };
+		BCEE077E1CC01B970023EC01 /* header-menu-logo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "header-menu-logo@3x.png"; path = "teleSUR/Images/header-menu-logo@3x.png"; sourceTree = SOURCE_ROOT; };
 		BCEE96E71972C97000E03F83 /* NSDictionary_Datos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSDictionary_Datos.h; path = teleSUR/Source/NSDictionary_Datos.h; sourceTree = SOURCE_ROOT; };
 		BCEE96E81972C97000E03F83 /* NSDictionary_Datos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSDictionary_Datos.m; path = teleSUR/Source/NSDictionary_Datos.m; sourceTree = SOURCE_ROOT; };
 		BCEE971E1972CAC300E03F83 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		BCEE97201972CAFB00E03F83 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		BCF02B641CACB9FE00EA32BA /* HomeSingleImageNewsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HomeSingleImageNewsTableViewCell.xib; path = "teleSUR/Helper Classes/telesur/cells/HomeSingleImageNewsTableViewCell.xib"; sourceTree = SOURCE_ROOT; };
 		BCF294E219CCD395007EEE84 /* SinImagen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SinImagen.png; path = teleSUR/Images/SinImagen.png; sourceTree = SOURCE_ROOT; };
 		BCF294E319CCD395007EEE84 /* SinImagen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "SinImagen@2x.png"; path = "teleSUR/Images/SinImagen@2x.png"; sourceTree = SOURCE_ROOT; };
 		BCF63AC819937B8F00960D96 /* teleSUR Multimedia English.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "teleSUR Multimedia English.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -2354,6 +2559,7 @@
 		15371F241728E43600A508F4 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				BCCF7BC81C98BC9500859084 /* SlideNavigation */,
 				BCDCAD851ABA89CF007099AF /* MarqueeLabel */,
 				BC4524A11A5D28C800F4F3ED /* Reachability */,
 				BC033E4D1A30DD0A0025C9A1 /* NJKWebViewProgress */,
@@ -2363,28 +2569,8 @@
 				BC419DE619AFB0D800C632C9 /* EasyTableView */,
 				BCA96CDD19787FCE009DC40F /* DropDown Menu */,
 				BC17BE561977609F006A02E3 /* CollapsableTableView */,
-				15C9AC0E1895A79A006E6F27 /* Animations */,
-				15CBD681172A209500F0C53E /* Assets */,
 			);
 			path = Source;
-			sourceTree = "<group>";
-		};
-		15C9AC0E1895A79A006E6F27 /* Animations */ = {
-			isa = PBXGroup;
-			children = (
-				BC56378619CA4EA800C10BCB /* SlideNavigationContorllerAnimator.h */,
-				BC56378719CA4EA800C10BCB /* SlideNavigationContorllerAnimatorFade.h */,
-				BC56378819CA4EA800C10BCB /* SlideNavigationContorllerAnimatorFade.m */,
-				BC56378919CA4EA800C10BCB /* SlideNavigationContorllerAnimatorScale.h */,
-				BC56378A19CA4EA800C10BCB /* SlideNavigationContorllerAnimatorScale.m */,
-				BC56378B19CA4EA800C10BCB /* SlideNavigationContorllerAnimatorScaleAndFade.h */,
-				BC56378C19CA4EA800C10BCB /* SlideNavigationContorllerAnimatorScaleAndFade.m */,
-				BC56378D19CA4EA800C10BCB /* SlideNavigationContorllerAnimatorSlide.h */,
-				BC56378E19CA4EA800C10BCB /* SlideNavigationContorllerAnimatorSlide.m */,
-				BC56378F19CA4EA800C10BCB /* SlideNavigationContorllerAnimatorSlideAndFade.h */,
-				BC56379019CA4EA800C10BCB /* SlideNavigationContorllerAnimatorSlideAndFade.m */,
-			);
-			path = Animations;
 			sourceTree = "<group>";
 		};
 		15CBD675172A15F900F0C53E /* Helper Classes */ = {
@@ -2399,15 +2585,6 @@
 				BCEE972C1973395400E03F83 /* Datos */,
 			);
 			path = "Helper Classes";
-			sourceTree = "<group>";
-		};
-		15CBD681172A209500F0C53E /* Assets */ = {
-			isa = PBXGroup;
-			children = (
-				BC5637E719CA501600C10BCB /* menu-button.png */,
-				BC5637E819CA501600C10BCB /* menu-button@2x.png */,
-			);
-			path = Assets;
 			sourceTree = "<group>";
 		};
 		15E7D319190C2894002EAE3F /* Images */ = {
@@ -2500,8 +2677,6 @@
 		BC17BE561977609F006A02E3 /* CollapsableTableView */ = {
 			isa = PBXGroup;
 			children = (
-				BC5637DB19CA4F8200C10BCB /* SlideNavigationController.h */,
-				BC5637DC19CA4F8200C10BCB /* SlideNavigationController.m */,
 				BC5637D619CA4F6C00C10BCB /* plaintableheader.png */,
 				BC17BE571977609F006A02E3 /* Classes */,
 			);
@@ -2583,6 +2758,8 @@
 				BC54B1C21C74D235001566EB /* KABasicImageData.m */,
 				BC54B1C31C74D235001566EB /* KADataRequest.h */,
 				BC54B1C41C74D235001566EB /* KADataRequest.m */,
+				BCC635A41CA2A5D400A83A3A /* KABasicDoubleCellData.h */,
+				BCC635A51CA2A5D400A83A3A /* KABasicDoubleCellData.m */,
 			);
 			path = data;
 			sourceTree = "<group>";
@@ -2628,6 +2805,10 @@
 			children = (
 				BC54B2221C74D9C5001566EB /* TSMainHomeViewController.h */,
 				BC54B2231C74D9C5001566EB /* TSMainHomeViewController.m */,
+				BCEE07751CBF06FD0023EC01 /* TSVideoHomeViewController.h */,
+				BCEE07761CBF06FD0023EC01 /* TSVideoHomeViewController.m */,
+				BCA7BD321CC7E06700BE2FAB /* TSTextNewsHomeViewController.h */,
+				BCA7BD331CC7E06700BE2FAB /* TSTextNewsHomeViewController.m */,
 			);
 			name = homeViewControllers;
 			sourceTree = "<group>";
@@ -2693,6 +2874,7 @@
 		BC63CB7D1981DD3200F447AE /* iPhone */ = {
 			isa = PBXGroup;
 			children = (
+				BCC635951CA2A17F00A83A3A /* navigation */,
 				BC1DB7501C8DE232000E3752 /* tableCells */,
 				BC54B2291C74DA76001566EB /* data */,
 				BC54B2211C74D926001566EB /* homeViewControllers */,
@@ -2774,6 +2956,16 @@
 				BCCA68EB1A97F494006604DB /* config.png */,
 				BCCA68EC1A97F494006604DB /* config@2x.png */,
 				BCCA68ED1A97F494006604DB /* config@3x.png */,
+				BCEE077C1CC01B970023EC01 /* header-menu-logo.png */,
+				BCEE077D1CC01B970023EC01 /* header-menu-logo@2x.png */,
+				BCEE077E1CC01B970023EC01 /* header-menu-logo@3x.png */,
+				BCCF7C191C9B8C2400859084 /* highlighted-color-shadow@2x.png */,
+				BCCF7C1A1C9B8C2400859084 /* highlighted-color-shadow@3x.png */,
+				BCC635851CA235AB00A83A3A /* highlighted-color-shadow-bis@2x.png */,
+				BCC635861CA235AB00A83A3A /* highlighted-color-shadow-bis@3x.png */,
+				BCE828421CAE072800128232 /* nlogo-telesur-header.png */,
+				BCE828431CAE072800128232 /* nlogo-telesur-header@2x.png */,
+				BCE828441CAE072800128232 /* nlogo-telesur-header@3x.png */,
 				BCA6A2E019CD1C9F0021B243 /* home.png */,
 				BCA6A2E119CD1C9F0021B243 /* home@2x.png */,
 				BCEDAC201A68A4E30059C357 /* home@3x.png */,
@@ -2819,9 +3011,18 @@
 				BCA6A2EC19CD1C9F0021B243 /* video.png */,
 				BCA6A2ED19CD1C9F0021B243 /* video@2x.png */,
 				BCEDAC021A685F5D0059C357 /* video@3x.png */,
+				BCE827FA1CADDDAB00128232 /* video-carrusel-0.png */,
+				BCE827FB1CADDDAB00128232 /* video-carrusel-0@2x.png */,
+				BCE827FC1CADDDAB00128232 /* video-carrusel-0@3x.png */,
+				BCE827FD1CADDDAB00128232 /* video-carrusel-1.png */,
+				BCE827FE1CADDDAB00128232 /* video-carrusel-1@2x.png */,
+				BCE827FF1CADDDAB00128232 /* video-carrusel-1@3x.png */,
 				BCEDABC41A60B18B0059C357 /* videos-bullet.png */,
 				BCEDABC51A60B18B0059C357 /* videos-bullet@2x.png */,
 				BCEDABC61A60B18B0059C357 /* videos-bullet@3x.png */,
+				BCE828241CADE88200128232 /* video-icon.png */,
+				BCE828251CADE88200128232 /* video-icon@2x.png */,
+				BCE828261CADE88200128232 /* video-icon@3x.png */,
 			);
 			name = iPhone;
 			sourceTree = "<group>";
@@ -3093,6 +3294,17 @@
 			name = core;
 			sourceTree = "<group>";
 		};
+		BCC635951CA2A17F00A83A3A /* navigation */ = {
+			isa = PBXGroup;
+			children = (
+				BCC635961CA2A1E800A83A3A /* TSiPhoneNavigationController.h */,
+				BCC635971CA2A1E800A83A3A /* TSiPhoneNavigationController.m */,
+				BCC6359D1CA2A29200A83A3A /* TSiPhoneNavigationBar.h */,
+				BCC6359E1CA2A29200A83A3A /* TSiPhoneNavigationBar.m */,
+			);
+			name = navigation;
+			sourceTree = "<group>";
+		};
 		BCCF7AD51C97705F00859084 /* utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -3100,6 +3312,48 @@
 				BCCF7AD71C97715300859084 /* TSUtils.m */,
 			);
 			name = utils;
+			sourceTree = "<group>";
+		};
+		BCCF7BC81C98BC9500859084 /* SlideNavigation */ = {
+			isa = PBXGroup;
+			children = (
+				BCCF7BC91C98BC9500859084 /* Animations */,
+				BCCF7BD71C98BC9500859084 /* Assets */,
+				BCCF7BDA1C98BC9500859084 /* plaintableheader.png */,
+				BCCF7BDB1C98BC9500859084 /* SlideNavigationController.h */,
+				BCCF7BDC1C98BC9500859084 /* SlideNavigationController.m */,
+			);
+			name = SlideNavigation;
+			path = teleSUR/Source/SlideNavigation;
+			sourceTree = SOURCE_ROOT;
+		};
+		BCCF7BC91C98BC9500859084 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				BCCF7BCA1C98BC9500859084 /* SlideNavigationContorllerAnimator.h */,
+				BCCF7BCB1C98BC9500859084 /* SlideNavigationContorllerAnimatorFade.h */,
+				BCCF7BCC1C98BC9500859084 /* SlideNavigationContorllerAnimatorFade.m */,
+				BCCF7BCD1C98BC9500859084 /* SlideNavigationContorllerAnimatorScale.h */,
+				BCCF7BCE1C98BC9500859084 /* SlideNavigationContorllerAnimatorScale.m */,
+				BCCF7BCF1C98BC9500859084 /* SlideNavigationContorllerAnimatorScaleAndFade.h */,
+				BCCF7BD01C98BC9500859084 /* SlideNavigationContorllerAnimatorScaleAndFade.m */,
+				BCCF7BD11C98BC9500859084 /* SlideNavigationContorllerAnimatorScaleSlideAndFade.h */,
+				BCCF7BD21C98BC9500859084 /* SlideNavigationContorllerAnimatorScaleSlideAndFade.m */,
+				BCCF7BD31C98BC9500859084 /* SlideNavigationContorllerAnimatorSlide.h */,
+				BCCF7BD41C98BC9500859084 /* SlideNavigationContorllerAnimatorSlide.m */,
+				BCCF7BD51C98BC9500859084 /* SlideNavigationContorllerAnimatorSlideAndFade.h */,
+				BCCF7BD61C98BC9500859084 /* SlideNavigationContorllerAnimatorSlideAndFade.m */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
+		BCCF7BD71C98BC9500859084 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				BCCF7BD81C98BC9500859084 /* menu-button.png */,
+				BCCF7BD91C98BC9500859084 /* menu-button@2x.png */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 		BCD4504519A84D4B00EC1DAA /* Other Frameworks */ = {
@@ -3186,6 +3440,13 @@
 				BC56389119CA562D00C10BCB /* UILabelMarginSet.m */,
 				BCCA68E91A97D5E9006604DB /* TSSwitchViewCell.xib */,
 				BCDCADB01ABB81BB007099AF /* TSProgramListTableViewCell.xib */,
+				BCC635AB1CA2A69900A83A3A /* HomeDoubleTableViewCell.xib */,
+				BCF02B641CACB9FE00EA32BA /* HomeSingleImageNewsTableViewCell.xib */,
+				BCE8281E1CADDF7800128232 /* HomeVideoCarrouselTableViewCell.xib */,
+				BCE828361CADEC6C00128232 /* HomeShowTableViewCell.xib */,
+				BCE8283C1CADFF4A00128232 /* HomeHSecondaryCarrouselTableViewCell.xib */,
+				BCA7BD1F1CC2E16E00BE2FAB /* VideoHomeHighlightedTebleViewCell.xib */,
+				BCA7BD251CC2FD6000BE2FAB /* VideoHomeBasicTableViewCell.xib */,
 			);
 			name = Celdas;
 			sourceTree = "<group>";
@@ -3267,8 +3528,6 @@
 		BCEE973119733CB100E03F83 /* resources */ = {
 			isa = PBXGroup;
 			children = (
-				BC9B8CC719C7851D0033D34A /* menu-button.png */,
-				BC9B8CC819C7851D0033D34A /* menu-button@2x.png */,
 				BCE9C4CA19B4FC340085A5ED /* teleSUR Multimedia EN */,
 				BC8F1F2719B11CB500D51196 /* teleSUR Multimedia */,
 				BC8F1F2619B11C6300D51196 /* teleSUR */,
@@ -3280,6 +3539,8 @@
 		BCEE973219733CB100E03F83 /* fonts */ = {
 			isa = PBXGroup;
 			children = (
+				BCC635891CA23E3200A83A3A /* PTF55F.ttf */,
+				BCC6358F1CA2412500A83A3A /* OpenSans-Bold.ttf */,
 				BC56398D19CA57F700C10BCB /* Roboto-Black.ttf */,
 				BC56398E19CA57F700C10BCB /* Roboto-BlackItalic.ttf */,
 				BC56398F19CA57F700C10BCB /* Roboto-Bold.ttf */,
@@ -3541,6 +3802,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCC6358A1CA23E3200A83A3A /* PTF55F.ttf in Resources */,
 				BC0789921AA3C884006185DC /* player-play@2x.png in Resources */,
 				BC4ADC631AA4CB5F00C54860 /* player-logo.png in Resources */,
 				BCC464C41AF9F9CB00543591 /* player-pause-highlighted@2x.png in Resources */,
@@ -3558,15 +3820,19 @@
 				BCC464AD1AF9F3AE00543591 /* player-share-highlighted.png in Resources */,
 				BCEDAC211A68A4E30059C357 /* home@3x.png in Resources */,
 				BCA6A2C819CD1BD80021B243 /* audio@2x.png in Resources */,
+				BCCF7C201C9B8C2600859084 /* highlighted-color-shadow@3x.png in Resources */,
 				BC56381D19CA516300C10BCB /* pop.wav in Resources */,
+				BCE828271CADE88200128232 /* video-icon.png in Resources */,
 				BCD544FF1A5796CA00276784 /* Default-Portrait@2x.png in Resources */,
 				BC8BA38119CFE0D50018BA0B /* icon-menu-header.png in Resources */,
 				BC8BA3EF19D07E5D0018BA0B /* ipad-home.png in Resources */,
 				BCEDABCB1A60B18B0059C357 /* blog@3x.png in Resources */,
 				BC07899E1AA3C884006185DC /* player-share@2x.png in Resources */,
 				BCA6A32219CD1C9F0021B243 /* opinion@2x.png in Resources */,
+				BCCF7C1B1C9B8C2500859084 /* highlighted-color-shadow@2x.png in Resources */,
 				BCA6A33A19CD1C9F0021B243 /* video@2x.png in Resources */,
 				BC8BA41719D07E5D0018BA0B /* ipad-reportaje.png in Resources */,
+				BCE828001CADDDAB00128232 /* video-carrusel-0.png in Resources */,
 				BCDCADB71ABBAE84007099AF /* ipad-config.png in Resources */,
 				BC07897A1AA3C884006185DC /* player-minimize@2x.png in Resources */,
 				BC54B1EF1C74D235001566EB /* KABasicHTableHCellView.xib in Resources */,
@@ -3581,6 +3847,7 @@
 				BCA6A31A19CD1C9F0021B243 /* noticias@2x.png in Resources */,
 				BC56387819CA54FA00C10BCB /* TSClipListadoTableViewController.xib in Resources */,
 				BC0789A21AA3C884006185DC /* player-share@3x.png in Resources */,
+				BCE828371CADEC6C00128232 /* HomeShowTableViewCell.xib in Resources */,
 				BCEDABFE1A685ED30059C357 /* senal@3x.png in Resources */,
 				BCEDABE31A60B18B0059C357 /* reportaje@3x.png in Resources */,
 				BC0789961AA3C884006185DC /* player-play@3x.png in Resources */,
@@ -3592,6 +3859,8 @@
 				BCA6A32E19CD1C9F0021B243 /* reportaje.png in Resources */,
 				BCEDABF41A685DE70059C357 /* audio@3x.png in Resources */,
 				BC8BA3EB19D07E5D0018BA0B /* ipad-buscar@2x.png in Resources */,
+				BCE8281F1CADDF7800128232 /* HomeVideoCarrouselTableViewCell.xib in Resources */,
+				BCCF7C051C98BC9500859084 /* plaintableheader.png in Resources */,
 				BCA6A30219CD1C9F0021B243 /* buscar@2x.png in Resources */,
 				BCC464B71AF9F3AE00543591 /* player-share-highlighted@3x.png in Resources */,
 				BC5639BD19CA57F700C10BCB /* Roboto-CondensedItalic.ttf in Resources */,
@@ -3614,9 +3883,11 @@
 				BC56389219CA562D00C10BCB /* ClipEstandarTableCellView.xib in Resources */,
 				BC9D36EF19DC774B009D09A8 /* BlogHomeCollectionCell.xib in Resources */,
 				BC8BA41319D07E5D0018BA0B /* ipad-programa@2x.png in Resources */,
+				BCE828451CAE072800128232 /* nlogo-telesur-header.png in Resources */,
 				BCEDABD71A60B18B0059C357 /* noticias@3x.png in Resources */,
 				BC5638C419CA56D800C10BCB /* HomeTopTableViewCell.xib in Resources */,
 				BC4ADC851AA4E8A100C54860 /* player-repeat@2x.png in Resources */,
+				BCC635881CA235AB00A83A3A /* highlighted-color-shadow-bis@3x.png in Resources */,
 				BCBC3C8E19F059F100C3379F /* icon40.png in Resources */,
 				BC8BA3B719CFF5BC0018BA0B /* NewsDefaultCollectionCell.xib in Resources */,
 				BCEDAC031A685F5D0059C357 /* video@3x.png in Resources */,
@@ -3628,6 +3899,7 @@
 				BCBC3C9E19F059F100C3379F /* icon100.png in Resources */,
 				BC8BA3B219CFF5990018BA0B /* NewsFirstCollectionCell.xib in Resources */,
 				BC6806021A2482680038930C /* back.png in Resources */,
+				BCE8284F1CAE072900128232 /* nlogo-telesur-header@3x.png in Resources */,
 				BCA6A2EE19CD1C9F0021B243 /* acerca.png in Resources */,
 				BCBC3CAC19F05A3100C3379F /* Default.png in Resources */,
 				BC8BA41B19D07E5D0018BA0B /* ipad-reportaje@2x.png in Resources */,
@@ -3637,26 +3909,33 @@
 				BCA6A2CE19CD1BE50021B243 /* senal@2x.png in Resources */,
 				BCEDAC0D1A6860840059C357 /* icon-menu-header@3x.png in Resources */,
 				BC5638CC19CA56D800C10BCB /* HomeVideoTableViewCell.xib in Resources */,
+				BCC635871CA235AB00A83A3A /* highlighted-color-shadow-bis@2x.png in Resources */,
 				BC6806061A2482680038930C /* back@2x.png in Resources */,
 				BC944C811AA93C4700F9EB18 /* TSVideoCollectionCell.xib in Resources */,
 				BC4ADC7D1AA4E8A100C54860 /* player-playback-status@3x.png in Resources */,
 				BCBC3C8C19F059F100C3379F /* icon29.png in Resources */,
+				BCEE077F1CC01B970023EC01 /* header-menu-logo.png in Resources */,
 				BCBC3CA219F059F100C3379F /* icon120.png in Resources */,
+				BCA7BD201CC2E16E00BE2FAB /* VideoHomeHighlightedTebleViewCell.xib in Resources */,
 				BCC464DB1AF9FB4E00543591 /* player-play-highlighted@3x.png in Resources */,
 				BCC464D61AF9FB4E00543591 /* player-play-highlighted@2x.png in Resources */,
 				BC4ADC891AA4E8A100C54860 /* player-repeat@3x.png in Resources */,
+				BCE828141CADDDAB00128232 /* video-carrusel-1@2x.png in Resources */,
 				BC13774119F05BF3002C47F1 /* home-cell-shadow@2x.png in Resources */,
 				BC8BA40F19D07E5D0018BA0B /* ipad-programa.png in Resources */,
 				BCA6A2F219CD1C9F0021B243 /* acerca@2x.png in Resources */,
 				BC54B1F41C74D235001566EB /* KABasicImageTableCellView.xib in Resources */,
 				BCBC3C8A19F059F100C3379F /* icon25.png in Resources */,
+				BCCF7C001C98BC9500859084 /* menu-button@2x.png in Resources */,
 				BCA6A2FE19CD1C9F0021B243 /* buscar.png in Resources */,
 				BCC464BF1AF9F9CB00543591 /* player-pause-highlighted.png in Resources */,
 				BC68060E1A2482680038930C /* share.png in Resources */,
 				BCBC3CAA19F05A3100C3379F /* Default-568h@2x.png in Resources */,
 				BC56389619CA562D00C10BCB /* FirstTableCellView.xib in Resources */,
+				BCE828311CADE88200128232 /* video-icon@3x.png in Resources */,
 				BCBC3C9819F059F100C3379F /* icon72.png in Resources */,
 				BCCA68EA1A97D5E9006604DB /* TSSwitchViewCell.xib in Resources */,
+				BCE8283D1CADFF4A00128232 /* HomeHSecondaryCarrouselTableViewCell.xib in Resources */,
 				BC5638B119CA56A200C10BCB /* VideoDetailCellView.xib in Resources */,
 				BC0789821AA3C884006185DC /* player-pause.png in Resources */,
 				BC8BA3F719D07E5D0018BA0B /* ipad-multimedia.png in Resources */,
@@ -3677,12 +3956,14 @@
 				BC8BA3FF19D07E5D0018BA0B /* ipad-noticias.png in Resources */,
 				BC4ADC671AA4CB5F00C54860 /* player-logo@2x.png in Resources */,
 				BC56382519CA516300C10BCB /* psst2.wav in Resources */,
+				BCA7BD261CC2FD6000BE2FAB /* VideoHomeBasicTableViewCell.xib in Resources */,
 				BCBC3CA619F059F100C3379F /* icon152.png in Resources */,
 				BC6806161A2482680038930C /* share@3x.png in Resources */,
 				BC8BA37C19CFE0C10018BA0B /* logo-menu-header.png in Resources */,
 				BCEDABDF1A60B18B0059C357 /* programa@3x.png in Resources */,
 				BCBC3C9A19F059F100C3379F /* icon76.png in Resources */,
 				BC6806121A2482680038930C /* share@2x.png in Resources */,
+				BCE828191CADDDAB00128232 /* video-carrusel-1@3x.png in Resources */,
 				BC07898A1AA3C884006185DC /* player-pause@3x.png in Resources */,
 				BCEDABEF1A60B18B0059C357 /* videos-bullet@3x.png in Resources */,
 				BC0789861AA3C884006185DC /* player-pause@2x.png in Resources */,
@@ -3691,16 +3972,23 @@
 				BCA053251A1CFBF900946420 /* Images.xcassets in Resources */,
 				BCEDABEB1A60B18B0059C357 /* videos-bullet@2x.png in Resources */,
 				BC5A008019D3981A0091EFF3 /* RelatedRSSTableViewCell.xib in Resources */,
+				BCF02B651CACB9FE00EA32BA /* HomeSingleImageNewsTableViewCell.xib in Resources */,
+				BCE8284A1CAE072900128232 /* nlogo-telesur-header@2x.png in Resources */,
 				BCBC3CA419F059F100C3379F /* icon144.png in Resources */,
 				BCBC3C9019F059F100C3379F /* icon44.png in Resources */,
 				BC8BA3D719D07E5D0018BA0B /* ipad-acerca.png in Resources */,
 				BCBC3C8819F059F100C3379F /* icon22.png in Resources */,
+				BCE8282C1CADE88200128232 /* video-icon@2x.png in Resources */,
 				BC247C9A1AB27BA100DEF5AA /* logo.png in Resources */,
+				BCE828051CADDDAB00128232 /* video-carrusel-0@2x.png in Resources */,
 				BCEDABC71A60B18B0059C357 /* acerca@3x.png in Resources */,
 				BCEDAC131A6861720059C357 /* logo-menu-header@2x.png in Resources */,
 				BC07899A1AA3C884006185DC /* player-share.png in Resources */,
+				BCCF7BFB1C98BC9500859084 /* menu-button.png in Resources */,
 				BC5639AD19CA57F700C10BCB /* Roboto-BoldCondensed.ttf in Resources */,
 				BCA6A33619CD1C9F0021B243 /* video.png in Resources */,
+				BCEE07891CC01B970023EC01 /* header-menu-logo@3x.png in Resources */,
+				BCE8280A1CADDDAB00128232 /* video-carrusel-0@3x.png in Resources */,
 				BCC464A51AF9EF5900543591 /* player-minimize-highlighted@3x.png in Resources */,
 				BC5639B919CA57F700C10BCB /* Roboto-Condensed.ttf in Resources */,
 				BC247C861AB252AB00DEF5AA /* close-icon.png in Resources */,
@@ -3709,6 +3997,7 @@
 				BC8BA42719D07E5D0018BA0B /* live-bullet.png in Resources */,
 				BC8BA3FB19D07E5D0018BA0B /* ipad-multimedia@2x.png in Resources */,
 				BCDCADB11ABB81BB007099AF /* TSProgramListTableViewCell.xib in Resources */,
+				BCC635901CA2412500A83A3A /* OpenSans-Bold.ttf in Resources */,
 				BCBC3C9619F059F100C3379F /* icon58.png in Resources */,
 				BCEDABDB1A60B18B0059C357 /* opinion@3x.png in Resources */,
 				BC86E2991A5CF48D00FF319E /* SinImagen@3x.png in Resources */,
@@ -3727,8 +4016,8 @@
 				BCE31E4D1AF041B3002ADAA9 /* MainStoryboard_iPhone.storyboard in Resources */,
 				BC8BA40319D07E5D0018BA0B /* ipad-noticias@2x.png in Resources */,
 				BC8BA3DF19D07E5D0018BA0B /* ipad-blog.png in Resources */,
-				BC9B8CC919C7851D0033D34A /* menu-button.png in Resources */,
 				BCEDABE71A60B18B0059C357 /* videos-bullet.png in Resources */,
+				BCC635AC1CA2A69900A83A3A /* HomeDoubleTableViewCell.xib in Resources */,
 				BC4ADC791AA4E8A100C54860 /* player-playback-status@2x.png in Resources */,
 				BC5639C919CA57F700C10BCB /* Roboto-LightItalic.ttf in Resources */,
 				BCA0E73719F07FB200E47033 /* icon180.png in Resources */,
@@ -3736,11 +4025,12 @@
 				BCA6A2C619CD1BD80021B243 /* audio.png in Resources */,
 				BCDCADBB1ABBAE84007099AF /* ipad-config@2x.png in Resources */,
 				BCF294E419CCD395007EEE84 /* SinImagen.png in Resources */,
+				BCE8280F1CADDDAB00128232 /* video-carrusel-1.png in Resources */,
 				BCCA68F21A97F494006604DB /* config@2x.png in Resources */,
-				BC5637ED19CA501600C10BCB /* menu-button@2x.png in Resources */,
 				BC8BA3E719D07E5D0018BA0B /* ipad-buscar.png in Resources */,
 				BC8BA3DB19D07E5D0018BA0B /* ipad-acerca@2x.png in Resources */,
 				BCEDAC171A6861720059C357 /* logo-menu-header@3x.png in Resources */,
+				BCEE07841CC01B970023EC01 /* header-menu-logo@2x.png in Resources */,
 				BCA0E73219F07E9700E47033 /* Default-Landscape.png in Resources */,
 				BCC464ED1AF9FC4400543591 /* player-repeat-highlighted@3x.png in Resources */,
 			);
@@ -3771,8 +4061,10 @@
 				BC18B0301AF0512000C3DAD3 /* ipad-blog@2x.png in Resources */,
 				BC18B0311AF0512000C3DAD3 /* plaintableheader.png in Resources */,
 				BC18B0321AF0512000C3DAD3 /* player-minimize@3x.png in Resources */,
+				BCC635941CA2412500A83A3A /* OpenSans-Bold.ttf in Resources */,
 				BCC464B11AF9F3AE00543591 /* player-share-highlighted.png in Resources */,
 				BC18B0331AF0512000C3DAD3 /* home@3x.png in Resources */,
+				BCE828411CADFF4A00128232 /* HomeHSecondaryCarrouselTableViewCell.xib in Resources */,
 				BC18B0341AF0512000C3DAD3 /* audio@2x.png in Resources */,
 				BC18B0351AF0512000C3DAD3 /* pop.wav in Resources */,
 				BC18B0361AF0512000C3DAD3 /* Default-Portrait@2x.png in Resources */,
@@ -3782,10 +4074,13 @@
 				BC18B03A1AF0512000C3DAD3 /* player-share@2x.png in Resources */,
 				BC18B03B1AF0512000C3DAD3 /* opinion@2x.png in Resources */,
 				BC18B03C1AF0512000C3DAD3 /* video@2x.png in Resources */,
+				BCCF7C1F1C9B8C2600859084 /* highlighted-color-shadow@2x.png in Resources */,
+				BCE8280E1CADDDAB00128232 /* video-carrusel-0@3x.png in Resources */,
 				BC18B03D1AF0512000C3DAD3 /* ipad-reportaje.png in Resources */,
 				BC18B03E1AF0512000C3DAD3 /* ipad-config.png in Resources */,
 				BC18B03F1AF0512000C3DAD3 /* player-minimize@2x.png in Resources */,
 				BC54B1F31C74D235001566EB /* KABasicHTableHCellView.xib in Resources */,
+				BCE8282B1CADE88200128232 /* video-icon.png in Resources */,
 				BC18B0401AF0512000C3DAD3 /* Roboto-BoldCondensedItalic.ttf in Resources */,
 				BC18B0411AF0512000C3DAD3 /* config.png in Resources */,
 				BC18B0421AF0512000C3DAD3 /* logo@2x.png in Resources */,
@@ -3806,6 +4101,7 @@
 				BC3B6B031C5AEC4900E8DAB6 /* KABasicHTableCellView.xib in Resources */,
 				BC18B0511AF0512000C3DAD3 /* programa.png in Resources */,
 				BC18B0521AF0512000C3DAD3 /* reportaje.png in Resources */,
+				BCE828131CADDDAB00128232 /* video-carrusel-1.png in Resources */,
 				BC18B0531AF0512000C3DAD3 /* audio@3x.png in Resources */,
 				BC18B0541AF0512000C3DAD3 /* ipad-buscar@2x.png in Resources */,
 				BC18B0551AF0512000C3DAD3 /* buscar@2x.png in Resources */,
@@ -3817,7 +4113,9 @@
 				BC18B05A1AF0512000C3DAD3 /* icon114.png in Resources */,
 				BC18B05B1AF0512000C3DAD3 /* reportaje@2x.png in Resources */,
 				BC18B05C1AF0512000C3DAD3 /* icon-menu-header@2x.png in Resources */,
+				BCE828301CADE88200128232 /* video-icon@2x.png in Resources */,
 				BC18B05D1AF0512000C3DAD3 /* player-minimize.png in Resources */,
+				BCEE078D1CC01B970023EC01 /* header-menu-logo@3x.png in Resources */,
 				BC18B05E1AF0512000C3DAD3 /* SinImagen@2x.png in Resources */,
 				BC18B05F1AF0512000C3DAD3 /* Default-Landscape@2x.png in Resources */,
 				BC54B1EE1C74D235001566EB /* KABasicHTableCellView.xib in Resources */,
@@ -3830,9 +4128,12 @@
 				BC18B0661AF0512000C3DAD3 /* ClipEstandarTableCellView.xib in Resources */,
 				BC18B0671AF0512000C3DAD3 /* BlogHomeCollectionCell.xib in Resources */,
 				BC18B0681AF0512000C3DAD3 /* ipad-programa@2x.png in Resources */,
+				BCCF7C041C98BC9500859084 /* menu-button@2x.png in Resources */,
 				BC18B0691AF0512000C3DAD3 /* noticias@3x.png in Resources */,
+				BCC6358E1CA23E3200A83A3A /* PTF55F.ttf in Resources */,
 				BC18B06A1AF0512000C3DAD3 /* HomeTopTableViewCell.xib in Resources */,
 				BC18B06B1AF0512000C3DAD3 /* player-repeat@2x.png in Resources */,
+				BCCF7BFF1C98BC9500859084 /* menu-button.png in Resources */,
 				BC18B06C1AF0512000C3DAD3 /* icon40.png in Resources */,
 				BC18B06D1AF0512000C3DAD3 /* NewsDefaultCollectionCell.xib in Resources */,
 				BC18B06E1AF0512000C3DAD3 /* video@3x.png in Resources */,
@@ -3840,7 +4141,9 @@
 				BC18B0701AF0512000C3DAD3 /* TSHiglightedVideoCollectionCell.xib in Resources */,
 				BC18B0711AF0512000C3DAD3 /* Default-Portrait.png in Resources */,
 				BCC464E71AF9FC4400543591 /* player-repeat-highlighted.png in Resources */,
+				BCF02B691CACB9FE00EA32BA /* HomeSingleImageNewsTableViewCell.xib in Resources */,
 				BC18B0721AF0512000C3DAD3 /* home.png in Resources */,
+				BCA7BD2A1CC2FD6000BE2FAB /* VideoHomeBasicTableViewCell.xib in Resources */,
 				BC18B0731AF0512000C3DAD3 /* icon100.png in Resources */,
 				BC18B0741AF0512000C3DAD3 /* NewsFirstCollectionCell.xib in Resources */,
 				BC18B0751AF0512000C3DAD3 /* back.png in Resources */,
@@ -3863,6 +4166,7 @@
 				BC18B0841AF0512000C3DAD3 /* player-repeat@3x.png in Resources */,
 				BC18B0851AF0512000C3DAD3 /* home-cell-shadow@2x.png in Resources */,
 				BC18B0861AF0512000C3DAD3 /* ipad-programa.png in Resources */,
+				BCE8281D1CADDDAB00128232 /* video-carrusel-1@3x.png in Resources */,
 				BC18B0871AF0512000C3DAD3 /* acerca@2x.png in Resources */,
 				BC54B1F81C74D235001566EB /* KABasicImageTableCellView.xib in Resources */,
 				BC18B0881AF0512000C3DAD3 /* icon25.png in Resources */,
@@ -3870,13 +4174,18 @@
 				BCC464C31AF9F9CB00543591 /* player-pause-highlighted.png in Resources */,
 				BC18B08A1AF0512000C3DAD3 /* share.png in Resources */,
 				BC18B08B1AF0512000C3DAD3 /* Default-568h@2x.png in Resources */,
+				BCA7BD241CC2E16E00BE2FAB /* VideoHomeHighlightedTebleViewCell.xib in Resources */,
 				BC18B08C1AF0512000C3DAD3 /* FirstTableCellView.xib in Resources */,
+				BCEE07831CC01B970023EC01 /* header-menu-logo.png in Resources */,
 				BC18B08D1AF0512000C3DAD3 /* icon72.png in Resources */,
+				BCE828181CADDDAB00128232 /* video-carrusel-1@2x.png in Resources */,
 				BC18B08E1AF0512000C3DAD3 /* TSSwitchViewCell.xib in Resources */,
 				BC18B08F1AF0512000C3DAD3 /* VideoDetailCellView.xib in Resources */,
 				BC18B0901AF0512000C3DAD3 /* player-pause.png in Resources */,
+				BCCF7C241C9B8C2600859084 /* highlighted-color-shadow@3x.png in Resources */,
 				BC18B0911AF0512000C3DAD3 /* ipad-multimedia.png in Resources */,
 				BC18B0921AF0512000C3DAD3 /* player-repeat.png in Resources */,
+				BCE8284E1CAE072900128232 /* nlogo-telesur-header@2x.png in Resources */,
 				BC18B0931AF0512000C3DAD3 /* menu-logo@3x.png in Resources */,
 				BC18B0941AF0512000C3DAD3 /* Roboto-Bold.ttf in Resources */,
 				BC18B0951AF0512000C3DAD3 /* OpinionHomeCollectionViewCell.xib in Resources */,
@@ -3899,23 +4208,30 @@
 				BC18B0A11AF0512000C3DAD3 /* programa@3x.png in Resources */,
 				BC18B0A21AF0512000C3DAD3 /* icon76.png in Resources */,
 				BC18B0A31AF0512000C3DAD3 /* share@2x.png in Resources */,
+				BCC635B01CA2A69900A83A3A /* HomeDoubleTableViewCell.xib in Resources */,
 				BC18B0A41AF0512000C3DAD3 /* player-pause@3x.png in Resources */,
+				BCE828351CADE88200128232 /* video-icon@3x.png in Resources */,
 				BC18B0A51AF0512000C3DAD3 /* videos-bullet@3x.png in Resources */,
 				BC18B0A61AF0512000C3DAD3 /* player-pause@2x.png in Resources */,
 				BC18B0A71AF0512000C3DAD3 /* Roboto-Medium.ttf in Resources */,
+				BCCF7C091C98BC9500859084 /* plaintableheader.png in Resources */,
+				BCE828231CADDF7800128232 /* HomeVideoCarrouselTableViewCell.xib in Resources */,
 				BC18B0A81AF0512000C3DAD3 /* refresh@3x.png in Resources */,
 				BC18B0A91AF0512000C3DAD3 /* Images.xcassets in Resources */,
 				BC18B0AA1AF0512000C3DAD3 /* videos-bullet@2x.png in Resources */,
+				BCE828491CAE072900128232 /* nlogo-telesur-header.png in Resources */,
 				BC18B0AB1AF0512000C3DAD3 /* RelatedRSSTableViewCell.xib in Resources */,
 				BC18B0AC1AF0512000C3DAD3 /* icon144.png in Resources */,
 				BC18B0AD1AF0512000C3DAD3 /* icon44.png in Resources */,
 				BC18B0AE1AF0512000C3DAD3 /* ipad-acerca.png in Resources */,
 				BC18B0AF1AF0512000C3DAD3 /* icon22.png in Resources */,
+				BCE8283B1CADEC6C00128232 /* HomeShowTableViewCell.xib in Resources */,
 				BC18B0B01AF0512000C3DAD3 /* logo.png in Resources */,
 				BC18B0B11AF0512000C3DAD3 /* acerca@3x.png in Resources */,
 				BC18B0B21AF0512000C3DAD3 /* logo-menu-header@2x.png in Resources */,
 				BC18B0B31AF0512000C3DAD3 /* player-share.png in Resources */,
 				BC18B0B41AF0512000C3DAD3 /* Roboto-BoldCondensed.ttf in Resources */,
+				BCEE07881CC01B970023EC01 /* header-menu-logo@2x.png in Resources */,
 				BC18B0B51AF0512000C3DAD3 /* video.png in Resources */,
 				BCC464A91AF9EF5900543591 /* player-minimize-highlighted@3x.png in Resources */,
 				BC18B0B61AF0512000C3DAD3 /* Roboto-Condensed.ttf in Resources */,
@@ -3924,6 +4240,7 @@
 				BC18B0B91AF0512000C3DAD3 /* MainStoryboard_iPad.storyboard in Resources */,
 				BC18B0BA1AF0512000C3DAD3 /* live-bullet.png in Resources */,
 				BC18B0BB1AF0512000C3DAD3 /* ipad-multimedia@2x.png in Resources */,
+				BCE828091CADDDAB00128232 /* video-carrusel-0@2x.png in Resources */,
 				BC18B0BC1AF0512000C3DAD3 /* TSProgramListTableViewCell.xib in Resources */,
 				BC18B0BD1AF0512000C3DAD3 /* icon58.png in Resources */,
 				BC18B0BE1AF0512000C3DAD3 /* opinion@3x.png in Resources */,
@@ -3941,9 +4258,9 @@
 				BCC464D51AF9FB4E00543591 /* player-play-highlighted.png in Resources */,
 				BC18B0CA1AF0512000C3DAD3 /* psst1.wav in Resources */,
 				BC18B0CB1AF0512000C3DAD3 /* MainStoryboard_iPhone.storyboard in Resources */,
+				BCE828041CADDDAB00128232 /* video-carrusel-0.png in Resources */,
 				BC18B0CC1AF0512000C3DAD3 /* ipad-noticias@2x.png in Resources */,
 				BC18B0CD1AF0512000C3DAD3 /* ipad-blog.png in Resources */,
-				BC18B0CE1AF0512000C3DAD3 /* menu-button.png in Resources */,
 				BC18B0CF1AF0512000C3DAD3 /* videos-bullet.png in Resources */,
 				BC18B0D01AF0512000C3DAD3 /* player-playback-status@2x.png in Resources */,
 				BC18B0D11AF0512000C3DAD3 /* Roboto-LightItalic.ttf in Resources */,
@@ -3953,12 +4270,12 @@
 				BC18B0D51AF0512000C3DAD3 /* ipad-config@2x.png in Resources */,
 				BC18B0D61AF0512000C3DAD3 /* SinImagen.png in Resources */,
 				BC18B0D71AF0512000C3DAD3 /* config@2x.png in Resources */,
-				BC18B0D81AF0512000C3DAD3 /* menu-button@2x.png in Resources */,
 				BC18B0D91AF0512000C3DAD3 /* ipad-buscar.png in Resources */,
 				BC18B0DA1AF0512000C3DAD3 /* ipad-acerca@2x.png in Resources */,
 				BC18B0DB1AF0512000C3DAD3 /* logo-menu-header@3x.png in Resources */,
 				BC18B0DC1AF0512000C3DAD3 /* Default-Landscape.png in Resources */,
 				BCC464F11AF9FC4400543591 /* player-repeat-highlighted@3x.png in Resources */,
+				BCE828531CAE072900128232 /* nlogo-telesur-header@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3980,9 +4297,12 @@
 				BCA6A2C919CD1BD80021B243 /* audio@2x.png in Resources */,
 				BC5639CE19CA57F700C10BCB /* Roboto-Medium.ttf in Resources */,
 				BC07897F1AA3C884006185DC /* player-minimize@3x.png in Resources */,
+				BCC635911CA2412500A83A3A /* OpenSans-Bold.ttf in Resources */,
 				BCC464AE1AF9F3AE00543591 /* player-share-highlighted.png in Resources */,
 				BCA053391A1D0E5F00946420 /* Default-Landscape@2x.png in Resources */,
+				BCE8283E1CADFF4A00128232 /* HomeHSecondaryCarrouselTableViewCell.xib in Resources */,
 				BC8BA41C19D07E5D0018BA0B /* ipad-reportaje@2x.png in Resources */,
+				BCCF7C211C9B8C2600859084 /* highlighted-color-shadow@3x.png in Resources */,
 				BCA6A2D719CD1BF50021B243 /* menu-logo@2x.png in Resources */,
 				BC419D6F19AC192300C632C9 /* teleSUR Multimedia English-Info.plist in Resources */,
 				BCA0E72619F07D5200E47033 /* icon-mult100.png in Resources */,
@@ -3990,10 +4310,13 @@
 				BCDCADBC1ABBAE84007099AF /* ipad-config@2x.png in Resources */,
 				BC247C871AB252AB00DEF5AA /* close-icon.png in Resources */,
 				BCA0E71819F07D5200E47033 /* icon-mult44.png in Resources */,
+				BCCF7C1C1C9B8C2500859084 /* highlighted-color-shadow@2x.png in Resources */,
+				BCE8280B1CADDDAB00128232 /* video-carrusel-0@3x.png in Resources */,
 				BC07899F1AA3C884006185DC /* player-share@2x.png in Resources */,
 				BC9D36DF19DB5C92009D09A8 /* RelatedVideoTableViewCell.xib in Resources */,
 				BCA0E72419F07D5200E47033 /* icon-mult80.png in Resources */,
 				BC61E88F19EF6CA50093526C /* Default.png in Resources */,
+				BCE828281CADE88200128232 /* video-icon.png in Resources */,
 				BC54B1F01C74D235001566EB /* KABasicHTableHCellView.xib in Resources */,
 				BC07897B1AA3C884006185DC /* player-minimize@2x.png in Resources */,
 				BC8BA45F19D21CB40018BA0B /* icon-video@2x.png in Resources */,
@@ -4014,9 +4337,11 @@
 				BC4ADC761AA4E8A100C54860 /* player-playback-status.png in Resources */,
 				BC3B6B001C5AEC4900E8DAB6 /* KABasicHTableCellView.xib in Resources */,
 				BCEDAC141A6861720059C357 /* logo-menu-header@2x.png in Resources */,
+				BCE828101CADDDAB00128232 /* video-carrusel-1.png in Resources */,
 				BCA0E72E19F07D5200E47033 /* icon-mult152.png in Resources */,
 				BC6805F91A246ED70038930C /* refresh@3x.png in Resources */,
 				BCEDABD81A60B18B0059C357 /* noticias@3x.png in Resources */,
+				BCCF7C061C98BC9500859084 /* plaintableheader.png in Resources */,
 				BC5639CA19CA57F700C10BCB /* Roboto-LightItalic.ttf in Resources */,
 				BCC464B81AF9F3AE00543591 /* player-share-highlighted@3x.png in Resources */,
 				BCA6A33B19CD1C9F0021B243 /* video@2x.png in Resources */,
@@ -4024,7 +4349,9 @@
 				BC8BA3E019D07E5D0018BA0B /* ipad-blog.png in Resources */,
 				BC8BA3E819D07E5D0018BA0B /* ipad-buscar.png in Resources */,
 				BCA6A32719CD1C9F0021B243 /* programa.png in Resources */,
+				BCE8282D1CADE88200128232 /* video-icon@2x.png in Resources */,
 				BCF294E919CCD395007EEE84 /* SinImagen@2x.png in Resources */,
+				BCEE078A1CC01B970023EC01 /* header-menu-logo@3x.png in Resources */,
 				BCEDAC0A1A6860840059C357 /* icon-menu-header@2x.png in Resources */,
 				BC0789771AA3C884006185DC /* player-minimize.png in Resources */,
 				BC8BA40C19D07E5D0018BA0B /* ipad-opinion@2x.png in Resources */,
@@ -4037,9 +4364,9 @@
 				BC247C8F1AB252AB00DEF5AA /* close-icon@3x.png in Resources */,
 				BCEDABF01A60B18B0059C357 /* videos-bullet@3x.png in Resources */,
 				BC6805F11A246ED70038930C /* refresh.png in Resources */,
-				BC5637EE19CA501600C10BCB /* menu-button@2x.png in Resources */,
 				BC8BA42819D07E5D0018BA0B /* live-bullet.png in Resources */,
 				BC8BA3D819D07E5D0018BA0B /* ipad-acerca.png in Resources */,
+				BCC6358B1CA23E3200A83A3A /* PTF55F.ttf in Resources */,
 				BCA6A30719CD1C9F0021B243 /* home.png in Resources */,
 				BC4ADC861AA4E8A100C54860 /* player-repeat@2x.png in Resources */,
 				BC8BA3F019D07E5D0018BA0B /* ipad-home.png in Resources */,
@@ -4050,7 +4377,9 @@
 				BC4DEA521AA14950001F1076 /* TSHiglightedVideoCollectionCell.xib in Resources */,
 				BCC464E41AF9FC4300543591 /* player-repeat-highlighted.png in Resources */,
 				BC8BA3DC19D07E5D0018BA0B /* ipad-acerca@2x.png in Resources */,
+				BCF02B661CACB9FE00EA32BA /* HomeSingleImageNewsTableViewCell.xib in Resources */,
 				BC68060F1A2482680038930C /* share.png in Resources */,
+				BCA7BD271CC2FD6000BE2FAB /* VideoHomeBasicTableViewCell.xib in Resources */,
 				BC8BA45B19D21CB40018BA0B /* icon-video.png in Resources */,
 				BCA6A32F19CD1C9F0021B243 /* reportaje.png in Resources */,
 				BCA0E72C19F07D5200E47033 /* icon-mult144.png in Resources */,
@@ -4073,20 +4402,26 @@
 				BC247C9F1AB27BA100DEF5AA /* logo@2x.png in Resources */,
 				BC4ADC8A1AA4E8A100C54860 /* player-repeat@3x.png in Resources */,
 				BC8BA38719CFF4020018BA0B /* MainStoryboard_iPad.storyboard in Resources */,
+				BCE8281A1CADDDAB00128232 /* video-carrusel-1@3x.png in Resources */,
 				BC54B1F51C74D235001566EB /* KABasicImageTableCellView.xib in Resources */,
 				BC8BA42C19D07E5D0018BA0B /* live-bullet@2x.png in Resources */,
 				BC56382219CA516300C10BCB /* psst1.wav in Resources */,
+				BCCF7C011C98BC9500859084 /* menu-button@2x.png in Resources */,
 				BCC464C01AF9F9CB00543591 /* player-pause-highlighted.png in Resources */,
 				BC8BA42419D07E5D0018BA0B /* ipad-video@2x.png in Resources */,
 				BCEDABC81A60B18B0059C357 /* acerca@3x.png in Resources */,
+				BCA7BD211CC2E16E00BE2FAB /* VideoHomeHighlightedTebleViewCell.xib in Resources */,
 				BCA0E71E19F07D5200E47033 /* icon-mult58.png in Resources */,
+				BCEE07801CC01B970023EC01 /* header-menu-logo.png in Resources */,
 				BC8BA3FC19D07E5D0018BA0B /* ipad-multimedia@2x.png in Resources */,
+				BCE828151CADDDAB00128232 /* video-carrusel-1@2x.png in Resources */,
 				BCEDABF51A685DE70059C357 /* audio@3x.png in Resources */,
 				BC5639AA19CA57F700C10BCB /* Roboto-Bold.ttf in Resources */,
 				BCEDABD41A60B18B0059C357 /* menu-logo@3x.png in Resources */,
 				BCA6A30319CD1C9F0021B243 /* buscar@2x.png in Resources */,
 				BC0789831AA3C884006185DC /* player-pause.png in Resources */,
 				BCD514611A5F049700F50484 /* Default-Portrait.png in Resources */,
+				BCE8284B1CAE072900128232 /* nlogo-telesur-header@2x.png in Resources */,
 				BC4ADC821AA4E8A100C54860 /* player-repeat.png in Resources */,
 				BC8BA3B319CFF5990018BA0B /* NewsFirstCollectionCell.xib in Resources */,
 				BC5639D619CA57F700C10BCB /* Roboto-Regular.ttf in Resources */,
@@ -4099,7 +4434,6 @@
 				BCC4649C1AF9EF5900543591 /* player-minimize-highlighted.png in Resources */,
 				BCC464B31AF9F3AE00543591 /* player-share-highlighted@2x.png in Resources */,
 				BCC464A11AF9EF5900543591 /* player-minimize-highlighted@2x.png in Resources */,
-				BC5637EA19CA501600C10BCB /* menu-button.png in Resources */,
 				BCA0E72019F07D5200E47033 /* icon-mult72.png in Resources */,
 				BC247CA31AB27BA100DEF5AA /* logo@3x.png in Resources */,
 				BC4ADC681AA4CB5F00C54860 /* player-logo@2x.png in Resources */,
@@ -4110,23 +4444,30 @@
 				BCCBEF0E19DCAD480001C2BD /* OpinionHomeCollectionViewCell.xib in Resources */,
 				BC8BA41019D07E5D0018BA0B /* ipad-programa.png in Resources */,
 				BCDCADB21ABB81BB007099AF /* TSProgramListTableViewCell.xib in Resources */,
+				BCC635AD1CA2A69900A83A3A /* HomeDoubleTableViewCell.xib in Resources */,
 				BC8BA3B819CFF5BC0018BA0B /* NewsDefaultCollectionCell.xib in Resources */,
+				BCE828321CADE88200128232 /* video-icon@3x.png in Resources */,
 				BC07898B1AA3C884006185DC /* player-pause@3x.png in Resources */,
 				BCA0E71A19F07D5200E47033 /* icon-mult50.png in Resources */,
 				BC0789871AA3C884006185DC /* player-pause@2x.png in Resources */,
 				BCEDAC1D1A6863190059C357 /* home-cell-shadow@3x.png in Resources */,
+				BCE828201CADDF7800128232 /* HomeVideoCarrouselTableViewCell.xib in Resources */,
 				BC8BA41819D07E5D0018BA0B /* ipad-reportaje.png in Resources */,
 				BCEDAC221A68A4E30059C357 /* home@3x.png in Resources */,
 				BC5638C519CA56D800C10BCB /* HomeTopTableViewCell.xib in Resources */,
+				BCE828461CAE072900128232 /* nlogo-telesur-header.png in Resources */,
 				BC8BA40819D07E5D0018BA0B /* ipad-opinion.png in Resources */,
 				BCEDAC181A6861720059C357 /* logo-menu-header@3x.png in Resources */,
 				BC8BA42019D07E5D0018BA0B /* ipad-video.png in Resources */,
 				BCA6A2CF19CD1BE50021B243 /* senal@2x.png in Resources */,
 				BCA6A33719CD1C9F0021B243 /* video.png in Resources */,
+				BCE828381CADEC6C00128232 /* HomeShowTableViewCell.xib in Resources */,
 				BC5639D219CA57F700C10BCB /* Roboto-MediumItalic.ttf in Resources */,
 				BCA6A2FB19CD1C9F0021B243 /* blog@2x.png in Resources */,
 				BC07899B1AA3C884006185DC /* player-share.png in Resources */,
+				BCCF7BFC1C98BC9500859084 /* menu-button.png in Resources */,
 				BCC464A61AF9EF5900543591 /* player-minimize-highlighted@3x.png in Resources */,
+				BCEE07851CC01B970023EC01 /* header-menu-logo@2x.png in Resources */,
 				BC6806071A2482680038930C /* back@2x.png in Resources */,
 				BC5639DE19CA57F700C10BCB /* Roboto-ThinItalic.ttf in Resources */,
 				BCA6A31719CD1C9F0021B243 /* noticias.png in Resources */,
@@ -4135,6 +4476,7 @@
 				BC5639C219CA57F700C10BCB /* Roboto-Italic.ttf in Resources */,
 				BC8BA40019D07E5D0018BA0B /* ipad-noticias.png in Resources */,
 				BCEDABD01A60B18B0059C357 /* buscar@3x.png in Resources */,
+				BCE828061CADDDAB00128232 /* video-carrusel-0@2x.png in Resources */,
 				BC56389719CA562D00C10BCB /* FirstTableCellView.xib in Resources */,
 				BC5639A619CA57F700C10BCB /* Roboto-BlackItalic.ttf in Resources */,
 				BC9D36F019DC774B009D09A8 /* BlogHomeCollectionCell.xib in Resources */,
@@ -4152,6 +4494,7 @@
 				BCE31E4E1AF041B3002ADAA9 /* MainStoryboard_iPhone.storyboard in Resources */,
 				BC5A008119D3981A0091EFF3 /* RelatedRSSTableViewCell.xib in Resources */,
 				BCA6A2F319CD1C9F0021B243 /* acerca@2x.png in Resources */,
+				BCE828011CADDDAB00128232 /* video-carrusel-0.png in Resources */,
 				BC5638CD19CA56D800C10BCB /* HomeVideoTableViewCell.xib in Resources */,
 				BCEDABE41A60B18B0059C357 /* reportaje@3x.png in Resources */,
 				BC4ADC7A1AA4E8A100C54860 /* player-playback-status@2x.png in Resources */,
@@ -4168,6 +4511,7 @@
 				BCF294E519CCD395007EEE84 /* SinImagen.png in Resources */,
 				BCA0E71619F07D5200E47033 /* icon-mult40.png in Resources */,
 				BCC464EE1AF9FC4400543591 /* player-repeat-highlighted@3x.png in Resources */,
+				BCE828501CAE072900128232 /* nlogo-telesur-header@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -4197,7 +4541,10 @@
 				BC86E29B1A5CF48D00FF319E /* SinImagen@3x.png in Resources */,
 				BCC464D81AF9FB4E00543591 /* player-play-highlighted@2x.png in Resources */,
 				BC6806101A2482680038930C /* share.png in Resources */,
+				BCE828391CADEC6C00128232 /* HomeShowTableViewCell.xib in Resources */,
+				BCE8282E1CADE88200128232 /* video-icon@2x.png in Resources */,
 				BC5639A719CA57F700C10BCB /* Roboto-BlackItalic.ttf in Resources */,
+				BCE828331CADE88200128232 /* video-icon@3x.png in Resources */,
 				BC8BA41119D07E5D0018BA0B /* ipad-programa.png in Resources */,
 				BC4ADC831AA4E8A100C54860 /* player-repeat.png in Resources */,
 				BC247CA41AB27BA100DEF5AA /* logo@3x.png in Resources */,
@@ -4208,6 +4555,8 @@
 				BC13774319F05BF3002C47F1 /* home-cell-shadow@2x.png in Resources */,
 				BC4DEA531AA14950001F1076 /* TSHiglightedVideoCollectionCell.xib in Resources */,
 				BC5639AF19CA57F700C10BCB /* Roboto-BoldCondensed.ttf in Resources */,
+				BCF02B671CACB9FE00EA32BA /* HomeSingleImageNewsTableViewCell.xib in Resources */,
+				BCA7BD221CC2E16E00BE2FAB /* VideoHomeHighlightedTebleViewCell.xib in Resources */,
 				BCDCADBD1ABBAE84007099AF /* ipad-config@2x.png in Resources */,
 				BC8BA41D19D07E5D0018BA0B /* ipad-reportaje@2x.png in Resources */,
 				BC8BA38319CFE0D50018BA0B /* icon-menu-header.png in Resources */,
@@ -4221,6 +4570,7 @@
 				BCA6A2F019CD1C9F0021B243 /* acerca.png in Resources */,
 				BCA6A32C19CD1C9F0021B243 /* programa@2x.png in Resources */,
 				BC5639C319CA57F700C10BCB /* Roboto-Italic.ttf in Resources */,
+				BCEE07811CC01B970023EC01 /* header-menu-logo.png in Resources */,
 				BCA6A33419CD1C9F0021B243 /* reportaje@2x.png in Resources */,
 				BC8BA41919D07E5D0018BA0B /* ipad-reportaje.png in Resources */,
 				BC4ADC6D1AA4CB5F00C54860 /* player-logo@3x.png in Resources */,
@@ -4228,9 +4578,11 @@
 				BC54B1EC1C74D235001566EB /* KABasicHTableCellView.xib in Resources */,
 				BCEDAC191A6861720059C357 /* logo-menu-header@3x.png in Resources */,
 				BCC464AF1AF9F3AE00543591 /* player-share-highlighted.png in Resources */,
+				BCE828291CADE88200128232 /* video-icon.png in Resources */,
 				BCC464C11AF9F9CB00543591 /* player-pause-highlighted.png in Resources */,
 				BC5638B819CA56BE00C10BCB /* VerMasClipsTableCellView.xib in Resources */,
 				BC8BA3B419CFF5990018BA0B /* NewsFirstCollectionCell.xib in Resources */,
+				BCE8283F1CADFF4A00128232 /* HomeHSecondaryCarrouselTableViewCell.xib in Resources */,
 				BCA6A32819CD1C9F0021B243 /* programa.png in Resources */,
 				BCEDAC051A685F5D0059C357 /* video@3x.png in Resources */,
 				BC5639B319CA57F700C10BCB /* Roboto-BoldCondensedItalic.ttf in Resources */,
@@ -4240,25 +4592,29 @@
 				BCC464C61AF9F9CB00543591 /* player-pause-highlighted@2x.png in Resources */,
 				BC247C881AB252AB00DEF5AA /* close-icon.png in Resources */,
 				BC8BA45C19D21CB40018BA0B /* icon-video.png in Resources */,
-				BC9B8CCB19C7851D0033D34A /* menu-button.png in Resources */,
 				BC07897C1AA3C884006185DC /* player-minimize@2x.png in Resources */,
 				BCCA68FC1A97F81C006604DB /* TSSwitchViewCell.xib in Resources */,
+				BCE8281B1CADDDAB00128232 /* video-carrusel-1@3x.png in Resources */,
 				BC8BA40119D07E5D0018BA0B /* ipad-noticias.png in Resources */,
 				BCA6A33819CD1C9F0021B243 /* video.png in Resources */,
 				BCA6A32019CD1C9F0021B243 /* opinion.png in Resources */,
 				BCC464DD1AF9FB4E00543591 /* player-play-highlighted@3x.png in Resources */,
 				BC8BA40D19D07E5D0018BA0B /* ipad-opinion@2x.png in Resources */,
 				BCC4649D1AF9EF5900543591 /* player-minimize-highlighted.png in Resources */,
+				BCC6358C1CA23E3200A83A3A /* PTF55F.ttf in Resources */,
 				BCC464A71AF9EF5900543591 /* player-minimize-highlighted@3x.png in Resources */,
 				BCC464B41AF9F3AE00543591 /* player-share-highlighted@2x.png in Resources */,
 				BCCA68F01A97F494006604DB /* config.png in Resources */,
+				BCCF7C021C98BC9500859084 /* menu-button@2x.png in Resources */,
 				BCC464E51AF9FC4300543591 /* player-repeat-highlighted.png in Resources */,
 				BC6806081A2482680038930C /* back@2x.png in Resources */,
 				BC8BA42D19D07E5D0018BA0B /* live-bullet@2x.png in Resources */,
 				BCDCADB91ABBAE84007099AF /* ipad-config.png in Resources */,
 				BCA6A30019CD1C9F0021B243 /* buscar.png in Resources */,
+				BCC635AE1CA2A69900A83A3A /* HomeDoubleTableViewCell.xib in Resources */,
 				BCEDABF61A685DE70059C357 /* audio@3x.png in Resources */,
 				BCEDAC0F1A6860840059C357 /* icon-menu-header@3x.png in Resources */,
+				BCC635921CA2412500A83A3A /* OpenSans-Bold.ttf in Resources */,
 				BC8BA3DD19D07E5D0018BA0B /* ipad-acerca@2x.png in Resources */,
 				BCC464EA1AF9FC4400543591 /* player-repeat-highlighted@2x.png in Resources */,
 				BC9D36F119DC774B009D09A8 /* BlogHomeCollectionCell.xib in Resources */,
@@ -4268,10 +4624,12 @@
 				BCEDAC231A68A4E30059C357 /* home@3x.png in Resources */,
 				BC8BA38819CFF4020018BA0B /* MainStoryboard_iPad.storyboard in Resources */,
 				BCEDABD51A60B18B0059C357 /* menu-logo@3x.png in Resources */,
+				BCCF7BFD1C98BC9500859084 /* menu-button.png in Resources */,
 				BCA0E73319F07E9700E47033 /* Default-Landscape.png in Resources */,
 				BCBC3C9D19F059F100C3379F /* icon80.png in Resources */,
 				BC0789981AA3C884006185DC /* player-play@3x.png in Resources */,
 				BCCA68F81A97F494006604DB /* config@3x.png in Resources */,
+				BCE828071CADDDAB00128232 /* video-carrusel-0@2x.png in Resources */,
 				BCBC3C9919F059F100C3379F /* icon72.png in Resources */,
 				BCEDABD91A60B18B0059C357 /* noticias@3x.png in Resources */,
 				BCEDABF11A60B18B0059C357 /* videos-bullet@3x.png in Resources */,
@@ -4283,7 +4641,6 @@
 				BCC464D31AF9FB4E00543591 /* player-play-highlighted.png in Resources */,
 				BCA6A30419CD1C9F0021B243 /* buscar@2x.png in Resources */,
 				BC8BA40919D07E5D0018BA0B /* ipad-opinion.png in Resources */,
-				BC5637EF19CA501600C10BCB /* menu-button@2x.png in Resources */,
 				BC4ADC651AA4CB5F00C54860 /* player-logo.png in Resources */,
 				BC8BA3ED19D07E5D0018BA0B /* ipad-buscar@2x.png in Resources */,
 				BCBC3C9B19F059F100C3379F /* icon76.png in Resources */,
@@ -4293,7 +4650,9 @@
 				BC1BB7441A5E489900F63AD1 /* Default-Portrait@2x.png in Resources */,
 				BC247C8C1AB252AB00DEF5AA /* close-icon@2x.png in Resources */,
 				BC5639CB19CA57F700C10BCB /* Roboto-LightItalic.ttf in Resources */,
+				BCEE07861CC01B970023EC01 /* header-menu-logo@2x.png in Resources */,
 				BC5639D319CA57F700C10BCB /* Roboto-MediumItalic.ttf in Resources */,
+				BCE828161CADDDAB00128232 /* video-carrusel-1@2x.png in Resources */,
 				BC8BA3E119D07E5D0018BA0B /* ipad-blog.png in Resources */,
 				BC5639DF19CA57F700C10BCB /* Roboto-ThinItalic.ttf in Resources */,
 				BCEDAC001A685ED30059C357 /* senal@3x.png in Resources */,
@@ -4328,10 +4687,13 @@
 				BC56387A19CA54FA00C10BCB /* TSClipListadoTableViewController.xib in Resources */,
 				BC5639CF19CA57F700C10BCB /* Roboto-Medium.ttf in Resources */,
 				BC5639BB19CA57F700C10BCB /* Roboto-Condensed.ttf in Resources */,
+				BCCF7C1D1C9B8C2500859084 /* highlighted-color-shadow@2x.png in Resources */,
 				BC5639BF19CA57F700C10BCB /* Roboto-CondensedItalic.ttf in Resources */,
+				BCCF7C071C98BC9500859084 /* plaintableheader.png in Resources */,
 				BC07899C1AA3C884006185DC /* player-share.png in Resources */,
 				BCEDABE11A60B18B0059C357 /* programa@3x.png in Resources */,
 				BC54B1F11C74D235001566EB /* KABasicHTableHCellView.xib in Resources */,
+				BCE828211CADDF7800128232 /* HomeVideoCarrouselTableViewCell.xib in Resources */,
 				BC5638CE19CA56D800C10BCB /* HomeVideoTableViewCell.xib in Resources */,
 				BC6805FA1A246ED70038930C /* refresh@3x.png in Resources */,
 				BCBC3CA719F059F100C3379F /* icon152.png in Resources */,
@@ -4342,12 +4704,14 @@
 				BCCA68F41A97F494006604DB /* config@2x.png in Resources */,
 				BC3B6B011C5AEC4900E8DAB6 /* KABasicHTableCellView.xib in Resources */,
 				BCEDABE91A60B18B0059C357 /* videos-bullet.png in Resources */,
+				BCE8280C1CADDDAB00128232 /* video-carrusel-0@3x.png in Resources */,
 				BC8BA42519D07E5D0018BA0B /* ipad-video@2x.png in Resources */,
 				BC4ADC7B1AA4E8A100C54860 /* player-playback-status@2x.png in Resources */,
 				BC0789781AA3C884006185DC /* player-minimize.png in Resources */,
 				BC8BA41519D07E5D0018BA0B /* ipad-programa@2x.png in Resources */,
 				BCA6A2F419CD1C9F0021B243 /* acerca@2x.png in Resources */,
 				BCA6A30C19CD1C9F0021B243 /* home@2x.png in Resources */,
+				BCE8284C1CAE072900128232 /* nlogo-telesur-header@2x.png in Resources */,
 				BCEDABDD1A60B18B0059C357 /* opinion@3x.png in Resources */,
 				BCBC3CAD19F05A3100C3379F /* Default.png in Resources */,
 				BC6805F61A246ED70038930C /* refresh@2x.png in Resources */,
@@ -4358,22 +4722,29 @@
 				BC6806181A2482680038930C /* share@3x.png in Resources */,
 				BCDCADB31ABB81BB007099AF /* TSProgramListTableViewCell.xib in Resources */,
 				BC56389419CA562D00C10BCB /* ClipEstandarTableCellView.xib in Resources */,
+				BCCF7C221C9B8C2600859084 /* highlighted-color-shadow@3x.png in Resources */,
+				BCE828111CADDDAB00128232 /* video-carrusel-1.png in Resources */,
 				BC8BA46019D21CB40018BA0B /* icon-video@2x.png in Resources */,
 				BC419D5C19AC18D800C632C9 /* Localizable.strings in Resources */,
+				BCEE078B1CC01B970023EC01 /* header-menu-logo@3x.png in Resources */,
 				BCA6A2D819CD1BF50021B243 /* menu-logo@2x.png in Resources */,
 				BC6806141A2482680038930C /* share@2x.png in Resources */,
 				BCEDABE51A60B18B0059C357 /* reportaje@3x.png in Resources */,
 				BC5637D919CA4F6C00C10BCB /* plaintableheader.png in Resources */,
+				BCE828021CADDDAB00128232 /* video-carrusel-0.png in Resources */,
 				BCEDAC1E1A6863190059C357 /* home-cell-shadow@3x.png in Resources */,
 				BC944C831AA93C4700F9EB18 /* TSVideoCollectionCell.xib in Resources */,
 				BCBC3C9519F059F100C3379F /* icon57.png in Resources */,
 				BC8BA3E919D07E5D0018BA0B /* ipad-buscar.png in Resources */,
 				BC4ADC8B1AA4E8A100C54860 /* player-repeat@3x.png in Resources */,
+				BCA7BD281CC2FD6000BE2FAB /* VideoHomeBasicTableViewCell.xib in Resources */,
 				BC5639B719CA57F700C10BCB /* Roboto-BoldItalic.ttf in Resources */,
 				BC6806041A2482680038930C /* back.png in Resources */,
 				BC5639C719CA57F700C10BCB /* Roboto-Light.ttf in Resources */,
 				BCEDABCD1A60B18B0059C357 /* blog@3x.png in Resources */,
+				BCE828511CAE072900128232 /* nlogo-telesur-header@3x.png in Resources */,
 				BC5638B319CA56A200C10BCB /* VideoDetailCellView.xib in Resources */,
+				BCE828471CAE072900128232 /* nlogo-telesur-header.png in Resources */,
 				BC8BA37E19CFE0C10018BA0B /* logo-menu-header.png in Resources */,
 				BCF294E619CCD395007EEE84 /* SinImagen.png in Resources */,
 				BC54B1FB1C74D235001566EB /* KABasicTableCellView.xib in Resources */,
@@ -4393,18 +4764,24 @@
 				BC0789891AA3C884006185DC /* player-pause@2x.png in Resources */,
 				BC8BA3DA19D07E5D0018BA0B /* ipad-acerca.png in Resources */,
 				BC5639DC19CA57F700C10BCB /* Roboto-Thin.ttf in Resources */,
+				BCE828221CADDF7800128232 /* HomeVideoCarrouselTableViewCell.xib in Resources */,
 				BC6806191A2482680038930C /* share@3x.png in Resources */,
+				BCEE07871CC01B970023EC01 /* header-menu-logo@2x.png in Resources */,
 				BCA6A32519CD1C9F0021B243 /* opinion@2x.png in Resources */,
 				BC5639D019CA57F700C10BCB /* Roboto-Medium.ttf in Resources */,
 				BC6806111A2482680038930C /* share.png in Resources */,
+				BCE8280D1CADDDAB00128232 /* video-carrusel-0@3x.png in Resources */,
 				BC6558B41A5F3F6A0007F021 /* Default-Portrait.png in Resources */,
 				BC86E29C1A5CF48D00FF319E /* SinImagen@3x.png in Resources */,
 				BCA0E72519F07D5200E47033 /* icon-mult80.png in Resources */,
 				BC8BA3DE19D07E5D0018BA0B /* ipad-acerca@2x.png in Resources */,
+				BCEE07821CC01B970023EC01 /* header-menu-logo.png in Resources */,
 				BC0789811AA3C884006185DC /* player-minimize@3x.png in Resources */,
+				BCE828171CADDDAB00128232 /* video-carrusel-1@2x.png in Resources */,
 				BCC464EB1AF9FC4400543591 /* player-repeat-highlighted@2x.png in Resources */,
 				BC0789951AA3C884006185DC /* player-play@2x.png in Resources */,
 				BCA6A2F919CD1C9F0021B243 /* blog.png in Resources */,
+				BCE828401CADFF4A00128232 /* HomeHSecondaryCarrouselTableViewCell.xib in Resources */,
 				BC8BA38419CFE0D50018BA0B /* icon-menu-header.png in Resources */,
 				BCC464D41AF9FB4E00543591 /* player-play-highlighted.png in Resources */,
 				BC8BA40219D07E5D0018BA0B /* ipad-noticias.png in Resources */,
@@ -4423,11 +4800,13 @@
 				BC5F024519F07B09008023AE /* Default-568h@2x.png in Resources */,
 				BC5639CC19CA57F700C10BCB /* Roboto-LightItalic.ttf in Resources */,
 				BC5F024619F07B09008023AE /* Default.png in Resources */,
+				BCEE078C1CC01B970023EC01 /* header-menu-logo@3x.png in Resources */,
 				BC6805FB1A246ED70038930C /* refresh@3x.png in Resources */,
 				BCA0E72119F07D5200E47033 /* icon-mult72.png in Resources */,
 				BC4ADC661AA4CB5F00C54860 /* player-logo.png in Resources */,
 				BCEDAC1A1A6861720059C357 /* logo-menu-header@3x.png in Resources */,
 				BCA6A2F119CD1C9F0021B243 /* acerca.png in Resources */,
+				BCCF7BFE1C98BC9500859084 /* menu-button.png in Resources */,
 				BCA0E72F19F07D5200E47033 /* icon-mult152.png in Resources */,
 				BC5639B419CA57F700C10BCB /* Roboto-BoldCondensedItalic.ttf in Resources */,
 				BCEDAC061A685F5D0059C357 /* video@3x.png in Resources */,
@@ -4438,12 +4817,15 @@
 				BC5639B019CA57F700C10BCB /* Roboto-BoldCondensed.ttf in Resources */,
 				BCA6A30119CD1C9F0021B243 /* buscar.png in Resources */,
 				BC5638B919CA56BE00C10BCB /* VerMasClipsTableCellView.xib in Resources */,
+				BCE828521CAE072900128232 /* nlogo-telesur-header@3x.png in Resources */,
 				BCA6A33919CD1C9F0021B243 /* video.png in Resources */,
 				BCCA68F11A97F494006604DB /* config.png in Resources */,
+				BCC6358D1CA23E3200A83A3A /* PTF55F.ttf in Resources */,
 				BCDCADBE1ABBAE84007099AF /* ipad-config@2x.png in Resources */,
 				BCA0E71F19F07D5200E47033 /* icon-mult58.png in Resources */,
 				BC4ADC881AA4E8A100C54860 /* player-repeat@2x.png in Resources */,
 				BC8BA41A19D07E5D0018BA0B /* ipad-reportaje.png in Resources */,
+				BCCF7C081C98BC9500859084 /* plaintableheader.png in Resources */,
 				BCC464BA1AF9F3AE00543591 /* player-share-highlighted@3x.png in Resources */,
 				BC247C9D1AB27BA100DEF5AA /* logo.png in Resources */,
 				BC6805F71A246ED70038930C /* refresh@2x.png in Resources */,
@@ -4454,15 +4836,22 @@
 				BC8BA40A19D07E5D0018BA0B /* ipad-opinion.png in Resources */,
 				BC56389519CA562D00C10BCB /* ClipEstandarTableCellView.xib in Resources */,
 				BCDCADB41ABB81BB007099AF /* TSProgramListTableViewCell.xib in Resources */,
+				BCA7BD231CC2E16E00BE2FAB /* VideoHomeHighlightedTebleViewCell.xib in Resources */,
 				BC8BA3F619D07E5D0018BA0B /* ipad-home@2x.png in Resources */,
 				BCEDAC241A68A4E30059C357 /* home@3x.png in Resources */,
+				BCE8281C1CADDDAB00128232 /* video-carrusel-1@3x.png in Resources */,
+				BCE8282F1CADE88200128232 /* video-icon@2x.png in Resources */,
 				BCA0E71D19F07D5200E47033 /* icon-mult57.png in Resources */,
+				BCA7BD291CC2FD6000BE2FAB /* VideoHomeBasicTableViewCell.xib in Resources */,
 				BC4ADC841AA4E8A100C54860 /* player-repeat.png in Resources */,
 				BCEDABD61A60B18B0059C357 /* menu-logo@3x.png in Resources */,
 				BCF294EB19CCD395007EEE84 /* SinImagen@2x.png in Resources */,
+				BCF02B681CACB9FE00EA32BA /* HomeSingleImageNewsTableViewCell.xib in Resources */,
 				BC5639BC19CA57F700C10BCB /* Roboto-Condensed.ttf in Resources */,
 				BCCA68F91A97F494006604DB /* config@3x.png in Resources */,
 				BC07897D1AA3C884006185DC /* player-minimize@2x.png in Resources */,
+				BCE828081CADDDAB00128232 /* video-carrusel-0@2x.png in Resources */,
+				BCE8283A1CADEC6C00128232 /* HomeShowTableViewCell.xib in Resources */,
 				BCDCADBA1ABBAE84007099AF /* ipad-config.png in Resources */,
 				BCA6A32D19CD1C9F0021B243 /* programa@2x.png in Resources */,
 				BCEDABDA1A60B18B0059C357 /* noticias@3x.png in Resources */,
@@ -4485,6 +4874,7 @@
 				BCC464E61AF9FC4400543591 /* player-repeat-highlighted.png in Resources */,
 				BC4ADC7C1AA4E8A100C54860 /* player-playback-status@2x.png in Resources */,
 				BCC464A81AF9EF5900543591 /* player-minimize-highlighted@3x.png in Resources */,
+				BCCF7C1E1C9B8C2600859084 /* highlighted-color-shadow@2x.png in Resources */,
 				BC0789791AA3C884006185DC /* player-minimize.png in Resources */,
 				BC8BA41619D07E5D0018BA0B /* ipad-programa@2x.png in Resources */,
 				BC8BA42619D07E5D0018BA0B /* ipad-video@2x.png in Resources */,
@@ -4492,9 +4882,11 @@
 				BCEDAC011A685ED30059C357 /* senal@3x.png in Resources */,
 				BCA6A30D19CD1C9F0021B243 /* home@2x.png in Resources */,
 				BCA6A32919CD1C9F0021B243 /* programa.png in Resources */,
+				BCE828341CADE88200128232 /* video-icon@3x.png in Resources */,
 				BCA0E72319F07D5200E47033 /* icon-mult76.png in Resources */,
 				BC6806091A2482680038930C /* back@2x.png in Resources */,
 				BC8BA41219D07E5D0018BA0B /* ipad-programa.png in Resources */,
+				BCE8282A1CADE88200128232 /* video-icon.png in Resources */,
 				BCC464B51AF9F3AE00543591 /* player-share-highlighted@2x.png in Resources */,
 				BC247CA11AB27BA100DEF5AA /* logo@2x.png in Resources */,
 				BCEDAC161A6861720059C357 /* logo-menu-header@2x.png in Resources */,
@@ -4511,12 +4903,12 @@
 				BCA0E72D19F07D5200E47033 /* icon-mult144.png in Resources */,
 				BC07899D1AA3C884006185DC /* player-share.png in Resources */,
 				BCC464DE1AF9FB4E00543591 /* player-play-highlighted@3x.png in Resources */,
+				BCCF7C231C9B8C2600859084 /* highlighted-color-shadow@3x.png in Resources */,
 				BC8BA3E619D07E5D0018BA0B /* ipad-blog@2x.png in Resources */,
 				BCC464C71AF9F9CB00543591 /* player-pause-highlighted@2x.png in Resources */,
 				BC5637DA19CA4F6C00C10BCB /* plaintableheader.png in Resources */,
 				BC4ADC6E1AA4CB5F00C54860 /* player-logo@3x.png in Resources */,
 				BC8BA40E19D07E5D0018BA0B /* ipad-opinion@2x.png in Resources */,
-				BC5637F019CA501600C10BCB /* menu-button@2x.png in Resources */,
 				BCEDABEE1A60B18B0059C357 /* videos-bullet@2x.png in Resources */,
 				BC4ADC8C1AA4E8A100C54860 /* player-repeat@3x.png in Resources */,
 				BCA0E71B19F07D5200E47033 /* icon-mult50.png in Resources */,
@@ -4528,7 +4920,6 @@
 				BCEDAC0C1A6860840059C357 /* icon-menu-header@2x.png in Resources */,
 				BC5639D819CA57F700C10BCB /* Roboto-Regular.ttf in Resources */,
 				BCA0E71919F07D5200E47033 /* icon-mult44.png in Resources */,
-				BC9B8CCC19C7851D0033D34A /* menu-button.png in Resources */,
 				BCA0E72B19F07D5200E47033 /* icon-mult120.png in Resources */,
 				BCEDABE21A60B18B0059C357 /* programa@3x.png in Resources */,
 				BC8BA3EE19D07E5D0018BA0B /* ipad-buscar@2x.png in Resources */,
@@ -4552,23 +4943,28 @@
 				BCE09DCF19F081A600528944 /* icon-mult180.png in Resources */,
 				BCEDABDE1A60B18B0059C357 /* opinion@3x.png in Resources */,
 				BC247C8D1AB252AB00DEF5AA /* close-icon@2x.png in Resources */,
+				BCE828481CAE072900128232 /* nlogo-telesur-header.png in Resources */,
 				BC8BA46119D21CB40018BA0B /* icon-video@2x.png in Resources */,
 				BC5639E019CA57F700C10BCB /* Roboto-ThinItalic.ttf in Resources */,
 				BC8BA42219D07E5D0018BA0B /* ipad-video.png in Resources */,
 				BC419D5D19AC18D800C632C9 /* Localizable.strings in Resources */,
+				BCE828031CADDDAB00128232 /* video-carrusel-0.png in Resources */,
 				BC8BA3EA19D07E5D0018BA0B /* ipad-buscar.png in Resources */,
 				BC5639C419CA57F700C10BCB /* Roboto-Italic.ttf in Resources */,
 				BCA6A33519CD1C9F0021B243 /* reportaje@2x.png in Resources */,
 				BC6558B91A5F3FF90007F021 /* Default-Landscape@2x.png in Resources */,
 				BC56389919CA562D00C10BCB /* FirstTableCellView.xib in Resources */,
 				BC5639A819CA57F700C10BCB /* Roboto-BlackItalic.ttf in Resources */,
+				BCC635931CA2412500A83A3A /* OpenSans-Bold.ttf in Resources */,
 				BCEDABE61A60B18B0059C357 /* reportaje@3x.png in Resources */,
 				BCA6A33119CD1C9F0021B243 /* reportaje.png in Resources */,
 				BC07898D1AA3C884006185DC /* player-pause@3x.png in Resources */,
+				BCC635AF1CA2A69900A83A3A /* HomeDoubleTableViewCell.xib in Resources */,
 				BC247C891AB252AB00DEF5AA /* close-icon.png in Resources */,
 				BCEDAC1F1A6863190059C357 /* home-cell-shadow@3x.png in Resources */,
 				BC5639C019CA57F700C10BCB /* Roboto-CondensedItalic.ttf in Resources */,
 				BC5638B419CA56A200C10BCB /* VideoDetailCellView.xib in Resources */,
+				BCE8284D1CAE072900128232 /* nlogo-telesur-header@2x.png in Resources */,
 				BC4DEA541AA14950001F1076 /* TSHiglightedVideoCollectionCell.xib in Resources */,
 				BC4ADC781AA4E8A100C54860 /* player-playback-status.png in Resources */,
 				BCA0E71519F07D5200E47033 /* icon-mult29.png in Resources */,
@@ -4580,10 +4976,12 @@
 				BCEDABCE1A60B18B0059C357 /* blog@3x.png in Resources */,
 				BC13774419F05BF3002C47F1 /* home-cell-shadow@2x.png in Resources */,
 				BCA0E71119F07D5200E47033 /* icon-mult22.png in Resources */,
+				BCE828121CADDDAB00128232 /* video-carrusel-1.png in Resources */,
 				BC6558B51A5F3F6A0007F021 /* Default-Portrait@2x.png in Resources */,
 				BCEDABCA1A60B18B0059C357 /* acerca@3x.png in Resources */,
 				BC5638CF19CA56D800C10BCB /* HomeVideoTableViewCell.xib in Resources */,
 				BC8BA42E19D07E5D0018BA0B /* live-bullet@2x.png in Resources */,
+				BCCF7C031C98BC9500859084 /* menu-button@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -4615,9 +5013,10 @@
 				BC5637A719CA4EF600C10BCB /* LeftMenuViewController.m in Sources */,
 				BC56384B19CA542900C10BCB /* GTMNSString+HTML.m in Sources */,
 				BC54B2081C74D235001566EB /* KAQueueLoaderTableViewController.m in Sources */,
-				BC56379519CA4EA800C10BCB /* SlideNavigationContorllerAnimatorScale.m in Sources */,
+				BCC6359F1CA2A29200A83A3A /* TSiPhoneNavigationBar.m in Sources */,
 				BC944C871AA93CCF00F9EB18 /* TSDefaultVideoCollectionViewCell.m in Sources */,
 				BCA770C519D4575D00A1CFBD /* UIView+WebCacheOperation.m in Sources */,
+				BCCF7BE21C98BC9500859084 /* SlideNavigationContorllerAnimatorScale.m in Sources */,
 				BC3024DE19DC830700298BED /* TSIPadBlogHomeCollectionViewCell.m in Sources */,
 				BCA7709119D4575C00A1CFBD /* SDImageCache.m in Sources */,
 				BC9D36E419DC661C009D09A8 /* BasicVideoTableViewCell.m in Sources */,
@@ -4629,14 +5028,17 @@
 				BC5637C519CA4F4600C10BCB /* CollapsableTableViewFooterViewController.m in Sources */,
 				BC4DEA431AA0DAB6001F1076 /* TSIpadVideoHomeViewController.m in Sources */,
 				BCA770C119D4575D00A1CFBD /* UIImageView+WebCache.m in Sources */,
+				BCCF7C0A1C98BC9500859084 /* SlideNavigationController.m in Sources */,
 				BC033E561A30DD2A0025C9A1 /* NJKWebViewProgressView.m in Sources */,
 				BC5638D219CA571800C10BCB /* EasyTableView.m in Sources */,
 				BC033E521A30DD2A0025C9A1 /* NJKWebViewProgress.m in Sources */,
+				BCC635981CA2A1E800A83A3A /* TSiPhoneNavigationController.m in Sources */,
 				BC1DB7531C8DE7D8000E3752 /* UIView+TSHighlightedViewCell.m in Sources */,
 				BCA6A2BA19CCE5160021B243 /* NSDate+InternetDateTime.m in Sources */,
 				BCCF7AD81C97715300859084 /* TSUtils.m in Sources */,
 				BCA6A2AB19CCDA1E0021B243 /* MWFeedParser.m in Sources */,
 				BC5637C919CA4F4600C10BCB /* CollapsableTableViewHeaderViewController.m in Sources */,
+				BCCF7BDD1C98BC9500859084 /* SlideNavigationContorllerAnimatorFade.m in Sources */,
 				BC54B1E01C74D235001566EB /* KABasicImageData.m in Sources */,
 				BCCA68E81A97D57B006604DB /* TSConfigurationTableViewController.m in Sources */,
 				BC9D36EA19DC70EE009D09A8 /* TSIPadBlogHomeViewController.m in Sources */,
@@ -4646,6 +5048,7 @@
 				BC56384F19CA542900C10BCB /* NSString+HTML.m in Sources */,
 				BC033E5C1A30DDE90025C9A1 /* TSWebViewController.m in Sources */,
 				BC5637F919CA504B00C10BCB /* TSClipPlayerViewController.m in Sources */,
+				BCCF7BF61C98BC9500859084 /* SlideNavigationContorllerAnimatorSlideAndFade.m in Sources */,
 				BCA770B519D4575D00A1CFBD /* UIImage+MultiFormat.m in Sources */,
 				BC5A008619D3992E0091EFF3 /* DefaultIPadTableViewCell.m in Sources */,
 				BC56386319CA547E00C10BCB /* UIViewController_Configuracion.m in Sources */,
@@ -4664,11 +5067,15 @@
 				BC5637C119CA4F4600C10BCB /* CollapsableTableView.m in Sources */,
 				BC54B20D1C74D235001566EB /* UITableViewController+KAUtils.m in Sources */,
 				BC5637B319CA4F0900C10BCB /* BuscarViewController.m in Sources */,
+				BCC635A61CA2A5D400A83A3A /* KABasicDoubleCellData.m in Sources */,
 				BCA7708919D4575C00A1CFBD /* MKAnnotationView+WebCache.m in Sources */,
 				BC4DEA4C1AA140A9001F1076 /* TSVideoCollectionViewCell.m in Sources */,
 				BC56384319CA52A100C10BCB /* NavigationBarsManager.m in Sources */,
 				BC54B1D61C74D235001566EB /* KABasicCellData.m in Sources */,
+				BCCF7BE71C98BC9500859084 /* SlideNavigationContorllerAnimatorScaleAndFade.m in Sources */,
 				BCA053321A1D000300946420 /* UIViewController+TSLoader.m in Sources */,
+				BCCF7BF11C98BC9500859084 /* SlideNavigationContorllerAnimatorSlide.m in Sources */,
+				BCA7BD341CC7E06700BE2FAB /* TSTextNewsHomeViewController.m in Sources */,
 				BC5638A919CA56A200C10BCB /* HighlightTableViewCell.m in Sources */,
 				BC56388619CA550F00C10BCB /* TSClipListadoTableViewController.m in Sources */,
 				BC56387319CA54EB00C10BCB /* TSHomeTableViewController.m in Sources */,
@@ -4681,16 +5088,13 @@
 				BCA770A119D4575D00A1CFBD /* SDWebImageDownloaderOperation.m in Sources */,
 				BCA7709D19D4575D00A1CFBD /* SDWebImageDownloader.m in Sources */,
 				BC8BA43319D09D1B0018BA0B /* TSBasicListViewController.m in Sources */,
-				BC5637A119CA4EA800C10BCB /* SlideNavigationContorllerAnimatorSlideAndFade.m in Sources */,
 				BC4524AB1A5D299600F4F3ED /* TSReachabilityViewController.m in Sources */,
-				BC5637DD19CA4F8200C10BCB /* SlideNavigationController.m in Sources */,
 				BCDCADA71ABB6BBB007099AF /* TSProgramListXMLParser.m in Sources */,
 				BC5637AD19CA4F0000C10BCB /* AcercaDeViewController.m in Sources */,
 				BCA7709519D4575C00A1CFBD /* SDWebImageCompat.m in Sources */,
 				BC56385F19CA547E00C10BCB /* NSDate_Utilidad.m in Sources */,
 				BC54B1E51C74D235001566EB /* KADataRequest.m in Sources */,
 				BC5637CD19CA4F4600C10BCB /* CollapsableTableViewTapRecognizer.m in Sources */,
-				BC56379919CA4EA800C10BCB /* SlideNavigationContorllerAnimatorScaleAndFade.m in Sources */,
 				BCA770BD19D4575D00A1CFBD /* UIImageView+HighlightedWebCache.m in Sources */,
 				BCA6A2B319CCDA1E0021B243 /* MWFeedItem.m in Sources */,
 				BC8BA43A19D142730018BA0B /* TSIPadHomeViewController.m in Sources */,
@@ -4698,14 +5102,12 @@
 				BCA770A519D4575D00A1CFBD /* SDWebImageManager.m in Sources */,
 				BCA6278F19FECBDC00B24198 /* TSDataRequest.m in Sources */,
 				BC4524A41A5D28DC00F4F3ED /* Reachability.m in Sources */,
-				BC56379119CA4EA800C10BCB /* SlideNavigationContorllerAnimatorFade.m in Sources */,
 				BC54B1FE1C74D235001566EB /* KABasicHTableViewController.m in Sources */,
 				BC56380419CA507C00C10BCB /* TSNewsViewController.m in Sources */,
 				BCA770B919D4575D00A1CFBD /* UIImage+WebP.m in Sources */,
 				BCA770AD19D4575D00A1CFBD /* UIButton+WebCache.m in Sources */,
 				BC5638AD19CA56A200C10BCB /* LoadMoreTableViewCell.m in Sources */,
 				BC54B2031C74D235001566EB /* KABasicTableViewController.m in Sources */,
-				BC56379D19CA4EA800C10BCB /* SlideNavigationContorllerAnimatorSlide.m in Sources */,
 				BC6B09FC1A51F1CE00077A12 /* TSIpadBasicDetailViewController.m in Sources */,
 				BC8BA3AD19CFF5270018BA0B /* RFQuiltLayout.m in Sources */,
 				BC15AD971A0B7BCC00D9F442 /* VideoDetailCellView.m in Sources */,
@@ -4713,6 +5115,7 @@
 				BC8BA39F19CFF4FF0018BA0B /* MainIpadViewController.m in Sources */,
 				BC54B22C1C74DAE5001566EB /* UIViewController+TSDataMG.m in Sources */,
 				BC8BA39119CFF4DC0018BA0B /* TSIpadNavigationViewController.m in Sources */,
+				BCEE07771CBF06FD0023EC01 /* TSVideoHomeViewController.m in Sources */,
 				BC8BA39519CFF4DC0018BA0B /* TSToolbar.m in Sources */,
 				BC7E916E1AF020D5004A3813 /* UIDropDownMenu.m in Sources */,
 				BCC464921AF9D74B00543591 /* CircularGradientView.m in Sources */,
@@ -4735,9 +5138,9 @@
 				BC18AFBA1AF0512000C3DAD3 /* LeftMenuViewController.m in Sources */,
 				BC18AFBB1AF0512000C3DAD3 /* GTMNSString+HTML.m in Sources */,
 				BC54B20C1C74D235001566EB /* KAQueueLoaderTableViewController.m in Sources */,
-				BC18AFBC1AF0512000C3DAD3 /* SlideNavigationContorllerAnimatorScale.m in Sources */,
 				BC18AFBD1AF0512000C3DAD3 /* TSDefaultVideoCollectionViewCell.m in Sources */,
 				BC18AFBE1AF0512000C3DAD3 /* UIView+WebCacheOperation.m in Sources */,
+				BCCF7BE61C98BC9500859084 /* SlideNavigationContorllerAnimatorScale.m in Sources */,
 				BC18AFBF1AF0512000C3DAD3 /* TSIPadBlogHomeCollectionViewCell.m in Sources */,
 				BC18AFC01AF0512000C3DAD3 /* SDImageCache.m in Sources */,
 				BC18AFC11AF0512000C3DAD3 /* BasicVideoTableViewCell.m in Sources */,
@@ -4749,6 +5152,8 @@
 				BC18AFC71AF0512000C3DAD3 /* CollapsableTableViewFooterViewController.m in Sources */,
 				BC18AFC81AF0512000C3DAD3 /* TSIpadVideoHomeViewController.m in Sources */,
 				BC18AFC91AF0512000C3DAD3 /* UIImageView+WebCache.m in Sources */,
+				BCCF7C0E1C98BC9500859084 /* SlideNavigationController.m in Sources */,
+				BCCF7BF01C98BC9500859084 /* SlideNavigationContorllerAnimatorScaleSlideAndFade.m in Sources */,
 				BC18AFCA1AF0512000C3DAD3 /* NJKWebViewProgressView.m in Sources */,
 				BC18AFCB1AF0512000C3DAD3 /* EasyTableView.m in Sources */,
 				BC18AFCC1AF0512000C3DAD3 /* NJKWebViewProgress.m in Sources */,
@@ -4757,6 +5162,7 @@
 				BCCF7ADC1C97715300859084 /* TSUtils.m in Sources */,
 				BC18AFCE1AF0512000C3DAD3 /* MWFeedParser.m in Sources */,
 				BC18AFCF1AF0512000C3DAD3 /* CollapsableTableViewHeaderViewController.m in Sources */,
+				BCCF7BE11C98BC9500859084 /* SlideNavigationContorllerAnimatorFade.m in Sources */,
 				BC54B1E41C74D235001566EB /* KABasicImageData.m in Sources */,
 				BC18AFD01AF0512000C3DAD3 /* TSConfigurationTableViewController.m in Sources */,
 				BC18AFD11AF0512000C3DAD3 /* TSIPadBlogHomeViewController.m in Sources */,
@@ -4766,11 +5172,13 @@
 				BC18AFD41AF0512000C3DAD3 /* NSString+HTML.m in Sources */,
 				BC18AFD51AF0512000C3DAD3 /* TSWebViewController.m in Sources */,
 				BC18AFD61AF0512000C3DAD3 /* TSClipPlayerViewController.m in Sources */,
+				BCCF7BFA1C98BC9500859084 /* SlideNavigationContorllerAnimatorSlideAndFade.m in Sources */,
 				BC18AFD71AF0512000C3DAD3 /* UIImage+MultiFormat.m in Sources */,
 				BC18AFD81AF0512000C3DAD3 /* DefaultIPadTableViewCell.m in Sources */,
 				BC18AFD91AF0512000C3DAD3 /* UIViewController_Configuracion.m in Sources */,
 				BC18AFDA1AF0512000C3DAD3 /* TSDataManager.m in Sources */,
 				BC18AFDB1AF0512000C3DAD3 /* UIViewController_Preferencias.m in Sources */,
+				BCC635A31CA2A29200A83A3A /* TSiPhoneNavigationBar.m in Sources */,
 				BC18AFDC1AF0512000C3DAD3 /* UIViewController+TSClipDownload.m in Sources */,
 				BC18AFDD1AF0512000C3DAD3 /* SDWebImageDecoder.m in Sources */,
 				BC54B2281C74D9C5001566EB /* TSMainHomeViewController.m in Sources */,
@@ -4786,9 +5194,12 @@
 				BC18AFE71AF0512000C3DAD3 /* BuscarViewController.m in Sources */,
 				BC18AFE81AF0512000C3DAD3 /* MKAnnotationView+WebCache.m in Sources */,
 				BC18AFE91AF0512000C3DAD3 /* TSVideoCollectionViewCell.m in Sources */,
+				BCEE077B1CBF06FD0023EC01 /* TSVideoHomeViewController.m in Sources */,
 				BC18AFEA1AF0512000C3DAD3 /* NavigationBarsManager.m in Sources */,
 				BC54B1DA1C74D235001566EB /* KABasicCellData.m in Sources */,
+				BCCF7BEB1C98BC9500859084 /* SlideNavigationContorllerAnimatorScaleAndFade.m in Sources */,
 				BC18AFEB1AF0512000C3DAD3 /* UIViewController+TSLoader.m in Sources */,
+				BCCF7BF51C98BC9500859084 /* SlideNavigationContorllerAnimatorSlide.m in Sources */,
 				BC18AFEC1AF0512000C3DAD3 /* HighlightTableViewCell.m in Sources */,
 				BC18AFED1AF0512000C3DAD3 /* TSClipListadoTableViewController.m in Sources */,
 				BC18AFEE1AF0512000C3DAD3 /* TSHomeTableViewController.m in Sources */,
@@ -4801,16 +5212,14 @@
 				BC18AFF41AF0512000C3DAD3 /* SDWebImageDownloaderOperation.m in Sources */,
 				BC18AFF51AF0512000C3DAD3 /* SDWebImageDownloader.m in Sources */,
 				BC18AFF61AF0512000C3DAD3 /* TSBasicListViewController.m in Sources */,
-				BC18AFF71AF0512000C3DAD3 /* SlideNavigationContorllerAnimatorSlideAndFade.m in Sources */,
 				BC18AFF81AF0512000C3DAD3 /* TSReachabilityViewController.m in Sources */,
-				BC18AFF91AF0512000C3DAD3 /* SlideNavigationController.m in Sources */,
 				BC18AFFA1AF0512000C3DAD3 /* TSProgramListXMLParser.m in Sources */,
 				BC18AFFB1AF0512000C3DAD3 /* AcercaDeViewController.m in Sources */,
+				BCC635AA1CA2A5D400A83A3A /* KABasicDoubleCellData.m in Sources */,
 				BC18AFFC1AF0512000C3DAD3 /* SDWebImageCompat.m in Sources */,
 				BC18AFFD1AF0512000C3DAD3 /* NSDate_Utilidad.m in Sources */,
 				BC54B1E91C74D235001566EB /* KADataRequest.m in Sources */,
 				BC18AFFE1AF0512000C3DAD3 /* CollapsableTableViewTapRecognizer.m in Sources */,
-				BC18AFFF1AF0512000C3DAD3 /* SlideNavigationContorllerAnimatorScaleAndFade.m in Sources */,
 				BC18B0001AF0512000C3DAD3 /* UIImageView+HighlightedWebCache.m in Sources */,
 				BC18B0011AF0512000C3DAD3 /* MWFeedItem.m in Sources */,
 				BC18B0021AF0512000C3DAD3 /* TSIPadHomeViewController.m in Sources */,
@@ -4818,19 +5227,19 @@
 				BC18B0041AF0512000C3DAD3 /* SDWebImageManager.m in Sources */,
 				BC18B0051AF0512000C3DAD3 /* TSDataRequest.m in Sources */,
 				BC18B0061AF0512000C3DAD3 /* Reachability.m in Sources */,
-				BC18B0071AF0512000C3DAD3 /* SlideNavigationContorllerAnimatorFade.m in Sources */,
 				BC54B2021C74D235001566EB /* KABasicHTableViewController.m in Sources */,
 				BC18B0081AF0512000C3DAD3 /* TSNewsViewController.m in Sources */,
 				BC18B0091AF0512000C3DAD3 /* UIImage+WebP.m in Sources */,
 				BC18B00A1AF0512000C3DAD3 /* UIButton+WebCache.m in Sources */,
 				BC18B00B1AF0512000C3DAD3 /* LoadMoreTableViewCell.m in Sources */,
 				BC54B2071C74D235001566EB /* KABasicTableViewController.m in Sources */,
-				BC18B00C1AF0512000C3DAD3 /* SlideNavigationContorllerAnimatorSlide.m in Sources */,
 				BC18B00D1AF0512000C3DAD3 /* TSIpadBasicDetailViewController.m in Sources */,
 				BC18B00E1AF0512000C3DAD3 /* RFQuiltLayout.m in Sources */,
+				BCC6359C1CA2A1E800A83A3A /* TSiPhoneNavigationController.m in Sources */,
 				BC18B00F1AF0512000C3DAD3 /* VideoDetailCellView.m in Sources */,
 				BC18B0101AF0512000C3DAD3 /* DefaultCollectionReusableView.m in Sources */,
 				BC18B0111AF0512000C3DAD3 /* MainIpadViewController.m in Sources */,
+				BCA7BD381CC7E06700BE2FAB /* TSTextNewsHomeViewController.m in Sources */,
 				BC54B2301C74DAE5001566EB /* UIViewController+TSDataMG.m in Sources */,
 				BC18B0121AF0512000C3DAD3 /* TSIpadNavigationViewController.m in Sources */,
 				BC18B0131AF0512000C3DAD3 /* TSToolbar.m in Sources */,
@@ -4848,6 +5257,7 @@
 				BC5637A819CA4EF600C10BCB /* LeftMenuViewController.m in Sources */,
 				BC54B22D1C74DAE5001566EB /* UIViewController+TSDataMG.m in Sources */,
 				BC8BA39219CFF4DC0018BA0B /* TSIpadNavigationViewController.m in Sources */,
+				BCC635A01CA2A29200A83A3A /* TSiPhoneNavigationBar.m in Sources */,
 				BC944C881AA93CCF00F9EB18 /* TSDefaultVideoCollectionViewCell.m in Sources */,
 				BC56384C19CA542900C10BCB /* GTMNSString+HTML.m in Sources */,
 				BCA770C619D4575D00A1CFBD /* UIView+WebCacheOperation.m in Sources */,
@@ -4855,7 +5265,6 @@
 				BCA7709219D4575C00A1CFBD /* SDImageCache.m in Sources */,
 				BC9D36E519DC661C009D09A8 /* BasicVideoTableViewCell.m in Sources */,
 				BC54B1DC1C74D235001566EB /* KABasicHCellData.m in Sources */,
-				BC56379A19CA4EA800C10BCB /* SlideNavigationContorllerAnimatorScaleAndFade.m in Sources */,
 				BCA770AA19D4575D00A1CFBD /* SDWebImagePrefetcher.m in Sources */,
 				BC56389B19CA562D00C10BCB /* UILabelMarginSet.m in Sources */,
 				BC5638DF19CA579B00C10BCB /* main.m in Sources */,
@@ -4867,6 +5276,7 @@
 				BC033E531A30DD2A0025C9A1 /* NJKWebViewProgress.m in Sources */,
 				BC54B2041C74D235001566EB /* KABasicTableViewController.m in Sources */,
 				BC5638D319CA571800C10BCB /* EasyTableView.m in Sources */,
+				BCC635991CA2A1E800A83A3A /* TSiPhoneNavigationController.m in Sources */,
 				BCDCADA21ABB3900007099AF /* TSProgramListElement.m in Sources */,
 				BC8BA3AE19CFF5270018BA0B /* RFQuiltLayout.m in Sources */,
 				BCA6A2BB19CCE5160021B243 /* NSDate+InternetDateTime.m in Sources */,
@@ -4879,7 +5289,9 @@
 				BC9CAAD71AC10741008103A0 /* MultimediaAPPDelegate.m in Sources */,
 				BCA770B619D4575D00A1CFBD /* UIImage+MultiFormat.m in Sources */,
 				BC5A008719D3992E0091EFF3 /* DefaultIPadTableViewCell.m in Sources */,
+				BCCF7C0B1C98BC9500859084 /* SlideNavigationController.m in Sources */,
 				BC8BA3A019CFF4FF0018BA0B /* MainIpadViewController.m in Sources */,
+				BCCF7BF21C98BC9500859084 /* SlideNavigationContorllerAnimatorSlide.m in Sources */,
 				BCE09DF819FB03C400528944 /* TSDataManager.m in Sources */,
 				BC56385019CA542900C10BCB /* NSString+HTML.m in Sources */,
 				BC9833821A34AA540034BE27 /* UIViewController+TSClipDownload.m in Sources */,
@@ -4899,12 +5311,15 @@
 				BC5637C219CA4F4600C10BCB /* CollapsableTableView.m in Sources */,
 				BC54B1FF1C74D235001566EB /* KABasicHTableViewController.m in Sources */,
 				BC5637B419CA4F0900C10BCB /* BuscarViewController.m in Sources */,
+				BCC635A71CA2A5D400A83A3A /* KABasicDoubleCellData.m in Sources */,
 				BC56384419CA52A100C10BCB /* NavigationBarsManager.m in Sources */,
 				BC6805EA1A2462170038930C /* HomeTopTableViewCell.m in Sources */,
 				BC9D36DA19DB2151009D09A8 /* TSIPadVideoDetailViewController.m in Sources */,
 				BC5638AA19CA56A200C10BCB /* HighlightTableViewCell.m in Sources */,
 				BC56388719CA550F00C10BCB /* TSClipListadoTableViewController.m in Sources */,
 				BC54B2091C74D235001566EB /* KAQueueLoaderTableViewController.m in Sources */,
+				BCCF7BE81C98BC9500859084 /* SlideNavigationContorllerAnimatorScaleAndFade.m in Sources */,
+				BCA7BD351CC7E06700BE2FAB /* TSTextNewsHomeViewController.m in Sources */,
 				BC54B2131C74D235001566EB /* UIViewController+KAUtils.m in Sources */,
 				BC54B1E61C74D235001566EB /* KADataRequest.m in Sources */,
 				BC56387419CA54EB00C10BCB /* TSHomeTableViewController.m in Sources */,
@@ -4917,15 +5332,15 @@
 				BC8BA43419D09D1B0018BA0B /* TSBasicListViewController.m in Sources */,
 				BC5637E419CA4FD700C10BCB /* HiddenVideoPlayerController.m in Sources */,
 				BCA7709619D4575C00A1CFBD /* SDWebImageCompat.m in Sources */,
-				BC56379219CA4EA800C10BCB /* SlideNavigationContorllerAnimatorFade.m in Sources */,
-				BC5637DE19CA4F8200C10BCB /* SlideNavigationController.m in Sources */,
 				BCDCAD9B1ABA8A19007099AF /* MarqueeLabel.m in Sources */,
+				BCCF7BDE1C98BC9500859084 /* SlideNavigationContorllerAnimatorFade.m in Sources */,
 				BC15AD981A0B7BCF00D9F442 /* VideoDetailCellView.m in Sources */,
 				BC5637AE19CA4F0000C10BCB /* AcercaDeViewController.m in Sources */,
 				BC54B1D71C74D235001566EB /* KABasicCellData.m in Sources */,
 				BCA770BE19D4575D00A1CFBD /* UIImageView+HighlightedWebCache.m in Sources */,
 				BC8BA43B19D142730018BA0B /* TSIPadHomeViewController.m in Sources */,
 				BCCF7AD91C97715300859084 /* TSUtils.m in Sources */,
+				BCCF7BF71C98BC9500859084 /* SlideNavigationContorllerAnimatorSlideAndFade.m in Sources */,
 				BC4DEA4D1AA140A9001F1076 /* TSVideoCollectionViewCell.m in Sources */,
 				BCA7708E19D4575C00A1CFBD /* NSData+ImageContentType.m in Sources */,
 				BCA770A619D4575D00A1CFBD /* SDWebImageManager.m in Sources */,
@@ -4934,19 +5349,19 @@
 				BC5637CE19CA4F4600C10BCB /* CollapsableTableViewTapRecognizer.m in Sources */,
 				BCA770BA19D4575D00A1CFBD /* UIImage+WebP.m in Sources */,
 				BCA770AE19D4575D00A1CFBD /* UIButton+WebCache.m in Sources */,
-				BC56379E19CA4EA800C10BCB /* SlideNavigationContorllerAnimatorSlide.m in Sources */,
 				BCA6A2B419CCDA1E0021B243 /* MWFeedItem.m in Sources */,
 				BC54B1E11C74D235001566EB /* KABasicImageData.m in Sources */,
 				BCC464931AF9D74B00543591 /* CircularGradientView.m in Sources */,
 				BC54B20E1C74D235001566EB /* UITableViewController+KAUtils.m in Sources */,
+				BCCF7BED1C98BC9500859084 /* SlideNavigationContorllerAnimatorScaleSlideAndFade.m in Sources */,
 				BCDCADA81ABB6BBB007099AF /* TSProgramListXMLParser.m in Sources */,
 				BC6B09FD1A51F1D100077A12 /* TSIpadBasicDetailViewController.m in Sources */,
+				BCCF7BE31C98BC9500859084 /* SlideNavigationContorllerAnimatorScale.m in Sources */,
 				BC1DB7541C8DE7D8000E3752 /* UIView+TSHighlightedViewCell.m in Sources */,
-				BC56379619CA4EA800C10BCB /* SlideNavigationContorllerAnimatorScale.m in Sources */,
 				BC8BA3BE19CFF6820018BA0B /* DefaultCollectionReusableView.m in Sources */,
+				BCEE07781CBF06FD0023EC01 /* TSVideoHomeViewController.m in Sources */,
 				BC56380519CA507C00C10BCB /* TSNewsViewController.m in Sources */,
 				BC5638AE19CA56A200C10BCB /* LoadMoreTableViewCell.m in Sources */,
-				BC5637A219CA4EA800C10BCB /* SlideNavigationContorllerAnimatorSlideAndFade.m in Sources */,
 				BCA053231A15806500946420 /* TSDataRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -4969,11 +5384,11 @@
 				BC54B20A1C74D235001566EB /* KAQueueLoaderTableViewController.m in Sources */,
 				BC56384D19CA542900C10BCB /* GTMNSString+HTML.m in Sources */,
 				BC944C891AA93CCF00F9EB18 /* TSDefaultVideoCollectionViewCell.m in Sources */,
+				BCCF7BE41C98BC9500859084 /* SlideNavigationContorllerAnimatorScale.m in Sources */,
 				BCA770C719D4575D00A1CFBD /* UIView+WebCacheOperation.m in Sources */,
 				BC3024E019DC830700298BED /* TSIPadBlogHomeCollectionViewCell.m in Sources */,
 				BCA7709319D4575C00A1CFBD /* SDImageCache.m in Sources */,
 				BC9D36E619DC661C009D09A8 /* BasicVideoTableViewCell.m in Sources */,
-				BC56379B19CA4EA800C10BCB /* SlideNavigationContorllerAnimatorScaleAndFade.m in Sources */,
 				BCA770AB19D4575D00A1CFBD /* SDWebImagePrefetcher.m in Sources */,
 				BC56389C19CA562D00C10BCB /* UILabelMarginSet.m in Sources */,
 				BC5638E019CA579B00C10BCB /* main.m in Sources */,
@@ -4981,6 +5396,8 @@
 				BCA6A2B119CCDA1E0021B243 /* MWFeedInfo.m in Sources */,
 				BCA770C319D4575D00A1CFBD /* UIImageView+WebCache.m in Sources */,
 				BC033E581A30DD2A0025C9A1 /* NJKWebViewProgressView.m in Sources */,
+				BCCF7C0C1C98BC9500859084 /* SlideNavigationController.m in Sources */,
+				BCCF7BEE1C98BC9500859084 /* SlideNavigationContorllerAnimatorScaleSlideAndFade.m in Sources */,
 				BC5637C719CA4F4600C10BCB /* CollapsableTableViewFooterViewController.m in Sources */,
 				BC033E541A30DD2A0025C9A1 /* NJKWebViewProgress.m in Sources */,
 				BC5638D419CA571800C10BCB /* EasyTableView.m in Sources */,
@@ -4989,6 +5406,7 @@
 				BCCF7ADA1C97715300859084 /* TSUtils.m in Sources */,
 				BCA6A2BC19CCE5160021B243 /* NSDate+InternetDateTime.m in Sources */,
 				BCCA68FB1A97F812006604DB /* TSConfigurationTableViewController.m in Sources */,
+				BCCF7BDF1C98BC9500859084 /* SlideNavigationContorllerAnimatorFade.m in Sources */,
 				BC54B1E21C74D235001566EB /* KABasicImageData.m in Sources */,
 				BCA6A2AD19CCDA1E0021B243 /* MWFeedParser.m in Sources */,
 				BC9D36EC19DC70EE009D09A8 /* TSIPadBlogHomeViewController.m in Sources */,
@@ -4998,11 +5416,13 @@
 				BC944C7E1AA90E4700F9EB18 /* TSIpadVideoHomeViewController.m in Sources */,
 				BC5637CB19CA4F4600C10BCB /* CollapsableTableViewHeaderViewController.m in Sources */,
 				BC033E5E1A30DDE90025C9A1 /* TSWebViewController.m in Sources */,
+				BCCF7BF81C98BC9500859084 /* SlideNavigationContorllerAnimatorSlideAndFade.m in Sources */,
 				BCA770B719D4575D00A1CFBD /* UIImage+MultiFormat.m in Sources */,
 				BC5A008819D3992E0091EFF3 /* DefaultIPadTableViewCell.m in Sources */,
 				BC8BA3A119CFF4FF0018BA0B /* MainIpadViewController.m in Sources */,
 				BCE09DF919FB03C400528944 /* TSDataManager.m in Sources */,
 				BC56385119CA542900C10BCB /* NSString+HTML.m in Sources */,
+				BCC635A11CA2A29200A83A3A /* TSiPhoneNavigationBar.m in Sources */,
 				BC9833831A34AA540034BE27 /* UIViewController+TSClipDownload.m in Sources */,
 				BCA7709B19D4575C00A1CFBD /* SDWebImageDecoder.m in Sources */,
 				BC54B2261C74D9C5001566EB /* TSMainHomeViewController.m in Sources */,
@@ -5018,9 +5438,12 @@
 				BC5638CA19CA56D800C10BCB /* HomeVideoTableViewCell.m in Sources */,
 				BC5637F719CA504B00C10BCB /* TSClipDetallesViewController.m in Sources */,
 				BCA7708B19D4575C00A1CFBD /* MKAnnotationView+WebCache.m in Sources */,
+				BCEE07791CBF06FD0023EC01 /* TSVideoHomeViewController.m in Sources */,
 				BCA053341A1D000300946420 /* UIViewController+TSLoader.m in Sources */,
 				BC54B1D81C74D235001566EB /* KABasicCellData.m in Sources */,
+				BCCF7BE91C98BC9500859084 /* SlideNavigationContorllerAnimatorScaleAndFade.m in Sources */,
 				BC8BA39719CFF4DC0018BA0B /* TSToolbar.m in Sources */,
+				BCCF7BF31C98BC9500859084 /* SlideNavigationContorllerAnimatorSlide.m in Sources */,
 				BC5637C319CA4F4600C10BCB /* CollapsableTableView.m in Sources */,
 				BC5637B519CA4F0900C10BCB /* BuscarViewController.m in Sources */,
 				BC56384519CA52A100C10BCB /* NavigationBarsManager.m in Sources */,
@@ -5036,12 +5459,11 @@
 				BC4524AD1A5D299600F4F3ED /* TSReachabilityViewController.m in Sources */,
 				BCA7709F19D4575D00A1CFBD /* SDWebImageDownloader.m in Sources */,
 				BC8BA43519D09D1B0018BA0B /* TSBasicListViewController.m in Sources */,
+				BCC635A81CA2A5D400A83A3A /* KABasicDoubleCellData.m in Sources */,
 				BCDCADA91ABB6BBB007099AF /* TSProgramListXMLParser.m in Sources */,
 				BC5637E519CA4FD700C10BCB /* HiddenVideoPlayerController.m in Sources */,
 				BCA7709719D4575C00A1CFBD /* SDWebImageCompat.m in Sources */,
-				BC56379319CA4EA800C10BCB /* SlideNavigationContorllerAnimatorFade.m in Sources */,
 				BC54B1E71C74D235001566EB /* KADataRequest.m in Sources */,
-				BC5637DF19CA4F8200C10BCB /* SlideNavigationController.m in Sources */,
 				BC4DEA4E1AA140A9001F1076 /* TSVideoCollectionViewCell.m in Sources */,
 				BC15AD991A0B7BCF00D9F442 /* VideoDetailCellView.m in Sources */,
 				BC5637AF19CA4F0000C10BCB /* AcercaDeViewController.m in Sources */,
@@ -5055,16 +5477,15 @@
 				BC5637CF19CA4F4600C10BCB /* CollapsableTableViewTapRecognizer.m in Sources */,
 				BCA770BB19D4575D00A1CFBD /* UIImage+WebP.m in Sources */,
 				BCA770AF19D4575D00A1CFBD /* UIButton+WebCache.m in Sources */,
-				BC56379F19CA4EA800C10BCB /* SlideNavigationContorllerAnimatorSlide.m in Sources */,
 				BC54B2051C74D235001566EB /* KABasicTableViewController.m in Sources */,
 				BCA6A2B519CCDA1E0021B243 /* MWFeedItem.m in Sources */,
+				BCC6359A1CA2A1E800A83A3A /* TSiPhoneNavigationController.m in Sources */,
 				BC6B09FE1A51F1D200077A12 /* TSIpadBasicDetailViewController.m in Sources */,
-				BC56379719CA4EA800C10BCB /* SlideNavigationContorllerAnimatorScale.m in Sources */,
 				BC8BA3BF19CFF6820018BA0B /* DefaultCollectionReusableView.m in Sources */,
 				BC56380619CA507C00C10BCB /* TSNewsViewController.m in Sources */,
+				BCA7BD361CC7E06700BE2FAB /* TSTextNewsHomeViewController.m in Sources */,
 				BC5638AF19CA56A200C10BCB /* LoadMoreTableViewCell.m in Sources */,
 				BC54B22E1C74DAE5001566EB /* UIViewController+TSDataMG.m in Sources */,
-				BC5637A319CA4EA800C10BCB /* SlideNavigationContorllerAnimatorSlideAndFade.m in Sources */,
 				BCA053221A15806500946420 /* TSDataRequest.m in Sources */,
 				BC7E91701AF020D5004A3813 /* UIDropDownMenu.m in Sources */,
 				BCC464941AF9D74B00543591 /* CircularGradientView.m in Sources */,
@@ -5080,6 +5501,7 @@
 				BC5637AA19CA4EF600C10BCB /* LeftMenuViewController.m in Sources */,
 				BC54B22F1C74DAE5001566EB /* UIViewController+TSDataMG.m in Sources */,
 				BC8BA39419CFF4DC0018BA0B /* TSIpadNavigationViewController.m in Sources */,
+				BCC635A21CA2A29200A83A3A /* TSiPhoneNavigationBar.m in Sources */,
 				BC944C8A1AA93CCF00F9EB18 /* TSDefaultVideoCollectionViewCell.m in Sources */,
 				BC56384E19CA542900C10BCB /* GTMNSString+HTML.m in Sources */,
 				BCA770C819D4575D00A1CFBD /* UIView+WebCacheOperation.m in Sources */,
@@ -5087,7 +5509,6 @@
 				BCA7709419D4575C00A1CFBD /* SDImageCache.m in Sources */,
 				BC9D36E719DC661C009D09A8 /* BasicVideoTableViewCell.m in Sources */,
 				BC54B1DE1C74D235001566EB /* KABasicHCellData.m in Sources */,
-				BC56379C19CA4EA800C10BCB /* SlideNavigationContorllerAnimatorScaleAndFade.m in Sources */,
 				BCA770AC19D4575D00A1CFBD /* SDWebImagePrefetcher.m in Sources */,
 				BC56389D19CA562D00C10BCB /* UILabelMarginSet.m in Sources */,
 				BC5638E119CA579B00C10BCB /* main.m in Sources */,
@@ -5099,6 +5520,7 @@
 				BC033E551A30DD2A0025C9A1 /* NJKWebViewProgress.m in Sources */,
 				BC54B2061C74D235001566EB /* KABasicTableViewController.m in Sources */,
 				BC5638D519CA571800C10BCB /* EasyTableView.m in Sources */,
+				BCC6359B1CA2A1E800A83A3A /* TSiPhoneNavigationController.m in Sources */,
 				BCDCADA41ABB3900007099AF /* TSProgramListElement.m in Sources */,
 				BC8BA3B019CFF5270018BA0B /* RFQuiltLayout.m in Sources */,
 				BCA6A2BD19CCE5160021B243 /* NSDate+InternetDateTime.m in Sources */,
@@ -5111,7 +5533,9 @@
 				BC9CAAD91AC10741008103A0 /* MultimediaAPPDelegate.m in Sources */,
 				BCA770B819D4575D00A1CFBD /* UIImage+MultiFormat.m in Sources */,
 				BC5A008919D3992E0091EFF3 /* DefaultIPadTableViewCell.m in Sources */,
+				BCCF7C0D1C98BC9500859084 /* SlideNavigationController.m in Sources */,
 				BC8BA3A219CFF4FF0018BA0B /* MainIpadViewController.m in Sources */,
+				BCCF7BF41C98BC9500859084 /* SlideNavigationContorllerAnimatorSlide.m in Sources */,
 				BCE09DFA19FB03C400528944 /* TSDataManager.m in Sources */,
 				BC56385219CA542900C10BCB /* NSString+HTML.m in Sources */,
 				BC9833841A34AA540034BE27 /* UIViewController+TSClipDownload.m in Sources */,
@@ -5131,12 +5555,15 @@
 				BC5637C419CA4F4600C10BCB /* CollapsableTableView.m in Sources */,
 				BC54B2011C74D235001566EB /* KABasicHTableViewController.m in Sources */,
 				BC5637B619CA4F0900C10BCB /* BuscarViewController.m in Sources */,
+				BCC635A91CA2A5D400A83A3A /* KABasicDoubleCellData.m in Sources */,
 				BC56384619CA52A100C10BCB /* NavigationBarsManager.m in Sources */,
 				BC6805EC1A2462170038930C /* HomeTopTableViewCell.m in Sources */,
 				BC9D36DC19DB2151009D09A8 /* TSIPadVideoDetailViewController.m in Sources */,
 				BC5638AC19CA56A200C10BCB /* HighlightTableViewCell.m in Sources */,
 				BC56388919CA550F00C10BCB /* TSClipListadoTableViewController.m in Sources */,
 				BC54B20B1C74D235001566EB /* KAQueueLoaderTableViewController.m in Sources */,
+				BCCF7BEA1C98BC9500859084 /* SlideNavigationContorllerAnimatorScaleAndFade.m in Sources */,
+				BCA7BD371CC7E06700BE2FAB /* TSTextNewsHomeViewController.m in Sources */,
 				BC54B2151C74D235001566EB /* UIViewController+KAUtils.m in Sources */,
 				BC54B1E81C74D235001566EB /* KADataRequest.m in Sources */,
 				BC56387619CA54EB00C10BCB /* TSHomeTableViewController.m in Sources */,
@@ -5149,15 +5576,15 @@
 				BC8BA43619D09D1B0018BA0B /* TSBasicListViewController.m in Sources */,
 				BC5637E619CA4FD700C10BCB /* HiddenVideoPlayerController.m in Sources */,
 				BCA7709819D4575C00A1CFBD /* SDWebImageCompat.m in Sources */,
-				BC56379419CA4EA800C10BCB /* SlideNavigationContorllerAnimatorFade.m in Sources */,
-				BC5637E019CA4F8200C10BCB /* SlideNavigationController.m in Sources */,
 				BCDCAD9D1ABA8A19007099AF /* MarqueeLabel.m in Sources */,
+				BCCF7BE01C98BC9500859084 /* SlideNavigationContorllerAnimatorFade.m in Sources */,
 				BC15AD9A1A0B7BD200D9F442 /* VideoDetailCellView.m in Sources */,
 				BC5637B019CA4F0000C10BCB /* AcercaDeViewController.m in Sources */,
 				BC54B1D91C74D235001566EB /* KABasicCellData.m in Sources */,
 				BCA770C019D4575D00A1CFBD /* UIImageView+HighlightedWebCache.m in Sources */,
 				BC8BA43D19D142730018BA0B /* TSIPadHomeViewController.m in Sources */,
 				BCCF7ADB1C97715300859084 /* TSUtils.m in Sources */,
+				BCCF7BF91C98BC9500859084 /* SlideNavigationContorllerAnimatorSlideAndFade.m in Sources */,
 				BC4DEA4F1AA140A9001F1076 /* TSVideoCollectionViewCell.m in Sources */,
 				BCA7709019D4575C00A1CFBD /* NSData+ImageContentType.m in Sources */,
 				BCA770A819D4575D00A1CFBD /* SDWebImageManager.m in Sources */,
@@ -5166,19 +5593,19 @@
 				BC5637D019CA4F4600C10BCB /* CollapsableTableViewTapRecognizer.m in Sources */,
 				BCA770BC19D4575D00A1CFBD /* UIImage+WebP.m in Sources */,
 				BCA770B019D4575D00A1CFBD /* UIButton+WebCache.m in Sources */,
-				BC5637A019CA4EA800C10BCB /* SlideNavigationContorllerAnimatorSlide.m in Sources */,
 				BCA6A2B619CCDA1E0021B243 /* MWFeedItem.m in Sources */,
 				BC54B1E31C74D235001566EB /* KABasicImageData.m in Sources */,
 				BCC464951AF9D74B00543591 /* CircularGradientView.m in Sources */,
 				BC54B2101C74D235001566EB /* UITableViewController+KAUtils.m in Sources */,
+				BCCF7BEF1C98BC9500859084 /* SlideNavigationContorllerAnimatorScaleSlideAndFade.m in Sources */,
 				BCDCADAA1ABB6BBB007099AF /* TSProgramListXMLParser.m in Sources */,
 				BC6B09FF1A51F1D200077A12 /* TSIpadBasicDetailViewController.m in Sources */,
+				BCCF7BE51C98BC9500859084 /* SlideNavigationContorllerAnimatorScale.m in Sources */,
 				BC1DB7561C8DE7D8000E3752 /* UIView+TSHighlightedViewCell.m in Sources */,
-				BC56379819CA4EA800C10BCB /* SlideNavigationContorllerAnimatorScale.m in Sources */,
 				BC8BA3C019CFF6820018BA0B /* DefaultCollectionReusableView.m in Sources */,
+				BCEE077A1CBF06FD0023EC01 /* TSVideoHomeViewController.m in Sources */,
 				BC56380719CA507C00C10BCB /* TSNewsViewController.m in Sources */,
 				BC5638B019CA56A200C10BCB /* LoadMoreTableViewCell.m in Sources */,
-				BC5637A419CA4EA800C10BCB /* SlideNavigationContorllerAnimatorSlideAndFade.m in Sources */,
 				BCA053241A15806600946420 /* TSDataRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -5244,7 +5671,7 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_BITCODE = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -5294,7 +5721,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -5306,7 +5733,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = teleSUR;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "4b40547b-c819-48a3-bce8-dc4fddb94cbd";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};

@@ -26,10 +26,7 @@
 }
 
 - (void)viewDidLoad {
-
 	[super viewDidLoad];
-    self.view.backgroundColor = [TSUtils colorRedLeftMenu];
-
 //    isLiveAudioON = NO;
 
     bool livestreamEnabled = [[[[[NSBundle mainBundle] infoDictionary] objectForKey:@"Configuración"] objectForKey:@"livestreamEnabled"] boolValue] == YES;
@@ -38,6 +35,9 @@
     tableFrame.origin.y = livestreamEnabled ? 82 : tableFrame.origin.y;
     tableFrame.size.height -= livestreamEnabled ? 10 : 0;
     self.tableView.frame = tableFrame;
+
+    self.view.backgroundColor = [TSUtils colorRedLeftMenu];
+    self.tableView.backgroundColor = [TSUtils colorRedLeftMenu];
 
     videoSectionsSlug = [[NSArray alloc] initWithArray:[[[[NSBundle mainBundle] infoDictionary] objectForKey:@"Configuración"] objectForKey:@"videoMenuSubsections"]];
     NSMutableArray *titles = [NSMutableArray array];
@@ -159,10 +159,10 @@
 // Uncomment the following two methods to use custom header views.
 - (UILabel *) createHeaderLabel: (UITableView *) tableView :(NSString *)headerTitle {
     UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectZero];
-    titleLabel.frame =CGRectMake(35, 0, 200, 50);
+    titleLabel.frame =CGRectMake(0, 0, 220, 50);
     titleLabel.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin;
     titleLabel.text = [headerTitle uppercaseString];
-    titleLabel.textAlignment = NSTextAlignmentLeft;
+    titleLabel.textAlignment = NSTextAlignmentCenter;
 
     titleLabel.textColor = [UIColor whiteColor];
     titleLabel.font = [UIFont fontWithName:@"Roboto-Light" size:18];
@@ -191,16 +191,10 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-
-    if( [sectionsSlug indexOfObject:@"video"] == section) {
-        return [videoSectionsSlug count];
-    }
     return 0;
-
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
@@ -218,7 +212,6 @@
     cell.textLabel.textAlignment = NSTextAlignmentCenter;
     cell.backgroundColor = [TSUtils colorRedLeftMenu];
     cell.textLabel.font = [UIFont fontWithName:@"Roboto-Light" size:16];
-
     return cell;
 }
 
@@ -227,15 +220,11 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-
     [self setSelectedSection:(int)indexPath.row withSlugCollection:videoSectionsSlug withTitleCollection:videoSections];
-
 }
 
 - (void) collapsableTableView:(CollapsableTableView *)tableView didUnselectSection:(NSInteger)sectionIndex title:(NSString *)sectionTitle headerView:(UIView *)headerView {
-
     headerView.backgroundColor = [TSUtils colorRedLeftMenu];
-
 }
 
 - (void) collapsableTableView:(CollapsableTableView *)tableView didSelectSection:(NSInteger)sectionIndex title:(NSString *)sectionTitle headerView:(UIView *)headerView {
@@ -243,31 +232,37 @@
     headerView.backgroundColor = [UIColor colorWithRed:(217/255.0) green:(25/255.0) blue:(24/255.0) alpha:1];
 
     [self collapseSection:tableView];
-
-    if (sectionIndex < [sectionsSlug count] - 2) {
-        [self setSelectedSection:(int)sectionIndex withSlugCollection:sectionsSlug withTitleCollection:sectionsTitle];
-        return;
-    }
-
-    UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPhone"
-                                                             bundle: nil];
-    UIViewController *vc;
-    if (sectionIndex == [sectionsSlug count] - 1 || sectionIndex == [sectionsSlug count] - 2) {
-        NSString *viewID = sectionIndex == [sectionsSlug count] - 1 ? [NSString stringWithFormat:NSLocalizedString(@"acercaViewID", nil)] :
-                            @"TSConfigurationTableViewController";
-        vc = [mainStoryboard instantiateViewControllerWithIdentifier: viewID];
-    }
-    [[SlideNavigationController sharedInstance] popToRootAndSwitchToViewController:vc
-                                                             withSlideOutAnimation:self.slideOutAnimationEnabled
-                                                                     andCompletion:nil];
-    TSClipListadoHomeMenuTableVC *view = [self getVideoHomeView];
-    if(view) {
-        [view sectionSelected:[sectionsSlug objectAtIndex:sectionIndex] withTitle:[sectionsTitle objectAtIndex:sectionIndex]];
+//    ((UINavigationController *)[SlideNavigationController sharedInstance]).navigationBarHidden = YES;
+    UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPhone" bundle: nil];
+    if ( sectionIndex < 3 ) {
+        NSString *vcID;
+        if ( sectionIndex == 0 ) {
+            vcID = @"TSMainHomeViewController";
+        } else if ( sectionIndex == 1 ) {
+            vcID = @"TSTextNewsHomeViewController";
+        } else if ( sectionIndex == 2 ) {
+            vcID = @"TSVideoHomeViewController";
+        }
+        [[SlideNavigationController sharedInstance] popToRootAndSwitchToViewController:[mainStoryboard instantiateViewControllerWithIdentifier:vcID] withSlideOutAnimation:self.slideOutAnimationEnabled andCompletion:nil];
+    } else {
+        if (sectionIndex < [sectionsSlug count] - 2) {
+            [self setSelectedSection:(int)sectionIndex withSlugCollection:sectionsSlug withTitleCollection:sectionsTitle];
+            return;
+        }
+        UIViewController *vc;
+        if (sectionIndex == [sectionsSlug count] - 1 || sectionIndex == [sectionsSlug count] - 2) {
+            NSString *viewID = sectionIndex == [sectionsSlug count] - 1 ? [NSString stringWithFormat:NSLocalizedString(@"acercaViewID", nil)] : @"TSConfigurationTableViewController";
+            vc = [mainStoryboard instantiateViewControllerWithIdentifier: viewID];
+        }
+        [[SlideNavigationController sharedInstance] popToRootAndSwitchToViewController:vc withSlideOutAnimation:self.slideOutAnimationEnabled andCompletion:nil];
+	    TSClipListadoHomeMenuTableVC *view = [self getVideoHomeView];
+        if(view) {
+            [view sectionSelected:[sectionsSlug objectAtIndex:sectionIndex] withTitle:[sectionsTitle objectAtIndex:sectionIndex]];
+        }
     }
 }
 
-- (void)collapseSection:(CollapsableTableView *)tableView
-{
+- (void)collapseSection:(CollapsableTableView *)tableView {
     NSString* vSectionTitle = @"Tag 0";
     //    [LeftMenuViewController titleForHeaderForSection:1]; // Use this expression when specifying text for headers.
     BOOL isCollapsed = [[tableView.headerTitleToIsCollapsedMap objectForKey:vSectionTitle] boolValue];
@@ -317,6 +312,11 @@
 - (void) collapsableTableView:(CollapsableTableView*) tableView didExpandSection:(NSInteger) section title:(NSString*) sectionTitle headerView:(UIView*) headerView
 {
 //    [spinner stopAnimating];
+}
+
+
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
 }
 
 @end

@@ -24,8 +24,10 @@
 
 - (UIView *) configureCell:(UIView *)cell forIndexPath:(NSIndexPath *)indexPath;
 - (UIView *) configureCell:(UIView *)cell withData:(KABasicCellData *)data;
+- (UIView *) configureCell:(UIView *)cell withData:(KABasicCellData *)data withTitle:(UILabel *)primary andSecondaryText:(UILabel *)secondary;
 
 - (void) configureCellImage:(UIView *)cell forIndexPath:(NSIndexPath *)indexPath;
+- (void) configureCellImage:(UIView *)cell withImageVW:(UIImageView *)imageVW withData:(KABasicCellData *)data;
 - (void) configureCellImage:(UIView *)cell withData:(KABasicCellData *)data;
 
 - (void) configureImageVW:(UIImageView *)imageVW withData:(KABasicCellData *)data;

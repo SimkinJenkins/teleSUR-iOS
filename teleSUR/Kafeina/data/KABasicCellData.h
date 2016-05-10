@@ -13,7 +13,7 @@
 @interface KABasicCellData : NSObject
 
 
-
+@property (nonatomic, assign) uint cellIndex;
 @property (nonatomic, strong) NSString *ID;//id, uid
 @property (nonatomic, strong) NSString *type;//id, uid
 @property (nonatomic, strong) NSString *title;//edTitle, title
@@ -22,7 +22,7 @@
 @property (nonatomic, strong) NSString *cellID;
 @property (nonatomic, strong) NSString *URL;
 
-@property (nonatomic, strong) NSDictionary *rawData;
+@property (nonatomic, strong) NSObject *rawData;
 
 @property (nonatomic, strong) NSArray *images;//images
 

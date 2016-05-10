@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="yzD-f0-X8n">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1713" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="yzD-f0-X8n">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
@@ -23,8 +23,8 @@
                                     <outlet property="delegate" destination="L46-bH-G45" id="GKZ-XN-Tto"/>
                                 </connections>
                             </tableView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="menu-logo.png" id="ENc-w9-S5P">
-                                <rect key="frame" x="0.0" y="5" width="292" height="68"/>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="header-menu-logo.png" id="ENc-w9-S5P">
+                                <rect key="frame" x="0.0" y="15" width="240" height="68"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
                         </subviews>
@@ -56,15 +56,15 @@
             </objects>
             <point key="canvasLocation" x="1304" y="787"/>
         </scene>
-        <!--Slide Navigation Controller-->
+        <!--Si Phone Navigation Controller-->
         <scene sceneID="cQY-wH-O5O">
             <objects>
-                <navigationController definesPresentationContext="YES" id="yzD-f0-X8n" customClass="SlideNavigationController" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="9jY-gB-7xP">
+                <navigationController definesPresentationContext="YES" id="yzD-f0-X8n" customClass="TSiPhoneNavigationController" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="9jY-gB-7xP" customClass="TSiPhoneNavigationBar">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="PTJ-uJ-12t" kind="relationship" relationship="rootViewController" id="yQb-Jb-NN1"/>
+                        <segue destination="PTJ-uJ-12t" kind="relationship" relationship="rootViewController" id="bhA-92-Fcp"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Qg-wo-U2C" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -89,6 +89,42 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N3i-na-ef9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="515" y="-615"/>
+        </scene>
+        <!--Video Home View Controller-->
+        <scene sceneID="GRt-iV-h6x">
+            <objects>
+                <tableViewController storyboardIdentifier="TSVideoHomeViewController" id="pDN-dH-7fE" customClass="TSVideoHomeViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="tN5-W5-LPF">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="pDN-dH-7fE" id="kbj-bW-MTr"/>
+                            <outlet property="delegate" destination="pDN-dH-7fE" id="xSv-DW-QDW"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oXo-zZ-W2M" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="879" y="-615"/>
+        </scene>
+        <!--Text News Home View Controller-->
+        <scene sceneID="WgI-M4-qUF">
+            <objects>
+                <tableViewController storyboardIdentifier="TSTextNewsHomeViewController" id="XxS-ap-9UA" customClass="TSTextNewsHomeViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="i0T-Wt-2aZ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="XxS-ap-9UA" id="GFP-oU-a9Z"/>
+                            <outlet property="delegate" destination="XxS-ap-9UA" id="gRu-N5-4f5"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="idU-Xi-DXu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1247" y="-615"/>
         </scene>
         <!--Home Table View Controller-->
         <scene sceneID="i9H-g4-Eu9">
@@ -353,6 +389,6 @@ We are a space and a voice for the construction of a new communications order.
         </scene>
     </scenes>
     <resources>
-        <image name="menu-logo.png" width="112" height="39"/>
+        <image name="header-menu-logo.png" width="130" height="35"/>
     </resources>
 </document>

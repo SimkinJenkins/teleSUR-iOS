@@ -13,5 +13,6 @@
 @interface UIViewController (TSDataMG)
 
 - (NSArray *) getLatestNewsHomeRequest;
+- (NSArray *) getVideosHomeRequest;
 
 @end

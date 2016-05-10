@@ -858,7 +858,7 @@ static SlideNavigationController *singletonInstance;
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle {
-    return UIStatusBarStyleDefault;
+    return UIStatusBarStyleLightContent;
     if ([self isMenuOpen]) {
         return UIStatusBarStyleLightContent;
     }

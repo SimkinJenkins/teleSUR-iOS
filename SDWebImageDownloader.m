@@ -177,7 +177,7 @@ static NSString *const kCompletedCallbackKey = @"completed";
     if(!success){
         NSLog(@"Error excluding %@ from backup %@", [url lastPathComponent], error);
     }else{
-        NSLog(@"Success excluding %@ from backup %@", [url lastPathComponent], error);
+//        NSLog(@"Success excluding %@ from backup %@", [url lastPathComponent], error);
     }
     //
 

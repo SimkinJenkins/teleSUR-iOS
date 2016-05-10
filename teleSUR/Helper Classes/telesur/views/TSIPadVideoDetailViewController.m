@@ -387,11 +387,8 @@ CGFloat const IPAD_VIEW_Y_POSITION = 23;
         date.hidden = YES;
 
     } else {
-
         title.text = switchTitles ? @"" : [currentItem valueForKey:@"titulo"];
-
         NSObject *categoria = [currentItem valueForKey:@"categoria"];
-
         if(categoria != [NSNull null]) {
             section.text = [[categoria valueForKey:@"nombre"] uppercaseString];
         } else if(switchTitles) {
@@ -401,10 +398,8 @@ CGFloat const IPAD_VIEW_Y_POSITION = 23;
         } else {
             section.text = @"";
         }
-
         NSLog(@"%@", [currentItem obtenerDescripcion]);
         description.text = [currentItem obtenerDescripcion];
-
     }
 
 //    description.text = [ NSString stringWithFormat:@"%@%@%@%@%@%@%@%@%@%@%@%@", description.text, description.text, description.text, description.text, description.text, description.text, description.text, description.text , description.text, description.text, description.text, description.text];
@@ -417,7 +412,6 @@ CGFloat const IPAD_VIEW_Y_POSITION = 23;
              placeholderImage:[UIImage imageNamed:@"SinImagen.png"]];
 
     [self adjustLabelsSize];
-
 }
 
 - (void) adjustLabelsSize {
@@ -430,9 +424,9 @@ CGFloat const IPAD_VIEW_Y_POSITION = 23;
 
     [self.view adjustSizeFrameForLabel:title constriainedToSize:CGSizeMake(playerFrame.size.width - 60, 300)];
     [self.view setLabel:title underView:section withSeparation:2];
-    
+
     [self.view setLabel:date underView:title withSeparation:10];
-    
+
     download.frame = CGRectMake(playerFrame.size.width - 170, date.hidden ? title.frame.origin.y + 7 : date.frame.origin.y - 4, download.frame.size.width, download.frame.size.height);
     
     [self.view adjustSizeFrameForLabel:description constriainedToSize:CGSizeMake(playerFrame.size.width - 60, 300)];
@@ -858,7 +852,7 @@ CGFloat const IPAD_VIEW_Y_POSITION = 23;
     if(!success){
         NSLog(@"Error excluding %@ from backup %@", [url lastPathComponent], error);
     }else{
-        NSLog(@"Success excluding %@ from backup %@", [url lastPathComponent], error);
+//        NSLog(@"Success excluding %@ from backup %@", [url lastPathComponent], error);
     }
 
     NSURLRequest *request = [NSURLRequest requestWithURL:url

@@ -10,7 +10,7 @@
 
 @implementation KABasicCellData
 
-@synthesize ID, type, title, summary, images, rawData, cellID, cellSize;
+@synthesize ID, type, title, summary, images, cellID, cellSize;
 
 
 
@@ -34,7 +34,7 @@
         } else {
             images = [NSArray arrayWithObject:[[KABasicImageData alloc] initWithDictionary:[raw objectForKey:@"images"]]];
         }
-        rawData = raw;
+        self.rawData = raw;
         self.URL = [raw objectForKey:@"resource_uri"];
     }
 

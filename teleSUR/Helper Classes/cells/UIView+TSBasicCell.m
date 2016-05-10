@@ -294,10 +294,7 @@
 }
 
 - (void) setLabel:(UILabel *)label underView:(UIView *)view withSeparation:(CGFloat)indent {
-
-//    [label sizeToFit];
-    label.frame = CGRectMake(label.frame.origin.x, (view.frame.origin.y + view.frame.size.height) + indent, label.frame.size.width, label.frame.size.height);
-    
+    label.frame = CGRectMake(label.frame.origin.x, (view.frame.origin.y + view.frame.size.height) + indent, label.frame.size.width, label.frame.size.height);    
 }
 
 - (NSString *) getLongFormatDateFromData:(NSDictionary *)data {

@@ -11,6 +11,7 @@
 #import "CollapsableTableViewDelegate.h"
 
 #import "TSUtils.h"
+#import "SlideNavigationContorllerAnimatorSlide.h"
 
 @interface LeftMenuViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, CollapsableTableViewDelegate> {
 

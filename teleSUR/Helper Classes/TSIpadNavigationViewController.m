@@ -133,10 +133,8 @@
 }
 
 - (void) removeTopViewController {
-    
     [self.topView.view removeFromSuperview];
     self.topView = nil;
-    
 }
 
 - (void) setNavigationItemsHidden:(BOOL)hidden {

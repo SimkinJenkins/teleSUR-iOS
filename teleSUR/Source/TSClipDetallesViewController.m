@@ -716,7 +716,7 @@ NSInteger const TS_VIEW_STATUS_ON_TRANSITION = 4;
     if(!success){
         NSLog(@"Error excluding %@ from backup %@", [url lastPathComponent], error);
     }else{
-        NSLog(@"Success excluding %@ from backup %@", [url lastPathComponent], error);
+//        NSLog(@"Success excluding %@ from backup %@", [url lastPathComponent], error);
     }
 
 }

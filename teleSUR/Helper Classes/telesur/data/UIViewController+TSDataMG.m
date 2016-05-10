@@ -25,6 +25,10 @@ NSString* const JO_BLOGS_API_URL = @"http://www.jornada.unam.mx/blogs/api/";
     return [[NSArray alloc] initWithObjects:[self getCatalogWithType:@"tipo_clip"], [self getCatalogWithType:@"programa"], [self getRSSRequestForSection:@"" andSlug:@""], [self getClipDataWithType:@"noticia" andRange:NSMakeRange(1, 10)], [self getClipDataWithType:@"programa" andRange:NSMakeRange(1, 10)], [self getRSSRequestForSection:@"noticias" andSlug:@"ultimas"], nil];
 }
 
+- (NSArray *) getVideosHomeRequest {
+    return [[NSArray alloc] initWithObjects:[self getClipDataWithType:@"noticia" andRange:NSMakeRange(1, 10)], [self getClipDataWithType:@"entrevista" andRange:NSMakeRange(1, 10)], [self getClipDataWithType:@"especial-web" andRange:NSMakeRange(1, 10)], [self getClipDataWithType:@"infografias" andRange:NSMakeRange(1, 10)], nil];
+}
+
 - (KADataRequest *) getClipDataWithType:(NSString *)type andRange:(NSRange)range {
     KADataRequest *request = [[KADataRequest alloc] initWithType:@"clip" forSection:@"noticia" forFamily:@""];
     request.URL = [self getNSURLWithBaseURL:[self getBaseURLStringWithType:@"clip"] andSeparator:@"?"

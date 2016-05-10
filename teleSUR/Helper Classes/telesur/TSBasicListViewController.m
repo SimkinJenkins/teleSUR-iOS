@@ -106,47 +106,28 @@ NSString* const TS_NOTICIAS_SLUG = @"noticias-texto";
 }
 
 - (void) loadCurrentSectionData {
-
     if ( ![self isAPIHostAvailable] ) {
         return;
     }
-
     TSDataRequest *sectionReq;
-
     if ( [self isRSSSection:currentSection] ) {
-
         sectionReq = [[TSDataRequest alloc] initWithType:TS_NOTICIAS_SLUG   forSection:currentSection       forSubsection:currentSubsection];
-
     } else {
-
         sectionReq = [[TSDataRequest alloc] initWithType:TS_CLIP_SLUG       forSection:currentSection       forSubsection:currentSubsection];
-
         if ( addAtListEnd ) {
-
             TSDataRequest *lastRequest = [currentData objectAtIndex:0];
             sectionReq.range = NSMakeRange(lastRequest.range.location + lastRequest.range.length, TS_ITEMS_PER_PAGE);
-
         } else {
-
             sectionReq.range = NSMakeRange(1, TS_ITEMS_PER_PAGE);
-
         }
-
     }
-
     if ( [ currentSection isEqualToString:TS_PROGRAMA_SLUG ] && [ catalogs objectForKey:TS_PROGRAMA_SLUG ] == nil ) {
-
         TSDataRequest *showCatReq = [[TSDataRequest alloc] initWithType:TS_PROGRAMA_SLUG    forSection:nil      forSubsection:nil];
         showCatReq.range = NSMakeRange(1, 300);
-
         [[[TSDataManager alloc] init] loadRequests:[NSArray arrayWithObjects:showCatReq, sectionReq, nil] delegateResponseTo:self];
-
     } else {
-
         [[[TSDataManager alloc] init] loadRequests:[NSArray arrayWithObject:sectionReq] delegateResponseTo:self];
-
     }
-
 }
 
 - (BOOL) isRSSSection:(NSString *)section {
@@ -243,23 +224,17 @@ NSString* const TS_NOTICIAS_SLUG = @"noticias-texto";
 }
 
 - (NSURL *) getThumbURLFromMWFeedItem:(MWFeedItem *)feedItem forceLargeImage:(BOOL)largeImage {
-
     uint objIndex = [feedItem.enclosures count] == 1 || largeImage ? 0 : 1;
     NSDictionary *enclosure = [feedItem.enclosures objectAtIndex:objIndex];
     return [NSURL URLWithString:[enclosure objectForKey:@"url"]];
-
 }
 
 - (NSURL *) getThumbURLFromAPIItem:(NSDictionary *)data forceLargeImage:(BOOL)largeImage {
-    
     NSString *miniaturaID = largeImage ? @"thumbnail_grande" : @"thumbnail_mediano";
-
     if ( [data class] == [NSNull class] )  {
         return [NSURL URLWithString:@""];
     }
-
-    return [NSURL URLWithString:[ data objectForKey:miniaturaID ]];
-
+    return [NSURL URLWithString:[data objectForKey:miniaturaID]];
 }
 
 - (NSArray *) getResultDataAtIndex:(int) index {

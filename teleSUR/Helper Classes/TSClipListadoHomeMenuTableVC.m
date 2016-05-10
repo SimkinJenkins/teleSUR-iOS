@@ -41,7 +41,7 @@
 	[SlideNavigationController sharedInstance].panGestureSideOffset = 50;
     [SlideNavigationController sharedInstance].enableShadow = NO;
 	((LeftMenuViewController *)[SlideNavigationController sharedInstance].leftMenu).slideOutAnimationEnabled = NO;
-    [SlideNavigationController sharedInstance].portraitSlideOffset = 95;
+    [SlideNavigationController sharedInstance].portraitSlideXOffset = 95;
 
     //Crear Header
     headerMenu = [[UIView alloc] initWithFrame:CGRectMake(50, 0, 225, 35)];

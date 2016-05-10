@@ -13,6 +13,7 @@
 - (void) viewDidLoad {
     [super viewDidLoad];
     [self setupRefreshControl];
+    [self setupTableView];
 }
 
 
@@ -85,10 +86,12 @@
 }
 
 - (UIView *) configureCell:(UIView *)cell withData:(KABasicCellData *)data {
-    UILabel *title = (UILabel *)[cell viewWithTag:10001];
-    UILabel *summary = (UILabel *)[cell viewWithTag:10002];
-    title.text = data.title;
-    summary.text = data.summary;
+    return [self configureCell:cell withData:data withTitle:(UILabel *)[cell viewWithTag:10001] andSecondaryText:(UILabel *)[cell viewWithTag:10002]];
+}
+
+- (UIView *) configureCell:(UIView *)cell withData:(KABasicCellData *)data withTitle:(UILabel *)primary andSecondaryText:(UILabel *)secondary {
+    primary.text = data.title;
+    secondary.text = data.summary;
     cell.userInteractionEnabled = !data.cancelUserInteraction;
     return cell;
 }
@@ -98,7 +101,10 @@
 }
 
 - (void) configureCellImage:(UIView *)cell withData:(KABasicCellData *)data {
-    UIImageView *imageVW = (UIImageView *)[cell viewWithTag:9000];
+    [self configureCellImage:cell withImageVW:(UIImageView *)[cell viewWithTag:9000] withData:data];
+}
+
+- (void) configureCellImage:(UIView *)cell withImageVW:(UIImageView *)imageVW withData:(KABasicCellData *)data {
     [self configureImageVW:imageVW withData:data];
     CAShapeLayer *maskLayer = [[CAShapeLayer alloc] init];
     CGRect maskRect = CGRectMake(0, 0, cell.frame.size.width, cell.frame.size.height);
@@ -183,5 +189,9 @@
 }
 
 - (void) loadData {}
+
+- (void) setupTableView {
+    self.tableView.separatorColor = [UIColor clearColor];
+}
 
 @end

@@ -39,11 +39,11 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>2.8</string>
+	<string>3.0</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>17</string>
+	<string>20</string>
 	<key>Configuración</key>
 	<dict>
 		<key>API URL Base</key>
@@ -349,6 +349,8 @@
 	<string>A00C5-B191F</string>
 	<key>UIAppFonts</key>
 	<array>
+		<string>PTF55F.ttf</string>
+		<string>OpenSans-Bold.ttf</string>
 		<string>Roboto-Regular.ttf</string>
 		<string>Roboto-Bold.ttf</string>
 		<string>Roboto-Light.ttf</string>

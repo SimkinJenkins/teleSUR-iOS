@@ -19,17 +19,14 @@
 
 @implementation EasyTableViewCell
 
-
-- (void) prepareForReuse
-{
+- (void) prepareForReuse {
     [super prepareForReuse];
-    
     UIView *content = [self viewWithTag:CELL_CONTENT_TAG];
     if ([content respondsToSelector:@selector(prepareForReuse)]) {
         [content performSelector:@selector(prepareForReuse)];
     }
-
 }
+
 @end
 
 
@@ -71,7 +68,6 @@
     return self;
 }
 
-
 - (void)createTableWithOrientation:(EasyTableViewOrientation)orientation {
 	// Save the orientation so that the table view cell knows how to set itself up
 	_orientation = orientation;
@@ -89,6 +85,7 @@
 	tableView.delegate			= self;
 	tableView.dataSource		= self;
 	tableView.autoresizingMask	= UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    tableView.decelerationRate  = UIScrollViewDecelerationRateFast;
 	
 	// Rotate the tableView 90 degrees so that it is horizontal
 	if (orientation == EasyTableViewOrientationHorizontal)
@@ -122,20 +119,16 @@
 
 - (CGPoint)contentOffset {
 	CGPoint offset = self.tableView.contentOffset;
-	
 	if (_orientation == EasyTableViewOrientationHorizontal)
 		offset = CGPointMake(offset.y, offset.x);
-	
 	return offset;
 }
 
 
 - (CGSize)contentSize {
 	CGSize size = self.tableView.contentSize;
-	
 	if (_orientation == EasyTableViewOrientationHorizontal)
 		size = CGSizeMake(size.height, size.width);
-	
 	return size;
 }
 
@@ -328,17 +321,16 @@
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-	if ([delegate respondsToSelector:@selector(easyTableView:scrolledToOffset:)])
+    if ([delegate respondsToSelector:@selector(easyTableView:scrolledToOffset:)]) {
 		[delegate easyTableView:self scrolledToOffset:self.contentOffset];
-	
+    }
 	CGFloat amountScrolled	= self.contentOffset.x;
 	CGFloat maxScrollAmount = [self contentSize].width - self.bounds.size.width;
-	
 	if (amountScrolled > maxScrollAmount) amountScrolled = maxScrollAmount;
 	if (amountScrolled < 0) amountScrolled = 0;
-	
-	if ([delegate respondsToSelector:@selector(easyTableView:scrolledToFraction:)])
+    if ([delegate respondsToSelector:@selector(easyTableView:scrolledToFraction:)]) {
 		[delegate easyTableView:self scrolledToFraction:amountScrolled/maxScrollAmount];
+    }
 }
 
 
@@ -426,20 +418,16 @@
 
 - (void)prepareRotatedView:(UIView *)rotatedView {
 	UIView *content = [delegate easyTableView:self viewForRect:rotatedView.bounds];
-	
 	// Add a default view if none is provided
 	if (content == nil)
 		content = [[UIView alloc] initWithFrame:rotatedView.bounds];
-	
 	content.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
 	content.tag = CELL_CONTENT_TAG;
 	[rotatedView addSubview:content];
 }
 
-
 - (void)setDataForRotatedView:(UIView *)rotatedView forIndexPath:(NSIndexPath *)indexPath {
 	UIView *content = [rotatedView viewWithTag:CELL_CONTENT_TAG];
-	
    [delegate easyTableView:self setDataForView:content forIndexPath:indexPath];
 }
 
@@ -447,5 +435,24 @@
     [self.tableView reloadData];
 }
 
-@end
 
+
+
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
+    if(decelerate) return;
+    [self scrollViewDidEndDecelerating:scrollView];
+}
+
+- (void)scrollViewDidEndDecelerating:(UITableView *)tableView {
+    CGPoint lala = CGPointMake(tableView.contentOffset.x, tableView.contentOffset.y + _cellWidthOrHeight / 2);
+    NSIndexPath *index = [tableView indexPathForRowAtPoint:lala];
+    [tableView scrollToRowAtIndexPath:index atScrollPosition:UITableViewScrollPositionTop animated:YES];
+}
+
+
+
+
+
+
+@end

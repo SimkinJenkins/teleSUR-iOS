@@ -349,6 +349,8 @@
 	<string>7E4FD-82E82</string>
 	<key>UIAppFonts</key>
 	<array>
+		<string>PTF55F.ttf</string>
+		<string>OpenSans-Bold.ttf</string>
 		<string>Roboto-Regular.ttf</string>
 		<string>Roboto-Bold.ttf</string>
 		<string>Roboto-Light.ttf</string>

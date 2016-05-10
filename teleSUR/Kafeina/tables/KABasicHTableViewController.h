@@ -20,7 +20,7 @@
 }
 
 
-
+- (UITableViewCell *) setHTableAtCell:(UITableViewCell *)cell forIndexPath:(NSIndexPath *)indexPath withID:(NSString *)cellID;
 - (BOOL) isTableItemHCellAtIndex:(NSIndexPath *)indexPath;
 - (NSString *) getHTableCellViewID;
 - (KABasicHCellData *) getDataForHTable:(EasyTableView *)tableView;

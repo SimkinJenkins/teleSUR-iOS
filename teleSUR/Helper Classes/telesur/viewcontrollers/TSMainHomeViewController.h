@@ -25,6 +25,10 @@
 
 #import "UIView+TSHighlightedViewCell.h"
 #import "TSUtils.h"
+#import "KABasicHCellData.h"
+#import "TSUtils.h"
+#import "KABasicDoubleCellData.h"
+#import "TSiPhoneNavigationController.h"
 
 @interface TSMainHomeViewController : KABasicHTableViewController <TSDataManagerDelegate> {
 
@@ -32,9 +36,6 @@
         NSArray *uDIRContent;
         uint videosCount;
         uint showsCount;
-        UIView *headerMenu;
-        UITextField *textfield;
-        UIDropDownMenu *textMenu;
         NSIndexPath *selectedIndexPath;
         NSArray *highlightedElements;
 }
